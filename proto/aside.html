@@ -1,0 +1,78 @@
+<!----------------------------------------------------
+
+  这是一个简单的 HTML 页面，包含一个侧边栏和主内容区
+  使用 Flexbox 布局来实现响应式设计。
+  屏幕宽度不足时，侧边栏会自动堆叠到主内容下方，并居中显示。
+
+----------------------------------------------------->
+<!DOCTYPE html>
+<html lang="zh">
+<style>
+
+  /*************** 背景点阵效果 below ***************/
+  body {
+    background-color: rgba(255, 255, 255, 0.836);
+    background-image: radial-gradient(rgb(121, 34, 0) 1px, transparent 1px);
+    background-size: 24px 24px;
+    animation: starfield 50s linear infinite;
+  }
+
+  @keyframes starfield {
+    from {
+      background-position: 0 0;
+    }
+
+    to {
+      background-position: 1000px 1000px;
+    }
+  }
+  /*************** 背景点阵效果 above ***************/
+
+  /*************** Aside 自适应 below *************/
+  .container {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  main {
+    flex: 2;
+  }
+
+  aside {
+    flex: 1;
+    background: #f1f1f1;
+    padding: 1rem;
+    border: 1px solid #ddd;
+  }
+
+  /* 小屏幕时：上下堆叠显示，并让 aside 居中 */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      /* 让 aside 居中 */
+    }
+
+    aside {
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+    }
+  }
+/************** Aside 自适应 below *************/
+
+</style>
+
+<div class="container">
+  <aside>
+    <h2>侧边栏</h2>
+    <p>一些补充信息或提示。</p>
+  </aside>
+  <main>
+    <h1>正文标题</h1>
+    <p>这是主内容部分。</p>
+  </main>
+</div>
+
+</html>

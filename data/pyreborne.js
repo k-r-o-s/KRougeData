@@ -1,0 +1,615 @@
+/////////////// 薪龙族 ///////////////
+
+// 薪龙族 英雄
+export const PYREBORNE_HEROES = [
+  {
+    "name": "吉尔达女士 | Fel",
+    "type": "勇者",
+    "clan": "薪龙族",
+    "cost": "0",
+    "effect": "",
+    "size": 3,
+    "attack": 10,
+    "health": 20,
+    "description": "菲尔是流放者中才华横溢且足智多谋的指挥官，她发誓要将天堂从她哥哥的暴政中解放出来。然而，她曾受的心伤能否痊愈，还是未知之数",
+  },
+  {
+    "name": "菲尼克斯大人 | Fel",
+    "type": "勇者",
+    "clan": "薪龙族",
+    "cost": "0",
+    "effect": "[能力: 菲尼克斯之火]",
+    "size": 3,
+    "attack": 15,
+    "health": 20,
+    "description": "菲尔是流放者中才华横溢且足智多谋的指挥官，她发誓要将天堂从她哥哥的暴政中解放出来。然而，她曾受的心伤能否痊愈，还是未知之数",
+  },
+]
+
+// 薪龙族 单位
+export const PYREBORNE_UNITS = [
+  {
+    "name": "膨胀幼龙 | Battle Dancer",
+    "type": "幼龙",
+    "clan": "薪龙族",
+    "rarity": "普通 | Common",
+    "cost": "1",
+    "effect": "[能力: 消化不良]",
+    "flag-unit": false,
+    "size": 1,
+    "attack": 4,
+    "health": 1,
+    "description": ""
+  },
+  {
+    "name": "金蛋龙 | Battle Dancer",
+    "type": "龙",
+    "clan": "薪龙族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "effect": "[亡语]: 获得 1 [龙族宝藏]",
+    "flag-unit": true,
+    "size": 2,
+    "attack": 10,
+    "health": 30,
+    "description": ""
+  },
+  {
+    "name": "熔岩锤击者 | Battle Dancer",
+    "type": "龙",
+    "clan": "薪龙族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "effect": "[攻击]: 施加 [薪火熔胶] 8",
+    "flag-unit": true,
+    "size": 2,
+    "attack": 10,
+    "health": 25,
+    "description": ""
+  },
+  {
+    "name": "守财奴 | Battle Dancer",
+    "type": "龙",
+    "clan": "薪龙族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "effect": "[贪婪] 10",
+    "flag-unit": true,
+    "size": 1,
+    "attack": 8,
+    "health": 8,
+    "description": ""
+  },
+  {
+    "name": "流涕幼龙 | Battle Dancer",
+    "type": "幼龙",
+    "clan": "薪龙族",
+    "rarity": "普通 | Common",
+    "cost": "1",
+    "effect": "[能力: 熔胶喷嚏]",
+    "flag-unit": false,
+    "size": 1,
+    "attack": 4,
+    "health": 1,
+    "description": ""
+  },
+  {
+    "name": "自大幼龙 | Battle Dancer",
+    "type": "幼龙",
+    "clan": "薪龙族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "effect": "[能力: 昂贵品味]",
+    "flag-unit": false,
+    "size": 1,
+    "attack": 4,
+    "health": 1,
+    "description": ""
+  },
+  {
+    "name": "流涕幼龙 | Battle Dancer",
+    "type": "幼龙",
+    "clan": "薪龙族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "effect": "[能力: 赚钱高手]",
+    "flag-unit": false,
+    "size": 1,
+    "attack": 4,
+    "health": 1,
+    "description": ""
+  },
+  {
+    "name": "金牙 | Battle Dancer",
+    "type": "龙",
+    "clan": "薪龙族",
+    "rarity": "稀有 | Rare",
+    "cost": "2",
+    "effect": "[贪婪] 5. 回合开始时, 每拥有 100 [金币], 获得 [攻击力] 15",
+    "flag-unit": true,
+    "size": 2,
+    "attack": 15,
+    "health": 30,
+    "description": ""
+  },
+  {
+    "name": "贪婪之龙 | Battle Dancer",
+    "type": "龙",
+    "clan": "薪龙族",
+    "rarity": "高级 | Uncommon",
+    "cost": "2",
+    "effect": "[召唤]: 每有一个 [金蛋] 获得 [攻击力] 10 和 [生命值] 10",
+    "flag-unit": true,
+    "size": 3,
+    "attack": 20,
+    "health": 35,
+    "description": ""
+  },
+  {
+    "name": "吞火龙 | Battle Dancer",
+    "type": "龙",
+    "clan": "薪龙族",
+    "rarity": "高级 | Uncommon",
+    "cost": "2",
+    "effect": "[能力: 火焰吐息]",
+    "flag-unit": true,
+    "size": 2,
+    "attack": 5,
+    "health": 20,
+    "description": ""
+  },
+  {
+    "name": "岩浆圣教徒 | Battle Dancer",
+    "type": "龙",
+    "clan": "薪龙族",
+    "rarity": "高级 | Uncommon",
+    "cost": "2",
+    "effect": "[咒语]: 对所有敌方单位施加 [薪火熔胶] 1",
+    "flag-unit": true,
+    "size": 1,
+    "attack": 5,
+    "health": 10,
+    "description": ""
+  },
+  {
+    "name": "薪血龙 | Battle Dancer",
+    "type": "龙",
+    "clan": "薪龙族",
+    "rarity": "稀有 | Rare",
+    "cost": "2",
+    "effect": "[能力: 赋能]",
+    "flag-unit": true,
+    "size": 1,
+    "attack": 5,
+    "health": 10,
+    "description": ""
+  },
+  {
+    "name": "狂热者 | Battle Dancer",
+    "type": "龙",
+    "clan": "薪龙族",
+    "rarity": "稀有 | Rare",
+    "cost": "3",
+    "effect": "[横扫]. [行动]: 对所有敌方单位施加 [薪火熔胶] 5",
+    "flag-unit": true,
+    "size": 2,
+    "attack": 10,
+    "health": 20,
+    "description": ""
+  },
+];
+
+// 薪龙族 法术
+export const PYREBORNE_SPELLS = [
+  {
+    "name": "薪龙族脑钉 | Dragon Egg",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "高级 | Uncommon",
+    "cost": "X",
+    "effect": "[消耗]. 冷却缩短 X. 获得 2 X [贪婪]",
+    "description": ""
+  },
+  {
+    "name": "火星 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "普通 | Common",
+    "cost": "0",
+    "effect": "对于所有敌方单位造成 1 点伤害",
+    "description": ""
+  },
+  {
+    "name": "熔岩流 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "普通 | Common",
+    "cost": "0",
+    "effect": "[消耗]. 对所有敌方单位施加 [薪火熔胶] 4",
+    "description": ""
+  },
+  {
+    "name": "雇佣兵 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "稀有 | Rare",
+    "cost": "0",
+    "effect": "[消耗]. 抽取一张单位牌, 如果你有 30 [金币], 则将其花费并使之获得 [攻击力] 30, [贪婪] 15 和 [护甲] 15",
+    "description": ""
+  },
+  {
+    "name": "邪恶交易 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "稀有 | Rare",
+    "cost": "1",
+    "effect": "[消耗]. 获得 3 [龙族宝藏]. 你的薪火收到 10 点伤害",
+    "description": ""
+  },
+  {
+    "name": "煽风点火 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "effect": "[爆炸]. 随机对一个敌方单位造成 3 点伤害. [杀戮]: 永久增加 3 点伤害",
+    "description": ""
+  },
+  {
+    "name": "引火 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "普通 | Common",
+    "cost": "1",
+    "effect": "造成 1 点伤害, 然后施加 [薪火熔胶] 2",
+    "description": ""
+  },
+  {
+    "name": "贪婪 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "effect": "对所有单位造成 20 点伤害, [杀戮]: 获得 10 [金币]",
+    "description": ""
+  },
+  {
+    "name": "非等价交换 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "effect": "造成相当于 25 x [龙族宝藏] 点伤害, 然后失去 1 [龙族宝藏]",
+    "description": ""
+  },
+  {
+    "name": "燃烧经费 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "effect": "对所有敌方单位造成 5 点伤害, 花费 5 [金币] 并重复此效果最多 3 次",
+    "description": ""
+  },
+  {
+    "name": "薪火桶 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "普通 | Common",
+    "cost": "1",
+    "effect": "[消耗]. 施加 [薪火熔胶] 10",
+    "description": ""
+  },
+  {
+    "name": "薪火桶 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "普通 | Common",
+    "cost": "1",
+    "effect": "[消耗]. 施加 [薪火熔胶] 10",
+    "description": ""
+  },
+  {
+    "name": "合同之书 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "稀有 | Rare",
+    "cost": "1",
+    "effect": "[消耗]. 将一个单位的冷却时间缩短 1, 最短至 1",
+    "description": ""
+  },
+  {
+    "name": "点金手 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "普通 | Common",
+    "cost": "2",
+    "effect": "造成 5 点伤害. [杀戮]: 获得 1 [龙族宝藏]",
+    "description": ""
+  },
+  {
+    "name": "投资回报 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "高级 | Uncommon",
+    "cost": "2",
+    "effect": "[消耗]. 每有一个 [龙族宝藏] 就恢复 5 薪火生命值",
+    "description": ""
+  },
+  {
+    "name": "薪火球 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "普通 | Common",
+    "cost": "2",
+    "effect": "[爆炸]. 造成 20 点伤害",
+    "description": ""
+  },
+  {
+    "name": "炼金术 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "普通 | Common",
+    "cost": "3",
+    "effect": "[消耗]. 获得 2 [龙族宝藏]",
+    "description": ""
+  },
+  {
+    "name": "死亡咆哮 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "稀有 | Rare",
+    "cost": "3",
+    "effect": "将该层所有的 [薪火熔胶] 转移到一个单位, 然后造成 5 点伤害 5 次",
+    "description": ""
+  },
+  {
+    "name": "龙息 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "高级 | Uncommon",
+    "cost": "3",
+    "effect": "施加 [薪火熔胶] 10, 并对所有敌方单位造成 10 点伤害",
+    "description": ""
+  },
+  {
+    "name": "过热 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "稀有 | Rare",
+    "cost": "3",
+    "effect": "[消耗]. 使目标的 [薪火熔胶] 层数翻倍",
+    "description": ""
+  },
+  {
+    "name": "薪火爆发 | Pyreborne Glue",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "稀有 | Rare",
+    "cost": "4",
+    "effect": "[调和]. [爆炸]. 造成 150 点伤害",
+    "description": ""
+  },
+
+];
+
+// 薪龙族 装备
+export const PYREBORNE_EQUIPMENTS = [
+  {
+    "name": "熔岩护甲 | Imprisoned Zephyr",
+    "type": "装备",
+    "clan": "薪龙族",
+    "rarity": "普通 | Common",
+    "cost": "1",
+    "health": 10,
+    "effect": "[复仇]: 对攻击者施加 [薪火熔胶] 3",
+  },
+  {
+    "name": "思维牢笼 | Imprisoned Zephyr",
+    "type": "装备",
+    "clan": "薪龙族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "attack": 4,
+    "health": 4,
+    "effect": "[结算]: 冷却缩短 1",
+  },
+  {
+    "name": "被诅咒的龙杖 | Imprisoned Zephyr",
+    "type": "装备",
+    "clan": "薪龙族",
+    "rarity": "稀有 | Rare",
+    "cost": "2",
+    "attack": 5,
+    "effect": "[咒语]: 对所有敌方单位造成 1 点伤害",
+  },
+  {
+    "name": "熔魂者 | Imprisoned Zephyr",
+    "type": "装备",
+    "clan": "薪龙族",
+    "rarity": "高级 | Uncommon",
+    "cost": "3",
+    "attack": 10,
+    "effect": "[虹吸]: 获得 1 [灵魂]; [庆祝]: 每有 4 [灵魂] 获得 1 [龙族宝藏] 和 1 [金币]。每有 10 [灵魂] 获得 1 [龙族宝藏]",
+  },
+];
+// 薪龙族 房间
+export const PYREBORNE_ROOMS = [
+  {
+    "name": "地狱熔炉 | Imprisoned Zephyr",
+    "type": "房间",
+    "clan": "薪龙族",
+    "rarity": "稀有 | Rare",
+    "cost": "1",
+    "health": 10,
+    "effect": "当一个单位获得 [薪火熔胶] 时, 获得的层数 +3",
+  },
+  {
+    "name": "献祭室 | Imprisoned Zephyr",
+    "type": "房间",
+    "clan": "薪龙族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "attack": 4,
+    "health": 4,
+    "effect": "每当一个单位死亡时, 获得 [金币] 10",
+  },
+];
+
+// 薪龙族 神器
+export const PYREBORNE_ARTIFACTS = [
+  {
+    "name": "协调镣铐 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": false,
+    "effect": "[召唤] 幼龙时使所有友方单位冷却减少 1",
+  },
+  {
+    "name": "更大的宝箱 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": false,
+    "effect": "[龙族宝藏] 上限提高 3",
+  },
+  {
+    "name": "菲拉的地狱火 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": false,
+    "effect": "龙 [攻击] 时施加 [薪火熔胶] 5",
+  },
+  {
+    "name": "熔胶注射器 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": false,
+    "effect": "当任意单位死亡时, 其 [薪火熔胶] 会随机传播给其他敌方单位",
+  },
+  {
+    "name": "金手套 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": false,
+    "effect": "所有友方单位获得 [贪婪] 2",
+  },
+  {
+    "name": "地狱之心 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": false,
+    "effect": "对于进入薪火室下方楼层的敌人施加 [薪火熔胶] 10",
+  },
+  {
+    "name": "岩浆核心 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": false,
+    "effect": "你的薪火 [复仇] 时, 对所有层的敌方单位施加 [薪火熔胶] 2",
+  },
+  {
+    "name": "棱彩龙鳞 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": false,
+    "effect": "战斗结束时, 如果你的薪火没有收到伤害, 获得 3 [龙族宝藏]",
+  },
+  {
+    "name": "献祭波纹匕首 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": false,
+    "effect": "幼龙死亡时, 对所有敌方单位施加 [薪火熔胶] 5",
+  },
+  {
+    "name": "火花石催化剂 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": false,
+    "effect": "当一个没有 [薪火熔胶] 的单位获得 [薪火熔胶] 时, 获得的层数 +6",
+  },
+  {
+    "name": "挫志电荷 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": false,
+    "effect": "当使用一种能力后, 友方单位获得 [攻击力] 5",
+  },
+  {
+    "name": "余烬充能 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": true,
+    "effect": "在你的第一个回合, 获得 [余烬] 2",
+  },
+  {
+    "name": "菲拉之息 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": true,
+    "effect": "幼龙 [攻击] 时, 施加 [薪火熔胶] 3",
+  },
+  {
+    "name": "燃烧利爪 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": true,
+    "effect": "当一个敌方单位 [上升] 时, 施加 [薪火熔胶] 2",
+  },
+  {
+    "name": "地狱火风箱 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": true,
+    "effect": "当一个单位获得 [薪火熔胶] 时, 获得的层数 +1",
+  },
+  {
+    "name": "隐藏宝库 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": true,
+    "effect": "[龙族宝藏] 上限提高 2",
+  },
+  {
+    "name": "优越勋章 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": true,
+    "effect": "单位牌每拥有 1 项升级, 获得 [攻击力] 3 和 [生命值] 3",
+  },
+  {
+    "name": "薪龙徽记 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": true,
+    "effect": "为一个友方单位穿戴装备时, 施加 [导流] 4",
+  },
+  {
+    "name": "岩石外甲 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": true,
+    "effect": "当使用一种能力后, 使所有友方单位获得 [护甲] 3",
+  },
+  {
+    "name": "尖锐之牙 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": true,
+    "effect": "龙 和 幼龙 获得 [攻击力] 8",
+  },
+  {
+    "name": "嘶鸣烟花 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": true,
+    "effect": "法术牌每拥有一项升级, 增加 3 点伤害",
+  },
+  {
+    "name": "工头的鞭子 | Imprisoned Zephyr",
+    "type": "神器",
+    "clan": "薪龙族",
+    "is-dragons-hoard": true,
+    "effect": "你对自己的单位造成伤害时, 使冷却缩短 1",
+  },
+];

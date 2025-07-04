@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Web Page</title>
+  <link rel="stylesheet" href="csstyles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to My Web Page</h1>
+  </header>
+  <main>
+    <p>查询参数的值是: <span id="paramValue"></span></p>
+
+    <script>
+      // 获取 URL 中的查询参数
+      const urlParams = new URLSearchParams(window.location.search);
+      const qValue = urlParams.get('q');  // 获取参数 q 的值
+
+      // 查找页面中的元素并更新内容
+      const paramValueElement = document.getElementById('paramValue');
+      if (qValue) {
+        paramValueElement.textContent = qValue;  // 如果有参数 q，显示它的值
+      } else {
+        paramValueElement.textContent = "未提供查询参数";  // 如果没有 q 参数，显示提示
+      }
+    </script>
+    <footer>
+      <p>&copy; 2023 My Web Page</p>
+    </footer>
+
+</html>

@@ -1,0 +1,42 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
+
+/* 确保 html 和 body 高度为 100% */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 使用 Flexbox 使页面内容布局 */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  /* 占据剩余空间 */
+  background-color: #f4f4f4;
+  padding: auto;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////// */
+.grid {
+  margin: 20px;
+}
+/* ///////////////////////////////////////////////////////////////////////// */
