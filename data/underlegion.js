@@ -412,7 +412,7 @@ export const UNDERLEGION_EQUIPMENTS = [
   },
 ];
 // 地下菌团 房间
-export const LUNA_COVEN_ROOMS = [
+export const UNDERLEGION_ROOMS = [
   {
     "name": "生长室 | Imprisoned",
     "type": "房间",
@@ -436,5 +436,74 @@ export const LUNA_COVEN_ROOMS = [
     "rarity": "高级 | Uncommon",
     "cost": "1",
     "effect": "在战斗结束时, 对敌方单位施加 [弱化] 3",
+  },
+];
+// 地下菌团 神器
+export const UNDERLEGION__ARTIFACTS = [
+  {
+    "name": "远古之根 | Imprisoned",
+    "type": "神器",
+    "clan": "地下菌团",
+    "effect": "你的卡组每有 15 张牌, 每回合使用的第一张法术牌 [余烬] -1",
+  },
+  {
+    "name": "皮层连接头盔 | Imprisoned",
+    "type": "神器",
+    "clan": "地下菌团",
+    "effect": "在 [收割] 时, 蘑菇单位获得 [再生] 1",
+  },
+  {
+    "name": "不息之土 | Imprisoned",
+    "type": "神器",
+    "clan": "地下菌团",
+    "effect": "你的卡组每有 25 张牌, 每回合的抽卡数 +1",
+  },
+  {
+    "name": "进化本能 | Imprisoned",
+    "type": "神器",
+    "clan": "地下菌团",
+    "effect": "当一个单位受到第三种独特状态影响时, [散播] 2",
+  },
+  {
+    "name": "树液之泉 | Imprisoned",
+    "type": "神器",
+    "clan": "地下菌团",
+    "effect": "蘑菇单位在 [召唤] 时对敌方单位施加 [腐朽] 1",
+  },
+  {
+    "name": "蘑菇水培 | Imprisoned",
+    "type": "神器",
+    "clan": "地下菌团",
+    "effect": "回合开始时, 友方单位 [散播] 1",
+  },
+  {
+    "name": "斑点孢子 | Imprisoned",
+    "type": "神器",
+    "clan": "地下菌团",
+    "effect": "每层 [部队], [蘑菇人] 获得 [攻击力] 2",
+  },
+  {
+    "name": "双重思维 | Imprisoned",
+    "type": "神器",
+    "clan": "地下菌团",
+    "effect": "每场战斗打出的第一张 [消耗] 牌创建一张永久复制体",
+  },
+  {
+    "name": "扭曲的菌丝 | Imprisoned",
+    "type": "神器",
+    "clan": "地下菌团",
+    "effect": "回合开始时, 你的卡组每有 20 张牌, [生成] 1",
+  },
+  {
+    "name": "新生循环 | Imprisoned",
+    "type": "神器",
+    "clan": "地下菌团",
+    "effect": "每回合首次使用带有 [消耗] 的卡牌时, 抽 1 张牌",
+  },
+  {
+    "name": "终末菌株 | Imprisoned",
+    "type": "神器",
+    "clan": "地下菌团",
+    "effect": "当一个单位死于 [腐朽] 时, 将其减益效果施加于另一个随机敌方单位",
   },
 ];
