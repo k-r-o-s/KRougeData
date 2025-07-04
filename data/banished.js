@@ -205,7 +205,7 @@ export const BANISHED_SPELLS = [
     "clan": "流放者",
     "rarity": "稀有 | Rare",
     "cost": "X",
-    "effect": "[消耗]。获得 3 X [英勇]",
+    "effect": "[消耗]。获得 3 [X] [英勇]",
   },
   {
     "name": "维格之光 | Wyngh's Radiance",
@@ -213,7 +213,7 @@ export const BANISHED_SPELLS = [
     "clan": "流放者",
     "rarity": "稀有 | Rare",
     "cost": "X",
-    "effect": "[前进]。施加 X [近战易伤]",
+    "effect": "[前进]。施加 [X] [近战易伤]",
   },
   {
     "name": "挑战 | Challenge",
@@ -221,7 +221,7 @@ export const BANISHED_SPELLS = [
     "clan": "流放者",
     "rarity": "普通 | Common",
     "cost": "1",
-    "effect": "[前进]。施加 X [近战易伤]",
+    "effect": "[前进]。施加 [近战易伤] 1",
   },
   {
     "name": "英勇俯冲 | Imprisoned Zephyr",

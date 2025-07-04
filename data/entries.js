@@ -3,17 +3,17 @@ export const ENTRIES = [];
 export const ENTRIES1 = [
   {
     "name": "上升",
-    "type": "行为",
+    "type": "基础",
     "description": "向上移动一层，到达该层的后面",
   },
   {
     "name": "下降",
-    "type": "行为",
+    "type": "基础",
     "description": "向下移动一层，到达该层的后面",
   },
   {
     "name": "前进",
-    "type": "行为",
+    "type": "基础",
     "description": "移动到该层前方",
   },
   {
@@ -40,7 +40,7 @@ export const ENTRIES1 = [
   },
   {
     "name": "消耗",
-    "type": "行为",
+    "type": "基础",
     "description": "每场战斗只能使用一次",
   },
   {
@@ -90,7 +90,7 @@ export const ENTRIES1 = [
   },
   {
     "name": "后退",
-    "type": "行为",
+    "type": "基础",
     "description": "移动到该层后方",
   },
   {
@@ -173,7 +173,7 @@ export const ENTRIES1 = [
   },
   {
     "name": "牺牲",
-    "type": "行为",
+    "type": "基础",
     "description": "消灭一个友方单位",
   },
   {
@@ -190,12 +190,12 @@ export const ENTRIES1 = [
   },
   {
     "name": "爆炸",
-    "type": "行为",
+    "type": "基础",
     "description": "所有过量伤害会作用于所有敌方单位",
   },
   {
     "name": "调和",
-    "type": "行为",
+    "type": "基础",
     "description": "将魔法强度的效果乘以 5",
   },
   {
@@ -222,5 +222,154 @@ export const ENTRIES1 = [
     "name": "导流",
     "type": "增益",
     "description": "每层使本楼层的魔法强度 +1",
+  },
+  {
+    "name": "魔刃",
+    "type": "特性",
+    "description": "本楼层每有一点魔法强度, 获得 1 [攻击力]",
+  },
+  {
+    "name": "月相循环",
+    "type": "触发",
+    "description": "月相发生变化时触发",
+  },
+  {
+    "name": "短暂",
+    "type": "基础",
+    "description": "在打出, 舍弃或是回合结束时移除",
+  },
+  {
+    "name": "月相变化",
+    "type": "基础",
+    "description": "推进当前的月相, 有 新月 和 满月 两种月相. 战斗期间无法触发",
+  },
+  {
+    "name": "能力: 月相操控",
+    "type": "能力",
+    "冷却": 2,
+    "description": "[月相变化]",
+  },
+  {
+    "name": "新月",
+    "type": "触发",
+    "description": "仅在 [新月] 时生效",
+  },
+  {
+    "name": "满月",
+    "type": "触发",
+    "description": "仅在 [满月] 时生效",
+  },
+  {
+    "name": "潜行",
+    "type": "增益",
+    "description": "在战斗中无法被选定为目标, 每回合不断减少",
+  },
+  {
+    "name": "能力: 法术猛击",
+    "type": "能力",
+    "冷却": 3,
+    "description": "恢复所有生命值. 对所有敌方单位施加 [法术易伤]",
+  },
+  {
+    "name": "法术易伤",
+    "type": "减益",
+    "description": "此单位下次收到法术或能力攻击时, 每有一层 [法术易伤], 就额外承受一次同等伤害值",
+  },
+  {
+    "name": "能力: 织法",
+    "type": "能力",
+    "冷却": 2,
+    "description": "抽取一张法术, 并获得 [余烬] -1",
+  },
+  {
+    "name": "泰坦皮肤",
+    "type": "特性",
+    "description": "每层 [泰坦皮肤] 减免一点伤害",
+  },
+  {
+    "name": "亡语",
+    "type": "触发",
+    "description": "死亡时触发",
+  },
+  {
+    "name": "生成",
+    "type": "基础",
+    "description": "在该层前方召唤 [蘑菇人], 每召唤一个都会触发 [集结]",
+  },
+  {
+    "name": "再生",
+    "type": "增益",
+    "description": "回合结束时, 每有一层 [再生] 恢复 1 点生命值. 每回合不断减少",
+  },
+  {
+    "name": "腐朽",
+    "type": "减益",
+    "description": "回合结束时, 每有一层 [腐朽] 受到 3 点伤害. 每回合不断减少",
+  },
+  {
+    "name": "弱化",
+    "type": "减益",
+    "description": "每有一层 [弱化] 使得 [攻击力] -2. 每回合不断减少",
+  },
+  {
+    "name": "蚀刻",
+    "type": "触发",
+    "description": "在本层有卡牌被消耗时触发",
+  },
+  {
+    "name": "月之仪式",
+    "type": "添加卡牌",
+    "cost": "0",
+    "description": "[月相变化]. 使一个友方单位获得 [导流] 1",
+  },
+  {
+    "name": "蘑菇人",
+    "type": "召唤单位",
+    "size": "1",
+    "attack": 3,
+    "health": 4,
+    "description": "部队",
+  },
+  {
+    "name": "能力: 接住",
+    "type": "能力",
+    "冷却": 3,
+    "description": "随机将一张带有 [短暂] 的装备卡加入手牌, 并使其 [余烬] -1",
+  },
+  {
+    "name": "尖刺",
+    "type": "增益",
+    "description": "???????????????",
+  },
+  {
+    "name": "增益",
+    "type": "增益",
+    "description": "增益效果通常对目标有加成作用, 以绿色图标显示",
+  },
+    {
+    "name": "减益",
+    "type": "减益",
+    "description": "减益效果通常对目标有负面作用, 以红色图标显示",
+  },
+  {
+    "name": "X",
+    "type": "基础",
+    "description": "消耗当前所有剩余 [余烬], 效果会随着消耗 [余烬] 的数量增加而变强",
+  },
+  {
+    "name": "散播",
+    "type": "基础",
+    "description": "增加友方单位 [增益] 或敌方单位的 [减益] 的层数, [眩晕] 除外",
+  },
+      {
+    "name": "眩晕",
+    "type": "减益",
+    "description": "被 [眩晕] 的敌人无法攻击, 无法采取任何 [行动], 也无法采取任何 [结算] 技能",
+  },
+   {
+    "name": "能力: 生生不息",
+    "type": "能力",
+    "冷却": 1,
+    "description": "获得 [再生] 3, 施加 [弱化] 3",
   },
 ];

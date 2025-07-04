@@ -207,7 +207,7 @@ export const PYREBORNE_SPELLS = [
     "clan": "薪龙族",
     "rarity": "高级 | Uncommon",
     "cost": "X",
-    "effect": "[消耗]. 冷却缩短 X. 获得 2 X [贪婪]",
+    "effect": "[消耗]. 冷却缩短 [X]. 获得 2 [X] [贪婪]",
     "description": ""
   },
   {
@@ -441,7 +441,6 @@ export const PYREBORNE_ROOMS = [
     "clan": "薪龙族",
     "rarity": "稀有 | Rare",
     "cost": "1",
-    "health": 10,
     "effect": "当一个单位获得 [薪火熔胶] 时, 获得的层数 +3",
   },
   {
@@ -450,8 +449,6 @@ export const PYREBORNE_ROOMS = [
     "clan": "薪龙族",
     "rarity": "高级 | Uncommon",
     "cost": "1",
-    "attack": 4,
-    "health": 4,
     "effect": "每当一个单位死亡时, 获得 [金币] 10",
   },
 ];
