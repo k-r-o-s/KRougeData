@@ -24,8 +24,7 @@ export const PYREBORNE_HEROES = [
     "health": 20,
     "description": "菲尔是流放者中才华横溢且足智多谋的指挥官，她发誓要将天堂从她哥哥的暴政中解放出来。然而，她曾受的心伤能否痊愈，还是未知之数",
   },
-]
-
+];
 // 薪龙族 单位
 export const PYREBORNE_UNITS = [
   {
@@ -198,7 +197,6 @@ export const PYREBORNE_UNITS = [
     "description": ""
   },
 ];
-
 // 薪龙族 法术
 export const PYREBORNE_SPELLS = [
   {
@@ -392,7 +390,6 @@ export const PYREBORNE_SPELLS = [
   },
 
 ];
-
 // 薪龙族 装备
 export const PYREBORNE_EQUIPMENTS = [
   {
@@ -452,7 +449,6 @@ export const PYREBORNE_ROOMS = [
     "effect": "每当一个单位死亡时, 获得 [金币] 10",
   },
 ];
-
 // 薪龙族 神器
 export const PYREBORNE_ARTIFACTS = [
   {
