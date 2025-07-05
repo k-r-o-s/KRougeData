@@ -24,7 +24,7 @@
   </footer>
 
   <script type="module">
-    import { BANISHED_HEROES, BANISHED_UNITS, BANISHED_SPELLS, BANISHED_EQUIPMENTS, BANISHED_ROOMS } from "./banished.js"
+    import { BANISHED_CHAMPIONS, BANISHED_UNITS, BANISHED_SPELLS, BANISHED_EQUIPMENTS, BANISHED_ROOMS } from "./banished.js"
     import { ENTRIES } from "./entries.js"
 
     function checkEntitiesInData(dataArray, entityArray) {
@@ -54,7 +54,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      const data = [BANISHED_HEROES, BANISHED_UNITS, BANISHED_SPELLS, BANISHED_EQUIPMENTS, BANISHED_ROOMS,];
+      const data = [BANISHED_CHAMPIONS, BANISHED_UNITS, BANISHED_SPELLS, BANISHED_EQUIPMENTS, BANISHED_ROOMS,];
       document.getElementById("result").innerHTML = "<h2>未找到的词条数据: </h2>" + checkEntitiesInData(data, ENTRIES).map(entry => "<li>" + entry + "</li>").join("");
     });
   </script>

@@ -1,7 +1,7 @@
 /////////////// 冥卫 ///////////////
 
 // 冥卫 英雄
-export const STYGIAN_GUARD_HEROES = [
+export const STYGIAN_GUARD_CHAMPIONS = [
   {
     "name": "烈士索尔加德 | Fel",
     "type": "勇者",

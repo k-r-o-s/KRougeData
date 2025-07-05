@@ -1,7 +1,7 @@
 /////////////// 月巫团 ///////////////
 
 // 月巫团 英雄
-export const LUNA_COVEN_HEROES = [
+export const LUNA_COVEN_CHAMPIONS = [
   {
     "name": "艾卡 | Ekka",
     "type": "勇者",

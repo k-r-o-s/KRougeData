@@ -1,7 +1,7 @@
 /////////////// 无氏族 ///////////////
 
 // 无氏族 英雄
-export const CLANLESS_HEROES = [
+export const CLANLESS_CHAMPIONS = [
 ];
 // 无氏族 单位
 export const CLANLESS_UNITS = [

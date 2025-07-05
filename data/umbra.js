@@ -1,7 +1,7 @@
 /////////////// 影主 ///////////////
 
 // 影主 英雄
-export const UMBRA_HEROES = [
+export const UMBRA_CHAMPIONS = [
   {
     "name": "影祖 | Fel",
     "type": "勇者",

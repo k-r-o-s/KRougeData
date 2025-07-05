@@ -1,7 +1,7 @@
 /////////////// 熔尸 ///////////////
 
 // 熔尸 英雄
-export const MELTING_REMNANT_HEROES = [
+export const MELTING_REMNANT_CHAMPIONS = [
   {
     "name": "小菲德 | Fel",
     "type": "勇者",

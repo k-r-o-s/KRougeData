@@ -1,7 +1,7 @@
 /////////////// 薪龙族 ///////////////
 
 // 薪龙族 英雄
-export const PYREBORNE_HEROES = [
+export const PYREBORNE_CHAMPIONS = [
   {
     "name": "吉尔达女士 | Fel",
     "type": "勇者",

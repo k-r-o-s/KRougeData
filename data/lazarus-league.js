@@ -1,7 +1,7 @@
 /////////////// 拉撒路联盟 ///////////////
 
 // 拉撒路联盟 英雄
-export const LAZARUS_LEAGUE_HEROES = [
+export const LAZARUS_LEAGUE_CHAMPIONS = [
   {
     "name": "格雷尔男爵 | Fel",
     "type": "勇者",

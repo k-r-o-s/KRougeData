@@ -1,7 +1,7 @@
 /////////////// 觉者 ///////////////
 
 // 觉者 英雄
-export const AWOKEN_HEROES = [
+export const AWOKEN_CHAMPIONS = [
   {
     "name": "智者 | Fel",
     "type": "勇者",

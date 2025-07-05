@@ -1,7 +1,7 @@
 /////////////// 狱魔 ///////////////
 
 // 狱魔 英雄
-export const HELLHORNED_HEROES = [
+export const HELLHORNED_CHAMPIONS = [
   {
     "name": "断角王子 | Fel",
     "type": "勇者",

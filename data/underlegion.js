@@ -1,7 +1,7 @@
 /////////////// 地下菌团 ///////////////
 
 // 地下菌团 英雄
-export const UNDERLEGION_HEROES = [
+export const UNDERLEGION_CHAMPIONS = [
   {
     "name": "\"断头台\"纽甘君 | Ekka",
     "type": "勇者",
