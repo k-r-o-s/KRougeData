@@ -319,9 +319,6 @@ export const ENTRIES1 = [
   {
     "name": "月之仪式",
     "type": "添加卡牌",
-    "cost": "0",
-    "card-type": "法术",
-    "description": "[月相变化]. 使一个友方单位获得 [导流] 1",
   },
   {
     "name": "蘑菇人",
@@ -386,9 +383,6 @@ export const ENTRIES1 = [
   {
     "name": "但丁的蜡烛",
     "type": "添加卡牌",
-    "cost": "1",
-    "card-type": "祸患",
-    "description": "[无法移除]. [保存]: 你的薪火收到 3 点伤害",
   },
   {
     "name": "移除",
@@ -498,7 +492,7 @@ export const ENTRIES1 = [
     "type": "触发",
     "description": "该单位穿戴装备时触发",
   },
-    {
+  {
     "name": "尖刺皮肤",
     "type": "嫁接装备",
     "cost": "1",
@@ -506,7 +500,7 @@ export const ENTRIES1 = [
     "health": 10,
     "description": "[复仇]: 获得 [尖刺] 3",
   },
-    {
+  {
     "name": "吸血鬼之牙",
     "type": "嫁接装备",
     "cost": "1",
@@ -514,7 +508,7 @@ export const ENTRIES1 = [
     "health": 0,
     "description": "[吸血] 1. [结算]: 获得 [吸血] 1",
   },
-    {
+  {
     "name": "扭曲脊背",
     "type": "嫁接装备",
     "cost": "1",
@@ -522,30 +516,53 @@ export const ENTRIES1 = [
     "health": 0,
     "description": "[践踏]. [攻击]: 获得 [狂怒] 2",
   },
-    {
+  {
     "name": "复生",
     "type": "触发",
     "description": "当单位因为 [复活] 增益复活时触发",
   },
-    {
+  {
     "name": "吸血",
     "type": "增益",
     "description": "当带有 [吸血] 的单位攻击时, 将恢复等同于此次伤害的生命值. 层数随每次攻击不断减少",
   },
-     {
+  {
     "name": "不稳定",
     "type": "减益",
     "description": "每回合战斗结束时, 如果一个单位的生命值小或等于 [不稳定] 层数, 则该单位死亡并爆炸, 对本层所有敌人造成该单位 [不稳定] 层数点伤害",
   },
-   {
+  {
     "name": "调配",
     "type": "基础",
     "description": "如果手牌中没有 [注入物] 卡牌, 则生成一张 [注入物] 卡牌. 否则升级手牌中的 [注入物] 卡牌. 有 2 个随机选项可供选择",
   },
-    {
+  {
     "name": "能力: 调配",
     "type": "能力",
     "冷却": 3,
     "description": "[调配]",
+  },
+  {
+    "name": "复原",
+    "type": "触发",
+    "description": "被治疗时触发, 即使生命值为满也可以触发",
+  },
+  {
+    "name": "滋养",
+    "type": "基础",
+    "description": "为生命值最少的友方单位提供 [攻击力] 和 [生命值], 数值等于 [滋养] 层数",
+  },
+  {
+    "name": "蛰刺",
+    "type": "添加卡牌",
+  },
+  {
+    "name": "藤蔓纠缠",
+    "type": "添加卡牌",
+  },
+  {
+    "name": "缠绕",
+    "type": "减益",
+    "description": "单位下次尝试移动到其他层时, 该移动会被限制. 首领对缠绕免疫",
   },
 ];
