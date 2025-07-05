@@ -125,7 +125,7 @@ export const CLANLESS_SPELLS = [
 ]
 // 无氏族 装备
 export const CLANLESS_EQUIPMENTS = [
-   {
+  {
     "name": "均衡对戒 | Imprisoned",
     "type": "装备",
     "clan": "无氏族",
@@ -134,7 +134,7 @@ export const CLANLESS_EQUIPMENTS = [
     "health": 15,
     "effect": "该单位的 [攻击力] 等同于其最大生命值",
   },
-   {
+  {
     "name": "嗜血之刃 | Imprisoned",
     "type": "装备",
     "clan": "无氏族",
@@ -143,7 +143,7 @@ export const CLANLESS_EQUIPMENTS = [
     "attack": 4,
     "effect": "[杀戮]: 这件装备永久获得 [攻击力] 1",
   },
-   {
+  {
     "name": "玻璃大炮 | Imprisoned",
     "type": "装备",
     "clan": "无氏族",
@@ -152,7 +152,7 @@ export const CLANLESS_EQUIPMENTS = [
     "attack": 50,
     "effect": "[不堪一击]",
   },
-   {
+  {
     "name": "赫芙的铁锤 | Imprisoned",
     "type": "装备",
     "clan": "无氏族",
@@ -161,7 +161,7 @@ export const CLANLESS_EQUIPMENTS = [
     "attack": 20,
     "effect": "[杀戮]: 本层获得 [容量] 1",
   },
-   {
+  {
     "name": "肉盾 | Imprisoned",
     "type": "装备",
     "clan": "无氏族",
@@ -170,7 +170,7 @@ export const CLANLESS_EQUIPMENTS = [
     "health": 15,
     "effect": "[结算]: 恢复 10 点生命值",
   },
-   {
+  {
     "name": "残忍板甲 | Imprisoned",
     "type": "装备",
     "clan": "无氏族",
@@ -179,7 +179,7 @@ export const CLANLESS_EQUIPMENTS = [
     "health": 30,
     "effect": "[沉默]. [护甲] 60",
   },
-   {
+  {
     "name": "迅钢匕首 | Imprisoned",
     "type": "装备",
     "clan": "无氏族",
@@ -188,7 +188,7 @@ export const CLANLESS_EQUIPMENTS = [
     "attack": 15,
     "effect": "[迅捷]",
   },
-   {
+  {
     "name": "过度成长的甲壳 | Imprisoned",
     "type": "装备",
     "clan": "无氏族",
@@ -196,7 +196,7 @@ export const CLANLESS_EQUIPMENTS = [
     "cost": "2",
     "effect": "[结算]. 若有可用的 [容量], 则获得 [容量] 1, [攻击力] 20 和 [生命值] 20",
   },
-   {
+  {
     "name": "虚空武器 | Imprisoned",
     "type": "装备",
     "clan": "无氏族",
@@ -466,6 +466,160 @@ export const CLANLESS_ARTIFACTS = [
     "type": "神器",
     "clan": "无氏族",
     "effect": "在 [部署阶段] 后, 当本回合打出第三张牌时, 抽 1 张牌",
+  },
+  {
+    "name": "锅炉房模组 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "在战斗开始时, 对第一层施加 [锅炉房]",
+  },
+  {
+    "name": "白骨犬的吊坠 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "当薪火的生命值首次达到 0 时, 将薪火的生命值恢复 25%. 只能触发一次",
+  },
+  {
+    "name": "卡尼奥 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "在非战斗状态 [移除] 卡牌时, 获得 75 [金币]",
+  },
+  {
+    "name": "卡文迪什 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "非勇者单位获得 3 倍基础 [攻击力]. 每回合战斗结束时, 此神器有 1% 的几率被摧毁",
+  },
+  {
+    "name": "西科 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "每场战斗开始时首领获得 [沉默] 3",
+  },
+  {
+    "name": "但丁的烛台 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "薪火获得 [泰坦皮肤] 2",
+  },
+  {
+    "name": "神圣碎片 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "薪火获得 25 最大生命值",
+  },
+  {
+    "name": "搏击俱乐部模组 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "在战斗开始时, 对第三层施加 [搏击俱乐部]",
+  },
+  {
+    "name": "大麦克香蕉 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "非勇者单位获得 [攻击力] 10. 每回合战斗结束时, 此神器有 10% 的几率被摧毁",
+  },
+  {
+    "name": "史学家的剃刀 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "使所有友方单位获得 [攻击力] 10, 但每拥有一件非首领神器, [攻击力] -1",
+  },
+  {
+    "name": "K金捕捉器 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "整场战斗结束时, 获得 [金币] 100",
+  },
+  {
+    "name": "大号神秘箱 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "每回合在手牌中增加一张随机牌",
+  },
+  {
+    "name": "漏水笔 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "每回合 [余烬] -1, 每回合抽牌数 +2",
+  },
+  {
+    "name": "朦胧黑暗碎片 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "每当抽到一张祸患或者天灾牌, 获得 [余烬] 1 并抽取 1 张非祸患或天灾牌",
+  },
+  {
+    "name": "尼姆的誓言 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "在回合开始时, 对随机层的前排单位施加 [眩晕] 1",
+  },
+  {
+    "name": "帕奇欧 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "在战斗开始时, 获得 [钙化的余烬], 一回合后未使用会变成 [采掘的余烬]",
+  },
+  {
+    "name": "法术圣所模组 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "在战斗开始时, 对第二层施加 [法术圣所]",
+  },
+  {
+    "name": "墨漏 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "友方单位 [杀戮] 时获得 [导流] 1",
+  },
+  {
+    "name": "特里布莱 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "卡组中每有一张稀有牌, 友方单位获得 [生命值] 3",
+  },
+  {
+    "name": "不稳定的碎片 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "友方单位获得 [攻击力] 5 和 [生命值] 12",
+  },
+  {
+    "name": "沃洛的血书 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "所有友方单位获得 [攻击力] 12, 每回合对所有友方单位造成 1 点伤害",
+  },
+  {
+    "name": "约里克 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "celestial-alcove": true,
+    "effect": "使用一张带有 [消耗] 的卡牌时, 获得 25 [金币]",
   },
 ];
 // 无氏族 祸患
