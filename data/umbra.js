@@ -1,0 +1,577 @@
+/////////////// 影主 ///////////////
+
+// 影主 英雄
+export const UMBRA_HEROES = [
+  {
+    "name": "影祖 | Fel",
+    "type": "勇者",
+    "clan": "影主",
+    "cost": "0",
+    "effect": "",
+    "size": 3,
+    "attack": 20,
+    "health": 20,
+    "description": "",
+  },
+  {
+    "name": "原基 | Fel",
+    "type": "勇者",
+    "clan": "影主",
+    "cost": "0",
+    "effect": "[自助餐] 3. [被吞食]: 使被吞食者获得此单位的 [攻击力] 和 [生命值]",
+    "size": 2,
+    "attack": 3,
+    "health": 3,
+    "description": "",
+  },
+];
+// 影主 单位
+export const UMBRA_UNITS = [
+  {
+    "name": "影者影裔 | BattleDancer",
+    "type": "影裔",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "0",
+    "effect": "[被吞食]: 吞食者获得 [生命值] 9",
+    "banner-unit": false,
+    "size": 1,
+    "attack": 0,
+    "health": 9,
+    "description": ""
+  },
+  {
+    "name": "熔岩影裔 | BattleDancer",
+    "type": "影裔",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "0",
+    "effect": "[被吞食]: 吞食者获得 [攻击力] 9",
+    "banner-unit": false,
+    "size": 1,
+    "attack": 9,
+    "health": 1,
+    "description": ""
+  },
+  {
+    "name": "影裔采掘者 | BattleDancer",
+    "type": "影裔",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "0",
+    "effect": "[被吞食]: 吞食者获得 [攻击力] 6 和 [吸血] 1",
+    "banner-unit": false,
+    "size": 1,
+    "attack": 6,
+    "health": 1,
+    "description": ""
+  },
+  {
+    "name": "影裔宝石匠 | BattleDancer",
+    "type": "影裔",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "0",
+    "effect": "[被吞食]: 吞食者获得 [生命值] 6 和 [伤害护盾] 1",
+    "banner-unit": false,
+    "size": 1,
+    "attack": 0,
+    "health": 6,
+    "description": ""
+  },
+  {
+    "name": "影裔矿工 | BattleDancer",
+    "type": "影裔",
+    "clan": "影主",
+    "rarity": "稀有",
+    "cost": "0",
+    "effect": "[被吞食]: 吞食者获得 [攻击力] 9 和 [生命值] 9",
+    "banner-unit": false,
+    "size": 1,
+    "attack": 0,
+    "health": 1,
+    "description": ""
+  },
+  {
+    "name": "影裔清道夫 | BattleDancer",
+    "type": "影裔",
+    "clan": "影主",
+    "rarity": "普通",
+    "cost": "0",
+    "effect": "[被吞食]: 获得 [余烬] 1. 吞食者获得 [攻击力] 3 和 [生命值] 3",
+    "banner-unit": false,
+    "size": 1,
+    "attack": 0,
+    "health": 1,
+    "description": ""
+  },
+  {
+    "name": "合金构造体 | BattleDancer",
+    "type": "构装",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "1",
+    "effect": "[怠惰]. [多重攻击] 1. [暴食]: 获得 [燃料] 1",
+    "banner-unit": true,
+    "size": 2,
+    "attack": 25,
+    "health": 25,
+    "description": ""
+  },
+  {
+    "name": "熔炉收藏家 | BattleDancer",
+    "type": "雾影",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "1",
+    "effect": "[暴食]: 获得 [吸血] 1",
+    "banner-unit": true,
+    "size": 2,
+    "attack": 30,
+    "health": 20,
+    "description": ""
+  },
+  {
+    "name": "熔炉看守者 | BattleDancer",
+    "type": "雾影",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "1",
+    "effect": "[暴食]: 获得 [伤害护盾] 1",
+    "banner-unit": true,
+    "size": 2,
+    "attack": 20,
+    "health": 30,
+    "description": ""
+  },
+  {
+    "name": "余烬锻炉 | BattleDancer",
+    "type": "构装",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "1",
+    "effect": "每回合 +2 [余烬]",
+    "banner-unit": false,
+    "size": 2,
+    "attack": 0,
+    "health": 20,
+    "description": ""
+  },
+  {
+    "name": "影裔宿主 | BattleDancer",
+    "type": "雾影",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "1",
+    "effect": "你在本层 [召唤] 一个影裔单位时, 可产生一个复制品",
+    "banner-unit": true,
+    "size": 1,
+    "attack": 10,
+    "health": 10,
+    "description": ""
+  },
+   {
+    "name": "影裔造物 | BattleDancer",
+    "type": "构装",
+    "clan": "影主",
+    "rarity": "稀有",
+    "cost": "2",
+    "effect": "[饥饿]: 吞食带有 [被吞食] 的单位. [暴食]: 获得 [攻击力] 2 和 [生命值] 2",
+    "banner-unit": true,
+    "size": 2,
+    "attack": 5,
+    "health": 20,
+    "description": ""
+  },
+  {
+    "name": "影裔制造者 | BattleDancer",
+    "type": "雾影",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "2",
+    "effect": "[结算]: 召唤一个 [影者影裔] 和 [熔岩影裔]",
+    "banner-unit": true,
+    "size": 1,
+    "attack": 5,
+    "health": 15,
+    "description": ""
+  },
+  {
+    "name": "狂食者 | BattleDancer",
+    "type": "雾影",
+    "clan": "影主",
+    "rarity": "稀有",
+    "cost": "2",
+    "effect": "[暴食]: 永久获得 [攻击力] 2",
+    "banner-unit": true,
+    "size": 3,
+    "attack": 0,
+    "health": 25,
+    "description": ""
+  },
+  {
+    "name": "噬影者 | BattleDancer",
+    "type": "雾影",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "2",
+    "effect": "[暴食]: 恢复 10 点生命值, 对所有敌方造成 20 点伤害",
+    "banner-unit": false,
+    "size": 3,
+    "attack": 0,
+    "health": 50,
+    "description": ""
+  },
+     {
+    "name": "暗影破城傀儡 | BattleDancer",
+    "type": "构装",
+    "clan": "影主",
+    "rarity": "稀有",
+    "cost": "6",
+    "effect": "",
+    "banner-unit": true,
+    "size": 6,
+    "attack": 200,
+    "health": 150,
+    "description": ""
+  },
+];
+// 影主 法术
+export const UMBRA_SPELLS = [
+  {
+    "name": "永恒吞噬 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "稀有",
+    "cost": "X",
+    "effect": "对前排敌方单位造成 40 [X] 点伤害",
+    "description": ""
+  },
+  {
+    "name": "火焰激发 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "稀有",
+    "cost": "X",
+    "effect": "[消耗]. 获得 2 [X] [余烬]",
+    "description": ""
+  },
+  {
+    "name": "矿井塌方 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "普通",
+    "cost": "X",
+    "effect": "对一个敌方单位造成 3 [X] 点伤害. [杀戮]: 获得 [余烬] 2",
+    "description": ""
+  },
+  {
+    "name": "棱晶提取 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "X",
+    "effect": "[消耗]. 抽取 1 张单位牌并使其获得 5 [X] [攻击力] 和 [余烬] -[X]",
+    "description": ""
+  },
+  {
+    "name": "棱晶之尘 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "普通",
+    "cost": "X",
+    "effect": "[消耗]. 获得 1 [X] [伤害护盾]",
+    "description": ""
+  },
+  {
+    "name": "雾影脑钉 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "稀有",
+    "cost": "X",
+    "effect": "[消耗]. 触发一个友方影裔单位的进食效果 2 [X] 次",
+    "description": ""
+  },
+  {
+    "name": "盛宴 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "0",
+    "effect": "触发拥有 [被吞食] 单位的吞食效果",
+    "description": ""
+  },
+  {
+    "name": "不朽交易 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "普通",
+    "cost": "0",
+    "effect": "使一个单位获得 [吸血] 4, [余烬流失] 2",
+    "description": ""
+  },
+  {
+    "name": "瓶装影裔 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "普通",
+    "cost": "0",
+    "effect": "[消耗]. 将 3 个高级或稀有影裔单位加入你的手牌",
+    "description": ""
+  },
+  {
+    "name": "生产风险 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "普通",
+    "cost": "0",
+    "effect": "使一个友方单位获得 [狂怒] 3, [余烬流失] 2. 获得 3 [余烬]",
+    "description": ""
+  },
+  {
+    "name": "反胃 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "稀有",
+    "cost": "0",
+    "effect": "将被吞食的单位返回手牌",
+    "description": ""
+  },
+  {
+    "name": "空间棱晶 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "普通",
+    "cost": "0",
+    "effect": "[消耗]. 本层获得 +1 [容量]",
+    "description": ""
+  },
+  {
+    "name": "影者猛袭 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "普通",
+    "cost": "1",
+    "effect": "造成 5 点伤害. [杀戮]: 将 2 个高级或稀有影裔单位加入手牌",
+    "description": ""
+  },
+  {
+    "name": "自相残杀 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "1",
+    "effect": "[牺牲]. 将 3 个高级或稀有影裔单位加入手牌",
+    "description": ""
+  },
+  {
+    "name": "余烬贮藏 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "1",
+    "effect": "[消耗]. 将 3 张 [采掘的余烬] 加入弃牌堆",
+    "description": ""
+  },
+  {
+    "name": "引擎升级 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "1",
+    "effect": "[消耗]. 本层 -1 [容量], 每回合获得 +1 [余烬], 效果持续到本场战斗结束",
+    "description": ""
+  },
+  {
+    "name": "创造影裔 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "普通",
+    "cost": "1",
+    "effect": "将一个 [影裔矿工] 加入手牌",
+    "description": ""
+  },
+  {
+    "name": "随意射击 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "普通",
+    "cost": "1",
+    "effect": "随机对敌方单位造成 2 点伤害, 重复 2 次. [杀戮]: 将 1 个普通或高级影裔单位加入手牌",
+    "description": ""
+  },
+  {
+    "name": "暗影分裂 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "普通",
+    "cost": "1",
+    "effect": "将 1 个普通或高级影裔单位加入手牌",
+    "description": ""
+  },
+  {
+    "name": "雾影分裂 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "稀有",
+    "cost": "1",
+    "effect": "创建 3 个友方影裔单位的复制体",
+    "description": ""
+  },
+  {
+    "name": "虚空禁锢 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "1",
+    "effect": "获得 [伤害护盾] 2, [狂怒] 6 和 [余烬流失] 3",
+    "description": ""
+  },
+  {
+    "name": "洞窟崩塌 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "2",
+    "effect": "使所有单位 [下降]",
+    "description": ""
+  },
+  {
+    "name": "熔炉延展 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "2",
+    "effect": "本层获得 +1 [容量]",
+    "description": ""
+  },
+  {
+    "name": "能量窃取 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "稀有",
+    "cost": "2",
+    "effect": "[消耗]. 获得 [多重攻击] 1 和 [余烬流失] 4",
+    "description": ""
+  },
+  {
+    "name": "卑躬屈膝 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "3",
+    "effect": "获得 [伤害护盾] 1, 将 2 个高级或稀有影裔单位加入手牌",
+    "description": ""
+  },
+  {
+    "name": "影主之石 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "稀有",
+    "cost": "3",
+    "effect": "[消耗]. 获得 [践踏]",
+    "description": ""
+  },
+  {
+    "name": "灼热钢钉 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "稀有",
+    "cost": "3",
+    "effect": "[移除]. 对前排敌方单位造成 40 点伤害, 并将强化后的这张牌加入你的弃牌堆",
+    "description": ""
+  },
+  {
+    "name": "爆裂喷发 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "3",
+    "effect": "随机对一个敌方单位造成 25 点伤害, 重复 3 次. [杀戮]: 获得 2 [余烬]",
+    "description": ""
+  },
+  {
+    "name": "宝石秘库 | DragonEgg",
+    "type": "法术",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "3",
+    "effect": "使所有友方单位获得 [伤害护盾] 1. 将 3 个高级或稀有影裔单位加入手牌",
+    "description": ""
+  },
+];
+// 影主 装备
+export const UMBRA_EQUIPMENTS = [
+];
+// 影主 房间
+export const UMBRA_ROOMS = [
+];
+// 影主 神器
+export const UMBRA_ARTIFACTS = [
+  {
+    "name": "被遗弃的影者 | ImprisonedZephyr",
+    "type": "神器",
+    "clan": "影主",
+    "effect": "回合开始时, 将 1 个普通或高级影裔单位加入手牌",
+  },
+  {
+    "name": "宝石项链 | ImprisonedZephyr",
+    "type": "神器",
+    "clan": "影主",
+    "effect": "每回合首个被召唤的友方单位获得 [伤害护盾] 2",
+  },
+  {
+    "name": "纪念道钉 | ImprisonedZephyr",
+    "type": "神器",
+    "clan": "影主",
+    "effect": "战斗开始时, 每一层都会召唤 1 个 [影裔矿工]",
+  },
+  {
+    "name": "化石尖牙 | ImprisonedZephyr",
+    "type": "神器",
+    "clan": "影主",
+    "effect": "[暴食] 额外触发一次",
+  },
+  {
+    "name": "影祖面具 | ImprisonedZephyr",
+    "type": "神器",
+    "clan": "影主",
+    "effect": "每回合召唤影裔单位时, 抽 1 张牌",
+  },
+  {
+    "name": "矿用千斤顶 | ImprisonedZephyr",
+    "type": "神器",
+    "clan": "影主",
+    "effect": "中间层 +2 [容量]",
+  },
+  {
+    "name": "虚空精酿 | ImprisonedZephyr",
+    "type": "神器",
+    "clan": "影主",
+    "effect": "友方单位进入战斗时, 获得 [吸血] 2",
+  },
+  {
+    "name": "暗影灯 | ImprisonedZephyr",
+    "type": "神器",
+    "clan": "影主",
+    "effect": "每回合第一个敌方单位死亡时, 将 2 个影裔单位加入手牌",
+  },
+  {
+    "name": "投影箱 | ImprisonedZephyr",
+    "type": "神器",
+    "clan": "影主",
+    "effect": "当你在一场战斗召唤了第 20 个影裔单位时, 对所有层的所有单位造成 200 点伤害",
+  },
+  {
+    "name": "金牙 | ImprisonedZephyr",
+    "type": "神器",
+    "clan": "影主",
+    "effect": "当一个单位 [被吞食] 时, 对后排敌方单位造成 5 点伤害",
+  },
+  {
+    "name": "翼族技术 | ImprisonedZephyr",
+    "type": "神器",
+    "clan": "影主",
+    "effect": "影裔单位进入战斗时, 获得 [伤害护盾] 1",
+  },
+];

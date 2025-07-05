@@ -221,7 +221,7 @@ export const STYGIAN_GUARD_SPELLS = [
     "name": "能量虹吸 | DragonEgg",
     "type": "法术",
     "clan": "冥卫",
-    "rarity": "高级",
+    "rarity": "普通",
     "cost": "0",
     "effect": "对一个敌方单位施加 [法术易伤] 1",
     "description": ""
@@ -248,7 +248,7 @@ export const STYGIAN_GUARD_SPELLS = [
     "name": "保存 | DragonEgg",
     "type": "法术",
     "clan": "冥卫",
-    "rarity": "普通",
+    "rarity": "高级",
     "cost": "0",
     "effect": "[永冻]. [冻结] 一张手牌",
     "description": ""
@@ -257,7 +257,7 @@ export const STYGIAN_GUARD_SPELLS = [
     "name": "无名者之书 | DragonEgg",
     "type": "法术",
     "clan": "冥卫",
-    "rarity": "稀有",
+    "rarity": "高级",
     "cost": "0",
     "effect": "[永冻]. [消耗]. 对所有敌方单位施加 [沉默] 5",
     "description": ""
@@ -275,7 +275,7 @@ export const STYGIAN_GUARD_SPELLS = [
     "name": "力竭 | DragonEgg",
     "type": "法术",
     "clan": "冥卫",
-    "rarity": "普通",
+    "rarity": "高级",
     "cost": "1",
     "effect": "施加 [弱化] 3, 随机舍弃 1 张牌",
     "description": ""
@@ -284,7 +284,7 @@ export const STYGIAN_GUARD_SPELLS = [
     "name": "急速冰冻 | DragonEgg",
     "type": "法术",
     "clan": "冥卫",
-    "rarity": "高级",
+    "rarity": "普通",
     "cost": "1",
     "effect": "造成 3 点伤害, 施加 [霜冻] 8",
     "description": ""
@@ -302,7 +302,7 @@ export const STYGIAN_GUARD_SPELLS = [
     "name": "寒冰长枪 | DragonEgg",
     "type": "法术",
     "clan": "冥卫",
-    "rarity": "高级",
+    "rarity": "普通",
     "cost": "1",
     "effect": "对前排敌方单位造成 10 点伤害",
     "description": ""
@@ -311,7 +311,7 @@ export const STYGIAN_GUARD_SPELLS = [
     "name": "驾驭泰坦 | DragonEgg",
     "type": "法术",
     "clan": "冥卫",
-    "rarity": "普通",
+    "rarity": "稀有",
     "cost": "1",
     "effect": "使手牌中的所有法术获得 +10 [魔法强度]",
     "description": ""
@@ -320,7 +320,7 @@ export const STYGIAN_GUARD_SPELLS = [
     "name": "寒冰和薪火 | DragonEgg",
     "type": "法术",
     "clan": "冥卫",
-    "rarity": "普通",
+    "rarity": "稀有",
     "cost": "1",
     "effect": "[薪火相传]. [调和]. 对前排敌方单位造成 90 点伤害",
     "description": ""
@@ -329,7 +329,7 @@ export const STYGIAN_GUARD_SPELLS = [
     "name": "寒冰风暴 | DragonEgg",
     "type": "法术",
     "clan": "冥卫",
-    "rarity": "普通",
+    "rarity": "高级",
     "cost": "1",
     "effect": "随机对一个敌方单位造成 1 点伤害, 重复 5 次",
     "description": ""
@@ -338,7 +338,7 @@ export const STYGIAN_GUARD_SPELLS = [
     "name": "海妖之歌 | DragonEgg",
     "type": "法术",
     "clan": "冥卫",
-    "rarity": "高级",
+    "rarity": "稀有",
     "cost": "1",
     "effect": "[薪火相传]. 使所有敌方单位 [上升] 并施加 [眩晕] 3",
     "description": ""
@@ -365,7 +365,7 @@ export const STYGIAN_GUARD_SPELLS = [
     "name": "螺旋结晶 | DragonEgg",
     "type": "法术",
     "clan": "冥卫",
-    "rarity": "稀有",
+    "rarity": "普通",
     "cost": "2",
     "effect": "对前排敌方单位造成 35 点伤害, 重复 2 次",
     "description": ""
@@ -374,7 +374,7 @@ export const STYGIAN_GUARD_SPELLS = [
     "name": "远古协调 | DragonEgg",
     "type": "法术",
     "clan": "冥卫",
-    "rarity": "普通",
+    "rarity": "稀有",
     "cost": "3",
     "effect": "对前排敌方单位造成伤害, 数值相当于卡组中法术牌的 2 倍, 重复 3 次",
     "description": ""
@@ -383,7 +383,7 @@ export const STYGIAN_GUARD_SPELLS = [
     "name": "地穴建造器 | DragonEgg",
     "type": "法术",
     "clan": "冥卫",
-    "rarity": "稀有",
+    "rarity": "普通",
     "cost": "3",
     "effect": "[献祭]. [调和]. [后退] 前排敌方单位, 并造成 80 点伤害",
     "description": ""
@@ -410,7 +410,7 @@ export const STYGIAN_GUARD_SPELLS = [
     "name": "凝霜雕像 | DragonEgg",
     "type": "法术",
     "clan": "冥卫",
-    "rarity": "高级",
+    "rarity": "稀有",
     "cost": "3",
     "effect": "将本层所有的 [霜冻] 都转移到目标身上, 之后将 [霜冻] 层数加倍",
     "description": ""
@@ -419,7 +419,7 @@ export const STYGIAN_GUARD_SPELLS = [
     "name": "寒冰龙卷 | DragonEgg",
     "type": "法术",
     "clan": "冥卫",
-    "rarity": "普通",
+    "rarity": "高级",
     "cost": "3",
     "effect": "[永冻]. 随机对一个敌方单位造成 30 点伤害, 重复 3 次",
     "description": ""
