@@ -458,7 +458,7 @@ export const STYGIAN_GUARD_ARTIFACTS = [
     "name": "成立印记 | ImprisonedZephyr",
     "type": "神器",
     "clan": "冥卫",
-    "effect": "咒语额外触发一次",
+    "effect": "[咒语] 额外触发一次",
   },
   {
     "name": "冰柱碎片 | ImprisonedZephyr",
