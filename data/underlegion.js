@@ -439,7 +439,7 @@ export const UNDERLEGION_ROOMS = [
   },
 ];
 // 地下菌团 神器
-export const UNDERLEGION__ARTIFACTS = [
+export const UNDERLEGION_ARTIFACTS = [
   {
     "name": "远古之根 | Imprisoned",
     "type": "神器",

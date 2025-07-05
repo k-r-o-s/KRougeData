@@ -1,0 +1,564 @@
+/////////////// 无氏族 ///////////////
+
+// 无氏族 英雄
+export const CLANLESS_HEROES = [
+];
+// 无氏族 单位
+export const CLANLESS_UNITS = [
+  {
+    "name": "白骨犬 | Astrologer",
+    "type": "犬",
+    "clan": "无氏族",
+    "rarity": "稀有 | Rare",
+    "cost": "0",
+    "effect": "[庆祝]: 你的薪火永久获得 10 最大生命值",
+    "flag-unit": false,
+    "size": 1,
+    "attack": 8,
+    "health": 3,
+    "description": ""
+  },
+  {
+    "name": "追随者 | Astrologer",
+    "type": "圣教徒",
+    "clan": "无氏族",
+    "rarity": "普通 | Common",
+    "cost": "0",
+    "effect": "[多重攻击] 2",
+    "flag-unit": false,
+    "size": 1,
+    "attack": 3,
+    "health": 1,
+    "description": ""
+  },
+  {
+    "name": "玩偶盒 | Astrologer",
+    "type": "盒",
+    "clan": "无氏族",
+    "rarity": "高级 | Uncommon",
+    "cost": "0",
+    "effect": "[结算]: 召唤一个盒子里的单位",
+    "flag-unit": true,
+    "size": 1,
+    "attack": 0,
+    "health": 1,
+    "description": ""
+  },
+  {
+    "name": "盾牌乘务员 | Astrologer",
+    "type": "乘务员",
+    "clan": "无氏族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "effect": "",
+    "flag-unit": true,
+    "size": 3,
+    "attack": 8,
+    "health": 25,
+    "description": ""
+  },
+  {
+    "name": "长矛乘务员 | Astrologer",
+    "type": "乘务员",
+    "clan": "无氏族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "effect": "",
+    "flag-unit": true,
+    "size": 2,
+    "attack": 14,
+    "health": 5,
+    "description": ""
+  },
+  {
+    "name": "可靠的但丁 | Astrologer",
+    "type": "但丁",
+    "clan": "无氏族",
+    "rarity": "稀有 | Rare",
+    "cost": "2",
+    "effect": "[召唤]: 永久添加一张 [但丁的蜡烛] 到手牌. 卡组中每有一张祸患卡牌就获得 [多重攻击] 1",
+    "flag-unit": true,
+    "size": 2,
+    "attack": 3,
+    "health": 10,
+    "description": ""
+  },
+]
+// 无氏族 法术
+export const CLANLESS_SPELLS = [
+  {
+    "name": "采掘的余烬 | DragonEgg",
+    "type": "法术",
+    "clan": "无氏族",
+    "rarity": "普通 | Common",
+    "cost": "0",
+    "effect": "[消耗]. 获得 [余烬] 2, 抽 1 张牌",
+    "description": ""
+  },
+  {
+    "name": "小礼物盒 | DragonEgg",
+    "type": "法术",
+    "clan": "无氏族",
+    "rarity": "高级 | Uncommon",
+    "cost": "0",
+    "effect": "[消耗]. 将其中的 3 张法术牌放入手牌",
+    "description": ""
+  },
+  {
+    "name": "薪火之光 | DragonEgg",
+    "type": "法术",
+    "clan": "无氏族",
+    "rarity": "普通 | Common",
+    "cost": "1",
+    "effect": "[移除]. [短暂]. 薪火获得 [攻击力] 10 并立即发动攻击",
+    "description": ""
+  },
+  {
+    "name": "但丁的地狱 | DragonEgg",
+    "type": "法术",
+    "clan": "无氏族",
+    "rarity": "稀有 | Rare",
+    "cost": "2",
+    "effect": "[穿刺]. [消耗]. 对所有层的所有敌方单位造成伤害, 数值等于卡组中 [但丁的蜡烛] 卡牌数量的 10 倍",
+    "description": ""
+  },
+]
+// 无氏族 装备
+export const CLANLESS_EQUIPMENTS = [
+   {
+    "name": "均衡对戒 | Imprisoned",
+    "type": "装备",
+    "clan": "无氏族",
+    "rarity": "稀有 | Rare",
+    "cost": "0",
+    "health": 15,
+    "effect": "该单位的 [攻击力] 等同于其最大生命值",
+  },
+   {
+    "name": "嗜血之刃 | Imprisoned",
+    "type": "装备",
+    "clan": "无氏族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "attack": 4,
+    "effect": "[杀戮]: 这件装备永久获得 [攻击力] 1",
+  },
+   {
+    "name": "玻璃大炮 | Imprisoned",
+    "type": "装备",
+    "clan": "无氏族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "attack": 50,
+    "effect": "[不堪一击]",
+  },
+   {
+    "name": "赫芙的铁锤 | Imprisoned",
+    "type": "装备",
+    "clan": "无氏族",
+    "rarity": "稀有 | Rare",
+    "cost": "1",
+    "attack": 20,
+    "effect": "[杀戮]: 本层获得 [容量] 1",
+  },
+   {
+    "name": "肉盾 | Imprisoned",
+    "type": "装备",
+    "clan": "无氏族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "health": 15,
+    "effect": "[结算]: 恢复 10 点生命值",
+  },
+   {
+    "name": "残忍板甲 | Imprisoned",
+    "type": "装备",
+    "clan": "无氏族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "health": 30,
+    "effect": "[沉默]. [护甲] 60",
+  },
+   {
+    "name": "迅钢匕首 | Imprisoned",
+    "type": "装备",
+    "clan": "无氏族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "attack": 15,
+    "effect": "[迅捷]",
+  },
+   {
+    "name": "过度成长的甲壳 | Imprisoned",
+    "type": "装备",
+    "clan": "无氏族",
+    "rarity": "稀有 | Rare",
+    "cost": "2",
+    "effect": "[结算]. 若有可用的 [容量], 则获得 [容量] 1, [攻击力] 20 和 [生命值] 20",
+  },
+   {
+    "name": "虚空武器 | Imprisoned",
+    "type": "装备",
+    "clan": "无氏族",
+    "rarity": "稀有 | Rare",
+    "cost": "3",
+    "attack": 10,
+    "effect": "[多重攻击] 1. [亡语]: [移除] 此卡牌",
+  },
+];
+// 无氏族 房间
+export const CLANLESS_ROOMS = [
+  {
+    "name": "乘务员宿舍 | Imprisoned",
+    "type": "房间",
+    "clan": "无氏族",
+    "rarity": "高级 | Uncommon",
+    "cost": "0",
+    "effect": "获得 1 [容量]. 乘务员单位获得 [多重攻击] 1 和 [攻击力] 20",
+  },
+  {
+    "name": "锅炉房 | Imprisoned",
+    "type": "房间",
+    "clan": "无氏族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "effect": "每当一个单位死亡, 获得 [余烬] 1",
+  },
+  {
+    "name": "附魔室 | Imprisoned",
+    "type": "房间",
+    "clan": "无氏族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "effect": "+15 [魔法强度]",
+  },
+  {
+    "name": "搏击俱乐部 | Imprisoned",
+    "type": "房间",
+    "clan": "无氏族",
+    "rarity": "高级 | Uncommon",
+    "cost": "1",
+    "effect": "所有友方单位获得 [攻击力] 15",
+  },
+  {
+    "name": "镜廊 | Imprisoned",
+    "type": "房间",
+    "clan": "无氏族",
+    "rarity": "高级 | Uncommon",
+    "cost": "2",
+    "effect": "减少 2 [容量]. [召唤] 友方单位时将其复制",
+  },
+  {
+    "name": "地狱火房间 | Imprisoned",
+    "type": "房间",
+    "clan": "无氏族",
+    "rarity": "稀有 | Rare",
+    "cost": "2",
+    "effect": "每回合战斗开始时, 对所有单位造成 50 点伤害",
+  },
+  {
+    "name": "法术圣所 | Imprisoned",
+    "type": "房间",
+    "clan": "无氏族",
+    "rarity": "稀有 | Rare",
+    "cost": "3",
+    "effect": "法术 [余烬] -1",
+  },
+  {
+    "name": "沉默领域 | Imprisoned",
+    "type": "房间",
+    "clan": "无氏族",
+    "rarity": "稀有 | Rare",
+    "cost": "1",
+    "effect": "对所有敌方单位施加 [沉默]",
+  },
+];
+// 无氏族 神器
+export const CLANLESS_ARTIFACTS = [
+  {
+    "name": "远古薪火龙头 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "当你没有 [余烬] 时, 你可以花费等同于卡牌费用的薪火生命值来使用卡牌",
+  },
+  {
+    "name": "人造薪火石 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "+3 [部署阶段余烬]",
+  },
+  {
+    "name": "调和磨石 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "在 [部署阶段] 时, 从卡组抽一张装备卡, 并使其 [余烬] 为 0",
+  },
+  {
+    "name": "天堂之息 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "使进入火车的后排敌方单位 [前进]",
+  },
+  {
+    "name": "无常倒影 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "奖励卡包中的卡牌与战旗单位获得一项随机升级",
+  },
+  {
+    "name": "净化升水 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "当敌方单位进入火车时, 有 50% 的几率移除一名敌方单位身上所有的 [增益] 效果",
+  },
+  {
+    "name": "永恒之冠 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "在回合开始时, 恢复勇者的所有生命值",
+  },
+  {
+    "name": "但丁的脚凳 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "在 [部署阶段] 时, 从卡组中抽取一张房间卡, 并使其 [余烬] 为 0",
+  },
+  {
+    "name": "深林油 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "有装备的单位获得 [护甲] 10",
+  },
+  {
+    "name": "依莫特之书 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "每回合使用第一个法术时, 获得其一个 [短暂] 复制体",
+  },
+  {
+    "name": "金色神像 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "试炼 [金币] 奖励获得提高 50%",
+  },
+  {
+    "name": "会员印记 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "商店价格降低 25%",
+  },
+  {
+    "name": "陷阱楼梯 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "当敌方单位移动到其他楼层时, 使其受到 3 点 [穿刺] 伤害",
+  },
+  {
+    "name": "圣光石套 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "法术获得一个额外升级栏",
+  },
+  {
+    "name": "遗失行李 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "在 [部署阶段] 之后的回合, 抽牌直到有 10 张手牌",
+  },
+  {
+    "name": "多面镜 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "每场战斗打出的第一张房间卡会应用到所有楼层",
+  },
+  {
+    "name": "欧迪的图腾 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "每回合 +1 [余烬]. -3 [部署阶段余烬]",
+  },
+  {
+    "name": "受净化的灵魂碎片 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "未升级的单位牌 [余烬] -1",
+  },
+  {
+    "name": "薪火石外壳 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "单位获得一个额外升级栏",
+  },
+  {
+    "name": "阴影外套 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "友方单位在 [召唤] 和 [杀戮] 时获得 [潜行] 1. 每拥有一层 [潜行], [攻击力] +3",
+  },
+  {
+    "name": "破碎光环 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "氏族卡牌自选只提供稀有(紫色)卡牌",
+  },
+  {
+    "name": "罪人的药膏 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "祸患和天灾的 [余烬] 变为 0",
+  },
+  {
+    "name": "救援计划 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "[部署阶段] 后, 从卡组随机召唤一个单位到每个楼层",
+  },
+  {
+    "name": "残破铁砧 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "打出一张法术牌后, 该回合手牌费用更低的法术牌的 [余烬] 为 0",
+  },
+  {
+    "name": "毁约者的羽毛 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "使用带有 [消耗] 的卡牌时, 对敌方前排单位造成 30 点伤害",
+  },
+  {
+    "name": "不稳定的薪火火花 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "乘务员单位获得 [能力: 自爆]",
+  },
+  {
+    "name": "全能余烬法杖 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "当你在一回合打出三种不同类型的卡牌时, 抽 1 张牌并获得 [余烬] 1",
+  },
+  {
+    "name": "沃拉的音叉 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "初始卡牌的 [余烬] -1",
+  },
+  {
+    "name": "不稳定计数器 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "当你抽到一张非勇者卡牌时, 随机将这张牌的 [余烬] 变为 0 到 3 之间. 每回合抽牌数 +2",
+  },
+  {
+    "name": "流浪者的护符 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "每回合开始时, 如果友方单位是所在楼层的唯一单位时, 获得 [攻击力] 5 和 [生命值] 5",
+  },
+  {
+    "name": "翅膀残片 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "带有 [消耗] 效果的法术牌有 50% 几率在打出后放入弃牌堆",
+  },
+  {
+    "name": "翼族锻钢 | Imprisoned",
+    "type": "神器",
+    "clan": "无氏族",
+    "effect": "在 [部署阶段] 后, 当本回合打出第三张牌时, 抽 1 张牌",
+  },
+];
+// 无氏族 祸患
+export const CLANLESS_BANES = [
+  {
+    "name": "增殖 | DragonEgg",
+    "type": "祸患",
+    "clan": "无氏族",
+    "cost": "0",
+    "effect": "[无法使用]. [无法移除]",
+    "description": ""
+  },
+  {
+    "name": "但丁的蜡烛 | DragonEgg",
+    "type": "祸患",
+    "clan": "无氏族",
+    "cost": "1",
+    "effect": "[无法移除]. [保存]: 薪火收到 3 点伤害",
+    "description": ""
+  },
+  {
+    "name": "统御之眼 | DragonEgg",
+    "type": "祸患",
+    "clan": "无氏族",
+    "cost": "1",
+    "effect": "[无法移除]. 手牌中的非天灾非祸患卡牌 [余烬] +1",
+    "description": ""
+  },
+  {
+    "name": "野蛮束缚 | DragonEgg",
+    "type": "祸患",
+    "clan": "无氏族",
+    "cost": "1",
+    "effect": "[无法移除]. [可部署]. 手牌中的单位卡牌 [余烬] +1",
+    "description": ""
+  },
+  {
+    "name": "复仇碎片 | DragonEgg",
+    "type": "祸患",
+    "clan": "无氏族",
+    "cost": "1",
+    "effect": "[无法移除]. [保存]: 薪火收到 1 点伤害",
+    "description": ""
+  },
+  {
+    "name": "混乱水晶 | DragonEgg",
+    "type": "祸患",
+    "clan": "无氏族",
+    "cost": "2",
+    "effect": "[无法移除]. [保存]: 卡组中的法术卡牌 [余烬] +1",
+    "description": ""
+  },
+  {
+    "name": "钙化的余烬 | DragonEgg",
+    "type": "祸患",
+    "clan": "无氏族",
+    "cost": "3",
+    "effect": "[移除]",
+    "description": ""
+  },
+];
+// 无氏族 天灾
+export const CLANLESS_CATASTROPHES = [
+  {
+    "name": "混乱泰坦的诅咒 | DragonEgg",
+    "type": "天灾",
+    "clan": "无氏族",
+    "cost": "0",
+    "effect": "[短暂]. 对所有层的友方单位施加 [弱化] 4. [保存]: 薪火收到 3 点伤害",
+    "description": ""
+  },
+  {
+    "name": "绝望的钟声 | DragonEgg",
+    "type": "天灾",
+    "clan": "无氏族",
+    "cost": "1",
+    "effect": "[移除]",
+    "description": ""
+  },
+  {
+    "name": "不谐钟声  | DragonEgg",
+    "type": "天灾",
+    "clan": "无氏族",
+    "cost": "1",
+    "effect": "[移除]. [保存]: 薪火收到 3 点伤害",
+    "description": ""
+  },
+  {
+    "name": "毁灭的回响 | DragonEgg",
+    "type": "天灾",
+    "clan": "无氏族",
+    "cost": "1",
+    "effect": "[移除]. [保存]: 薪火收到 5 点伤害",
+    "description": ""
+  },
+];
