@@ -6,7 +6,7 @@ export const CLANLESS_CHAMPIONS = [
 // 无氏族 单位
 export const CLANLESS_UNITS = [
   {
-    "name": "白骨犬 | Astrologer",
+    "name": "白骨犬 | Bone Dog",
     "type": "犬",
     "clan": "无氏族",
     "rarity": "稀有",
@@ -19,7 +19,7 @@ export const CLANLESS_UNITS = [
     "description": ""
   },
   {
-    "name": "追随者 | Astrologer",
+    "name": "追随者 | Follower",
     "type": "圣教徒",
     "clan": "无氏族",
     "rarity": "普通",
@@ -32,7 +32,7 @@ export const CLANLESS_UNITS = [
     "description": ""
   },
   {
-    "name": "玩偶盒 | Astrologer",
+    "name": "玩偶盒 | Jack in the Box",
     "type": "盒",
     "clan": "无氏族",
     "rarity": "高级",
@@ -45,7 +45,7 @@ export const CLANLESS_UNITS = [
     "description": ""
   },
   {
-    "name": "盾牌乘务员 | Astrologer",
+    "name": "盾牌乘务员 | Shield Steward",
     "type": "乘务员",
     "clan": "无氏族",
     "rarity": "普通",
@@ -58,7 +58,7 @@ export const CLANLESS_UNITS = [
     "description": ""
   },
   {
-    "name": "长矛乘务员 | Astrologer",
+    "name": "长矛乘务员 | Spear steward",
     "type": "乘务员",
     "clan": "无氏族",
     "rarity": "普通",
@@ -71,7 +71,7 @@ export const CLANLESS_UNITS = [
     "description": ""
   },
   {
-    "name": "可靠的但丁 | Astrologer",
+    "name": "可靠的但丁 | Dante the Dependable",
     "type": "但丁",
     "clan": "无氏族",
     "rarity": "稀有",
@@ -87,7 +87,7 @@ export const CLANLESS_UNITS = [
 // 无氏族 法术
 export const CLANLESS_SPELLS = [
   {
-    "name": "采掘的余烬 | DragonEgg",
+    "name": "采掘的余烬 | Excavated Ember",
     "type": "法术",
     "clan": "无氏族",
     "rarity": "普通",
@@ -96,7 +96,7 @@ export const CLANLESS_SPELLS = [
     "description": ""
   },
   {
-    "name": "小礼物盒 | DragonEgg",
+    "name": "小礼物盒 | Small Gift Box",
     "type": "法术",
     "clan": "无氏族",
     "rarity": "高级",
@@ -105,7 +105,7 @@ export const CLANLESS_SPELLS = [
     "description": ""
   },
   {
-    "name": "薪火之光 | DragonEgg",
+    "name": "薪火之光 | Pyre Light",
     "type": "法术",
     "clan": "无氏族",
     "rarity": "普通",
@@ -114,7 +114,7 @@ export const CLANLESS_SPELLS = [
     "description": ""
   },
   {
-    "name": "但丁的地狱 | DragonEgg",
+    "name": "但丁的地狱 | Dante's Inferno",
     "type": "法术",
     "clan": "无氏族",
     "rarity": "稀有",
@@ -126,7 +126,7 @@ export const CLANLESS_SPELLS = [
 // 无氏族 装备
 export const CLANLESS_EQUIPMENTS = [
   {
-    "name": "均衡对戒 | Imprisoned",
+    "name": "均衡对戒 | Equalizing Rings",
     "type": "装备",
     "clan": "无氏族",
     "rarity": "稀有",
@@ -135,7 +135,7 @@ export const CLANLESS_EQUIPMENTS = [
     "effect": "该单位的 [攻击力] 等同于其最大生命值",
   },
   {
-    "name": "嗜血之刃 | Imprisoned",
+    "name": "嗜血之刃 | Bloodthirsty Blade",
     "type": "装备",
     "clan": "无氏族",
     "rarity": "高级",
@@ -144,7 +144,7 @@ export const CLANLESS_EQUIPMENTS = [
     "effect": "[杀戮]: 这件装备永久获得 [攻击力] 1",
   },
   {
-    "name": "玻璃大炮 | Imprisoned",
+    "name": "玻璃大炮 | Glass Cannon",
     "type": "装备",
     "clan": "无氏族",
     "rarity": "高级",
@@ -153,7 +153,7 @@ export const CLANLESS_EQUIPMENTS = [
     "effect": "[不堪一击]",
   },
   {
-    "name": "赫芙的铁锤 | Imprisoned",
+    "name": "赫芙的铁锤 | Heph's Hammer",
     "type": "装备",
     "clan": "无氏族",
     "rarity": "稀有",
@@ -162,7 +162,7 @@ export const CLANLESS_EQUIPMENTS = [
     "effect": "[杀戮]: 本层获得 [容量] 1",
   },
   {
-    "name": "肉盾 | Imprisoned",
+    "name": "肉盾 | Meat Shield",
     "type": "装备",
     "clan": "无氏族",
     "rarity": "高级",
@@ -171,7 +171,7 @@ export const CLANLESS_EQUIPMENTS = [
     "effect": "[结算]: 恢复 10 点生命值",
   },
   {
-    "name": "残忍板甲 | Imprisoned",
+    "name": "残忍板甲 | Stoic Platemail",
     "type": "装备",
     "clan": "无氏族",
     "rarity": "高级",
@@ -180,7 +180,7 @@ export const CLANLESS_EQUIPMENTS = [
     "effect": "[沉默]. [护甲] 60",
   },
   {
-    "name": "迅钢匕首 | Imprisoned",
+    "name": "迅钢匕首 | Swiftsteel Dagger",
     "type": "装备",
     "clan": "无氏族",
     "rarity": "高级",
@@ -189,7 +189,7 @@ export const CLANLESS_EQUIPMENTS = [
     "effect": "[迅捷]",
   },
   {
-    "name": "过度成长的甲壳 | Imprisoned",
+    "name": "过度成长的甲壳 | Overgrowth Carapace",
     "type": "装备",
     "clan": "无氏族",
     "rarity": "稀有",
@@ -197,7 +197,7 @@ export const CLANLESS_EQUIPMENTS = [
     "effect": "[结算]. 若有可用的 [容量], 则获得 [容量] 1, [攻击力] 20 和 [生命值] 20",
   },
   {
-    "name": "虚空武器 | Imprisoned",
+    "name": "虚空武器 | Void Armament",
     "type": "装备",
     "clan": "无氏族",
     "rarity": "稀有",
@@ -209,7 +209,7 @@ export const CLANLESS_EQUIPMENTS = [
 // 无氏族 房间
 export const CLANLESS_ROOMS = [
   {
-    "name": "乘务员宿舍 | Imprisoned",
+    "name": "乘务员宿舍 | Steward's Quarters",
     "type": "房间",
     "clan": "无氏族",
     "rarity": "高级",
@@ -217,7 +217,7 @@ export const CLANLESS_ROOMS = [
     "effect": "获得 1 [容量]. 乘务员单位获得 [多重攻击] 1 和 [攻击力] 20",
   },
   {
-    "name": "锅炉房 | Imprisoned",
+    "name": "锅炉房 | BoilerRoom",
     "type": "房间",
     "clan": "无氏族",
     "rarity": "高级",
@@ -225,7 +225,7 @@ export const CLANLESS_ROOMS = [
     "effect": "每当一个单位死亡, 获得 [余烬] 1",
   },
   {
-    "name": "附魔室 | Imprisoned",
+    "name": "附魔室 | Enchanted Chamber",
     "type": "房间",
     "clan": "无氏族",
     "rarity": "高级",
@@ -233,7 +233,7 @@ export const CLANLESS_ROOMS = [
     "effect": "+15 [魔法强度]",
   },
   {
-    "name": "搏击俱乐部 | Imprisoned",
+    "name": "搏击俱乐部 | Fight Club",
     "type": "房间",
     "clan": "无氏族",
     "rarity": "高级",
@@ -241,7 +241,7 @@ export const CLANLESS_ROOMS = [
     "effect": "所有友方单位获得 [攻击力] 15",
   },
   {
-    "name": "镜廊 | Imprisoned",
+    "name": "镜廊 | Hall of Mirrors",
     "type": "房间",
     "clan": "无氏族",
     "rarity": "高级",
@@ -249,7 +249,7 @@ export const CLANLESS_ROOMS = [
     "effect": "减少 2 [容量]. [召唤] 友方单位时将其复制",
   },
   {
-    "name": "地狱火房间 | Imprisoned",
+    "name": "地狱火房间 | Inferno Room",
     "type": "房间",
     "clan": "无氏族",
     "rarity": "稀有",
@@ -257,7 +257,7 @@ export const CLANLESS_ROOMS = [
     "effect": "每回合战斗开始时, 对所有单位造成 50 点伤害",
   },
   {
-    "name": "法术圣所 | Imprisoned",
+    "name": "法术圣所 | Spell Sanctum",
     "type": "房间",
     "clan": "无氏族",
     "rarity": "稀有",
@@ -265,7 +265,7 @@ export const CLANLESS_ROOMS = [
     "effect": "法术 [余烬] -1",
   },
   {
-    "name": "沉默领域 | Imprisoned",
+    "name": "沉默领域 | Zoneof Silence",
     "type": "房间",
     "clan": "无氏族",
     "rarity": "稀有",
@@ -276,346 +276,346 @@ export const CLANLESS_ROOMS = [
 // 无氏族 神器
 export const CLANLESS_ARTIFACTS = [
   {
-    "name": "远古薪火龙头 | Imprisoned",
+    "name": "远古薪火龙头 | Ancient Pyretap",
     "type": "神器",
     "clan": "无氏族",
     "effect": "当你没有 [余烬] 时, 你可以花费等同于卡牌费用的薪火生命值来使用卡牌",
   },
   {
-    "name": "人造薪火石 | Imprisoned",
+    "name": "人造薪火石 | Artificial Pyrestone",
     "type": "神器",
     "clan": "无氏族",
     "effect": "+3 [部署阶段余烬]",
   },
   {
-    "name": "调和磨石 | Imprisoned",
+    "name": "调和磨石 | Attuned Whetstone",
     "type": "神器",
     "clan": "无氏族",
     "effect": "在 [部署阶段] 时, 从卡组抽一张装备卡, 并使其 [余烬] 为 0",
   },
   {
-    "name": "天堂之息 | Imprisoned",
+    "name": "天堂之息 | Breath of Heaven",
     "type": "神器",
     "clan": "无氏族",
     "effect": "使进入火车的后排敌方单位 [前进]",
   },
   {
-    "name": "无常倒影 | Imprisoned",
+    "name": "无常倒影 | Capricious Reflection",
     "type": "神器",
     "clan": "无氏族",
     "effect": "奖励卡包中的卡牌与战旗单位获得一项随机升级",
   },
   {
-    "name": "净化升水 | Imprisoned",
+    "name": "净化升水 | Cleansing Water",
     "type": "神器",
     "clan": "无氏族",
     "effect": "当敌方单位进入火车时, 有 50% 的几率移除一名敌方单位身上所有的 [增益] 效果",
   },
   {
-    "name": "永恒之冠 | Imprisoned",
+    "name": "永恒之冠 | Crown of the Eternal",
     "type": "神器",
     "clan": "无氏族",
     "effect": "在回合开始时, 恢复勇者的所有生命值",
   },
   {
-    "name": "但丁的脚凳 | Imprisoned",
+    "name": "但丁的脚凳 | Dante's Footstool",
     "type": "神器",
     "clan": "无氏族",
     "effect": "在 [部署阶段] 时, 从卡组中抽取一张房间卡, 并使其 [余烬] 为 0",
   },
   {
-    "name": "深林油 | Imprisoned",
+    "name": "深林油 | Deepwood Oil",
     "type": "神器",
     "clan": "无氏族",
     "effect": "有装备的单位获得 [护甲] 10",
   },
   {
-    "name": "依莫特之书 | Imprisoned",
+    "name": "依莫特之书 | Emot Tome",
     "type": "神器",
     "clan": "无氏族",
     "effect": "每回合使用第一个法术时, 获得其一个 [短暂] 复制体",
   },
   {
-    "name": "金色神像 | Imprisoned",
+    "name": "金色神像 | Golden Idol",
     "type": "神器",
     "clan": "无氏族",
     "effect": "试炼 [金币] 奖励获得提高 50%",
   },
   {
-    "name": "会员印记 | Imprisoned",
+    "name": "会员印记 | Guild Maker",
     "type": "神器",
     "clan": "无氏族",
     "effect": "商店价格降低 25%",
   },
   {
-    "name": "陷阱楼梯 | Imprisoned",
+    "name": "陷阱楼梯 | Jackstrips",
     "type": "神器",
     "clan": "无氏族",
     "effect": "当敌方单位移动到其他楼层时, 使其受到 3 点 [穿刺] 伤害",
   },
   {
-    "name": "圣光石套 | Imprisoned",
+    "name": "圣光石套 | Lightstone Casing",
     "type": "神器",
     "clan": "无氏族",
     "effect": "法术获得一个额外升级栏",
   },
   {
-    "name": "遗失行李 | Imprisoned",
+    "name": "遗失行李 | Lost Luggage",
     "type": "神器",
     "clan": "无氏族",
     "effect": "在 [部署阶段] 之后的回合, 抽牌直到有 10 张手牌",
   },
   {
-    "name": "多面镜 | Imprisoned",
+    "name": "多面镜 | Manifold Mirror",
     "type": "神器",
     "clan": "无氏族",
     "effect": "每场战斗打出的第一张房间卡会应用到所有楼层",
   },
   {
-    "name": "欧迪的图腾 | Imprisoned",
+    "name": "欧迪的图腾 | Odi's Totem",
     "type": "神器",
     "clan": "无氏族",
     "effect": "每回合 +1 [余烬]. -3 [部署阶段余烬]",
   },
   {
-    "name": "受净化的灵魂碎片 | Imprisoned",
+    "name": "受净化的灵魂碎片 | Purified Soul Shard",
     "type": "神器",
     "clan": "无氏族",
     "effect": "未升级的单位牌 [余烬] -1",
   },
   {
-    "name": "薪火石外壳 | Imprisoned",
+    "name": "薪火石外壳 | Pyrestone housing",
     "type": "神器",
     "clan": "无氏族",
     "effect": "单位获得一个额外升级栏",
   },
   {
-    "name": "阴影外套 | Imprisoned",
+    "name": "阴影外套 | Shadow's Sheath",
     "type": "神器",
     "clan": "无氏族",
     "effect": "友方单位在 [召唤] 和 [杀戮] 时获得 [潜行] 1. 每拥有一层 [潜行], [攻击力] +3",
   },
   {
-    "name": "破碎光环 | Imprisoned",
+    "name": "破碎光环 | Shattered Halo",
     "type": "神器",
     "clan": "无氏族",
     "effect": "氏族卡牌自选只提供稀有(紫色)卡牌",
   },
   {
-    "name": "罪人的药膏 | Imprisoned",
+    "name": "罪人的药膏 | Sinner's Salve",
     "type": "神器",
     "clan": "无氏族",
     "effect": "祸患和天灾的 [余烬] 变为 0",
   },
   {
-    "name": "救援计划 | Imprisoned",
+    "name": "救援计划 | Sketches of Salvation",
     "type": "神器",
     "clan": "无氏族",
     "effect": "[部署阶段] 后, 从卡组随机召唤一个单位到每个楼层",
   },
   {
-    "name": "残破铁砧 | Imprisoned",
+    "name": "残破铁砧 | Split Anvil",
     "type": "神器",
     "clan": "无氏族",
     "effect": "打出一张法术牌后, 该回合手牌费用更低的法术牌的 [余烬] 为 0",
   },
   {
-    "name": "毁约者的羽毛 | Imprisoned",
+    "name": "毁约者的羽毛 | Traitor's Quill",
     "type": "神器",
     "clan": "无氏族",
     "effect": "使用带有 [消耗] 的卡牌时, 对敌方前排单位造成 30 点伤害",
   },
   {
-    "name": "不稳定的薪火火花 | Imprisoned",
+    "name": "不稳定的薪火火花 | Unstable Pyresparks",
     "type": "神器",
     "clan": "无氏族",
     "effect": "乘务员单位获得 [能力: 自爆]",
   },
   {
-    "name": "全能余烬法杖 | Imprisoned",
+    "name": "全能余烬法杖 | Versatile Emberstaff",
     "type": "神器",
     "clan": "无氏族",
     "effect": "当你在一回合打出三种不同类型的卡牌时, 抽 1 张牌并获得 [余烬] 1",
   },
   {
-    "name": "沃拉的音叉 | Imprisoned",
+    "name": "沃拉的音叉 | Vola's Tuning Fork",
     "type": "神器",
     "clan": "无氏族",
     "effect": "初始卡牌的 [余烬] -1",
   },
   {
-    "name": "不稳定计数器 | Imprisoned",
+    "name": "不稳定计数器 | Volatile Gauge",
     "type": "神器",
     "clan": "无氏族",
     "effect": "当你抽到一张非勇者卡牌时, 随机将这张牌的 [余烬] 变为 0 到 3 之间. 每回合抽牌数 +2",
   },
   {
-    "name": "流浪者的护符 | Imprisoned",
+    "name": "流浪者的护符 | Wanderer's Tailsman",
     "type": "神器",
     "clan": "无氏族",
     "effect": "每回合开始时, 如果友方单位是所在楼层的唯一单位时, 获得 [攻击力] 5 和 [生命值] 5",
   },
   {
-    "name": "翅膀残片 | Imprisoned",
+    "name": "翅膀残片 | Wing Clippings",
     "type": "神器",
     "clan": "无氏族",
     "effect": "带有 [消耗] 效果的法术牌有 50% 几率在打出后放入弃牌堆",
   },
   {
-    "name": "翼族锻钢 | Imprisoned",
+    "name": "翼族锻钢 | Winged Steel",
     "type": "神器",
     "clan": "无氏族",
     "effect": "在 [部署阶段] 后, 当本回合打出第三张牌时, 抽 1 张牌",
   },
   {
-    "name": "锅炉房模组 | Imprisoned",
+    "name": "锅炉房模组 | Boiler Room Mod",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "在战斗开始时, 对第一层施加 [锅炉房]",
   },
   {
-    "name": "白骨犬的吊坠 | Imprisoned",
+    "name": "白骨犬的吊坠 | Bone Dog's Pendant",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "当薪火的生命值首次达到 0 时, 将薪火的生命值恢复 25%. 只能触发一次",
   },
   {
-    "name": "卡尼奥 | Imprisoned",
+    "name": "卡尼奥 | Canio",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "在非战斗状态 [移除] 卡牌时, 获得 75 [金币]",
   },
   {
-    "name": "卡文迪什 | Imprisoned",
+    "name": "卡文迪什 | Cavendish",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "非勇者单位获得 3 倍基础 [攻击力]. 每回合战斗结束时, 此神器有 1% 的几率被摧毁",
   },
   {
-    "name": "西科 | Imprisoned",
+    "name": "西科 | Chicot",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "每场战斗开始时首领获得 [沉默] 3",
   },
   {
-    "name": "但丁的烛台 | Imprisoned",
+    "name": "但丁的烛台 | Dante's Candelabra",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "薪火获得 [泰坦皮肤] 2",
   },
   {
-    "name": "神圣碎片 | Imprisoned",
+    "name": "神圣碎片 | Divine Shard",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "薪火获得 25 最大生命值",
   },
   {
-    "name": "搏击俱乐部模组 | Imprisoned",
+    "name": "搏击俱乐部模组 | Fight Club Mod",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "在战斗开始时, 对第三层施加 [搏击俱乐部]",
   },
   {
-    "name": "大麦克香蕉 | Imprisoned",
+    "name": "大麦克香蕉 | Gros Michel",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "非勇者单位获得 [攻击力] 10. 每回合战斗结束时, 此神器有 10% 的几率被摧毁",
   },
   {
-    "name": "史学家的剃刀 | Imprisoned",
+    "name": "史学家的剃刀 | Historian's Razor",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "使所有友方单位获得 [攻击力] 10, 但每拥有一件非首领神器, [攻击力] -1",
   },
   {
-    "name": "K金捕捉器 | Imprisoned",
+    "name": "K金捕捉器 | Kwilling Catcher",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "整场战斗结束时, 获得 [金币] 100",
   },
   {
-    "name": "大号神秘箱 | Imprisoned",
+    "name": "大号神秘箱 | Large Mystery Box",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "每回合在手牌中增加一张随机牌",
   },
   {
-    "name": "漏水笔 | Imprisoned",
+    "name": "漏水笔 | Leaky Pen",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "每回合 [余烬] -1, 每回合抽牌数 +2",
   },
   {
-    "name": "朦胧黑暗碎片 | Imprisoned",
+    "name": "朦胧黑暗碎片 | Looming Darkshard",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "每当抽到一张祸患或者天灾牌, 获得 [余烬] 1 并抽取 1 张非祸患或天灾牌",
   },
   {
-    "name": "尼姆的誓言 | Imprisoned",
+    "name": "尼姆的誓言 | Nim's Oath",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "在回合开始时, 对随机层的前排单位施加 [眩晕] 1",
   },
   {
-    "name": "帕奇欧 | Imprisoned",
+    "name": "帕奇欧 | Perkeo",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "在战斗开始时, 获得 [钙化的余烬], 一回合后未使用会变成 [采掘的余烬]",
   },
   {
-    "name": "法术圣所模组 | Imprisoned",
+    "name": "法术圣所模组 | Spell Sauctum Mod",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "在战斗开始时, 对第二层施加 [法术圣所]",
   },
   {
-    "name": "墨漏 | Imprisoned",
+    "name": "墨漏 | The Clepsydranium",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "友方单位 [杀戮] 时获得 [导流] 1",
   },
   {
-    "name": "特里布莱 | Imprisoned",
+    "name": "特里布莱 | Triboulet",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "卡组中每有一张稀有牌, 友方单位获得 [生命值] 3",
   },
   {
-    "name": "不稳定的碎片 | Imprisoned",
+    "name": "不稳定的碎片 | Unstable Shard",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "友方单位获得 [攻击力] 5 和 [生命值] 12",
   },
   {
-    "name": "沃洛的血书 | Imprisoned",
+    "name": "沃洛的血书 | Wolo's Bloodletter",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
     "effect": "所有友方单位获得 [攻击力] 12, 每回合对所有友方单位造成 1 点伤害",
   },
   {
-    "name": "约里克 | Imprisoned",
+    "name": "约里克 | Yorick",
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
@@ -625,7 +625,7 @@ export const CLANLESS_ARTIFACTS = [
 // 无氏族 祸患
 export const CLANLESS_BANES = [
   {
-    "name": "增殖 | DragonEgg",
+    "name": "增殖 | Deathweight",
     "type": "祸患",
     "clan": "无氏族",
     "cost": "0",
@@ -633,7 +633,7 @@ export const CLANLESS_BANES = [
     "description": ""
   },
   {
-    "name": "但丁的蜡烛 | DragonEgg",
+    "name": "但丁的蜡烛 | Dante's Candel",
     "type": "祸患",
     "clan": "无氏族",
     "cost": "1",
@@ -641,7 +641,7 @@ export const CLANLESS_BANES = [
     "description": ""
   },
   {
-    "name": "统御之眼 | DragonEgg",
+    "name": "统御之眼 | Dominion's Eye",
     "type": "祸患",
     "clan": "无氏族",
     "cost": "1",
@@ -649,7 +649,7 @@ export const CLANLESS_BANES = [
     "description": ""
   },
   {
-    "name": "野蛮束缚 | DragonEgg",
+    "name": "野蛮束缚 | Savage Shackles",
     "type": "祸患",
     "clan": "无氏族",
     "cost": "1",
@@ -657,7 +657,7 @@ export const CLANLESS_BANES = [
     "description": ""
   },
   {
-    "name": "复仇碎片 | DragonEgg",
+    "name": "复仇碎片 | Vengeful Shard",
     "type": "祸患",
     "clan": "无氏族",
     "cost": "1",
@@ -665,7 +665,7 @@ export const CLANLESS_BANES = [
     "description": ""
   },
   {
-    "name": "混乱水晶 | DragonEgg",
+    "name": "混乱水晶 | Entropic Crystals",
     "type": "祸患",
     "clan": "无氏族",
     "cost": "2",
@@ -673,7 +673,7 @@ export const CLANLESS_BANES = [
     "description": ""
   },
   {
-    "name": "钙化的余烬 | DragonEgg",
+    "name": "钙化的余烬 | Calcified Ember",
     "type": "祸患",
     "clan": "无氏族",
     "cost": "3",
@@ -684,7 +684,7 @@ export const CLANLESS_BANES = [
 // 无氏族 天灾
 export const CLANLESS_CATASTROPHES = [
   {
-    "name": "混乱泰坦的诅咒 | DragonEgg",
+    "name": "混乱泰坦的诅咒 | Curse of Entropy",
     "type": "天灾",
     "clan": "无氏族",
     "cost": "0",
@@ -692,7 +692,7 @@ export const CLANLESS_CATASTROPHES = [
     "description": ""
   },
   {
-    "name": "绝望的钟声 | DragonEgg",
+    "name": "绝望的钟声 | Chime of Despire",
     "type": "天灾",
     "clan": "无氏族",
     "cost": "1",
@@ -700,7 +700,7 @@ export const CLANLESS_CATASTROPHES = [
     "description": ""
   },
   {
-    "name": "不谐钟声  | DragonEgg",
+    "name": "不谐钟声  | Discordant Toll",
     "type": "天灾",
     "clan": "无氏族",
     "cost": "1",
@@ -708,7 +708,7 @@ export const CLANLESS_CATASTROPHES = [
     "description": ""
   },
   {
-    "name": "毁灭的回响 | DragonEgg",
+    "name": "毁灭的回响 | Resonant Ruin",
     "type": "天灾",
     "clan": "无氏族",
     "cost": "1",
