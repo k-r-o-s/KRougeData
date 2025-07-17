@@ -1,3 +1,5 @@
+export const module_name = "升级石";
+
 export const UPGRADES = [
   {
     "name": "巨型石",

@@ -10,6 +10,7 @@ import * as StygianGuard from "./stygian-guard.js"
 import * as Umbra from "./umbra.js"
 import * as Underlegion from "./underlegion.js"
 import * as Entries from "./entries.js"
+import * as Upgrades from "./upgrades.js"
 
 import { __log_data } from "../../script/util.js"
 
@@ -26,6 +27,7 @@ export const MT_DATA = [
   Umbra,
   Underlegion,
   Entries,
+  Upgrades,
 ].reduce(
   (accumulator, group) => {
     __log_data("------------------ 读取数据 " + group.module_name + "------------------", group);
@@ -64,6 +66,10 @@ export const MT_DATA = [
     if (group.ENTRIES) {
       group.ENTRIES.map(item => accumulator.set(item.name, item));
       __log_data("获取数据 ENTRIES", accumulator);
+    }
+    if (group.UPGRADES) {
+      group.UPGRADES.map(item => accumulator.set(item.name, item));
+      __log_data("获取数据 UPGRADES", accumulator);
     }
     return accumulator;
   }, new Map());
