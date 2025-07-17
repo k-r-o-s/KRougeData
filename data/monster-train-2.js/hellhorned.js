@@ -1,7 +1,9 @@
 /////////////// 狱魔 ///////////////
 
+export const module_name = "狱魔";
+
 // 狱魔 英雄
-export const HELLHORNED_CHAMPIONS = [
+export const CHAMPIONS = [
   {
     "name": "断角王子",
     "english-name": "Fel",
@@ -28,7 +30,7 @@ export const HELLHORNED_CHAMPIONS = [
   },
 ];
 // 狱魔 单位
-export const HELLHORNED_UNITS = [
+export const UNITS = [
   {
     "name": "巅峰小鬼",
     "english-name": "BattleDancer",
@@ -254,7 +256,7 @@ export const HELLHORNED_UNITS = [
   },
 ];
 // 狱魔 法术
-export const HELLHORNED_SPELLS = [
+export const SPELLS = [
   {
     "name": "狱魔脑钉",
     "english-name": "DragonEgg",
@@ -487,13 +489,13 @@ export const HELLHORNED_SPELLS = [
   },
 ];
 // 狱魔 装备
-export const HELLHORNED_EQUIPMENTS = [
+export const EQUIPMENTS = [
 ];
 // 狱魔 房间
-export const HELLHORNED_ROOMS = [
+export const ROOMS = [
 ];
 // 狱魔 神器
-export const HELLHORNED_ARTIFACTS = [
+export const ARTIFACTS = [
    {
     "name": "死者骨灰",
     "english-name": "ImprisonedZephyr",

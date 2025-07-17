@@ -1,7 +1,9 @@
 /////////////// 薪龙族 ///////////////
 
+export const module_name = "薪龙族";
+
 // 薪龙族 英雄
-export const PYREBORNE_CHAMPIONS = [
+export const CHAMPIONS = [
   {
     "name": "吉尔达女士",
     "english-name": "Fel",
@@ -28,7 +30,7 @@ export const PYREBORNE_CHAMPIONS = [
   },
 ];
 // 薪龙族 单位
-export const PYREBORNE_UNITS = [
+export const UNITS = [
   {
     "name": "膨胀幼龙",
     "english-name": "BattleDancer",
@@ -148,7 +150,7 @@ export const PYREBORNE_UNITS = [
     "clan": "薪龙族",
     "rarity": "高级",
     "cost": "2",
-    "effect": "[召唤]: 每有一个 [金蛋] 获得 [攻击力] 10 和 [生命值] 10",
+    "effect": "[召唤]: 每有一个 [龙族宝藏] 获得 [攻击力] 10 和 [生命值] 10",
     "banner-unit": true,
     "size": 3,
     "attack": 20,
@@ -213,7 +215,7 @@ export const PYREBORNE_UNITS = [
   },
 ];
 // 薪龙族 法术
-export const PYREBORNE_SPELLS = [
+export const SPELLS = [
   {
     "name": "薪龙族脑钉",
     "english-name": "DragonEgg",
@@ -427,7 +429,7 @@ export const PYREBORNE_SPELLS = [
 
 ];
 // 薪龙族 装备
-export const PYREBORNE_EQUIPMENTS = [
+export const EQUIPMENTS = [
   {
     "name": "熔岩护甲",
     "english-name": "ImprisonedZephyr",
@@ -471,7 +473,7 @@ export const PYREBORNE_EQUIPMENTS = [
   },
 ];
 // 薪龙族 房间
-export const PYREBORNE_ROOMS = [
+export const ROOMS = [
   {
     "name": "地狱熔炉",
     "english-name": "ImprisonedZephyr",
@@ -492,7 +494,7 @@ export const PYREBORNE_ROOMS = [
   },
 ];
 // 薪龙族 神器
-export const PYREBORNE_ARTIFACTS = [
+export const ARTIFACTS = [
   {
     "name": "协调镣铐",
     "english-name": "ImprisonedZephyr",

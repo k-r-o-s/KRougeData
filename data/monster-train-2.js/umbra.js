@@ -1,7 +1,9 @@
 /////////////// 影主 ///////////////
 
+export const module_name = "影主";
+
 // 影主 英雄
-export const UMBRA_CHAMPIONS = [
+export const CHAMPIONS = [
   {
     "name": "影祖",
     "english-name": "Fel",
@@ -28,7 +30,7 @@ export const UMBRA_CHAMPIONS = [
   },
 ];
 // 影主 单位
-export const UMBRA_UNITS = [
+export const UNITS = [
   {
     "name": "影者影裔",
     "english-name": "BattleDancer",
@@ -255,7 +257,7 @@ export const UMBRA_UNITS = [
   },
 ];
 // 影主 法术
-export const UMBRA_SPELLS = [
+export const SPELLS = [
   {
     "name": "永恒吞噬",
     "english-name": "DragonEgg",
@@ -548,13 +550,13 @@ export const UMBRA_SPELLS = [
   },
 ];
 // 影主 装备
-export const UMBRA_EQUIPMENTS = [
+export const EQUIPMENTS = [
 ];
 // 影主 房间
-export const UMBRA_ROOMS = [
+export const ROOMS = [
 ];
 // 影主 神器
-export const UMBRA_ARTIFACTS = [
+export const ARTIFACTS = [
   {
     "name": "被遗弃的影者",
     "english-name": "ImprisonedZephyr",

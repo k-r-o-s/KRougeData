@@ -1,7 +1,9 @@
 /////////////// 觉者 ///////////////
 
+export const module_name = "觉者";
+
 // 觉者 英雄
-export const AWOKEN_CHAMPIONS = [
+export const CHAMPIONS = [
   {
     "name": "智者",
     "english-name": "Fel",
@@ -28,7 +30,7 @@ export const AWOKEN_CHAMPIONS = [
   },
 ];
 // 觉者 单位
-export const AWOKEN_UNITS = [
+export const UNITS = [
   {
     "name": "极速蔓灵",
     "english-name": "BattleDancer",
@@ -199,7 +201,7 @@ export const AWOKEN_UNITS = [
   },
 ];
 // 觉者 法术
-export const AWOKEN_SPELLS = [
+export const SPELLS = [
   {
     "name": "觉者脑钉",
     "english-name": "DragonEgg",
@@ -472,13 +474,13 @@ export const AWOKEN_SPELLS = [
   },
 ];
 // 觉者 装备
-export const AWOKEN_EQUIPMENTS = [
+export const EQUIPMENTS = [
 ];
 // 觉者 房间
-export const AWOKEN_ROOMS = [
+export const ROOMS = [
 ];
 // 觉者 神器
-export const AWOKEN_ARTIFACTS = [
+export const ARTIFACTS = [
   {
     "name": "通灵之心",
     "english-name": "ImprisonedZephyr",

@@ -19,6 +19,9 @@ header {
   color: white;
   padding: 5px;
   text-align: center;
+
+  flex-shrink: 0;
+  height: 40px; /* 固定高度 */
 }
 
 main {
@@ -26,6 +29,9 @@ main {
   /* 占据剩余空间 */
   background-color: #f4f4f4;
   padding: auto;
+
+  display: flex;
+  flex-direction: row;
 }
 
 footer {
@@ -33,9 +39,21 @@ footer {
   color: white;
   text-align: center;
   padding: 5px;
+
+  flex-shrink: 0;
+  height: 40px; /* 固定高度 */
 }
 
 /* ///////////////////////////////////////////////////////////////////////// */
+.left-panel {
+  background-color: beige;
+
+  width: 300px; /* 固定宽度 */
+  flex-shrink: 0;
+}
+.right-panel {
+  flex: 1;
+}
 .grid {
   margin: 20px;
 }

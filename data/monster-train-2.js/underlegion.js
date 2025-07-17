@@ -1,7 +1,9 @@
 /////////////// 地下菌团 ///////////////
 
+export const module_name = "地下菌团";
+
 // 地下菌团 英雄
-export const UNDERLEGION_CHAMPIONS = [
+export const CHAMPIONS = [
   {
     "name": "\"断头台\"纽甘君",
     "english-name": "Ekka",
@@ -29,7 +31,7 @@ export const UNDERLEGION_CHAMPIONS = [
 ];
 
 // 地下菌团 单位
-export const UNDERLEGION_UNITS = [
+export const UNITS = [
   {
     "name": "绿色新兵",
     "english-name": "Astrologer",
@@ -214,7 +216,7 @@ export const UNDERLEGION_UNITS = [
   },
 ];
 // 地下菌团 法术
-export const UNDERLEGION_SPELLS = [
+export const SPELLS = [
   {
     "name": "菌团脑钉",
     "english-name": "DragonEgg",
@@ -427,7 +429,7 @@ export const UNDERLEGION_SPELLS = [
   },
 ];
 // 地下菌团 装备
-export const UNDERLEGION_EQUIPMENTS = [
+export const EQUIPMENTS = [
   {
     "name": "有丝分裂菌",
     "english-name": "Imprisoned",
@@ -450,7 +452,7 @@ export const UNDERLEGION_EQUIPMENTS = [
   },
 ];
 // 地下菌团 房间
-export const UNDERLEGION_ROOMS = [
+export const ROOMS = [
   {
     "name": "生长室",
     "english-name": "Imprisoned",
@@ -480,7 +482,7 @@ export const UNDERLEGION_ROOMS = [
   },
 ];
 // 地下菌团 神器
-export const UNDERLEGION_ARTIFACTS = [
+export const ARTIFACTS = [
   {
     "name": "远古之根",
     "english-name": "Imprisoned",

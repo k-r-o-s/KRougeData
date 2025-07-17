@@ -1,7 +1,9 @@
 /////////////// 流放者 ///////////////
 
+export const module_name = "流放者";
+
 // 流放者 英雄
-export const BANISHED_CHAMPIONS = [
+export const CHAMPIONS = [
   {
     "name": "菲尔",
     "english-name": "Fel",
@@ -170,7 +172,7 @@ export const BANISHED_CHAMPIONS = [
   },
 ];
 // 流放者 单位
-export const BANISHED_UNITS = [
+export const UNITS = [
   {
     "name": "战斗舞者",
     "english-name": "Battle Dancer",
@@ -355,7 +357,7 @@ export const BANISHED_UNITS = [
   },
 ];
 // 流放者 法术
-export const BANISHED_SPELLS = [
+export const SPELLS = [
   {
     "name": "流放者道钉",
     "english-name": "Spike of the Banished",
@@ -520,7 +522,7 @@ export const BANISHED_SPELLS = [
   },
 ];
 // 流放者 装备
-export const BANISHED_EQUIPMENTS = [
+export const EQUIPMENTS = [
   {
     "name": "永恒之光",
     "english-name": "Everlasting Light",
@@ -580,7 +582,7 @@ export const BANISHED_EQUIPMENTS = [
   },
 ];
 // 流放者 房间
-export const BANISHED_ROOMS = [
+export const ROOMS = [
   {
     "name": "被禁锢的西风",
     "english-name": "Imprisoned Zephyr",

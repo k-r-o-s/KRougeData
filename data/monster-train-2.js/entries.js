@@ -1,6 +1,6 @@
-export const ENTRIES = [];
+export const module_name = "词条";
 
-export const ENTRIES1 = [
+export const ENTRIES = [
   {
     "name": "上升",
     "type": "基础",
@@ -99,6 +99,11 @@ export const ENTRIES1 = [
     "description": "该单位攻击时触发",
   },
   {
+    "name": "咒语",
+    "type": "触发",
+    "description": "在本层打出法术牌时触发",
+  },
+  {
     "name": "多重攻击",
     "type": "特性",
     "description": "每回合多攻击一次",
@@ -170,6 +175,18 @@ export const ENTRIES1 = [
     "type": "能力",
     "冷却": 2,
     "description": "每有一个 [龙族宝藏] 就获得 5 [金币]",
+  },
+  {
+    "name": "能力: 昂贵品味",
+    "type": "能力",
+    "冷却": 3,
+    "description": "使所有友方单位获得 [贪婪] 2",
+  },
+  {
+    "name": "能力: 赚钱高手",
+    "type": "能力",
+    "冷却": 2,
+    "description": "每有一个 [龙族宝藏] 就获得 [金币] 5",
   },
   {
     "name": "牺牲",
@@ -290,6 +307,21 @@ export const ENTRIES1 = [
     "name": "亡语",
     "type": "触发",
     "description": "死亡时触发",
+  },
+  {
+    "name": "集结",
+    "type": "触发",
+    "description": "在本层添加单位时触发",
+  },
+  {
+    "name": "行动",
+    "type": "触发",
+    "description": "在此单位回合开始时触发",
+  },
+  {
+    "name": "部署阶段",
+    "type": "基础",
+    "description": "-",
   },
   {
     "name": "生成",
@@ -628,6 +660,11 @@ export const ENTRIES1 = [
     "description": "[召唤] 出带有 [被吞食] 的单位时触发",
   },
   {
+    "name": "带甲",
+    "type": "触发",
+    "description": "在此单位获得 [护甲] 时触发",
+  },
+  {
     "name": "滋养",
     "type": "基础",
     "description": "为生命值最少的友方单位提供 [攻击力] 和 [生命值], 数值等于 [滋养] 层数",
@@ -636,6 +673,11 @@ export const ENTRIES1 = [
     "name": "改造",
     "type": "基础",
     "description": "将一个被击败的友方单位返回手牌, 将其获得 +5 [攻击力] 和 +5 [生命值], 并变为 [余烬] 0, [燃命] 1, 持续到本场战斗结束",
+  },
+  {
+    "name": "冻结",
+    "type": "基础",
+    "description": "[冻结] 的卡牌在回合结束时不会被丢弃, 当打出这张卡牌时, [冻结] 效果消失",
   },
   {
     "name": "蛰刺",
@@ -674,5 +716,10 @@ export const ENTRIES1 = [
     "name": "复生",
     "type": "特性",
     "description": "此单位死亡或被吞食时, 其卡牌会返回抽牌堆最上面",
+  },
+  {
+    "name": "横扫",
+    "type": "特性",
+    "description": "攻击所有敌方单位",
   },
 ];

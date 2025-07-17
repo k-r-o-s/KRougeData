@@ -1,7 +1,9 @@
 /////////////// 熔尸 ///////////////
 
+export const module_name = "熔尸";
+
 // 熔尸 英雄
-export const MELTING_REMNANT_CHAMPIONS = [
+export const CHAMPIONS = [
   {
     "name": "小菲德",
     "english-name": "Fel",
@@ -28,7 +30,7 @@ export const MELTING_REMNANT_CHAMPIONS = [
   },
 ];
 // 熔尸 单位
-export const MELTING_REMNANT_UNITS = [
+export const UNITS = [
   {
     "name": "蜡渣",
     "english-name": "BattleDancer",
@@ -269,7 +271,7 @@ export const MELTING_REMNANT_UNITS = [
   },
 ];
 // 熔尸 法术
-export const MELTING_REMNANT_SPELLS = [
+export const SPELLS = [
   {
     "name": "烛人脑钉",
     "english-name": "DragonEgg",
@@ -492,13 +494,13 @@ export const MELTING_REMNANT_SPELLS = [
   },
 ];
 // 熔尸 装备
-export const MELTING_REMNANT_EQUIPMENTS = [
+export const EQUIPMENTS = [
 ];
 // 熔尸 房间
-export const MELTING_REMNANT_ROOMS = [
+export const ROOMS = [
 ];
 // 熔尸 神器
-export const MELTING_REMNANT_ARTIFACTS = [
+export const ARTIFACTS = [
   {
     "name": "易燃蜡",
     "english-name": "ImprisonedZephyr",

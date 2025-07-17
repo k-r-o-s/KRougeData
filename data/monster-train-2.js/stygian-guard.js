@@ -1,7 +1,9 @@
 /////////////// 冥卫 ///////////////
 
+export const module_name = "冥卫";
+
 // 冥卫 英雄
-export const STYGIAN_GUARD_CHAMPIONS = [
+export const CHAMPIONS = [
   {
     "name": "烈士索尔加德",
     "english-name": "Fel",
@@ -28,7 +30,7 @@ export const STYGIAN_GUARD_CHAMPIONS = [
   },
 ];
 // 冥卫 单位
-export const STYGIAN_GUARD_UNITS = [
+export const UNITS = [
   {
     "name": "邪术乌贼",
     "english-name": "BattleDancer",
@@ -213,7 +215,7 @@ export const STYGIAN_GUARD_UNITS = [
   },
 ];
 // 冥卫 法术
-export const STYGIAN_GUARD_SPELLS = [
+export const SPELLS = [
   {
     "name": "冥卫脑钉",
     "english-name": "DragonEgg",
@@ -476,13 +478,13 @@ export const STYGIAN_GUARD_SPELLS = [
   },
 ];
 // 冥卫 装备
-export const STYGIAN_GUARD_EQUIPMENTS = [
+export const EQUIPMENTS = [
 ];
 // 冥卫 房间
-export const STYGIAN_GUARD_ROOMS = [
+export const ROOMS = [
 ];
 // 冥卫 神器
-export const STYGIAN_GUARD_ARTIFACTS = [
+export const ARTIFACTS = [
   {
     "name": "遗忘之名",
     "english-name": "ImprisonedZephyr",

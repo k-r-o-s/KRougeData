@@ -1,10 +1,12 @@
 /////////////// 无氏族 ///////////////
 
+export const module_name = "无氏族";
+
 // 无氏族 英雄
-export const CLANLESS_CHAMPIONS = [
+export const CHAMPIONS = [
 ];
 // 无氏族 单位
-export const CLANLESS_UNITS = [
+export const UNITS = [
   {
     "name": "白骨犬",
     "english-name": "Bone Dog",
@@ -94,7 +96,7 @@ export const CLANLESS_UNITS = [
   },
 ]
 // 无氏族 法术
-export const CLANLESS_SPELLS = [
+export const SPELLS = [
   {
     "name": "采掘的余烬",
     "english-name": "Excavated Ember",
@@ -137,7 +139,7 @@ export const CLANLESS_SPELLS = [
   },
 ]
 // 无氏族 装备
-export const CLANLESS_EQUIPMENTS = [
+export const EQUIPMENTS = [
   {
     "name": "均衡对戒",
     "english-name": "Equalizing Rings",
@@ -232,7 +234,7 @@ export const CLANLESS_EQUIPMENTS = [
   },
 ];
 // 无氏族 房间
-export const CLANLESS_ROOMS = [
+export const ROOMS = [
   {
     "name": "乘务员宿舍",
     "english-name": "Steward's Quarters",
@@ -307,7 +309,7 @@ export const CLANLESS_ROOMS = [
   },
 ];
 // 无氏族 神器
-export const CLANLESS_ARTIFACTS = [
+export const ARTIFACTS = [
   {
     "name": "远古薪火龙头",
     "english-name": "Ancient Pyretap",
@@ -710,7 +712,7 @@ export const CLANLESS_ARTIFACTS = [
   },
 ];
 // 无氏族 祸患
-export const CLANLESS_BANES = [
+export const BANES = [
   {
     "name": "增殖",
     "english-name": "Deathweight",
@@ -776,7 +778,7 @@ export const CLANLESS_BANES = [
   },
 ];
 // 无氏族 天灾
-export const CLANLESS_CATASTROPHES = [
+export const CATASTROPHES = [
   {
     "name": "混乱泰坦的诅咒",
     "english-name": "Curse of Entropy",

@@ -1,7 +1,9 @@
 /////////////// 拉撒路联盟 ///////////////
 
+export const module_name = "拉撒路联盟";
+
 // 拉撒路联盟 英雄
-export const LAZARUS_LEAGUE_CHAMPIONS = [
+export const CHAMPIONS = [
   {
     "name": "格雷尔男爵",
     "english-name": "Fel",
@@ -28,7 +30,7 @@ export const LAZARUS_LEAGUE_CHAMPIONS = [
   },
 ];
 // 拉撒路联盟 单位
-export const LAZARUS_LEAGUE_UNITS = [
+export const UNITS = [
   {
     "name": "古怪助手",
     "english-name": "BattleDancer",
@@ -241,7 +243,7 @@ export const LAZARUS_LEAGUE_UNITS = [
   },
 ];
 // 拉撒路联盟 法术
-export const LAZARUS_LEAGUE_SPELLS = [
+export const SPELLS = [
   {
     "name": "联盟脑钉",
     "english-name": "DragonEgg",
@@ -434,7 +436,7 @@ export const LAZARUS_LEAGUE_SPELLS = [
   },
 ];
 // 拉撒路联盟 装备
-export const LAZARUS_LEAGUE_EQUIPMENTS = [
+export const EQUIPMENTS = [
   {
     "name": "剪刀手",
     "english-name": "ImprisonedZephyr",
@@ -519,7 +521,7 @@ export const LAZARUS_LEAGUE_EQUIPMENTS = [
   },
 ];
 // 拉撒路联盟 房间
-export const LAZARUS_LEAGUE_ROOMS = [
+export const ROOMS = [
    {
     "name": "电力室",
     "english-name": "ImprisonedZephyr",
@@ -540,7 +542,7 @@ export const LAZARUS_LEAGUE_ROOMS = [
   },
 ];
 // 拉撒路联盟 神器
-export const LAZARUS_LEAGUE_ARTIFACTS = [
+export const ARTIFACTS = [
    {
     "name": "高级增长剂",
     "english-name": "ImprisonedZephyr",

@@ -1,7 +1,9 @@
 /////////////// 月巫团 ///////////////
 
+export const module_name = "月巫团";
+
 // 月巫团 英雄
-export const LUNA_COVEN_CHAMPIONS = [
+export const CHAMPIONS = [
   {
     "name": "艾卡",
     "english-name": "Ekka",
@@ -28,7 +30,7 @@ export const LUNA_COVEN_CHAMPIONS = [
   },
 ];
 // 月巫团 单位
-export const LUNA_COVEN_UNITS = [
+export const UNITS = [
   {
     "name": "占星师",
     "english-name": "Astrologer",
@@ -214,7 +216,7 @@ export const LUNA_COVEN_UNITS = [
   },
 ];
 // 月巫团 法术
-export const LUNA_COVEN_SPELLS = [
+export const SPELLS = [
   {
     "name": "月巫团脑钉",
     "english-name": "DragonEgg",
@@ -437,7 +439,7 @@ export const LUNA_COVEN_SPELLS = [
   },
 ];
 // 月巫团 装备
-export const LUNA_COVEN_EQUIPMENTS = [
+export const EQUIPMENTS = [
   {
     "name": "月相循环法杖",
     "english-name": "Imprisoned",
@@ -459,7 +461,7 @@ export const LUNA_COVEN_EQUIPMENTS = [
   },
 ];
 // 月巫团 房间
-export const LUNA_COVEN_ROOMS = [
+export const ROOMS = [
   {
     "name": "月食室",
     "english-name": "Imprisoned",
@@ -480,13 +482,13 @@ export const LUNA_COVEN_ROOMS = [
   },
 ];
 // 月巫团 神器
-export const LUNA_COVEN_ARTIFACTS = [
+export const ARTIFACTS = [
   {
     "name": "占星师的星象仪",
     "english-name": "Imprisoned",
     "type": "神器",
     "clan": "月巫团",
-    "effect": "每回合 [月相] 首次变为 [满月] 时, 获得 [余烬] 1",
+    "effect": "每回合月相首次变为 [满月] 时, 获得 [余烬] 1",
   },
   {
     "name": "星界之帆",
@@ -549,7 +551,7 @@ export const LUNA_COVEN_ARTIFACTS = [
     "english-name": "Imprisoned",
     "type": "神器",
     "clan": "月巫团",
-    "effect": "当 [月相] 变化为 [新月] 时, 寂静者单位获得 [护甲] 10",
+    "effect": "当月相变化为 [新月] 时, 寂静者单位获得 [护甲] 10",
   },
   {
     "name": "星尘点心",
