@@ -346,7 +346,7 @@ export const ENTRIES = [
   {
     "name": "蚀刻",
     "type": "触发",
-    "description": "在本层有卡牌被消耗时触发",
+    "description": "在本层有卡牌被 [消耗] 时触发",
   },
   {
     "name": "月之仪式",
@@ -442,6 +442,16 @@ export const ENTRIES = [
     "name": "移除",
     "type": "基础",
     "description": "这张牌打出之后, 会从卡组中彻底移除",
+  },
+  {
+    "name": "法术连锁",
+    "type": "基础",
+    "description": "打出后, 将这张牌的带有 [短暂] 的复制品加入手牌",
+  },
+  {
+    "name": "双层",
+    "type": "基础",
+    "description": "打出后, 将这张牌的带有 [短暂] 的复制品加入手牌",
   },
   {
     "name": "无法使用",
@@ -680,6 +690,16 @@ export const ENTRIES = [
     "description": "[冻结] 的卡牌在回合结束时不会被丢弃, 当打出这张卡牌时, [冻结] 效果消失",
   },
   {
+    "name": "冻结",
+    "type": "基础",
+    "description": "打出后返回抽牌堆顶端",
+  },
+  {
+    "name": "固有",
+    "type": "基础",
+    "description": "会出现在 [部署阶段] 后的第一个回合手牌里",
+  },
+  {
     "name": "蛰刺",
     "type": "添加卡牌",
   },
@@ -721,5 +741,15 @@ export const ENTRIES = [
     "name": "横扫",
     "type": "特性",
     "description": "攻击所有敌方单位",
+  },
+  {
+    "name": "二元性",
+    "type": "特性",
+    "description": "该单位施加的 [护甲], [增益] 和 [减益] 层数翻倍",
+  },
+  {
+    "name": "泰坦之躯",
+    "type": "特性",
+    "description": "该单位收到的伤害减半",
   },
 ];
