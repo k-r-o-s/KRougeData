@@ -273,7 +273,7 @@ export const UNITS = [
 // 熔尸 法术
 export const SPELLS = [
   {
-    "name": "烛人脑钉",
+    "name": "烛人道钉",
     "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",

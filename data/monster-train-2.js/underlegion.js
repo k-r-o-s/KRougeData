@@ -218,7 +218,7 @@ export const UNITS = [
 // 地下菌团 法术
 export const SPELLS = [
   {
-    "name": "菌团脑钉",
+    "name": "菌团道钉",
     "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",

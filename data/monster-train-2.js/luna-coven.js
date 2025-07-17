@@ -218,7 +218,7 @@ export const UNITS = [
 // 月巫团 法术
 export const SPELLS = [
   {
-    "name": "月巫团脑钉",
+    "name": "月巫团道钉",
     "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
@@ -238,7 +238,7 @@ export const SPELLS = [
     "description": ""
   },
   {
-    "name": "月光轰炸",
+    "name": "月光轰击",
     "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",

@@ -309,7 +309,7 @@ export const SPELLS = [
     "description": ""
   },
   {
-    "name": "雾影脑钉",
+    "name": "雾影道钉",
     "english-name": "DragonEgg",
     "type": "法术",
     "clan": "影主",

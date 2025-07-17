@@ -245,7 +245,7 @@ export const UNITS = [
 // 拉撒路联盟 法术
 export const SPELLS = [
   {
-    "name": "联盟脑钉",
+    "name": "联盟道钉",
     "english-name": "DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",

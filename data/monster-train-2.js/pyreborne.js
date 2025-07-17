@@ -327,16 +327,6 @@ export const SPELLS = [
     "description": ""
   },
   {
-    "name": "薪火桶",
-    "english-name": "Pyreborne Glue",
-    "type": "法术",
-    "clan": "薪龙族",
-    "rarity": "普通",
-    "cost": "1",
-    "effect": "[消耗]. 施加 [薪火熔胶] 10",
-    "description": ""
-  },
-  {
     "name": "合同之书",
     "english-name": "Pyreborne Glue",
     "type": "法术",

@@ -217,7 +217,7 @@ export const UNITS = [
 // 冥卫 法术
 export const SPELLS = [
   {
-    "name": "冥卫脑钉",
+    "name": "冥卫道钉",
     "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
