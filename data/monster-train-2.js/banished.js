@@ -534,7 +534,7 @@ export const EQUIPMENTS = [
     "effect": "[攻击]: 使所有友方单位获得 [英勇] 2",
   },
   {
-    "name": "虔诚者的血之衣",
+    "name": "虔信者的血之衣",
     "english-name": "Penitent's Bloodsuit",
     "type": "装备",
     "clan": "流放者",
@@ -543,7 +543,7 @@ export const EQUIPMENTS = [
     "effect": "[转移]: 受到 30 点伤害。可以装备在敌方单位上",
   },
   {
-    "name": "虔诚者的死亡之衣",
+    "name": "虔信者的死亡之衣",
     "english-name": "Pentitent's Deathsuit",
     "type": "装备",
     "clan": "流放者",

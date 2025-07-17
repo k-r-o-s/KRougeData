@@ -712,9 +712,9 @@ export const ARTIFACTS = [
   },
 ];
 // 无氏族 祸患
-export const BANES = [
+export const BLIGHTS = [
   {
-    "name": "增殖",
+    "name": "无用负荷",
     "english-name": "Deathweight",
     "type": "祸患",
     "clan": "无氏族",
@@ -778,7 +778,7 @@ export const BANES = [
   },
 ];
 // 无氏族 天灾
-export const CATASTROPHES = [
+export const SCOURGES = [
   {
     "name": "混乱泰坦的诅咒",
     "english-name": "Curse of Entropy",

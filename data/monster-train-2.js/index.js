@@ -51,17 +51,17 @@ export const MT_DATA = [
       group.ROOMS.map(item => accumulator.set(item.name, item));
       __log_data("获取数据 ROOMS", accumulator);
     }
-    if (group.BANES) {
-      group.BANES.map(item => accumulator.set(item.name, item));
-      __log_data("获取数据 BANES", accumulator);
+    if (group.BLIGHTS) {
+      group.BLIGHTS.map(item => accumulator.set(item.name, item));
+      __log_data("获取数据 BLIGHTS", accumulator);
     }
     if (group.ARTIFACTS) {
       group.ARTIFACTS.map(item => accumulator.set(item.name, item));
       __log_data("获取数据 ARTIFACTS", accumulator);
     }
-    if (group.CATASTROPHES) {
-      group.CATASTROPHES.map(item => accumulator.set(item.name, item));
-      __log_data("获取数据 CATASTROPHES", accumulator);
+    if (group.SCOURGES) {
+      group.SCOURGES.map(item => accumulator.set(item.name, item));
+      __log_data("获取数据 SCOURGES", accumulator);
     }
     if (group.ENTRIES) {
       group.ENTRIES.map(item => accumulator.set(item.name, item));
