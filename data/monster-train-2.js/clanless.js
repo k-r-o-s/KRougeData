@@ -346,7 +346,7 @@ export const ARTIFACTS = [
     "effect": "奖励卡包中的卡牌与战旗单位获得一项随机升级",
   },
   {
-    "name": "净化升水",
+    "name": "净化圣水",
     "english-name": "Cleansing Water",
     "type": "神器",
     "clan": "无氏族",
