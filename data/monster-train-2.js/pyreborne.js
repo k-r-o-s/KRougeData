@@ -102,7 +102,7 @@ export const UNITS = [
     "description": ""
   },
   {
-    "name": "自大幼龙",
+    "name": "自大的幼龙",
     "english-name": "BattleDancer",
     "type": "幼龙",
     "clan": "薪龙族",
@@ -116,7 +116,7 @@ export const UNITS = [
     "description": ""
   },
   {
-    "name": "流涕幼龙",
+    "name": "土豪幼龙",
     "english-name": "BattleDancer",
     "type": "幼龙",
     "clan": "薪龙族",

@@ -5,18 +5,6 @@ export const module_name = "月巫团";
 // 月巫团 英雄
 export const CHAMPIONS = [
   {
-    "name": "艾卡",
-    "english-name": "Ekka",
-    "type": "勇者",
-    "clan": "月巫团",
-    "cost": "0",
-    "effect": "[能力: 飞行]",
-    "size": 2,
-    "attack": 5,
-    "health": 5,
-    "description": ""
-  },
-  {
     "name": "阿杜恩",
     "english-name": "Arduhn",
     "type": "勇者",
@@ -27,6 +15,18 @@ export const CHAMPIONS = [
     "attack": 10,
     "health": 10,
     "description": "菲尔是月巫团中才华横溢且足智多谋的指挥官，她发誓要将天堂从她哥哥的暴政中解放出来。然而，她曾受的心伤能否痊愈，还是未知之数",
+  },
+  {
+    "name": "艾卡",
+    "english-name": "Ekka",
+    "type": "勇者",
+    "clan": "月巫团",
+    "cost": "0",
+    "effect": "[能力: 飞行]",
+    "size": 2,
+    "attack": 5,
+    "health": 5,
+    "description": ""
   },
 ];
 // 月巫团 单位
@@ -187,7 +187,7 @@ export const UNITS = [
     "description": ""
   },
   {
-    "name": "月神殿侍从",
+    "name": "月神女侍从",
     "english-name": "Selene Acolyte",
     "type": "月神女",
     "clan": "月巫团",

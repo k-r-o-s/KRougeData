@@ -5,7 +5,7 @@ export const module_name = "地下菌团";
 // 地下菌团 英雄
 export const CHAMPIONS = [
   {
-    "name": "\"断头台\"纽甘君",
+    "name": "断头台纽甘君",
     "english-name": "Ekka",
     "type": "勇者",
     "clan": "地下菌团",

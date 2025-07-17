@@ -157,7 +157,7 @@ export const UNITS = [
     "health": 1,
     "description": ""
   },
-    {
+  {
     "name": "锻铁者",
     "english-name": "BattleDancer",
     "type": "恶魔",
@@ -171,7 +171,7 @@ export const UNITS = [
     "health": 10,
     "description": ""
   },
-    {
+  {
     "name": "锻铁工人",
     "english-name": "BattleDancer",
     "type": "恶魔",
@@ -200,18 +200,19 @@ export const UNITS = [
     "description": ""
   },
   {
-  "name": "恐魔领主 | BattleDancer",
-  "type": "恶魔",
-  "clan": "狱魔",
-  "rarity": "高级",
-  "cost": "2",
-  "effect": "[攻击]: 获得 [攻击力] 15",
-  "banner-unit": true,
-  "size": 3,
-  "attack": 10,
-  "health": 25,
-  "description": ""
-},
+    "name": "恐魔领主",
+    "english-name": "BattleDancer",
+    "type": "恶魔",
+    "clan": "狱魔",
+    "rarity": "高级",
+    "cost": "2",
+    "effect": "[攻击]: 获得 [攻击力] 15",
+    "banner-unit": true,
+    "size": 3,
+    "attack": 10,
+    "health": 25,
+    "description": ""
+  },
   {
     "name": "超凡小鬼",
     "english-name": "BattleDancer",
@@ -226,7 +227,7 @@ export const UNITS = [
     "health": 1,
     "description": ""
   },
-    {
+  {
     "name": "地狱恶魔",
     "english-name": "BattleDancer",
     "type": "恶魔",
@@ -240,7 +241,7 @@ export const UNITS = [
     "health": 60,
     "description": ""
   },
-    {
+  {
     "name": "皇冠吞噬者",
     "english-name": "BattleDancer",
     "type": "恶魔",
@@ -496,77 +497,77 @@ export const ROOMS = [
 ];
 // 狱魔 神器
 export const ARTIFACTS = [
-   {
+  {
     "name": "死者骨灰",
     "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "[召唤] 额外触发一次",
   },
-   {
+  {
     "name": "尾巴收藏品",
     "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "友方单位的 [狂怒] 不会减少",
   },
-   {
+  {
     "name": "圣者桂冠",
     "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "友方单位 [杀戮] 时获得 [攻击力] 3",
   },
-   {
+  {
     "name": "格鲁格的刺棍",
     "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "恶魔单位获得 [多重攻击] 1",
   },
-   {
+  {
     "name": "小鬼回收",
     "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "回合开始时, 随机将一个小鬼牌加入手牌",
   },
-   {
+  {
     "name": "女王之尾",
     "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "每回合第一次 [召唤] 小鬼单位时, 获得 [余烬] 1 并抽 1 张牌",
   },
-   {
+  {
     "name": "铁道锻锤",
     "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "友方单位获得 [护甲] 时, 获得的层数 + 4",
   },
-   {
+  {
     "name": "回响碎片",
     "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "每层 [狂怒] 获得的 [攻击力] 额外 +1",
   },
-   {
+  {
     "name": "灼热锻钢",
     "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "友方单位进入战斗时, 获得 [护甲] 5",
   },
-   {
+  {
     "name": "灼热枷锁",
     "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "友方单位进入战斗时, 获得 [狂怒] 3",
   },
-   {
+  {
     "name": "不折之角",
     "english-name": "ImprisonedZephyr",
     "type": "神器",
