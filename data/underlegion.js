@@ -3,7 +3,8 @@
 // 地下菌团 英雄
 export const UNDERLEGION_CHAMPIONS = [
   {
-    "name": "\"断头台\"纽甘君 | Ekka",
+    "name": "\"断头台\"纽甘君",
+    "english-name": "Ekka",
     "type": "勇者",
     "clan": "地下菌团",
     "cost": "0",
@@ -14,7 +15,8 @@ export const UNDERLEGION_CHAMPIONS = [
     "description": ""
   },
   {
-    "name": "狮鬃夫人 | Ekka",
+    "name": "狮鬃夫人",
+    "english-name": "Ekka",
     "type": "勇者",
     "clan": "地下菌团",
     "cost": "0",
@@ -29,7 +31,8 @@ export const UNDERLEGION_CHAMPIONS = [
 // 地下菌团 单位
 export const UNDERLEGION_UNITS = [
   {
-    "name": "绿色新兵 | Astrologer",
+    "name": "绿色新兵",
+    "english-name": "Astrologer",
     "type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "普通",
@@ -42,7 +45,8 @@ export const UNDERLEGION_UNITS = [
     "description": ""
   },
   {
-    "name": "多情金菇 | Astrologer",
+    "name": "多情金菇",
+    "english-name": "Astrologer",
     "type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -55,7 +59,8 @@ export const UNDERLEGION_UNITS = [
     "description": ""
   },
   {
-    "name": "欢快毒鹅膏 | Astrologer",
+    "name": "欢快毒鹅膏",
+    "english-name": "Astrologer",
     "type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -68,7 +73,8 @@ export const UNDERLEGION_UNITS = [
     "description": ""
   },
   {
-    "name": "毒鹅膏先知 | Astrologer",
+    "name": "毒鹅膏先知",
+    "english-name": "Astrologer",
     "type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "稀有",
@@ -81,7 +87,8 @@ export const UNDERLEGION_UNITS = [
     "description": ""
   },
   {
-    "name": "羊笃珺女士 | Astrologer",
+    "name": "羊笃珺女士",
+    "english-name": "Astrologer",
     "type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -94,7 +101,8 @@ export const UNDERLEGION_UNITS = [
     "description": ""
   },
   {
-    "name": "多刺尘菌 | Astrologer",
+    "name": "多刺尘菌",
+    "english-name": "Astrologer",
     "type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -107,7 +115,8 @@ export const UNDERLEGION_UNITS = [
     "description": ""
   },
   {
-    "name": "蘑菇兵长 | Astrologer",
+    "name": "蘑菇兵长",
+    "english-name": "Astrologer",
     "type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -120,7 +129,8 @@ export const UNDERLEGION_UNITS = [
     "description": ""
   },
   {
-    "name": "松露犬 | Astrologer",
+    "name": "松露犬",
+    "english-name": "Astrologer",
     "type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -133,7 +143,8 @@ export const UNDERLEGION_UNITS = [
     "description": ""
   },
   {
-    "name": "滴蜡菌伞 | Astrologer",
+    "name": "滴蜡菌伞",
+    "english-name": "Astrologer",
     "type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -146,7 +157,8 @@ export const UNDERLEGION_UNITS = [
     "description": ""
   },
   {
-    "name": "菌簇上校 | Astrologer",
+    "name": "菌簇上校",
+    "english-name": "Astrologer",
     "type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -159,7 +171,8 @@ export const UNDERLEGION_UNITS = [
     "description": ""
   },
   {
-    "name": "孢子发射者 | Astrologer",
+    "name": "孢子发射者",
+    "english-name": "Astrologer",
     "type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -172,7 +185,8 @@ export const UNDERLEGION_UNITS = [
     "description": ""
   },
   {
-    "name": "巴尔马贝洛 | Astrologer",
+    "name": "巴尔马贝洛",
+    "english-name": "Astrologer",
     "type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "稀有",
@@ -185,7 +199,8 @@ export const UNDERLEGION_UNITS = [
     "description": ""
   },
   {
-    "name": "迷人的贵妇人 | Astrologer",
+    "name": "迷人的贵妇人",
+    "english-name": "Astrologer",
     "type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "稀有",
@@ -201,7 +216,8 @@ export const UNDERLEGION_UNITS = [
 // 地下菌团 法术
 export const UNDERLEGION_SPELLS = [
   {
-    "name": "菌团脑钉 | DragonEgg",
+    "name": "菌团脑钉",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "稀有",
@@ -210,7 +226,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "盖土 | DragonEgg",
+    "name": "盖土",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -219,7 +236,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "热情新兵 | DragonEgg",
+    "name": "热情新兵",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "普通",
@@ -228,7 +246,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "焕发光彩 | DragonEgg",
+    "name": "焕发光彩",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "普通",
@@ -237,7 +256,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "黏菌烧瓶 | DragonEgg",
+    "name": "黏菌烧瓶",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -246,7 +266,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "大口吸入 | DragonEgg",
+    "name": "大口吸入",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -255,7 +276,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "蘑菇云 | DragonEgg",
+    "name": "蘑菇云",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -264,7 +286,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "增殖 | DragonEgg",
+    "name": "增殖",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "普通",
@@ -273,7 +296,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "孢子之触 | DragonEgg",
+    "name": "孢子之触",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "普通",
@@ -282,7 +306,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "生息之书 | DragonEgg",
+    "name": "生息之书",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "稀有",
@@ -291,7 +316,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "挖掘宝藏 | DragonEgg",
+    "name": "挖掘宝藏",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "稀有",
@@ -300,7 +326,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "极度痛苦 | DragonEgg",
+    "name": "极度痛苦",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "稀有",
@@ -309,7 +336,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "传染 | DragonEgg",
+    "name": "传染",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "稀有",
@@ -318,7 +346,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "致命变形 | DragonEgg",
+    "name": "致命变形",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "稀有",
@@ -327,7 +356,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "深度挖掘 | DragonEgg",
+    "name": "深度挖掘",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -336,7 +366,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "沃土 | DragonEgg",
+    "name": "沃土",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -345,7 +376,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "流行病 | DragonEgg",
+    "name": "流行病",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -354,7 +386,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "孢子瘟疫 | DragonEgg",
+    "name": "孢子瘟疫",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -363,7 +396,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "出生荚囊 | DragonEgg",
+    "name": "出生荚囊",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "普通",
@@ -372,7 +406,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "蘑菇人活动盔甲 | DragonEgg",
+    "name": "蘑菇人活动盔甲",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "稀有",
@@ -381,7 +416,8 @@ export const UNDERLEGION_SPELLS = [
     "description": ""
   },
   {
-    "name": "腐烂 | DragonEgg",
+    "name": "腐烂",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "普通",
@@ -393,7 +429,8 @@ export const UNDERLEGION_SPELLS = [
 // 地下菌团 装备
 export const UNDERLEGION_EQUIPMENTS = [
   {
-    "name": "有丝分裂菌 | Imprisoned",
+    "name": "有丝分裂菌",
+    "english-name": "Imprisoned",
     "type": "装备",
     "clan": "地下菌团",
     "rarity": "稀有",
@@ -402,7 +439,8 @@ export const UNDERLEGION_EQUIPMENTS = [
     "effect": "[庆祝]: 获得该单位的永久复制体. 勇者或无卡牌单位无法装备",
   },
   {
-    "name": "沃土大衣 | Imprisoned",
+    "name": "沃土大衣",
+    "english-name": "Imprisoned",
     "type": "装备",
     "clan": "地下菌团",
     "rarity": "普通",
@@ -414,7 +452,8 @@ export const UNDERLEGION_EQUIPMENTS = [
 // 地下菌团 房间
 export const UNDERLEGION_ROOMS = [
   {
-    "name": "生长室 | Imprisoned",
+    "name": "生长室",
+    "english-name": "Imprisoned",
     "type": "房间",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -422,7 +461,8 @@ export const UNDERLEGION_ROOMS = [
     "effect": "所有单位在回合结束时 [散播] 1",
   },
   {
-    "name": "传染源 | Imprisoned",
+    "name": "传染源",
+    "english-name": "Imprisoned",
     "type": "房间",
     "clan": "地下菌团",
     "rarity": "普通",
@@ -430,7 +470,8 @@ export const UNDERLEGION_ROOMS = [
     "effect": "当没有 [部队] 的单位死亡时, [生成] 1",
   },
   {
-    "name": "黏糊房间 | Imprisoned",
+    "name": "黏糊房间",
+    "english-name": "Imprisoned",
     "type": "房间",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -441,67 +482,78 @@ export const UNDERLEGION_ROOMS = [
 // 地下菌团 神器
 export const UNDERLEGION_ARTIFACTS = [
   {
-    "name": "远古之根 | Imprisoned",
+    "name": "远古之根",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "你的卡组每有 15 张牌, 每回合使用的第一张法术牌 [余烬] -1",
   },
   {
-    "name": "皮层连接头盔 | Imprisoned",
+    "name": "皮层连接头盔",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "在 [收割] 时, 蘑菇单位获得 [再生] 1",
   },
   {
-    "name": "不息之土 | Imprisoned",
+    "name": "不息之土",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "你的卡组每有 25 张牌, 每回合的抽卡数 +1",
   },
   {
-    "name": "进化本能 | Imprisoned",
+    "name": "进化本能",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "当一个单位受到第三种独特状态影响时, [散播] 2",
   },
   {
-    "name": "树液之泉 | Imprisoned",
+    "name": "树液之泉",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "蘑菇单位在 [召唤] 时对敌方单位施加 [腐朽] 1",
   },
   {
-    "name": "蘑菇水培 | Imprisoned",
+    "name": "蘑菇水培",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "回合开始时, 友方单位 [散播] 1",
   },
   {
-    "name": "斑点孢子 | Imprisoned",
+    "name": "斑点孢子",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "每层 [部队], [蘑菇人] 获得 [攻击力] 2",
   },
   {
-    "name": "双重思维 | Imprisoned",
+    "name": "双重思维",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "每场战斗打出的第一张 [消耗] 牌创建一张永久复制体",
   },
   {
-    "name": "扭曲的菌丝 | Imprisoned",
+    "name": "扭曲的菌丝",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "回合开始时, 你的卡组每有 20 张牌, [生成] 1",
   },
   {
-    "name": "新生循环 | Imprisoned",
+    "name": "新生循环",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "每回合首次使用带有 [消耗] 的卡牌时, 抽 1 张牌",
   },
   {
-    "name": "终末菌株 | Imprisoned",
+    "name": "终末菌株",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "当一个单位死于 [腐朽] 时, 将其减益效果施加于另一个随机敌方单位",

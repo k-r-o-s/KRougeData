@@ -3,7 +3,8 @@
 // 冥卫 英雄
 export const STYGIAN_GUARD_CHAMPIONS = [
   {
-    "name": "烈士索尔加德 | Fel",
+    "name": "烈士索尔加德",
+    "english-name": "Fel",
     "type": "勇者",
     "clan": "冥卫",
     "cost": "0",
@@ -14,7 +15,8 @@ export const STYGIAN_GUARD_CHAMPIONS = [
     "description": "菲尔是流放者中才华横溢且足智多谋的指挥官，她发誓要将天堂从她哥哥的暴政中解放出来。然而，她曾受的心伤能否痊愈，还是未知之数",
   },
   {
-    "name": "泰西斯·泰坦之灾 | Fel",
+    "name": "泰西斯·泰坦之灾",
+    "english-name": "Fel",
     "type": "勇者",
     "clan": "冥卫",
     "cost": "0",
@@ -28,7 +30,8 @@ export const STYGIAN_GUARD_CHAMPIONS = [
 // 冥卫 单位
 export const STYGIAN_GUARD_UNITS = [
   {
-    "name": "邪术乌贼 | BattleDancer",
+    "name": "邪术乌贼",
+    "english-name": "BattleDancer",
     "type": "法师",
     "clan": "冥卫",
     "rarity": "普通",
@@ -41,7 +44,8 @@ export const STYGIAN_GUARD_UNITS = [
     "description": ""
   },
   {
-    "name": "寒流 | BattleDancer",
+    "name": "寒流",
+    "english-name": "BattleDancer",
     "type": "海妖",
     "clan": "冥卫",
     "rarity": "高级",
@@ -54,7 +58,8 @@ export const STYGIAN_GUARD_UNITS = [
     "description": ""
   },
   {
-    "name": "寒冰封印 | BattleDancer",
+    "name": "寒冰封印",
+    "english-name": "BattleDancer",
     "type": "图腾",
     "clan": "冥卫",
     "rarity": "高级",
@@ -67,7 +72,8 @@ export const STYGIAN_GUARD_UNITS = [
     "description": ""
   },
   {
-    "name": "无名者护卫 | BattleDancer",
+    "name": "无名者护卫",
+    "english-name": "BattleDancer",
     "type": "海妖",
     "clan": "冥卫",
     "rarity": "高级",
@@ -80,7 +86,8 @@ export const STYGIAN_GUARD_UNITS = [
     "description": ""
   },
   {
-    "name": "冥卫之石 | BattleDancer",
+    "name": "冥卫之石",
+    "english-name": "BattleDancer",
     "type": "图腾",
     "clan": "冥卫",
     "rarity": "高级",
@@ -93,7 +100,8 @@ export const STYGIAN_GUARD_UNITS = [
     "description": ""
   },
   {
-    "name": "寒冰之子 | BattleDancer",
+    "name": "寒冰之子",
+    "english-name": "BattleDancer",
     "type": "海妖",
     "clan": "冥卫",
     "rarity": "高级",
@@ -106,7 +114,8 @@ export const STYGIAN_GUARD_UNITS = [
     "description": ""
   },
   {
-    "name": "软体法师 | BattleDancer",
+    "name": "软体法师",
+    "english-name": "BattleDancer",
     "type": "法师",
     "clan": "冥卫",
     "rarity": "普通",
@@ -119,7 +128,8 @@ export const STYGIAN_GUARD_UNITS = [
     "description": ""
   },
   {
-    "name": "无名海妖 | BattleDancer",
+    "name": "无名海妖",
+    "english-name": "BattleDancer",
     "type": "海妖",
     "clan": "冥卫",
     "rarity": "高级",
@@ -132,7 +142,8 @@ export const STYGIAN_GUARD_UNITS = [
     "description": ""
   },
   {
-    "name": "祭品石碑 | BattleDancer",
+    "name": "祭品石碑",
+    "english-name": "BattleDancer",
     "type": "图腾",
     "clan": "冥卫",
     "rarity": "稀有",
@@ -145,7 +156,8 @@ export const STYGIAN_GUARD_UNITS = [
     "description": ""
   },
   {
-    "name": "深海海妖 | BattleDancer",
+    "name": "深海海妖",
+    "english-name": "BattleDancer",
     "type": "海妖",
     "clan": "冥卫",
     "rarity": "高级",
@@ -158,7 +170,8 @@ export const STYGIAN_GUARD_UNITS = [
     "description": ""
   },
   {
-    "name": "泰坦哨兵 | BattleDancer",
+    "name": "泰坦哨兵",
+    "english-name": "BattleDancer",
     "type": "海妖",
     "clan": "冥卫",
     "rarity": "高级",
@@ -171,7 +184,8 @@ export const STYGIAN_GUARD_UNITS = [
     "description": ""
   },
   {
-    "name": "鳗鱼戈耳工 | BattleDancer",
+    "name": "鳗鱼戈耳工",
+    "english-name": "BattleDancer",
     "type": "法师",
     "clan": "冥卫",
     "rarity": "稀有",
@@ -184,7 +198,8 @@ export const STYGIAN_GUARD_UNITS = [
     "description": ""
   },
   {
-    "name": "磁石图腾 | BattleDancer",
+    "name": "磁石图腾",
+    "english-name": "BattleDancer",
     "type": "图腾",
     "clan": "冥卫",
     "rarity": "稀有",
@@ -200,7 +215,8 @@ export const STYGIAN_GUARD_UNITS = [
 // 冥卫 法术
 export const STYGIAN_GUARD_SPELLS = [
   {
-    "name": "冥卫脑钉 | DragonEgg",
+    "name": "冥卫脑钉",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "稀有",
@@ -209,7 +225,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "结晶之种 | DragonEgg",
+    "name": "结晶之种",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -218,7 +235,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "能量虹吸 | DragonEgg",
+    "name": "能量虹吸",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "普通",
@@ -227,7 +245,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "遗弃之力 | DragonEgg",
+    "name": "遗弃之力",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "普通",
@@ -236,7 +255,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "献祭代币 | DragonEgg",
+    "name": "献祭代币",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "普通",
@@ -245,7 +265,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "保存 | DragonEgg",
+    "name": "保存",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -254,7 +275,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "无名者之书 | DragonEgg",
+    "name": "无名者之书",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -263,7 +285,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "海胆尖刺 | DragonEgg",
+    "name": "海胆尖刺",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -272,7 +295,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "力竭 | DragonEgg",
+    "name": "力竭",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -281,7 +305,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "急速冰冻 | DragonEgg",
+    "name": "急速冰冻",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "普通",
@@ -290,7 +315,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "凶残妖群 | DragonEgg",
+    "name": "凶残妖群",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -299,7 +325,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "寒冰长枪 | DragonEgg",
+    "name": "寒冰长枪",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "普通",
@@ -308,7 +335,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "驾驭泰坦 | DragonEgg",
+    "name": "驾驭泰坦",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "稀有",
@@ -317,7 +345,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "寒冰和薪火 | DragonEgg",
+    "name": "寒冰和薪火",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "稀有",
@@ -326,7 +355,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "寒冰风暴 | DragonEgg",
+    "name": "寒冰风暴",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -335,7 +365,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "海妖之歌 | DragonEgg",
+    "name": "海妖之歌",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "稀有",
@@ -344,7 +375,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "泰坦谢礼 | DragonEgg",
+    "name": "泰坦谢礼",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "普通",
@@ -353,7 +385,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "深渊祭礼 | DragonEgg",
+    "name": "深渊祭礼",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "稀有",
@@ -362,7 +395,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "螺旋结晶 | DragonEgg",
+    "name": "螺旋结晶",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "普通",
@@ -371,7 +405,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "远古协调 | DragonEgg",
+    "name": "远古协调",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "稀有",
@@ -380,7 +415,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "地穴建造器 | DragonEgg",
+    "name": "地穴建造器",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "普通",
@@ -389,7 +425,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "冥卫之礼 | DragonEgg",
+    "name": "冥卫之礼",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "稀有",
@@ -398,7 +435,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "冥卫护符 | DragonEgg",
+    "name": "冥卫护符",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -407,7 +445,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "凝霜雕像 | DragonEgg",
+    "name": "凝霜雕像",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "稀有",
@@ -416,7 +455,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "寒冰龙卷 | DragonEgg",
+    "name": "寒冰龙卷",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -425,7 +465,8 @@ export const STYGIAN_GUARD_SPELLS = [
     "description": ""
   },
   {
-    "name": "泰坦之牙 | DragonEgg",
+    "name": "泰坦之牙",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -443,67 +484,78 @@ export const STYGIAN_GUARD_ROOMS = [
 // 冥卫 神器
 export const STYGIAN_GUARD_ARTIFACTS = [
   {
-    "name": "遗忘之名 | ImprisonedZephyr",
+    "name": "遗忘之名",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "冥卫",
     "effect": "当本回合打出第三张法术时, 所有卡牌获得 +1 [魔法强度], 持续整场战斗",
   },
   {
-    "name": "乌贼触须 | ImprisonedZephyr",
+    "name": "乌贼触须",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "冥卫",
     "effect": "当一个单位获得 [霜冻] 时, 获得的层数 +3, 且不会衰减",
   },
   {
-    "name": "成立印记 | ImprisonedZephyr",
+    "name": "成立印记",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "冥卫",
     "effect": "[咒语] 额外触发一次",
   },
   {
-    "name": "冰柱碎片 | ImprisonedZephyr",
+    "name": "冰柱碎片",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "冥卫",
     "effect": "回合结束时, 随机 [冻结] 一张手牌",
   },
   {
-    "name": "亲族石图腾 | ImprisonedZephyr",
+    "name": "亲族石图腾",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "冥卫",
     "effect": "在回合结束前舍弃一张牌时, 获得 [余烬] 1",
   },
   {
-    "name": "仪式律法 | ImprisonedZephyr",
+    "name": "仪式律法",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "冥卫",
     "effect": "当敌方单位进入战斗时, 获得 [霜冻] 2",
   },
   {
-    "name": "符文海藻 | ImprisonedZephyr",
+    "name": "符文海藻",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "冥卫",
     "effect": "当敌方单位进入火车时, 对其施加 [沉默] 1",
   },
   {
-    "name": "泰西斯之鳞 | ImprisonedZephyr",
+    "name": "泰西斯之鳞",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "冥卫",
     "effect": "当敌方单位进入火车时, 50% 几率对其施加 [法术易伤] 1",
   },
   {
-    "name": "泰坦之爪 | ImprisonedZephyr",
+    "name": "泰坦之爪",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "冥卫",
     "effect": "回合结束时, [冻结] 的卡牌 [余烬] 降为 0, 直到打出或舍弃",
   },
   {
-    "name": "毁约者代币 | ImprisonedZephyr",
+    "name": "毁约者代币",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "冥卫",
     "effect": "使用法术会随机对该层的一个敌方单位造成 2 点伤害",
   },
   {
-    "name": "图腾碎片 | ImprisonedZephyr",
+    "name": "图腾碎片",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "冥卫",
     "effect": "当敌方单位进入薪火室下方的楼层时, 对其施加 [法术易伤] 2",

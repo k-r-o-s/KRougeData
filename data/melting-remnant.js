@@ -3,7 +3,8 @@
 // 熔尸 英雄
 export const MELTING_REMNANT_CHAMPIONS = [
   {
-    "name": "小菲德 | Fel",
+    "name": "小菲德",
+    "english-name": "Fel",
     "type": "勇者",
     "clan": "熔尸",
     "cost": "0",
@@ -14,7 +15,8 @@ export const MELTING_REMNANT_CHAMPIONS = [
     "description": "",
   },
   {
-    "name": "雷克特·烛焰 | Fel",
+    "name": "雷克特·烛焰",
+    "english-name": "Fel",
     "type": "勇者",
     "clan": "熔尸",
     "cost": "0",
@@ -28,7 +30,8 @@ export const MELTING_REMNANT_CHAMPIONS = [
 // 熔尸 单位
 export const MELTING_REMNANT_UNITS = [
   {
-    "name": "蜡渣 | BattleDancer",
+    "name": "蜡渣",
+    "english-name": "BattleDancer",
     "type": "烛人",
     "clan": "熔尸",
     "rarity": "普通",
@@ -41,7 +44,8 @@ export const MELTING_REMNANT_UNITS = [
     "description": ""
   },
   {
-    "name": "宿主残渣 | BattleDancer",
+    "name": "宿主残渣",
+    "english-name": "BattleDancer",
     "type": "墓灵",
     "clan": "熔尸",
     "rarity": "高级",
@@ -54,7 +58,8 @@ export const MELTING_REMNANT_UNITS = [
     "description": ""
   },
   {
-    "name": "许愿烛灵 | BattleDancer",
+    "name": "许愿烛灵",
+    "english-name": "BattleDancer",
     "type": "烛人",
     "clan": "熔尸",
     "rarity": "高级",
@@ -67,7 +72,8 @@ export const MELTING_REMNANT_UNITS = [
     "description": ""
   },
   {
-    "name": "赏金猎手 | BattleDancer",
+    "name": "赏金猎手",
+    "english-name": "BattleDancer",
     "type": "无芯者",
     "clan": "熔尸",
     "rarity": "稀有",
@@ -80,7 +86,8 @@ export const MELTING_REMNANT_UNITS = [
     "description": ""
   },
   {
-    "name": "死亡吞没者 | BattleDancer",
+    "name": "死亡吞没者",
+    "english-name": "BattleDancer",
     "type": "无芯者",
     "clan": "熔尸",
     "rarity": "稀有",
@@ -93,7 +100,8 @@ export const MELTING_REMNANT_UNITS = [
     "description": ""
   },
   {
-    "name": "重塑烛人 | BattleDancer",
+    "name": "重塑烛人",
+    "english-name": "BattleDancer",
     "type": "烛人",
     "clan": "熔尸",
     "rarity": "普通",
@@ -106,7 +114,8 @@ export const MELTING_REMNANT_UNITS = [
     "description": ""
   },
   {
-    "name": "蜡封炸弹 | BattleDancer",
+    "name": "蜡封炸弹",
+    "english-name": "BattleDancer",
     "type": "墓灵",
     "clan": "熔尸",
     "rarity": "普通",
@@ -119,7 +128,8 @@ export const MELTING_REMNANT_UNITS = [
     "description": ""
   },
   {
-    "name": "蜡神夫人 | BattleDancer",
+    "name": "蜡神夫人",
+    "english-name": "BattleDancer",
     "type": "烛人",
     "clan": "熔尸",
     "rarity": "高级",
@@ -132,7 +142,8 @@ export const MELTING_REMNANT_UNITS = [
     "description": ""
   },
   {
-    "name": "移形夫人 | BattleDancer",
+    "name": "移形夫人",
+    "english-name": "BattleDancer",
     "type": "烛人",
     "clan": "熔尸",
     "rarity": "高级",
@@ -145,7 +156,8 @@ export const MELTING_REMNANT_UNITS = [
     "description": ""
   },
   {
-    "name": "燃烧蜡液 | BattleDancer",
+    "name": "燃烧蜡液",
+    "english-name": "BattleDancer",
     "type": "墓灵",
     "clan": "熔尸",
     "rarity": "普通",
@@ -158,7 +170,8 @@ export const MELTING_REMNANT_UNITS = [
     "description": ""
   },
   {
-    "name": "石蜡执法者 | BattleDancer",
+    "name": "石蜡执法者",
+    "english-name": "BattleDancer",
     "type": "无芯者",
     "clan": "熔尸",
     "rarity": "高级",
@@ -171,7 +184,8 @@ export const MELTING_REMNANT_UNITS = [
     "description": ""
   },
   {
-    "name": "石蜡暴徒 | BattleDancer",
+    "name": "石蜡暴徒",
+    "english-name": "BattleDancer",
     "type": "无芯者",
     "clan": "熔尸",
     "rarity": "高级",
@@ -184,7 +198,8 @@ export const MELTING_REMNANT_UNITS = [
     "description": ""
   },
   {
-    "name": "无芯男爵 | BattleDancer",
+    "name": "无芯男爵",
+    "english-name": "BattleDancer",
     "type": "无芯者",
     "clan": "熔尸",
     "rarity": "高级",
@@ -197,7 +212,8 @@ export const MELTING_REMNANT_UNITS = [
     "description": ""
   },
   {
-    "name": "无芯大亨 | BattleDancer",
+    "name": "无芯大亨",
+    "english-name": "BattleDancer",
     "type": "无芯者",
     "clan": "熔尸",
     "rarity": "高级",
@@ -210,7 +226,8 @@ export const MELTING_REMNANT_UNITS = [
     "description": ""
   },
   {
-    "name": "巨型蜡油 | BattleDancer",
+    "name": "巨型蜡油",
+    "english-name": "BattleDancer",
     "type": "无芯者",
     "clan": "熔尸",
     "rarity": "稀有",
@@ -223,7 +240,8 @@ export const MELTING_REMNANT_UNITS = [
     "description": ""
   },
   {
-    "name": "无形小孩 | BattleDancer",
+    "name": "无形小孩",
+    "english-name": "BattleDancer",
     "type": "墓灵",
     "clan": "熔尸",
     "rarity": "稀有",
@@ -236,7 +254,8 @@ export const MELTING_REMNANT_UNITS = [
     "description": ""
   },
   {
-    "name": "烛人大军 | BattleDancer",
+    "name": "烛人大军",
+    "english-name": "BattleDancer",
     "type": "烛人",
     "clan": "熔尸",
     "rarity": "稀有",
@@ -252,7 +271,8 @@ export const MELTING_REMNANT_UNITS = [
 // 熔尸 法术
 export const MELTING_REMNANT_SPELLS = [
   {
-    "name": "烛人脑钉 | DragonEgg",
+    "name": "烛人脑钉",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "稀有",
@@ -261,7 +281,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "神圣滴注 | DragonEgg",
+    "name": "神圣滴注",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "普通",
@@ -270,7 +291,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "熔化者的记忆 | DragonEgg",
+    "name": "熔化者的记忆",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -279,7 +301,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "精华洗礼 | DragonEgg",
+    "name": "精华洗礼",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "普通",
@@ -288,7 +311,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "神圣烛芯 | DragonEgg",
+    "name": "神圣烛芯",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -297,7 +321,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "牺牲重塑 | DragonEgg",
+    "name": "牺牲重塑",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "稀有",
@@ -306,7 +331,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "招募无芯者 | DragonEgg",
+    "name": "招募无芯者",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "稀有",
@@ -315,7 +341,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "致命重碾 | DragonEgg",
+    "name": "致命重碾",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -324,7 +351,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "烛油滴落 | DragonEgg",
+    "name": "烛油滴落",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "普通",
@@ -333,7 +361,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "一心求死 | DragonEgg",
+    "name": "一心求死",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "稀有",
@@ -342,7 +371,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "重铸 | DragonEgg",
+    "name": "重铸",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "普通",
@@ -351,7 +381,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "原始模具 | DragonEgg",
+    "name": "原始模具",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "普通",
@@ -360,7 +391,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "熔尸誓约 | DragonEgg",
+    "name": "熔尸誓约",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "稀有",
@@ -369,7 +401,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "树脂剥落 | DragonEgg",
+    "name": "树脂剥落",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -378,7 +411,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "无尽刀锋 | DragonEgg",
+    "name": "无尽刀锋",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -387,7 +421,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "加速燃烧 | DragonEgg",
+    "name": "加速燃烧",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "普通",
@@ -396,7 +431,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "致命熔炼 | DragonEgg",
+    "name": "致命熔炼",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -405,7 +441,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "烟雾缭绕 | DragonEgg",
+    "name": "烟雾缭绕",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -414,7 +451,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "空荡大厅 | DragonEgg",
+    "name": "空荡大厅",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "稀有",
@@ -423,7 +461,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "烛芯速燃 | DragonEgg",
+    "name": "烛芯速燃",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -432,7 +471,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "死亡纪念 | DragonEgg",
+    "name": "死亡纪念",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -441,7 +481,8 @@ export const MELTING_REMNANT_SPELLS = [
     "description": ""
   },
   {
-    "name": "致命陷阱 | DragonEgg",
+    "name": "致命陷阱",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -459,67 +500,78 @@ export const MELTING_REMNANT_ROOMS = [
 // 熔尸 神器
 export const MELTING_REMNANT_ARTIFACTS = [
   {
-    "name": "易燃蜡 | ImprisonedZephyr",
+    "name": "易燃蜡",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "熔尸",
     "effect": "当一个友方单位获得 [燃命] 时, 获得层数 +3",
   },
   {
-    "name": "蜡衣余烬 | ImprisonedZephyr",
+    "name": "蜡衣余烬",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "熔尸",
     "effect": "每当一个墓灵单位死亡时, 获得 5 [余烬]",
   },
   {
-    "name": "爆裂蜡烛 | ImprisonedZephyr",
+    "name": "爆裂蜡烛",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "熔尸",
     "effect": "当一个 [燃命] 单位死亡时, 对所有敌方单位造成 5 点伤害",
   },
   {
-    "name": "菲德的第一把剑 | ImprisonedZephyr",
+    "name": "菲德的第一把剑",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "熔尸",
     "effect": "友方单位每失去一层 [燃命], 便会获得 [狂怒] 3",
   },
   {
-    "name": "烛焰的烈酒 | ImprisonedZephyr",
+    "name": "烛焰的烈酒",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "熔尸",
     "effect": "[部署阶段] 之后, 当你打出一个单位时, 该回合的一张随机卡牌费用会降为 [余烬] 0, 直到其被打出或丢弃",
   },
   {
-    "name": "熔蜡喷壶 | ImprisonedZephyr",
+    "name": "熔蜡喷壶",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "熔尸",
     "effect": "墓灵单位获得 +30 [生命值] 和 [燃命] 1",
   },
   {
-    "name": "纪念基金 | ImprisonedZephyr",
+    "name": "纪念基金",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "熔尸",
     "effect": "每当一个友方单位死亡时, 获得 5 [金币]",
   },
   {
-    "name": "模具束带 | ImprisonedZephyr",
+    "name": "模具束带",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "熔尸",
     "effect": "友方单位在 [亡语] 时, 对前排友方单位施加 [护甲] 5",
   },
   {
-    "name": "树脂外皮 | ImprisonedZephyr",
+    "name": "树脂外皮",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "熔尸",
     "effect": "当一个友方单位死亡时, 使其获得 +10 [攻击力]",
   },
   {
-    "name": "蜡神之钥 | ImprisonedZephyr",
+    "name": "蜡神之钥",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "熔尸",
     "effect": "每回合打出的首个友方单位获得 [复生]",
   },
   {
-    "name": "烛人阴燃者 | ImprisonedZephyr",
+    "name": "烛人阴燃者",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "熔尸",
     "effect": "[亡语] 额外触发一次",

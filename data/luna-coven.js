@@ -3,7 +3,8 @@
 // 月巫团 英雄
 export const LUNA_COVEN_CHAMPIONS = [
   {
-    "name": "艾卡 | Ekka",
+    "name": "艾卡",
+    "english-name": "Ekka",
     "type": "勇者",
     "clan": "月巫团",
     "cost": "0",
@@ -14,7 +15,8 @@ export const LUNA_COVEN_CHAMPIONS = [
     "description": ""
   },
   {
-    "name": "阿杜恩 | Arduhn",
+    "name": "阿杜恩",
+    "english-name": "Arduhn",
     "type": "勇者",
     "clan": "月巫团",
     "cost": "0",
@@ -28,7 +30,8 @@ export const LUNA_COVEN_CHAMPIONS = [
 // 月巫团 单位
 export const LUNA_COVEN_UNITS = [
   {
-    "name": "占星师 | Astrologer",
+    "name": "占星师",
+    "english-name": "Astrologer",
     "type": "月神女",
     "clan": "月巫团",
     "rarity": "高级",
@@ -41,7 +44,8 @@ export const LUNA_COVEN_UNITS = [
     "description": ""
   },
   {
-    "name": "灵气编织者 | Aurora Weaver",
+    "name": "灵气编织者",
+    "english-name": "Aurora Weaver",
     "type": "月神女",
     "clan": "月巫团",
     "rarity": "高级",
@@ -54,7 +58,8 @@ export const LUNA_COVEN_UNITS = [
     "description": ""
   },
   {
-    "name": "优雅小仙女 | Ethereal Seelie",
+    "name": "优雅小仙女",
+    "english-name": "Ethereal Seelie",
     "type": "妖精",
     "clan": "月巫团",
     "rarity": "稀有",
@@ -67,7 +72,8 @@ export const LUNA_COVEN_UNITS = [
     "description": ""
   },
   {
-    "name": "月亮祭司 | Lunar Priestess",
+    "name": "月亮祭司",
+    "english-name": "Lunar Priestess",
     "type": "月神女",
     "clan": "月巫团",
     "rarity": "高级",
@@ -80,7 +86,8 @@ export const LUNA_COVEN_UNITS = [
     "description": ""
   },
   {
-    "name": "搞事精 | Meddler",
+    "name": "搞事精",
+    "english-name": "Meddler",
     "type": "妖精",
     "clan": "月巫团",
     "rarity": "普通",
@@ -93,7 +100,8 @@ export const LUNA_COVEN_UNITS = [
     "description": ""
   },
   {
-    "name": "月之仙子 | Moon Pixie",
+    "name": "月之仙子",
+    "english-name": "Moon Pixie",
     "type": "妖精",
     "clan": "月巫团",
     "rarity": "普通",
@@ -106,7 +114,8 @@ export const LUNA_COVEN_UNITS = [
     "description": ""
   },
   {
-    "name": "唤月者 | Mooncaller",
+    "name": "唤月者",
+    "english-name": "Mooncaller",
     "type": "月神女",
     "clan": "月巫团",
     "rarity": "高级",
@@ -119,7 +128,8 @@ export const LUNA_COVEN_UNITS = [
     "description": ""
   },
   {
-    "name": "夜莺 | Nightingale",
+    "name": "夜莺",
+    "english-name": "Nightingale",
     "type": "寂静者",
     "clan": "月巫团",
     "rarity": "高级",
@@ -132,7 +142,8 @@ export const LUNA_COVEN_UNITS = [
     "description": ""
   },
   {
-    "name": "寂静者哨兵 | Silent Sentinel",
+    "name": "寂静者哨兵",
+    "english-name": "Silent Sentinel",
     "type": "寂静者",
     "clan": "月巫团",
     "rarity": "高级",
@@ -146,7 +157,8 @@ export const LUNA_COVEN_UNITS = [
   },
 
   {
-    "name": "月之守卫 | Moonguard",
+    "name": "月之守卫",
+    "english-name": "Moonguard",
     "type": "寂静者",
     "clan": "月巫团",
     "rarity": "稀有",
@@ -159,7 +171,8 @@ export const LUNA_COVEN_UNITS = [
     "description": ""
   },
   {
-    "name": "代笔人 | Scrivener",
+    "name": "代笔人",
+    "english-name": "Scrivener",
     "type": "月神女",
     "clan": "月巫团",
     "rarity": "稀有",
@@ -172,7 +185,8 @@ export const LUNA_COVEN_UNITS = [
     "description": ""
   },
   {
-    "name": "月神殿侍从 | Selene Acolyte",
+    "name": "月神殿侍从",
+    "english-name": "Selene Acolyte",
     "type": "月神女",
     "clan": "月巫团",
     "rarity": "高级",
@@ -185,7 +199,8 @@ export const LUNA_COVEN_UNITS = [
     "description": ""
   },
   {
-    "name": "阴影守卫 | Shadeguard",
+    "name": "阴影守卫",
+    "english-name": "Shadeguard",
     "type": "寂静者",
     "clan": "月巫团",
     "rarity": "高级",
@@ -201,7 +216,8 @@ export const LUNA_COVEN_UNITS = [
 // 月巫团 法术
 export const LUNA_COVEN_SPELLS = [
   {
-    "name": "月巫团脑钉 | DragonEgg",
+    "name": "月巫团脑钉",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "稀有",
@@ -210,7 +226,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "月相魔导 | DragonEgg",
+    "name": "月相魔导",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "高级",
@@ -219,7 +236,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "月光轰炸 | DragonEgg",
+    "name": "月光轰炸",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "高级",
@@ -228,7 +246,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "月之仪式 | DragonEgg",
+    "name": "月之仪式",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "普通",
@@ -237,7 +256,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "月出时分 | DragonEgg",
+    "name": "月出时分",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "高级",
@@ -246,7 +266,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "魔纺术 | DragonEgg",
+    "name": "魔纺术",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "普通",
@@ -255,7 +276,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "夜幕掩护 | DragonEgg",
+    "name": "夜幕掩护",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "高级",
@@ -264,7 +286,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "二元性 | DragonEgg",
+    "name": "二元性",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "稀有",
@@ -273,7 +296,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "妖精祝福 | DragonEgg",
+    "name": "妖精祝福",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "普通",
@@ -282,7 +306,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "闪光饮剂 | DragonEgg",
+    "name": "闪光饮剂",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "高级",
@@ -291,7 +316,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "重力 | DragonEgg",
+    "name": "重力",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "普通",
@@ -300,7 +326,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "银光闪击 | DragonEgg",
+    "name": "银光闪击",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "普通",
@@ -309,7 +336,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "星尘祈愿 | DragonEgg",
+    "name": "星尘祈愿",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "稀有",
@@ -318,7 +346,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "星尘冲击 | DragonEgg",
+    "name": "星尘冲击",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "普通",
@@ -327,7 +356,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "血月 | DragonEgg",
+    "name": "血月",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "普通",
@@ -336,7 +366,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "宇宙闪电 | DragonEgg",
+    "name": "宇宙闪电",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "高级",
@@ -345,7 +376,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "妖术飞升 | DragonEgg",
+    "name": "妖术飞升",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "高级",
@@ -354,7 +386,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "仪式之书 | DragonEgg",
+    "name": "仪式之书",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "稀有",
@@ -363,7 +396,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "天体风暴 | DragonEgg",
+    "name": "天体风暴",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "普通",
@@ -372,7 +406,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "银墨粉 | DragonEgg",
+    "name": "银墨粉",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "稀有",
@@ -381,7 +416,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "潮汐之舞 | DragonEgg",
+    "name": "潮汐之舞",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "稀有",
@@ -390,7 +426,8 @@ export const LUNA_COVEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "苍穹坠落 | DragonEgg",
+    "name": "苍穹坠落",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "稀有",
@@ -402,7 +439,8 @@ export const LUNA_COVEN_SPELLS = [
 // 月巫团 装备
 export const LUNA_COVEN_EQUIPMENTS = [
   {
-    "name": "月相循环法杖 | Imprisoned",
+    "name": "月相循环法杖",
+    "english-name": "Imprisoned",
     "type": "装备",
     "clan": "月巫团",
     "rarity": "稀有",
@@ -410,7 +448,8 @@ export const LUNA_COVEN_EQUIPMENTS = [
     "effect": "[月相循环]: 这件装备永久获得 [攻击力] 1",
   },
   {
-    "name": "月光弯刃剑 | Imprisoned",
+    "name": "月光弯刃剑",
+    "english-name": "Imprisoned",
     "type": "装备",
     "clan": "月巫团",
     "rarity": "高级",
@@ -422,7 +461,8 @@ export const LUNA_COVEN_EQUIPMENTS = [
 // 月巫团 房间
 export const LUNA_COVEN_ROOMS = [
   {
-    "name": "月食室 | Imprisoned",
+    "name": "月食室",
+    "english-name": "Imprisoned",
     "type": "房间",
     "clan": "月巫团",
     "rarity": "高级",
@@ -430,7 +470,8 @@ export const LUNA_COVEN_ROOMS = [
     "effect": "[新月] 效果始终有效. 寂静者单位 [结算] 时获得 [攻击力] 15",
   },
   {
-    "name": "天文馆 | Imprisoned",
+    "name": "天文馆",
+    "english-name": "Imprisoned",
     "type": "房间",
     "clan": "月巫团",
     "rarity": "高级",
@@ -441,67 +482,78 @@ export const LUNA_COVEN_ROOMS = [
 // 月巫团 神器
 export const LUNA_COVEN_ARTIFACTS = [
   {
-    "name": "占星师的星象仪 | Imprisoned",
+    "name": "占星师的星象仪",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "月巫团",
     "effect": "每回合 [月相] 首次变为 [满月] 时, 获得 [余烬] 1",
   },
   {
-    "name": "星界之帆 | Imprisoned",
+    "name": "星界之帆",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "月巫团",
     "effect": "[部署阶段] 期间, 从卡组中抽取一张非伤害性法术, 并使其 [余烬] -1",
   },
   {
-    "name": "循环之轮 | Imprisoned",
+    "name": "循环之轮",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "月巫团",
     "effect": "[月相循环] 时, 生命值最低的友方单位恢复 10 点生命值",
   },
   {
-    "name": "妖精隐匿处 | Imprisoned",
+    "name": "妖精隐匿处",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "月巫团",
     "effect": "[月相循环] 时, 妖精获得 [导流] 1 和 [攻击力] 5",
   },
   {
-    "name": "王国之泪 | Imprisoned",
+    "name": "王国之泪",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "月巫团",
     "effect": "法术治疗效果提高 10",
   },
   {
-    "name": "月亮灯 | Imprisoned",
+    "name": "月亮灯",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "月巫团",
     "effect": "[满月] 期间, 月神女单位获得 [攻击力] 20. [新月] 期间, 寂静者单位获得 [攻击力] 20",
   },
   {
-    "name": "月之石 | Imprisoned",
+    "name": "月之石",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "月巫团",
     "effect": "回合结束时, 若月相为 [满月], 手牌中的法术牌获得 [魔法强度] 10",
   },
   {
-    "name": "锋锐月牙 | Imprisoned",
+    "name": "锋锐月牙",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "月巫团",
     "effect": "每层 [魔刃] 额外获得 [攻击力] 1",
   },
   {
-    "name": "先知之球 | Imprisoned",
+    "name": "先知之球",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "月巫团",
     "effect": "当施加 [法术易伤] 时, 额外施加 1 层",
   },
   {
-    "name": "寂静者符文 | Imprisoned",
+    "name": "寂静者符文",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "月巫团",
     "effect": "当 [月相] 变化为 [新月] 时, 寂静者单位获得 [护甲] 10",
   },
   {
-    "name": "星尘点心 | Imprisoned",
+    "name": "星尘点心",
+    "english-name": "Imprisoned",
     "type": "神器",
     "clan": "月巫团",
     "effect": "每回合召唤的第一个单位获得 [导流] 4",

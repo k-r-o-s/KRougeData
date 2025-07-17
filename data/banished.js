@@ -3,7 +3,8 @@
 // 流放者 英雄
 export const BANISHED_CHAMPIONS = [
   {
-    "name": "菲尔 | Fel",
+    "name": "菲尔",
+    "english-name": "Fel",
     "type": "勇者",
     "clan": "流放者",
     "cost": "0",
@@ -85,7 +86,8 @@ export const BANISHED_CHAMPIONS = [
     ]
   },
   {
-    "name": "塔洛丝 | Talos",
+    "name": "塔洛丝",
+    "english-name": "Talos",
     "type": "勇者",
     "clan": "流放者",
     "cost": "0",
@@ -170,7 +172,8 @@ export const BANISHED_CHAMPIONS = [
 // 流放者 单位
 export const BANISHED_UNITS = [
   {
-    "name": "战斗舞者 | Battle Dancer",
+    "name": "战斗舞者",
+    "english-name": "Battle Dancer",
     "type": "天使",
     "clan": "流放者",
     "rarity": "高级",
@@ -183,7 +186,8 @@ export const BANISHED_UNITS = [
     "description": ""
   },
   {
-    "name": "死亡舞者 | Death's Dancer",
+    "name": "死亡舞者",
+    "english-name": "Death's Dancer",
     "type": "天使",
     "clan": "流放者",
     "rarity": "高级",
@@ -196,7 +200,8 @@ export const BANISHED_UNITS = [
     "description": ""
   },
   {
-    "name": "恶魔新兵 | Demonic Fledgling",
+    "name": "恶魔新兵",
+    "english-name": "Demonic Fledgling",
     "type": "天使",
     "clan": "流放者",
     "rarity": "高级",
@@ -209,7 +214,8 @@ export const BANISHED_UNITS = [
     "description": "\"到休息时间了吗?\""
   },
   {
-    "name": "神圣舞者 | Divine Dancer",
+    "name": "神圣舞者",
+    "english-name": "Divine Dancer",
     "type": "天使",
     "clan": "流放者",
     "rarity": "稀有",
@@ -222,7 +228,8 @@ export const BANISHED_UNITS = [
     "description": "舞蹈是一首诗, 每一次杀戮都是一段舞步"
   },
   {
-    "name": "领唱鸣鸟 | Lead Songbird",
+    "name": "领唱鸣鸟",
+    "english-name": "Lead Songbird",
     "type": "圣乐团成员",
     "clan": "流放者",
     "rarity": "普通",
@@ -235,7 +242,8 @@ export const BANISHED_UNITS = [
     "description": "舞蹈是一首诗, 每一次杀戮都是一段舞步"
   },
   {
-    "name": "朋克吉他手 | Punk Shredder",
+    "name": "朋克吉他手",
+    "english-name": "Punk Shredder",
     "type": "圣乐团成员",
     "clan": "流放者",
     "rarity": "高级",
@@ -248,7 +256,8 @@ export const BANISHED_UNITS = [
     "description": "舞蹈是一首诗, 每一次杀戮都是一段舞步"
   },
   {
-    "name": "坚毅十字军 | Steadfast Crusader",
+    "name": "坚毅十字军",
+    "english-name": "Steadfast Crusader",
     "type": "天使",
     "clan": "流放者",
     "rarity": "高级",
@@ -261,7 +270,8 @@ export const BANISHED_UNITS = [
     "description": "舞蹈是一首诗, 每一次杀戮都是一段舞步"
   },
   {
-    "name": "持剑侍女 | Swordmaiden",
+    "name": "持剑侍女",
+    "english-name": "Swordmaiden",
     "type": "天使",
     "clan": "流放者",
     "rarity": "高级",
@@ -274,7 +284,8 @@ export const BANISHED_UNITS = [
     "description": "舞蹈是一首诗, 每一次杀戮都是一段舞步"
   },
   {
-    "name": "林莺号手 | Upbeat Warbler",
+    "name": "林莺号手",
+    "english-name": "Upbeat Warbler",
     "type": "圣乐团成员",
     "clan": "流放者",
     "rarity": "普通",
@@ -287,7 +298,8 @@ export const BANISHED_UNITS = [
     "description": "舞蹈是一首诗, 每一次杀戮都是一段舞步"
   },
   {
-    "name": "复仇者 | Avenger",
+    "name": "复仇者",
+    "english-name": "Avenger",
     "type": "天使",
     "clan": "流放者",
     "rarity": "高级",
@@ -300,7 +312,8 @@ export const BANISHED_UNITS = [
     "description": "舞蹈是一首诗, 每一次杀戮都是一段舞步"
   },
   {
-    "name": "放火者 | Firebrand",
+    "name": "放火者",
+    "english-name": "Firebrand",
     "type": "天使",
     "clan": "流放者",
     "rarity": "高级",
@@ -313,7 +326,8 @@ export const BANISHED_UNITS = [
     "description": "舞蹈是一首诗, 每一次杀戮都是一段舞步"
   },
   {
-    "name": "军团守卫 | Hostguard",
+    "name": "军团守卫",
+    "english-name": "Hostguard",
     "type": "天使",
     "clan": "流放者",
     "rarity": "稀有",
@@ -326,7 +340,8 @@ export const BANISHED_UNITS = [
     "description": "舞蹈是一首诗, 每一次杀戮都是一段舞步"
   },
   {
-    "name": "死亡金属竖琴手 | Deathmetal Hymnist",
+    "name": "死亡金属竖琴手",
+    "english-name": "Deathmetal Hymnist",
     "type": "圣乐团成员",
     "clan": "流放者",
     "rarity": "稀有",
@@ -342,7 +357,8 @@ export const BANISHED_UNITS = [
 // 流放者 法术
 export const BANISHED_SPELLS = [
   {
-    "name": "流放者道钉 | Spike of the Banished",
+    "name": "流放者道钉",
+    "english-name": "Spike of the Banished",
     "type": "法术",
     "clan": "流放者",
     "rarity": "稀有",
@@ -350,7 +366,8 @@ export const BANISHED_SPELLS = [
     "effect": "[消耗]。获得 3 [X] [英勇]",
   },
   {
-    "name": "维格之光 | Wyngh's Radiance",
+    "name": "维格之光",
+    "english-name": "Wyngh's Radiance",
     "type": "法术",
     "clan": "流放者",
     "rarity": "稀有",
@@ -358,7 +375,8 @@ export const BANISHED_SPELLS = [
     "effect": "[前进]。施加 [X] [近战易伤]",
   },
   {
-    "name": "挑战 | Challenge",
+    "name": "挑战",
+    "english-name": "Challenge",
     "type": "法术",
     "clan": "流放者",
     "rarity": "普通",
@@ -366,7 +384,8 @@ export const BANISHED_SPELLS = [
     "effect": "[前进]。施加 [近战易伤] 1",
   },
   {
-    "name": "英勇俯冲 | Heroic Dive",
+    "name": "英勇俯冲",
+    "english-name": "Heroic Dive",
     "type": "法术",
     "clan": "流放者",
     "rarity": "高级",
@@ -374,7 +393,8 @@ export const BANISHED_SPELLS = [
     "effect": "[消耗]。下降 然后 [前进] 一个友方单位. 对前排敌方单位造成该单位 ([生命值] + [护甲]) x 2 的伤害",
   },
   {
-    "name": "激励 | Inspire",
+    "name": "激励",
+    "english-name": "Inspire",
     "type": "法术",
     "clan": "流放者",
     "rarity": "普通",
@@ -382,7 +402,8 @@ export const BANISHED_SPELLS = [
     "effect": "使所有友方单位获得 [英勇] 1",
   },
   {
-    "name": "正义之战 | Just Cause",
+    "name": "正义之战",
+    "english-name": "Just Cause",
     "type": "法术",
     "clan": "流放者",
     "rarity": "普通",
@@ -390,7 +411,8 @@ export const BANISHED_SPELLS = [
     "effect": "[前进]。获得 [英勇] 2",
   },
   {
-    "name": "勇气药水 | Liquid Courage",
+    "name": "勇气药水",
+    "english-name": "Liquid Courage",
     "type": "法术",
     "clan": "流放者",
     "rarity": "高级",
@@ -398,7 +420,8 @@ export const BANISHED_SPELLS = [
     "effect": "[消耗]。施加 [伤害护盾] 1 和 [英勇] 4",
   },
   {
-    "name": "狂怒飞升 | Rising Rage",
+    "name": "狂怒飞升",
+    "english-name": "Rising Rage",
     "type": "法术",
     "clan": "流放者",
     "rarity": "普通",
@@ -406,7 +429,8 @@ export const BANISHED_SPELLS = [
     "effect": "[上升]。然后 [前进]",
   },
   {
-    "name": "失落路途之书 | Tome of the Lost Path",
+    "name": "失落路途之书",
+    "english-name": "Tome of the Lost Path",
     "type": "法术",
     "clan": "流放者",
     "rarity": "稀有",
@@ -414,7 +438,8 @@ export const BANISHED_SPELLS = [
     "effect": "[消耗]。使一个友方单位获得 [能力: 飞行]",
   },
   {
-    "name": "斥退 | Begone",
+    "name": "斥退",
+    "english-name": "Begone",
     "type": "法术",
     "clan": "流放者",
     "rarity": "高级",
@@ -422,7 +447,8 @@ export const BANISHED_SPELLS = [
     "effect": "[后退] 前排敌方单位。对所有地方单位施加 [近战易伤] 1",
   },
   {
-    "name": "顺劈 | Cleave",
+    "name": "顺劈",
+    "english-name": "Cleave",
     "type": "法术",
     "clan": "流放者",
     "rarity": "普通",
@@ -430,7 +456,8 @@ export const BANISHED_SPELLS = [
     "effect": "对敌方单位造成等于前排友方单位 [攻击] 的伤害",
   },
   {
-    "name": "致命猛袭 | Deadly Plunge",
+    "name": "致命猛袭",
+    "english-name": "Deadly Plunge",
     "type": "法术",
     "clan": "流放者",
     "rarity": "高级",
@@ -438,7 +465,8 @@ export const BANISHED_SPELLS = [
     "effect": "[消耗]。对前排敌方单位造成等于相当于该单位 ([生命值] + [护甲]) x 3 的伤害",
   },
   {
-    "name": "鹰之心 | Eagle Heart",
+    "name": "鹰之心",
+    "english-name": "Eagle Heart",
     "type": "法术",
     "clan": "流放者",
     "rarity": "稀有",
@@ -446,7 +474,8 @@ export const BANISHED_SPELLS = [
     "effect": "[消耗]。[前进]。使一个友方单位获得 [英勇] 5, 然后使其立即攻击",
   },
   {
-    "name": "无私牺牲 | Selfless Sacrefice",
+    "name": "无私牺牲",
+    "english-name": "Selfless Sacrefice",
     "type": "法术",
     "clan": "流放者",
     "rarity": "普通",
@@ -454,7 +483,8 @@ export const BANISHED_SPELLS = [
     "effect": "[消耗]。[前进]。获得 [伤害护盾] 2",
   },
   {
-    "name": "赐福 | Benidiction",
+    "name": "赐福",
+    "english-name": "Benidiction",
     "type": "法术",
     "clan": "流放者",
     "rarity": "高级",
@@ -462,7 +492,8 @@ export const BANISHED_SPELLS = [
     "effect": "使所有友方单位获得 [英勇] 2, [伤害护盾] 1",
   },
   {
-    "name": "妖魔化 | Demonize",
+    "name": "妖魔化",
+    "english-name": "Demonize",
     "type": "法术",
     "clan": "流放者",
     "rarity": "高级",
@@ -470,7 +501,8 @@ export const BANISHED_SPELLS = [
     "effect": "[下降]。施加 [近战易伤] 2",
   },
   {
-    "name": "神祇 | Divinity",
+    "name": "神祇",
+    "english-name": "Divinity",
     "type": "法术",
     "clan": "流放者",
     "rarity": "普通",
@@ -478,7 +510,8 @@ export const BANISHED_SPELLS = [
     "effect": "获得 [英勇] 10",
   },
   {
-    "name": "避难所 | Sanctuary",
+    "name": "避难所",
+    "english-name": "Sanctuary",
     "type": "法术",
     "clan": "流放者",
     "rarity": "稀有",
@@ -489,7 +522,8 @@ export const BANISHED_SPELLS = [
 // 流放者 装备
 export const BANISHED_EQUIPMENTS = [
   {
-    "name": "永恒之光 | Everlasting Light",
+    "name": "永恒之光",
+    "english-name": "Everlasting Light",
     "type": "装备",
     "clan": "流放者",
     "rarity": "高级",
@@ -498,7 +532,8 @@ export const BANISHED_EQUIPMENTS = [
     "effect": "[攻击]: 使所有友方单位获得 [英勇] 2",
   },
   {
-    "name": "虔诚者的血之衣 | Penitent's Bloodsuit",
+    "name": "虔诚者的血之衣",
+    "english-name": "Penitent's Bloodsuit",
     "type": "装备",
     "clan": "流放者",
     "rarity": "普通",
@@ -506,7 +541,8 @@ export const BANISHED_EQUIPMENTS = [
     "effect": "[转移]: 受到 30 点伤害。可以装备在敌方单位上",
   },
   {
-    "name": "虔诚者的死亡之衣 | Pentitent's Deathsuit",
+    "name": "虔诚者的死亡之衣",
+    "english-name": "Pentitent's Deathsuit",
     "type": "装备",
     "clan": "流放者",
     "rarity": "高级",
@@ -514,7 +550,8 @@ export const BANISHED_EQUIPMENTS = [
     "effect": "[转移]: 施加 [近战易伤] 1。可以装备在敌方单位上",
   },
   {
-    "name": "风之刃 | Windblade",
+    "name": "风之刃",
+    "english-name": "Windblade",
     "type": "装备",
     "clan": "流放者",
     "rarity": "普通",
@@ -522,7 +559,8 @@ export const BANISHED_EQUIPMENTS = [
     "effect": "[转移]: 施加 [英勇] 1; [结算]: 触发 [转移]",
   },
   {
-    "name": "被诅咒的双头刃 | Cursed Twinblade",
+    "name": "被诅咒的双头刃",
+    "english-name": "Cursed Twinblade",
     "type": "装备",
     "clan": "流放者",
     "rarity": "稀有",
@@ -531,7 +569,8 @@ export const BANISHED_EQUIPMENTS = [
     "effect": "[多重攻击] 1; [攻击]: -1 [攻击力]",
   },
   {
-    "name": "维格之盾 | Shield of Wyngh",
+    "name": "维格之盾",
+    "english-name": "Shield of Wyngh",
     "type": "装备",
     "clan": "流放者",
     "rarity": "高级",
@@ -543,7 +582,8 @@ export const BANISHED_EQUIPMENTS = [
 // 流放者 房间
 export const BANISHED_ROOMS = [
   {
-    "name": "被禁锢的西风 | Imprisoned Zephyr",
+    "name": "被禁锢的西风",
+    "english-name": "Imprisoned Zephyr",
     "type": "房间",
     "clan": "流放者",
     "rarity": "高级",
@@ -551,7 +591,8 @@ export const BANISHED_ROOMS = [
     "effect": "所有友方单位在 [攻击] 时 [前进]",
   },
   {
-    "name": "浴血竞技场 | Bloodsoaked Arena",
+    "name": "浴血竞技场",
+    "english-name": "Bloodsoaked Arena",
     "type": "房间",
     "clan": "流放者",
     "rarity": "稀有",

@@ -3,7 +3,8 @@
 // 拉撒路联盟 英雄
 export const LAZARUS_LEAGUE_CHAMPIONS = [
   {
-    "name": "格雷尔男爵 | Fel",
+    "name": "格雷尔男爵",
+    "english-name": "Fel",
     "type": "勇者",
     "clan": "拉撒路联盟",
     "cost": "0",
@@ -14,7 +15,8 @@ export const LAZARUS_LEAGUE_CHAMPIONS = [
     "description": "菲尔是流放者中才华横溢且足智多谋的指挥官，她发誓要将天堂从她哥哥的暴政中解放出来。然而，她曾受的心伤能否痊愈，还是未知之数",
   },
   {
-    "name": "奥莱奇 | Fel",
+    "name": "奥莱奇",
+    "english-name": "Fel",
     "type": "勇者",
     "clan": "拉撒路联盟",
     "cost": "0",
@@ -28,7 +30,8 @@ export const LAZARUS_LEAGUE_CHAMPIONS = [
 // 拉撒路联盟 单位
 export const LAZARUS_LEAGUE_UNITS = [
   {
-    "name": "古怪助手 | BattleDancer",
+    "name": "古怪助手",
+    "english-name": "BattleDancer",
     "type": "助手",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -41,7 +44,8 @@ export const LAZARUS_LEAGUE_UNITS = [
     "description": ""
   },
   {
-    "name": "过劳的助手 | BattleDancer",
+    "name": "过劳的助手",
+    "english-name": "BattleDancer",
     "type": "助手",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -54,7 +58,8 @@ export const LAZARUS_LEAGUE_UNITS = [
     "description": ""
   },
   {
-    "name": "双刃卫士 | BattleDancer",
+    "name": "双刃卫士",
+    "english-name": "BattleDancer",
     "type": "助手",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -67,7 +72,8 @@ export const LAZARUS_LEAGUE_UNITS = [
     "description": ""
   },
   {
-    "name": "临时魔像 | BattleDancer",
+    "name": "临时魔像",
+    "english-name": "BattleDancer",
     "type": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -80,7 +86,8 @@ export const LAZARUS_LEAGUE_UNITS = [
     "description": ""
   },
   {
-    "name": "肉钩 | BattleDancer",
+    "name": "肉钩",
+    "english-name": "BattleDancer",
     "type": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -93,7 +100,8 @@ export const LAZARUS_LEAGUE_UNITS = [
     "description": ""
   },
   {
-    "name": "扎针怪 | BattleDancer",
+    "name": "扎针怪",
+    "english-name": "BattleDancer",
     "type": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -106,7 +114,8 @@ export const LAZARUS_LEAGUE_UNITS = [
     "description": ""
   },
   {
-    "name": "河豚人 | BattleDancer",
+    "name": "河豚人",
+    "english-name": "BattleDancer",
     "type": "助手",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -119,7 +128,8 @@ export const LAZARUS_LEAGUE_UNITS = [
     "description": ""
   },
   {
-    "name": "重组软泥怪 | BattleDancer",
+    "name": "重组软泥怪",
+    "english-name": "BattleDancer",
     "type": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -132,7 +142,8 @@ export const LAZARUS_LEAGUE_UNITS = [
     "description": ""
   },
   {
-    "name": "乐观的助手 | BattleDancer",
+    "name": "乐观的助手",
+    "english-name": "BattleDancer",
     "type": "助手",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -145,7 +156,8 @@ export const LAZARUS_LEAGUE_UNITS = [
     "description": ""
   },
   {
-    "name": "扭曲的助手 | BattleDancer",
+    "name": "扭曲的助手",
+    "english-name": "BattleDancer",
     "type": "助手",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -158,7 +170,8 @@ export const LAZARUS_LEAGUE_UNITS = [
     "description": ""
   },
   {
-    "name": "笨拙大块头 | BattleDancer",
+    "name": "笨拙大块头",
+    "english-name": "BattleDancer",
     "type": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -171,7 +184,8 @@ export const LAZARUS_LEAGUE_UNITS = [
     "description": ""
   },
   {
-    "name": "恐怖多臂怪 | BattleDancer",
+    "name": "恐怖多臂怪",
+    "english-name": "BattleDancer",
     "type": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -184,7 +198,8 @@ export const LAZARUS_LEAGUE_UNITS = [
     "description": ""
   },
   {
-    "name": "九命梦魇 | BattleDancer",
+    "name": "九命梦魇",
+    "english-name": "BattleDancer",
     "type": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -197,7 +212,8 @@ export const LAZARUS_LEAGUE_UNITS = [
     "description": ""
   },
   {
-    "name": "瘟疫医生 | BattleDancer",
+    "name": "瘟疫医生",
+    "english-name": "BattleDancer",
     "type": "助手",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -210,7 +226,8 @@ export const LAZARUS_LEAGUE_UNITS = [
     "description": ""
   },
   {
-    "name": "实验对象阿尔法 | BattleDancer",
+    "name": "实验对象阿尔法",
+    "english-name": "BattleDancer",
     "type": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -226,7 +243,8 @@ export const LAZARUS_LEAGUE_UNITS = [
 // 拉撒路联盟 法术
 export const LAZARUS_LEAGUE_SPELLS = [
   {
-    "name": "联盟脑钉 | DragonEgg",
+    "name": "联盟脑钉",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -235,7 +253,8 @@ export const LAZARUS_LEAGUE_SPELLS = [
     "description": ""
   },
   {
-    "name": "酸液淋浴 | DragonEgg",
+    "name": "酸液淋浴",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -244,7 +263,8 @@ export const LAZARUS_LEAGUE_SPELLS = [
     "description": ""
   },
   {
-    "name": "劣质躯体 | DragonEgg",
+    "name": "劣质躯体",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -253,7 +273,8 @@ export const LAZARUS_LEAGUE_SPELLS = [
     "description": ""
   },
   {
-    "name": "永恒精华 | DragonEgg",
+    "name": "永恒精华",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -262,7 +283,8 @@ export const LAZARUS_LEAGUE_SPELLS = [
     "description": ""
   },
   {
-    "name": "惊骇 | DragonEgg",
+    "name": "惊骇",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -271,7 +293,8 @@ export const LAZARUS_LEAGUE_SPELLS = [
     "description": ""
   },
   {
-    "name": "无尽饥饿 | DragonEgg",
+    "name": "无尽饥饿",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -280,7 +303,8 @@ export const LAZARUS_LEAGUE_SPELLS = [
     "description": ""
   },
   {
-    "name": "它活了! | DragonEgg",
+    "name": "它活了",
+    "english-name": " DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -289,7 +313,8 @@ export const LAZARUS_LEAGUE_SPELLS = [
     "description": ""
   },
   {
-    "name": "伪科学 | DragonEgg",
+    "name": "伪科学",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -298,7 +323,8 @@ export const LAZARUS_LEAGUE_SPELLS = [
     "description": ""
   },
   {
-    "name": "风险操作 | DragonEgg",
+    "name": "风险操作",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -307,7 +333,8 @@ export const LAZARUS_LEAGUE_SPELLS = [
     "description": ""
   },
   {
-    "name": "零部件废料 | DragonEgg",
+    "name": "零部件废料",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -316,7 +343,8 @@ export const LAZARUS_LEAGUE_SPELLS = [
     "description": ""
   },
   {
-    "name": "秘密成分 | DragonEgg",
+    "name": "秘密成分",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -325,7 +353,8 @@ export const LAZARUS_LEAGUE_SPELLS = [
     "description": ""
   },
   {
-    "name": "手术式打击 | DragonEgg",
+    "name": "手术式打击",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -334,7 +363,8 @@ export const LAZARUS_LEAGUE_SPELLS = [
     "description": ""
   },
   {
-    "name": "武器化义肢 | DragonEgg",
+    "name": "武器化义肢",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -343,7 +373,8 @@ export const LAZARUS_LEAGUE_SPELLS = [
     "description": ""
   },
   {
-    "name": "大脑转移 | DragonEgg",
+    "name": "大脑转移",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -352,7 +383,8 @@ export const LAZARUS_LEAGUE_SPELLS = [
     "description": ""
   },
   {
-    "name": "爆炸反应 | DragonEgg",
+    "name": "爆炸反应",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -361,7 +393,8 @@ export const LAZARUS_LEAGUE_SPELLS = [
     "description": ""
   },
   {
-    "name": "调配技术 | DragonEgg",
+    "name": "调配技术",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -370,7 +403,8 @@ export const LAZARUS_LEAGUE_SPELLS = [
     "description": ""
   },
   {
-    "name": "自我意识 | DragonEgg",
+    "name": "自我意识",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -379,7 +413,8 @@ export const LAZARUS_LEAGUE_SPELLS = [
     "description": ""
   },
   {
-    "name": "复制光线 | DragonEgg",
+    "name": "复制光线",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -388,7 +423,8 @@ export const LAZARUS_LEAGUE_SPELLS = [
     "description": ""
   },
   {
-    "name": "恐怖之书 | DragonEgg",
+    "name": "恐怖之书",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -400,7 +436,8 @@ export const LAZARUS_LEAGUE_SPELLS = [
 // 拉撒路联盟 装备
 export const LAZARUS_LEAGUE_EQUIPMENTS = [
   {
-    "name": "剪刀手 | ImprisonedZephyr",
+    "name": "剪刀手",
+    "english-name": "ImprisonedZephyr",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -409,7 +446,8 @@ export const LAZARUS_LEAGUE_EQUIPMENTS = [
     "effect": "",
   },
   {
-    "name": "燃烧服 | ImprisonedZephyr",
+    "name": "燃烧服",
+    "english-name": "ImprisonedZephyr",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -419,7 +457,8 @@ export const LAZARUS_LEAGUE_EQUIPMENTS = [
     "effect": "[攻击]: 对所有敌方单位施加 [不稳定] 5",
   },
   {
-    "name": "双刃臂 | ImprisonedZephyr",
+    "name": "双刃臂",
+    "english-name": "ImprisonedZephyr",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -428,7 +467,8 @@ export const LAZARUS_LEAGUE_EQUIPMENTS = [
     "description": "[多重攻击] 1",
   },
   {
-    "name": "器官采集器 | ImprisonedZephyr",
+    "name": "器官采集器",
+    "english-name": "ImprisonedZephyr",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -437,7 +477,8 @@ export const LAZARUS_LEAGUE_EQUIPMENTS = [
     "effect": "[杀戮]: 获得 [复活] 1",
   },
   {
-    "name": "药剂套装 | ImprisonedZephyr",
+    "name": "药剂套装",
+    "english-name": "ImprisonedZephyr",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -447,7 +488,8 @@ export const LAZARUS_LEAGUE_EQUIPMENTS = [
     "effect": "[能力: 调配]",
   },
   {
-    "name": "尖刺皮肤 | ImprisonedZephyr",
+    "name": "尖刺皮肤",
+    "english-name": "ImprisonedZephyr",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -456,7 +498,8 @@ export const LAZARUS_LEAGUE_EQUIPMENTS = [
     "description": "[复仇]: 获得 [尖刺] 3",
   },
   {
-    "name": "扭曲脊背 | ImprisonedZephyr",
+    "name": "扭曲脊背",
+    "english-name": "ImprisonedZephyr",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -465,7 +508,8 @@ export const LAZARUS_LEAGUE_EQUIPMENTS = [
     "description": "[践踏]. [攻击]: 获得 [狂怒] 2",
   },
   {
-    "name": "吸血鬼之牙 | ImprisonedZephyr",
+    "name": "吸血鬼之牙",
+    "english-name": "ImprisonedZephyr",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -477,7 +521,8 @@ export const LAZARUS_LEAGUE_EQUIPMENTS = [
 // 拉撒路联盟 房间
 export const LAZARUS_LEAGUE_ROOMS = [
    {
-    "name": "电力室 | ImprisonedZephyr",
+    "name": "电力室",
+    "english-name": "ImprisonedZephyr",
     "type": "房间",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -485,7 +530,8 @@ export const LAZARUS_LEAGUE_ROOMS = [
     "effect": "友方单位在 [召唤] 和 [复活] 时, 获得 [尖刺] 8",
   },
    {
-    "name": "复生实验室 | ImprisonedZephyr",
+    "name": "复生实验室",
+    "english-name": "ImprisonedZephyr",
     "type": "房间",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -496,67 +542,78 @@ export const LAZARUS_LEAGUE_ROOMS = [
 // 拉撒路联盟 神器
 export const LAZARUS_LEAGUE_ARTIFACTS = [
    {
-    "name": "高级增长剂 | ImprisonedZephyr",
+    "name": "高级增长剂",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "当拥有装备的单位死亡时, 其装备永久获得 [攻击力] 4",
   },
    {
-    "name": "催化剂 | ImprisonedZephyr",
+    "name": "催化剂",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "每回合战斗结束时, [不稳定] 层数 +5",
   },
    {
-    "name": "应急计划书 | ImprisonedZephyr",
+    "name": "应急计划书",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "怪物造物进入战斗时获得 [尖刺] 7",
   },
    {
-    "name": "狂热药剂 | ImprisonedZephyr",
+    "name": "狂热药剂",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "每回合友方单位首次穿戴装备时, 获得 [余烬] 1",
   },
    {
-    "name": "混种生物的头发 | ImprisonedZephyr",
+    "name": "混种生物的头发",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "为一个友方单位穿戴装备时, 若其生命值小于 50% 则获得 [护甲] 10, 否则获得 [狂怒] 5",
   },
    {
-    "name": "英伽的烧杯 | ImprisonedZephyr",
+    "name": "英伽的烧杯",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "当使用 [调配] 时, 选择的数量 +1",
   },
    {
-    "name": "保命外衣 | ImprisonedZephyr",
+    "name": "保命外衣",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "使用 [复活] 增益复活单位时, 使其获得 [护甲] 14",
   },
    {
-    "name": "毒性液体 | ImprisonedZephyr",
+    "name": "毒性液体",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "[不稳定] 爆炸造成的伤害翻倍",
   },
    {
-    "name": "零件工厂 | ImprisonedZephyr",
+    "name": "零件工厂",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "在 [部署阶段] 时, 随机将一个 [嫁接] 单位加入手牌",
   },
    {
-    "name": "进度起搏器 | ImprisonedZephyr",
+    "name": "进度起搏器",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "每回合第一次 [调配] 时, 再次 [调配]",
   },
    {
-    "name": "外科医生的缝合线 | ImprisonedZephyr",
+    "name": "外科医生的缝合线",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "为一个友方单位穿戴装备时, 恢复其所有生命值",

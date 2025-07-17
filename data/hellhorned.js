@@ -3,7 +3,8 @@
 // 狱魔 英雄
 export const HELLHORNED_CHAMPIONS = [
   {
-    "name": "断角王子 | Fel",
+    "name": "断角王子",
+    "english-name": "Fel",
     "type": "勇者",
     "clan": "狱魔",
     "cost": "0",
@@ -14,7 +15,8 @@ export const HELLHORNED_CHAMPIONS = [
     "description": "菲尔是流放者中才华横溢且足智多谋的指挥官，她发誓要将天堂从她哥哥的暴政中解放出来。然而，她曾受的心伤能否痊愈，还是未知之数",
   },
   {
-    "name": "碎尾女王 | Fel",
+    "name": "碎尾女王",
+    "english-name": "Fel",
     "type": "勇者",
     "clan": "狱魔",
     "cost": "0",
@@ -28,7 +30,8 @@ export const HELLHORNED_CHAMPIONS = [
 // 狱魔 单位
 export const HELLHORNED_UNITS = [
   {
-    "name": "巅峰小鬼 | BattleDancer",
+    "name": "巅峰小鬼",
+    "english-name": "BattleDancer",
     "type": "恶魔小鬼",
     "clan": "狱魔",
     "rarity": "稀有",
@@ -41,7 +44,8 @@ export const HELLHORNED_UNITS = [
     "description": ""
   },
   {
-    "name": "烙印武士 | BattleDancer",
+    "name": "烙印武士",
+    "english-name": "BattleDancer",
     "type": "恶魔",
     "clan": "狱魔",
     "rarity": "高级",
@@ -54,7 +58,8 @@ export const HELLHORNED_UNITS = [
     "description": ""
   },
   {
-    "name": "狂乱蛮兽 | BattleDancer",
+    "name": "狂乱蛮兽",
+    "english-name": "BattleDancer",
     "type": "恶魔",
     "clan": "狱魔",
     "rarity": "稀有",
@@ -67,7 +72,8 @@ export const HELLHORNED_UNITS = [
     "description": ""
   },
   {
-    "name": "懵懂小鬼 | BattleDancer",
+    "name": "懵懂小鬼",
+    "english-name": "BattleDancer",
     "type": "恶魔小鬼",
     "clan": "狱魔",
     "rarity": "普通",
@@ -80,7 +86,8 @@ export const HELLHORNED_UNITS = [
     "description": ""
   },
   {
-    "name": "长角武士 | BattleDancer",
+    "name": "长角武士",
+    "english-name": "BattleDancer",
     "type": "恶魔",
     "clan": "狱魔",
     "rarity": "高级",
@@ -93,7 +100,8 @@ export const HELLHORNED_UNITS = [
     "description": ""
   },
   {
-    "name": "小鬼学者 | BattleDancer",
+    "name": "小鬼学者",
+    "english-name": "BattleDancer",
     "type": "恶魔小鬼",
     "clan": "狱魔",
     "rarity": "高级",
@@ -106,7 +114,8 @@ export const HELLHORNED_UNITS = [
     "description": ""
   },
   {
-    "name": "蜕皮小鬼 | BattleDancer",
+    "name": "蜕皮小鬼",
+    "english-name": "BattleDancer",
     "type": "恶魔小鬼",
     "clan": "狱魔",
     "rarity": "普通",
@@ -119,7 +128,8 @@ export const HELLHORNED_UNITS = [
     "description": ""
   },
   {
-    "name": "薪火暴食者 | BattleDancer",
+    "name": "薪火暴食者",
+    "english-name": "BattleDancer",
     "type": "恶魔小鬼",
     "clan": "狱魔",
     "rarity": "高级",
@@ -132,7 +142,8 @@ export const HELLHORNED_UNITS = [
     "description": ""
   },
   {
-    "name": "女王的小鬼 | BattleDancer",
+    "name": "女王的小鬼",
+    "english-name": "BattleDancer",
     "type": "恶魔小鬼",
     "clan": "狱魔",
     "rarity": "普通",
@@ -145,7 +156,8 @@ export const HELLHORNED_UNITS = [
     "description": ""
   },
     {
-    "name": "锻铁者 | BattleDancer",
+    "name": "锻铁者",
+    "english-name": "BattleDancer",
     "type": "恶魔",
     "clan": "狱魔",
     "rarity": "高级",
@@ -158,7 +170,8 @@ export const HELLHORNED_UNITS = [
     "description": ""
   },
     {
-    "name": "锻铁工人 | BattleDancer",
+    "name": "锻铁工人",
+    "english-name": "BattleDancer",
     "type": "恶魔",
     "clan": "狱魔",
     "rarity": "高级",
@@ -171,7 +184,8 @@ export const HELLHORNED_UNITS = [
     "description": ""
   },
   {
-    "name": "焊工助手 | BattleDancer",
+    "name": "焊工助手",
+    "english-name": "BattleDancer",
     "type": "恶魔小鬼",
     "clan": "狱魔",
     "rarity": "普通",
@@ -197,7 +211,8 @@ export const HELLHORNED_UNITS = [
   "description": ""
 },
   {
-    "name": "超凡小鬼 | BattleDancer",
+    "name": "超凡小鬼",
+    "english-name": "BattleDancer",
     "type": "恶魔小鬼",
     "clan": "狱魔",
     "rarity": "稀有",
@@ -210,7 +225,8 @@ export const HELLHORNED_UNITS = [
     "description": ""
   },
     {
-    "name": "地狱恶魔 | BattleDancer",
+    "name": "地狱恶魔",
+    "english-name": "BattleDancer",
     "type": "恶魔",
     "clan": "狱魔",
     "rarity": "高级",
@@ -223,7 +239,8 @@ export const HELLHORNED_UNITS = [
     "description": ""
   },
     {
-    "name": "皇冠吞噬者 | BattleDancer",
+    "name": "皇冠吞噬者",
+    "english-name": "BattleDancer",
     "type": "恶魔",
     "clan": "狱魔",
     "rarity": "稀有",
@@ -239,7 +256,8 @@ export const HELLHORNED_UNITS = [
 // 狱魔 法术
 export const HELLHORNED_SPELLS = [
   {
-    "name": "狱魔脑钉 | DragonEgg",
+    "name": "狱魔脑钉",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "稀有",
@@ -248,7 +266,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "排气 | DragonEgg",
+    "name": "排气",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "普通",
@@ -257,7 +276,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "黑暗交易 | DragonEgg",
+    "name": "黑暗交易",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "稀有",
@@ -266,7 +286,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "硬化 | DragonEgg",
+    "name": "硬化",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "普通",
@@ -275,7 +296,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "小鬼礼盒 | DragonEgg",
+    "name": "小鬼礼盒",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -284,7 +306,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "鬼功神力 | DragonEgg",
+    "name": "鬼功神力",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -293,7 +316,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "狂怒精华 | DragonEgg",
+    "name": "狂怒精华",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -302,7 +326,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "远古合金 | DragonEgg",
+    "name": "远古合金",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "稀有",
@@ -311,7 +336,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "隐秘通道 | DragonEgg",
+    "name": "隐秘通道",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "普通",
@@ -320,7 +346,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "断角 | DragonEgg",
+    "name": "断角",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "普通",
@@ -329,7 +356,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "鬼头鬼脑 | DragonEgg",
+    "name": "鬼头鬼脑",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "稀有",
@@ -338,7 +366,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "鬼斧神工 | DragonEgg",
+    "name": "鬼斧神工",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -347,7 +376,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "盾墙冲锋 | DragonEgg",
+    "name": "盾墙冲锋",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -356,7 +386,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "火把 | DragonEgg",
+    "name": "火把",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "普通",
@@ -365,7 +396,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "烙印仪式 | DragonEgg",
+    "name": "烙印仪式",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -374,7 +406,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "烈火焚身 | DragonEgg",
+    "name": "烈火焚身",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -383,7 +416,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "累人的攀爬 | DragonEgg",
+    "name": "累人的攀爬",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -392,7 +426,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "攻城战槌 | DragonEgg",
+    "name": "攻城战槌",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -401,7 +436,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "地狱火 | DragonEgg",
+    "name": "地狱火",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -410,7 +446,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "背水一战 | DragonEgg",
+    "name": "背水一战",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "稀有",
@@ -419,7 +456,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "护甲增强 | DragonEgg",
+    "name": "护甲增强",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "稀有",
@@ -428,7 +466,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "战斗仪式 | DragonEgg",
+    "name": "战斗仪式",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "普通",
@@ -437,7 +476,8 @@ export const HELLHORNED_SPELLS = [
     "description": ""
   },
   {
-    "name": "断角之书 | DragonEgg",
+    "name": "断角之书",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "稀有",
@@ -455,67 +495,78 @@ export const HELLHORNED_ROOMS = [
 // 狱魔 神器
 export const HELLHORNED_ARTIFACTS = [
    {
-    "name": "死者骨灰 | ImprisonedZephyr",
+    "name": "死者骨灰",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "[召唤] 额外触发一次",
   },
    {
-    "name": "尾巴收藏品 | ImprisonedZephyr",
+    "name": "尾巴收藏品",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "友方单位的 [狂怒] 不会减少",
   },
    {
-    "name": "圣者桂冠 | ImprisonedZephyr",
+    "name": "圣者桂冠",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "友方单位 [杀戮] 时获得 [攻击力] 3",
   },
    {
-    "name": "格鲁格的刺棍 | ImprisonedZephyr",
+    "name": "格鲁格的刺棍",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "恶魔单位获得 [多重攻击] 1",
   },
    {
-    "name": "小鬼回收 | ImprisonedZephyr",
+    "name": "小鬼回收",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "回合开始时, 随机将一个小鬼牌加入手牌",
   },
    {
-    "name": "女王之尾 | ImprisonedZephyr",
+    "name": "女王之尾",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "每回合第一次 [召唤] 小鬼单位时, 获得 [余烬] 1 并抽 1 张牌",
   },
    {
-    "name": "铁道锻锤 | ImprisonedZephyr",
+    "name": "铁道锻锤",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "友方单位获得 [护甲] 时, 获得的层数 + 4",
   },
    {
-    "name": "回响碎片 | ImprisonedZephyr",
+    "name": "回响碎片",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "每层 [狂怒] 获得的 [攻击力] 额外 +1",
   },
    {
-    "name": "灼热锻钢 | ImprisonedZephyr",
+    "name": "灼热锻钢",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "友方单位进入战斗时, 获得 [护甲] 5",
   },
    {
-    "name": "灼热枷锁 | ImprisonedZephyr",
+    "name": "灼热枷锁",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "友方单位进入战斗时, 获得 [狂怒] 3",
   },
    {
-    "name": "不折之角 | ImprisonedZephyr",
+    "name": "不折之角",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "狱魔",
     "effect": "未使用的 [余烬] 保留至下一回合",

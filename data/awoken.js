@@ -3,7 +3,8 @@
 // 觉者 英雄
 export const AWOKEN_CHAMPIONS = [
   {
-    "name": "智者 | Fel",
+    "name": "智者",
+    "english-name": "Fel",
     "type": "勇者",
     "clan": "觉者",
     "cost": "0",
@@ -14,7 +15,8 @@ export const AWOKEN_CHAMPIONS = [
     "description": "菲尔是流放者中才华横溢且足智多谋的指挥官，她发誓要将天堂从她哥哥的暴政中解放出来。然而，她曾受的心伤能否痊愈，还是未知之数",
   },
   {
-    "name": "威尔丹顿 | Fel",
+    "name": "威尔丹顿",
+    "english-name": "Fel",
     "type": "勇者",
     "clan": "觉者",
     "cost": "0",
@@ -28,7 +30,8 @@ export const AWOKEN_CHAMPIONS = [
 // 觉者 单位
 export const AWOKEN_UNITS = [
   {
-    "name": "极速蔓灵 | BattleDancer",
+    "name": "极速蔓灵",
+    "english-name": "BattleDancer",
     "type": "蔓灵",
     "clan": "觉者",
     "rarity": "高级",
@@ -41,7 +44,8 @@ export const AWOKEN_UNITS = [
     "description": ""
   },
   {
-    "name": "刚毅蔓灵 | BattleDancer",
+    "name": "刚毅蔓灵",
+    "english-name": "BattleDancer",
     "type": "蔓灵",
     "clan": "觉者",
     "rarity": "高级",
@@ -54,7 +58,8 @@ export const AWOKEN_UNITS = [
     "description": ""
   },
   {
-    "name": "觉者空灵 | BattleDancer",
+    "name": "觉者空灵",
+    "english-name": "BattleDancer",
     "type": "空灵",
     "clan": "觉者",
     "rarity": "高级",
@@ -67,7 +72,8 @@ export const AWOKEN_UNITS = [
     "description": ""
   },
   {
-    "name": "隐修会 | BattleDancer",
+    "name": "隐修会",
+    "english-name": "BattleDancer",
     "type": "通灵者",
     "clan": "觉者",
     "rarity": "高级",
@@ -80,7 +86,8 @@ export const AWOKEN_UNITS = [
     "description": ""
   },
   {
-    "name": "坚壳隐者 | BattleDancer",
+    "name": "坚壳隐者",
+    "english-name": "BattleDancer",
     "type": "蔓灵",
     "clan": "觉者",
     "rarity": "高级",
@@ -93,7 +100,8 @@ export const AWOKEN_UNITS = [
     "description": ""
   },
   {
-    "name": "碎片通灵者 | BattleDancer",
+    "name": "碎片通灵者",
+    "english-name": "BattleDancer",
     "type": "通灵者",
     "clan": "觉者",
     "rarity": "稀有",
@@ -106,7 +114,8 @@ export const AWOKEN_UNITS = [
     "description": ""
   },
   {
-    "name": "破碎坚壳 | BattleDancer",
+    "name": "破碎坚壳",
+    "english-name": "BattleDancer",
     "type": "蔓灵",
     "clan": "觉者",
     "rarity": "高级",
@@ -119,7 +128,8 @@ export const AWOKEN_UNITS = [
     "description": ""
   },
   {
-    "name": "荆棘空灵 | BattleDancer",
+    "name": "荆棘空灵",
+    "english-name": "BattleDancer",
     "type": "空灵",
     "clan": "觉者",
     "rarity": "高级",
@@ -132,7 +142,8 @@ export const AWOKEN_UNITS = [
     "description": ""
   },
   {
-    "name": "藤蔓之母 | BattleDancer",
+    "name": "藤蔓之母",
+    "english-name": "BattleDancer",
     "type": "空灵",
     "clan": "觉者",
     "rarity": "稀有",
@@ -145,7 +156,8 @@ export const AWOKEN_UNITS = [
     "description": ""
   },
   {
-    "name": "野林看守人 | BattleDancer",
+    "name": "野林看守人",
+    "english-name": "BattleDancer",
     "type": "通灵者",
     "clan": "觉者",
     "rarity": "高级",
@@ -158,7 +170,8 @@ export const AWOKEN_UNITS = [
     "description": ""
   },
   {
-    "name": "枯萎白木 | BattleDancer",
+    "name": "枯萎白木",
+    "english-name": "BattleDancer",
     "type": "空灵",
     "clan": "觉者",
     "rarity": "稀有",
@@ -171,7 +184,8 @@ export const AWOKEN_UNITS = [
     "description": ""
   },
   {
-    "name": "钢铁歌者 | BattleDancer",
+    "name": "钢铁歌者",
+    "english-name": "BattleDancer",
     "type": "空灵",
     "clan": "觉者",
     "rarity": "稀有",
@@ -187,7 +201,8 @@ export const AWOKEN_UNITS = [
 // 觉者 法术
 export const AWOKEN_SPELLS = [
   {
-    "name": "觉者脑钉 | DragonEgg",
+    "name": "觉者脑钉",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "稀有",
@@ -196,7 +211,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "诱捕 | DragonEgg",
+    "name": "诱捕",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -205,7 +221,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "薪火丰壤 | DragonEgg",
+    "name": "薪火丰壤",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -214,7 +231,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "钢铁强化剂 | DragonEgg",
+    "name": "钢铁强化剂",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -223,7 +241,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "蛰刺 | DragonEgg",
+    "name": "蛰刺",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -232,7 +251,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "藤蔓纠缠 | DragonEgg",
+    "name": "藤蔓纠缠",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -241,7 +261,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "通灵之歌 | DragonEgg",
+    "name": "通灵之歌",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "稀有",
@@ -250,7 +271,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "藤蔓嫁接 | DragonEgg",
+    "name": "藤蔓嫁接",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -259,7 +281,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "微光 | DragonEgg",
+    "name": "微光",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -268,7 +291,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "振奋药剂 | DragonEgg",
+    "name": "振奋药剂",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -277,7 +301,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "贮藏荆棘 | DragonEgg",
+    "name": "贮藏荆棘",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -286,7 +311,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "薪火碎片 | DragonEgg",
+    "name": "薪火碎片",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -295,7 +321,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "剃刀利刃 | DragonEgg",
+    "name": "剃刀利刃",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -304,7 +331,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "治疗爆破 | DragonEgg",
+    "name": "治疗爆破",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -313,7 +341,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "恢复 | DragonEgg",
+    "name": "恢复",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -322,7 +351,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "撤退治疗 | DragonEgg",
+    "name": "撤退治疗",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -331,7 +361,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "根须之种 | DragonEgg",
+    "name": "根须之种",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -340,7 +371,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "扩散孢子 | DragonEgg",
+    "name": "扩散孢子",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "稀有",
@@ -349,7 +381,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "野林之力 | DragonEgg",
+    "name": "野林之力",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "稀有",
@@ -358,7 +391,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "野林树液 | DragonEgg",
+    "name": "野林树液",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -367,7 +401,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "野林之书 | DragonEgg",
+    "name": "野林之书",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "稀有",
@@ -376,7 +411,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "突变进化 | DragonEgg",
+    "name": "突变进化",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "稀有",
@@ -385,7 +421,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "荆棘鞭笞 | DragonEgg",
+    "name": "荆棘鞭笞",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -394,7 +431,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "专注成长 | DragonEgg",
+    "name": "专注成长",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -403,7 +441,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "磨砺武器 | DragonEgg",
+    "name": "磨砺武器",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -412,7 +451,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "觉醒 | DragonEgg",
+    "name": "觉醒",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -421,7 +461,8 @@ export const AWOKEN_SPELLS = [
     "description": ""
   },
   {
-    "name": "生命轮回 | DragonEgg",
+    "name": "生命轮回",
+    "english-name": "DragonEgg",
     "type": "法术",
     "clan": "觉者",
     "rarity": "稀有",
@@ -439,67 +480,78 @@ export const AWOKEN_ROOMS = [
 // 觉者 神器
 export const AWOKEN_ARTIFACTS = [
   {
-    "name": "通灵之心 | ImprisonedZephyr",
+    "name": "通灵之心",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "觉者",
     "effect": "[蛰刺] 获得 +20 [魔法强度]",
   },
   {
-    "name": "诅咒藤蔓 | ImprisonedZephyr",
+    "name": "诅咒藤蔓",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "觉者",
     "effect": "回合开始时, 添加一张带有 [短暂] 的 [藤蔓纠缠] 法术加入手牌",
   },
   {
-    "name": "流亡者徽章 | ImprisonedZephyr",
+    "name": "流亡者徽章",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "觉者",
     "effect": "回合开始时, 每层的前排友方单位获得 [生命值] 15",
   },
   {
-    "name": "扭曲根须 | ImprisonedZephyr",
+    "name": "扭曲根须",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "觉者",
     "effect": "友方单位每层 [尖刺] 获得 [攻击力] 1",
   },
   {
-    "name": "石化熔炉 | ImprisonedZephyr",
+    "name": "石化熔炉",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "觉者",
     "effect": "友方单位每层 [尖刺] 造成的伤害 +1",
   },
   {
-    "name": "隐修披风 | ImprisonedZephyr",
+    "name": "隐修披风",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "觉者",
     "effect": "对友方单位恢复生命时, 对前排敌方单位造成同等的伤害",
   },
   {
-    "name": "根须面具 | ImprisonedZephyr",
+    "name": "根须面具",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "觉者",
     "effect": "当敌方单位进入薪火室下方的楼层时, 对其施加 [缠绕]",
   },
   {
-    "name": "树液吸取 | ImprisonedZephyr",
+    "name": "树液吸取",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "觉者",
     "effect": "每回合友方单位首次获得治疗时, 抽 1 张牌",
   },
   {
-    "name": "肿胀真菌 | ImprisonedZephyr",
+    "name": "肿胀真菌",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "觉者",
     "effect": "每层 [再生] 恢复的生命值 +1",
   },
   {
-    "name": "荆棘套 | ImprisonedZephyr",
+    "name": "荆棘套",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "觉者",
     "effect": "[蛰刺] 获得 +10 [魔法强度] 和 [穿刺]",
   },
   {
-    "name": "荆棘果实 | ImprisonedZephyr",
+    "name": "荆棘果实",
+    "english-name": "ImprisonedZephyr",
     "type": "神器",
     "clan": "觉者",
     "effect": "回合开始时, 将一张 [蛰刺] 加入手牌",
