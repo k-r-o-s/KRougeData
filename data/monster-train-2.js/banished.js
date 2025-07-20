@@ -234,7 +234,7 @@ export const UNITS = [
     "english-name": "Lead Songbird",
     "type": "圣乐团成员",
     "clan": "流放者",
-    "rarity": "普通",
+    "rarity": "高级",
     "cost": "1",
     "effect": "[前进]。获得 [英勇] 2",
     "banner-unit": false,
@@ -602,7 +602,7 @@ export const ROOMS = [
     "effect": "所有友方单位在 [杀戮] 时获得 [英勇] 6",
   },
 ];
-
+// 流放者 神器
 export const ARTIFACTS = [
   {
     "name": "远古化石羽翼",

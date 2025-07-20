@@ -9,7 +9,7 @@ import * as PyreBorne from "./pyreborne.js"
 import * as StygianGuard from "./stygian-guard.js"
 import * as Umbra from "./umbra.js"
 import * as Underlegion from "./underlegion.js"
-import * as Entries from "./entries.js"
+import * as Terms from "./terms.js"
 import * as Upgrades from "./upgrades.js"
 
 import { __log_data } from "../../script/util.js"
@@ -26,7 +26,7 @@ export const MT_DATA = [
   StygianGuard,
   Umbra,
   Underlegion,
-  Entries,
+  Terms,
   Upgrades,
 ].reduce(
   (accumulator, group) => {
@@ -63,9 +63,9 @@ export const MT_DATA = [
       group.SCOURGES.map(item => accumulator.set(item.name, item));
       __log_data("获取数据 SCOURGES", accumulator);
     }
-    if (group.ENTRIES) {
-      group.ENTRIES.map(item => accumulator.set(item.name, item));
-      __log_data("获取数据 ENTRIES", accumulator);
+    if (group.TERMS) {
+      group.TERMS.map(item => accumulator.set(item.name, item));
+      __log_data("获取数据 TERMS", accumulator);
     }
     if (group.UPGRADES) {
       group.UPGRADES.map(item => accumulator.set(item.name, item));

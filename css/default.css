@@ -1,0 +1,7 @@
+hr {
+    border: none; /* 移除浏览器默认的边框 */
+    height: 1px;  /* 设置线条的粗细（高度）*/
+    background-color: #ccc; /* 设置线条的颜色 */
+    margin: 20px 0; /* 控制线条上下与周围元素的间距 */
+    width: 100%; /* 默认线条宽度与父容器相同 */
+}

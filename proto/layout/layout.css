@@ -45,12 +45,11 @@ footer {
 /* ///////////////////////////////////////////////////////////////////////// */
 .left-panel {
   background-color: beige;
-
-  width: 300px; /* 固定宽度 */
-  flex-shrink: 0;
+  flex: 1;
 }
 .right-panel {
-  flex: 1;
+  width: 300px; /* 固定宽度 */
+  flex-shrink: 0;
 }
 .grid {
   margin: 20px;
