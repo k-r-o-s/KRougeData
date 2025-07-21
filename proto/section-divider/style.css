@@ -1,0 +1,36 @@
+.section-divider {
+  display: flex;
+  /* 使用 Flexbox 布局 */
+  align-items: center;
+  /* 垂直居中文本 */
+  text-align: center;
+  /* 确保文字在分隔符中居中 */
+  margin: 20px 0;
+  /* 上下外边距 */
+  color: #555;
+  /* 文字颜色 */
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  /* 伪元素内容必须是空字符串 */
+  flex-grow: 1;
+  /* 让伪元素占据可用空间 */
+  height: 1px;
+  /* 线的高度 */
+  background-color: #ccc;
+  /* 线的颜色 */
+}
+
+.section-divider::before {
+  margin-right: 15px;
+  /* 左侧线与文字的间距 */
+}
+
+.section-divider::after {
+  margin-left: 15px;
+  /* 右侧线与文字的间距 */
+}

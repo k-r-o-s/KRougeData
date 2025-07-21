@@ -1,2 +1,42 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
-@import "../proto/layout/layout.css"
+/* @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"; */
+@import "../proto/layout/layout.css";
+@import "../proto/image-toggle-button/style.css";
+@import "../css/default.css";
+
+.search-container {
+  display: flex; /* 启用 Flexbox 布局 */
+  align-items: center; /* 垂直居中对齐子项 */
+  gap: 1px; /* input 和 button 之间的间距 */
+  width: 90%; /* 容器宽度 */
+  margin: 10px auto; /* 居中显示容器 */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#search-input {
+  flex-grow: 1; /* 让输入框尽可能占据可用空间 */
+  padding: 10px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px 0 0 6px;
+  font-size: 12px;
+}
+
+#search-button {
+  padding: 4px 4px;
+  background-color: #8abff8;
+  color: white;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 20px;
+  white-space: nowrap; /* 防止按钮文本换行 */
+}
+
+#search-button:hover {
+  border: 1px solid #444444;
+}
+#search-input:hover {
+  border: 1px solid #444444;
+}

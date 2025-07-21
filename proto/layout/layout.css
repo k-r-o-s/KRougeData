@@ -48,7 +48,7 @@ footer {
   flex: 1;
 }
 .right-panel {
-  width: 300px; /* 固定宽度 */
+  width: 380px; /* 固定宽度 */
   flex-shrink: 0;
 }
 .grid {

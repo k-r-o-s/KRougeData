@@ -13,7 +13,9 @@ for %%f in ("%~1\*.png") do (
     echo Processing "%%f"...
     set "filename=%~2\%%~nf"
     :: 执行FFmpeg命令
-    ffmpeg -i "%%f" -vf scale=240:-1 -quality 75 !filename!.webp
+    :: -y 表示重新压缩, 覆盖上次压缩的文件
+    :: -n 表示如果发现目标文件已经存在则不压缩, 直接跳过
+    ffmpeg -N -i "%%f" -vf scale=240:-1 -quality 75 !filename!.webp
     if !ERRORLEVEL! neq 0 (
         exit /b 1
     )

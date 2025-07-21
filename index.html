@@ -7,6 +7,8 @@
   <title>My Web Page</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="script.js" defer></script>
+  <script type="module" src="./script/image-toggle-button.js"></script>
+  <script type="module" src="./script/section-divider.js"></script>
 </head>
 
 <body>
@@ -41,30 +43,91 @@
     </div>
     <!-- 查询条件面板 -->
     <div class="right-panel">
-
-    </div>
+      <!-- 查询输入框和按钮区 -->
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="请输入搜索条件...">
+        <button id="search-button">🔎</button>
+      </div>
+      <!-- 卡牌氏族选取区 -->
+      <section-divider text="氏族"></section-divider>
+      <div id="clan-section" class="image-toggle-button-group">
+        <image-toggle-button src="image/other/流放者.webp" title="流放者"></image-toggle-button>
+        <image-toggle-button src="image/other/薪龙族.webp" title="薪龙族"></image-toggle-button>
+        <image-toggle-button src="image/other/月巫团.webp" title="月巫团"></image-toggle-button>
+        <image-toggle-button src="image/other/地下菌团.webp" title="地下菌团"></image-toggle-button>
+        <image-toggle-button src="image/other/拉撒路联盟.webp" title="拉撒路联盟"></image-toggle-button>
+        <image-toggle-button src="image/other/狱魔.webp" title="狱魔"></image-toggle-button>
+        <image-toggle-button src="image/other/觉者.webp" title="觉者"></image-toggle-button>
+        <image-toggle-button src="image/other/冥卫.webp" title="冥卫"></image-toggle-button>
+        <image-toggle-button src="image/other/影主.webp" title="影主"></image-toggle-button>
+        <image-toggle-button src="image/other/熔尸.webp" title="熔尸"></image-toggle-button>
+        <image-toggle-button src="image/other/无氏族.webp" title="无氏族"></image-toggle-button>
+      </div>
+      <!-- 卡牌类型选取区 -->
+      <section-divider text="类型"></section-divider>
+      <div id="type-section" class="image-toggle-button-group">
+        <image-toggle-button src="image/other/单位.webp" title="单位"></image-toggle-button>
+        <image-toggle-button src="image/other/法术.webp" title="法术"></image-toggle-button>
+        <image-toggle-button src="image/other/装备.webp" title="装备"></image-toggle-button>
+        <image-toggle-button src="image/other/房间.webp" title="房间"></image-toggle-button>
+        <image-toggle-button src="image/other/神器.webp" title="神器"></image-toggle-button>
+        <image-toggle-button src="image/other/祸患.webp" title="祸患"></image-toggle-button>
+        <image-toggle-button src="image/other/天灾.webp" title="天灾"></image-toggle-button>
+      </div>
+      <!-- 卡牌稀有度选取区 -->
+      <section-divider text="稀有度"></section-divider>
+      <div id="rarity-section" class="image-toggle-button-group">
+        <image-toggle-button src="image/other/勇者.webp" title="勇者" size="small"></image-toggle-button>
+        <image-toggle-button src="image/other/普通.webp" title="普通" size="small"></image-toggle-button>
+        <image-toggle-button src="image/other/高级.webp" title="高级" size="small"></image-toggle-button>
+        <image-toggle-button src="image/other/稀有.webp" title="稀有" size="small"></image-toggle-button>
+      </div>
+      <!-- 卡牌费用选取区 -->
+      <section-divider text="费用"></section-divider>
+      <div id="cost-section" class="image-toggle-button-group">
+        <image-toggle-button src="" text="0" size="small"></image-toggle-button>
+        <image-toggle-button src="" text="1" size="small"></image-toggle-button>
+        <image-toggle-button src="" text="2" size="small"></image-toggle-button>
+        <image-toggle-button src="" text="3" size="small"></image-toggle-button>
+        <image-toggle-button src="" text="4+" size="small"></image-toggle-button>
+        <image-toggle-button src="" text="X" size="small"></image-toggle-button>
+      </div>
+      <!-- 标签选取区 -->
+      <section-divider text="标签"></section-divider>
   </main>
   <footer>
     <p>&copy; 2023 My Web Page</p>
   </footer>
-  <template id="item-card-template">
+  <template id="item-card-template" id="button">
     <div class="card-container">
-        <img id="image" src="" alt="">
+      <img id="image">
     </div>
     <div class="card-tooltip"></div>
   </template>
+  <template id="image-toggle-button-template">
+    <button div class="image-toggle-button image-toggle-button-medium" id="button">
+      <img id="image">
+    </button>
+  </template>
+  <template id="section-divider-template">
+    <div class="section-divider" id="divider"></div>
+  </template>
   <script>
-    // 获取 URL 中的查询参数
-    const urlParams = new URLSearchParams(window.location.search);
-    const qValue = urlParams.get('q');  // 获取参数 q 的值
-
-    // 查找页面中的元素并更新内容
-    const paramValueElement = document.getElementById('paramValue');
-    if (qValue) {
-      paramValueElement.textContent = qValue;  // 如果有参数 q，显示它的值
-    } else {
-      paramValueElement.textContent = "未提供查询参数";  // 如果没有 q 参数，显示提示
-    }
+    const searchButton = document.getElementById("search-button");
+    const searchInput = document.getElementById("search-input");
+    const toggleButtons = [];
+    ["clan-secton", "type-secton", "rarity-secton", "cost-secton"].forEach(eleId => {
+      const section = document.getElementById(eleId);
+      if (!section) { console.error("Can't find section: [" + eleId + "]"); }
+      const buttons = Array.from(section.querySelectorAll("image-toggle-button"));
+      toggleButtons.push(...buttons);
+    });
+    searchButton.addEventListener('click', ()=> {
+      const searchConditions = [];
+      let searchText = searchInput.value;
+      const regex = /[&:|]/g;
+      searchText.replace(regex, '');
+    })
   </script>
 </body>
 

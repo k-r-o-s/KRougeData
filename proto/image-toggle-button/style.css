@@ -1,0 +1,36 @@
+.image-toggle-button {
+  background-color: rgb(206, 181, 114);
+  font-weight: 1000;
+}
+
+.image-toggle-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.image-toggle-button-group {
+  margin: 2px auto;
+  width: 360px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1px;
+}
+.toggle-off {
+  filter: grayscale(100);
+  background-color: transparent;
+}
+
+/* 中号 和 小号 */
+.image-toggle-button-medium {
+  padding: 4px;
+  width: 56px;
+  height: 56px;
+}
+.image-toggle-button-small {
+  padding: 0px;
+  width: 42px;
+  height: 42px;
+}
+
