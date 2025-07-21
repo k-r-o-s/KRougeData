@@ -7,7 +7,9 @@ export const CHAMPIONS = [
   {
     "name": "格雷尔男爵",
     "english-name": "Fel",
-    "type": "勇者",
+    "type": "单位",
+    "unit-type": "勇者",
+    "rarity": "勇者",
     "clan": "拉撒路联盟",
     "cost": "0",
     "effect": "",
@@ -19,7 +21,9 @@ export const CHAMPIONS = [
   {
     "name": "奥莱奇",
     "english-name": "Fel",
-    "type": "勇者",
+    "type": "单位",
+    "unit-type": "勇者",
+    "rarity": "勇者",
     "clan": "拉撒路联盟",
     "cost": "0",
     "effect": "",
@@ -34,7 +38,8 @@ export const UNITS = [
   {
     "name": "古怪助手",
     "english-name": "BattleDancer",
-    "type": "助手",
+    "type": "单位",
+    "unit-type": "助手",
     "clan": "拉撒路联盟",
     "rarity": "普通",
     "cost": "0",
@@ -48,7 +53,8 @@ export const UNITS = [
   {
     "name": "过劳的助手",
     "english-name": "BattleDancer",
-    "type": "助手",
+    "type": "单位",
+    "unit-type": "助手",
     "clan": "拉撒路联盟",
     "rarity": "普通",
     "cost": "0",
@@ -62,7 +68,8 @@ export const UNITS = [
   {
     "name": "双刃卫士",
     "english-name": "BattleDancer",
-    "type": "助手",
+    "type": "单位",
+    "unit-type": "助手",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
     "cost": "1",
@@ -76,7 +83,8 @@ export const UNITS = [
   {
     "name": "临时魔像",
     "english-name": "BattleDancer",
-    "type": "怪异造物",
+    "type": "单位",
+    "unit-type": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "高级",
     "cost": "1",
@@ -90,7 +98,8 @@ export const UNITS = [
   {
     "name": "肉钩",
     "english-name": "BattleDancer",
-    "type": "怪异造物",
+    "type": "单位",
+    "unit-type": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "高级",
     "cost": "1",
@@ -104,7 +113,8 @@ export const UNITS = [
   {
     "name": "扎针怪",
     "english-name": "BattleDancer",
-    "type": "怪异造物",
+    "type": "单位",
+    "unit-type": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "高级",
     "cost": "1",
@@ -118,7 +128,8 @@ export const UNITS = [
   {
     "name": "河豚人",
     "english-name": "BattleDancer",
-    "type": "助手",
+    "type": "单位",
+    "unit-type": "助手",
     "clan": "拉撒路联盟",
     "rarity": "高级",
     "cost": "1",
@@ -132,7 +143,8 @@ export const UNITS = [
   {
     "name": "重组软泥怪",
     "english-name": "BattleDancer",
-    "type": "怪异造物",
+    "type": "单位",
+    "unit-type": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
     "cost": "1",
@@ -146,7 +158,8 @@ export const UNITS = [
   {
     "name": "乐观的助手",
     "english-name": "BattleDancer",
-    "type": "助手",
+    "type": "单位",
+    "unit-type": "助手",
     "clan": "拉撒路联盟",
     "rarity": "普通",
     "cost": "1",
@@ -160,7 +173,8 @@ export const UNITS = [
   {
     "name": "扭曲的助手",
     "english-name": "BattleDancer",
-    "type": "助手",
+    "type": "单位",
+    "unit-type": "助手",
     "clan": "拉撒路联盟",
     "rarity": "普通",
     "cost": "1",
@@ -174,7 +188,8 @@ export const UNITS = [
   {
     "name": "笨拙大块头",
     "english-name": "BattleDancer",
-    "type": "怪异造物",
+    "type": "单位",
+    "unit-type": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "高级",
     "cost": "2",
@@ -188,7 +203,8 @@ export const UNITS = [
   {
     "name": "恐怖多臂怪",
     "english-name": "BattleDancer",
-    "type": "怪异造物",
+    "type": "单位",
+    "unit-type": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
     "cost": "2",
@@ -202,7 +218,8 @@ export const UNITS = [
   {
     "name": "九命梦魇",
     "english-name": "BattleDancer",
-    "type": "怪异造物",
+    "type": "单位",
+    "unit-type": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
     "cost": "2",
@@ -216,7 +233,8 @@ export const UNITS = [
   {
     "name": "瘟疫医生",
     "english-name": "BattleDancer",
-    "type": "助手",
+    "type": "单位",
+    "unit-type": "助手",
     "clan": "拉撒路联盟",
     "rarity": "高级",
     "cost": "2",
@@ -230,7 +248,8 @@ export const UNITS = [
   {
     "name": "实验对象阿尔法",
     "english-name": "BattleDancer",
-    "type": "怪异造物",
+    "type": "单位",
+    "unit-type": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "高级",
     "cost": "2",

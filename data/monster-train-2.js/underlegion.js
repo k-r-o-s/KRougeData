@@ -7,7 +7,9 @@ export const CHAMPIONS = [
   {
     "name": "断头台纽甘君",
     "english-name": "Ekka",
-    "type": "勇者",
+    "type": "单位",
+    "unit-type": "勇者",
+    "rarity": "勇者",
     "clan": "地下菌团",
     "cost": "0",
     "effect": "[能力: 飞行]",
@@ -19,7 +21,9 @@ export const CHAMPIONS = [
   {
     "name": "狮鬃夫人",
     "english-name": "Ekka",
-    "type": "勇者",
+    "type": "单位",
+    "unit-type": "勇者",
+    "rarity": "勇者",
     "clan": "地下菌团",
     "cost": "0",
     "effect": "[能力: 飞行]",
@@ -35,7 +39,8 @@ export const UNITS = [
   {
     "name": "绿色新兵",
     "english-name": "Astrologer",
-    "type": "蘑菇",
+    "type": "单位",
+    "unit-type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "普通",
     "cost": "0",
@@ -49,7 +54,8 @@ export const UNITS = [
   {
     "name": "多情金菇",
     "english-name": "Astrologer",
-    "type": "蘑菇",
+    "type": "单位",
+    "unit-type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
     "cost": "1",
@@ -63,7 +69,8 @@ export const UNITS = [
   {
     "name": "欢快毒鹅膏",
     "english-name": "Astrologer",
-    "type": "蘑菇",
+    "type": "单位",
+    "unit-type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
     "cost": "1",
@@ -77,7 +84,8 @@ export const UNITS = [
   {
     "name": "毒鹅膏先知",
     "english-name": "Astrologer",
-    "type": "蘑菇",
+    "type": "单位",
+    "unit-type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "稀有",
     "cost": "1",
@@ -91,7 +99,8 @@ export const UNITS = [
   {
     "name": "羊笃珺女士",
     "english-name": "Astrologer",
-    "type": "蘑菇",
+    "type": "单位",
+    "unit-type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
     "cost": "1",
@@ -105,7 +114,8 @@ export const UNITS = [
   {
     "name": "多刺尘菌",
     "english-name": "Astrologer",
-    "type": "蘑菇",
+    "type": "单位",
+    "unit-type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
     "cost": "1",
@@ -119,7 +129,8 @@ export const UNITS = [
   {
     "name": "蘑菇兵长",
     "english-name": "Astrologer",
-    "type": "蘑菇",
+    "type": "单位",
+    "unit-type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
     "cost": "1",
@@ -133,7 +144,8 @@ export const UNITS = [
   {
     "name": "松露犬",
     "english-name": "Astrologer",
-    "type": "蘑菇",
+    "type": "单位",
+    "unit-type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
     "cost": "1",
@@ -147,7 +159,8 @@ export const UNITS = [
   {
     "name": "滴蜡菌伞",
     "english-name": "Astrologer",
-    "type": "蘑菇",
+    "type": "单位",
+    "unit-type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
     "cost": "1",
@@ -161,7 +174,8 @@ export const UNITS = [
   {
     "name": "菌簇上校",
     "english-name": "Astrologer",
-    "type": "蘑菇",
+    "type": "单位",
+    "unit-type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
     "cost": "2",
@@ -175,7 +189,8 @@ export const UNITS = [
   {
     "name": "孢子发射者",
     "english-name": "Astrologer",
-    "type": "蘑菇",
+    "type": "单位",
+    "unit-type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
     "cost": "2",
@@ -189,7 +204,8 @@ export const UNITS = [
   {
     "name": "巴尔马贝洛",
     "english-name": "Astrologer",
-    "type": "蘑菇",
+    "type": "单位",
+    "unit-type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "稀有",
     "cost": "3",
@@ -203,7 +219,8 @@ export const UNITS = [
   {
     "name": "迷人的贵妇人",
     "english-name": "Astrologer",
-    "type": "蘑菇",
+    "type": "单位",
+    "unit-type": "蘑菇",
     "clan": "地下菌团",
     "rarity": "稀有",
     "cost": "3",

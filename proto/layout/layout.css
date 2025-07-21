@@ -26,10 +26,11 @@ main {
   flex: 1;
   /* 占据剩余空间 */
   background-color: #f4f4f4;
-  padding: auto;
+  padding: 4px;
 
   display: flex;
   flex-direction: row;
+  overflow-y: auto;
 }
 
 footer {

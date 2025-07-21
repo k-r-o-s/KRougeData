@@ -7,7 +7,9 @@ export const CHAMPIONS = [
   {
     "name": "断角王子",
     "english-name": "Fel",
-    "type": "勇者",
+    "type": "单位",
+    "unit-type": "勇者",
+    "rarity": "勇者",
     "clan": "狱魔",
     "cost": "0",
     "effect": "",
@@ -19,7 +21,9 @@ export const CHAMPIONS = [
   {
     "name": "碎尾女王",
     "english-name": "Fel",
-    "type": "勇者",
+    "unit-type": "勇者",
+    "type": "单位",
+    "rarity": "勇者",
     "clan": "狱魔",
     "cost": "0",
     "effect": "",
@@ -34,7 +38,8 @@ export const UNITS = [
   {
     "name": "巅峰小鬼",
     "english-name": "BattleDancer",
-    "type": "恶魔小鬼",
+    "type": "单位",
+    "unit-type": "恶魔小鬼",
     "clan": "狱魔",
     "rarity": "稀有",
     "cost": "1",
@@ -48,7 +53,8 @@ export const UNITS = [
   {
     "name": "烙印武士",
     "english-name": "BattleDancer",
-    "type": "恶魔",
+    "type": "单位",
+    "unit-type": "恶魔",
     "clan": "狱魔",
     "rarity": "高级",
     "cost": "1",
@@ -62,7 +68,8 @@ export const UNITS = [
   {
     "name": "狂乱蛮兽",
     "english-name": "BattleDancer",
-    "type": "恶魔",
+    "type": "单位",
+    "unit-type": "恶魔",
     "clan": "狱魔",
     "rarity": "稀有",
     "cost": "1",
@@ -76,7 +83,8 @@ export const UNITS = [
   {
     "name": "懵懂小鬼",
     "english-name": "BattleDancer",
-    "type": "恶魔小鬼",
+    "type": "单位",
+    "unit-type": "恶魔小鬼",
     "clan": "狱魔",
     "rarity": "普通",
     "cost": "1",
@@ -90,7 +98,8 @@ export const UNITS = [
   {
     "name": "长角武士",
     "english-name": "BattleDancer",
-    "type": "恶魔",
+    "type": "单位",
+    "unit-type": "恶魔",
     "clan": "狱魔",
     "rarity": "高级",
     "cost": "1",
@@ -104,7 +113,8 @@ export const UNITS = [
   {
     "name": "小鬼学者",
     "english-name": "BattleDancer",
-    "type": "恶魔小鬼",
+    "type": "单位",
+    "unit-type": "恶魔小鬼",
     "clan": "狱魔",
     "rarity": "高级",
     "cost": "1",
@@ -118,7 +128,8 @@ export const UNITS = [
   {
     "name": "蜕皮小鬼",
     "english-name": "BattleDancer",
-    "type": "恶魔小鬼",
+    "type": "单位",
+    "unit-type": "恶魔小鬼",
     "clan": "狱魔",
     "rarity": "普通",
     "cost": "1",
@@ -132,7 +143,8 @@ export const UNITS = [
   {
     "name": "薪火暴食者",
     "english-name": "BattleDancer",
-    "type": "恶魔小鬼",
+    "type": "单位",
+    "unit-type": "恶魔小鬼",
     "clan": "狱魔",
     "rarity": "高级",
     "cost": "1",
@@ -146,7 +158,8 @@ export const UNITS = [
   {
     "name": "女王的小鬼",
     "english-name": "BattleDancer",
-    "type": "恶魔小鬼",
+    "type": "单位",
+    "unit-type": "恶魔小鬼",
     "clan": "狱魔",
     "rarity": "普通",
     "cost": "1",
@@ -160,7 +173,8 @@ export const UNITS = [
   {
     "name": "锻铁者",
     "english-name": "BattleDancer",
-    "type": "恶魔",
+    "type": "单位",
+    "unit-type": "恶魔",
     "clan": "狱魔",
     "rarity": "高级",
     "cost": "1",
@@ -174,7 +188,8 @@ export const UNITS = [
   {
     "name": "锻铁工人",
     "english-name": "BattleDancer",
-    "type": "恶魔",
+    "type": "单位",
+    "unit-type": "恶魔",
     "clan": "狱魔",
     "rarity": "高级",
     "cost": "1",
@@ -188,7 +203,8 @@ export const UNITS = [
   {
     "name": "焊工助手",
     "english-name": "BattleDancer",
-    "type": "恶魔小鬼",
+    "type": "单位",
+    "unit-type": "恶魔小鬼",
     "clan": "狱魔",
     "rarity": "普通",
     "cost": "1",
@@ -202,7 +218,8 @@ export const UNITS = [
   {
     "name": "恐魔领主",
     "english-name": "BattleDancer",
-    "type": "恶魔",
+    "type": "单位",
+    "unit-type": "恶魔",
     "clan": "狱魔",
     "rarity": "高级",
     "cost": "2",
@@ -216,7 +233,8 @@ export const UNITS = [
   {
     "name": "超凡小鬼",
     "english-name": "BattleDancer",
-    "type": "恶魔小鬼",
+    "type": "单位",
+    "unit-type": "恶魔小鬼",
     "clan": "狱魔",
     "rarity": "稀有",
     "cost": "2",
@@ -230,7 +248,8 @@ export const UNITS = [
   {
     "name": "地狱恶魔",
     "english-name": "BattleDancer",
-    "type": "恶魔",
+    "type": "单位",
+    "unit-type": "恶魔",
     "clan": "狱魔",
     "rarity": "高级",
     "cost": "4",
@@ -244,7 +263,8 @@ export const UNITS = [
   {
     "name": "皇冠吞噬者",
     "english-name": "BattleDancer",
-    "type": "恶魔",
+    "type": "单位",
+    "unit-type": "恶魔",
     "clan": "狱魔",
     "rarity": "稀有",
     "cost": "8",

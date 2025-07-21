@@ -7,7 +7,9 @@ export const CHAMPIONS = [
   {
     "name": "吉尔达女士",
     "english-name": "Fel",
-    "type": "勇者",
+    "type": "单位",
+    "unit-type": "勇者",
+    "rarity": "勇者",
     "clan": "薪龙族",
     "cost": "0",
     "effect": "",
@@ -19,7 +21,9 @@ export const CHAMPIONS = [
   {
     "name": "菲尼克斯大人",
     "english-name": "Fel",
-    "type": "勇者",
+    "type": "单位",
+    "unit-type": "勇者",
+    "rarity": "勇者",
     "clan": "薪龙族",
     "cost": "0",
     "effect": "[能力: 菲尼克斯之火]",
@@ -34,7 +38,8 @@ export const UNITS = [
   {
     "name": "膨胀幼龙",
     "english-name": "BattleDancer",
-    "type": "幼龙",
+    "type": "单位",
+    "unit-type": "幼龙",
     "clan": "薪龙族",
     "rarity": "普通",
     "cost": "1",
@@ -48,7 +53,8 @@ export const UNITS = [
   {
     "name": "金蛋龙",
     "english-name": "BattleDancer",
-    "type": "龙",
+    "type": "单位",
+    "unit-type": "龙",
     "clan": "薪龙族",
     "rarity": "高级",
     "cost": "1",
@@ -62,7 +68,8 @@ export const UNITS = [
   {
     "name": "熔岩锤击者",
     "english-name": "BattleDancer",
-    "type": "龙",
+    "type": "单位",
+    "unit-type": "龙",
     "clan": "薪龙族",
     "rarity": "高级",
     "cost": "1",
@@ -76,7 +83,8 @@ export const UNITS = [
   {
     "name": "守财奴",
     "english-name": "BattleDancer",
-    "type": "龙",
+    "type": "单位",
+    "unit-type": "龙",
     "clan": "薪龙族",
     "rarity": "高级",
     "cost": "1",
@@ -90,7 +98,8 @@ export const UNITS = [
   {
     "name": "流涕幼龙",
     "english-name": "BattleDancer",
-    "type": "幼龙",
+    "type": "单位",
+    "unit-type": "幼龙",
     "clan": "薪龙族",
     "rarity": "普通",
     "cost": "1",
@@ -104,7 +113,8 @@ export const UNITS = [
   {
     "name": "自大的幼龙",
     "english-name": "BattleDancer",
-    "type": "幼龙",
+    "type": "单位",
+    "unit-type": "幼龙",
     "clan": "薪龙族",
     "rarity": "高级",
     "cost": "1",
@@ -118,7 +128,8 @@ export const UNITS = [
   {
     "name": "土豪幼龙",
     "english-name": "BattleDancer",
-    "type": "幼龙",
+    "type": "单位",
+    "unit-type": "幼龙",
     "clan": "薪龙族",
     "rarity": "高级",
     "cost": "1",
@@ -132,7 +143,8 @@ export const UNITS = [
   {
     "name": "金牙",
     "english-name": "BattleDancer",
-    "type": "龙",
+    "type": "单位",
+    "unit-type": "龙",
     "clan": "薪龙族",
     "rarity": "稀有",
     "cost": "2",
@@ -146,7 +158,8 @@ export const UNITS = [
   {
     "name": "贪婪之龙",
     "english-name": "BattleDancer",
-    "type": "龙",
+    "type": "单位",
+    "unit-type": "龙",
     "clan": "薪龙族",
     "rarity": "高级",
     "cost": "2",
@@ -160,7 +173,8 @@ export const UNITS = [
   {
     "name": "吞火龙",
     "english-name": "BattleDancer",
-    "type": "龙",
+    "type": "单位",
+    "unit-type": "龙",
     "clan": "薪龙族",
     "rarity": "高级",
     "cost": "2",
@@ -174,7 +188,8 @@ export const UNITS = [
   {
     "name": "岩浆圣教徒",
     "english-name": "BattleDancer",
-    "type": "龙",
+    "type": "单位",
+    "unit-type": "龙",
     "clan": "薪龙族",
     "rarity": "高级",
     "cost": "2",
@@ -188,7 +203,8 @@ export const UNITS = [
   {
     "name": "薪血龙",
     "english-name": "BattleDancer",
-    "type": "龙",
+    "type": "单位",
+    "unit-type": "龙",
     "clan": "薪龙族",
     "rarity": "稀有",
     "cost": "2",
@@ -202,7 +218,8 @@ export const UNITS = [
   {
     "name": "狂热者",
     "english-name": "BattleDancer",
-    "type": "龙",
+    "type": "单位",
+    "unit-type": "龙",
     "clan": "薪龙族",
     "rarity": "稀有",
     "cost": "3",

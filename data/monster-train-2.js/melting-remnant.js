@@ -7,7 +7,9 @@ export const CHAMPIONS = [
   {
     "name": "小菲德",
     "english-name": "Fel",
-    "type": "勇者",
+    "type": "单位",
+    "unit-type": "勇者",
+    "rarity": "勇者",
     "clan": "熔尸",
     "cost": "0",
     "effect": "",
@@ -19,7 +21,9 @@ export const CHAMPIONS = [
   {
     "name": "雷克特·烛焰",
     "english-name": "Fel",
-    "type": "勇者",
+    "type": "单位",
+    "unit-type": "勇者",
+    "rarity": "勇者",
     "clan": "熔尸",
     "cost": "0",
     "effect": "[自助餐] 3. [被吞食]: 使被吞食者获得此单位的 [攻击力] 和 [生命值]",
@@ -34,7 +38,8 @@ export const UNITS = [
   {
     "name": "蜡渣",
     "english-name": "BattleDancer",
-    "type": "烛人",
+    "type": "单位",
+    "unit-type": "烛人",
     "clan": "熔尸",
     "rarity": "普通",
     "cost": "0",
@@ -48,7 +53,8 @@ export const UNITS = [
   {
     "name": "宿主残渣",
     "english-name": "BattleDancer",
-    "type": "墓灵",
+    "type": "单位",
+    "unit-type": "墓灵",
     "clan": "熔尸",
     "rarity": "高级",
     "cost": "0",
@@ -62,7 +68,8 @@ export const UNITS = [
   {
     "name": "许愿烛灵",
     "english-name": "BattleDancer",
-    "type": "烛人",
+    "type": "单位",
+    "unit-type": "烛人",
     "clan": "熔尸",
     "rarity": "高级",
     "cost": "0",
@@ -76,7 +83,8 @@ export const UNITS = [
   {
     "name": "赏金猎手",
     "english-name": "BattleDancer",
-    "type": "无芯者",
+    "type": "单位",
+    "unit-type": "无芯者",
     "clan": "熔尸",
     "rarity": "稀有",
     "cost": "1",
@@ -90,7 +98,8 @@ export const UNITS = [
   {
     "name": "死亡吞没者",
     "english-name": "BattleDancer",
-    "type": "无芯者",
+    "type": "单位",
+    "unit-type": "无芯者",
     "clan": "熔尸",
     "rarity": "稀有",
     "cost": "1",
@@ -104,7 +113,8 @@ export const UNITS = [
   {
     "name": "重塑烛人",
     "english-name": "BattleDancer",
-    "type": "烛人",
+    "type": "单位",
+    "unit-type": "烛人",
     "clan": "熔尸",
     "rarity": "普通",
     "cost": "1",
@@ -118,7 +128,8 @@ export const UNITS = [
   {
     "name": "蜡封炸弹",
     "english-name": "BattleDancer",
-    "type": "墓灵",
+    "type": "单位",
+    "unit-type": "墓灵",
     "clan": "熔尸",
     "rarity": "普通",
     "cost": "1",
@@ -132,7 +143,8 @@ export const UNITS = [
   {
     "name": "蜡神夫人",
     "english-name": "BattleDancer",
-    "type": "烛人",
+    "type": "单位",
+    "unit-type": "烛人",
     "clan": "熔尸",
     "rarity": "高级",
     "cost": "1",
@@ -146,7 +158,8 @@ export const UNITS = [
   {
     "name": "移形夫人",
     "english-name": "BattleDancer",
-    "type": "烛人",
+    "type": "单位",
+    "unit-type": "烛人",
     "clan": "熔尸",
     "rarity": "高级",
     "cost": "1",
@@ -160,7 +173,8 @@ export const UNITS = [
   {
     "name": "燃烧蜡液",
     "english-name": "BattleDancer",
-    "type": "墓灵",
+    "type": "单位",
+    "unit-type": "墓灵",
     "clan": "熔尸",
     "rarity": "普通",
     "cost": "1",
@@ -174,7 +188,8 @@ export const UNITS = [
   {
     "name": "石蜡执法者",
     "english-name": "BattleDancer",
-    "type": "无芯者",
+    "type": "单位",
+    "unit-type": "无芯者",
     "clan": "熔尸",
     "rarity": "高级",
     "cost": "1",
@@ -188,7 +203,8 @@ export const UNITS = [
   {
     "name": "石蜡暴徒",
     "english-name": "BattleDancer",
-    "type": "无芯者",
+    "type": "单位",
+    "unit-type": "无芯者",
     "clan": "熔尸",
     "rarity": "高级",
     "cost": "1",
@@ -202,7 +218,8 @@ export const UNITS = [
   {
     "name": "无芯男爵",
     "english-name": "BattleDancer",
-    "type": "无芯者",
+    "type": "单位",
+    "unit-type": "无芯者",
     "clan": "熔尸",
     "rarity": "高级",
     "cost": "1",
@@ -216,7 +233,8 @@ export const UNITS = [
   {
     "name": "无芯大亨",
     "english-name": "BattleDancer",
-    "type": "无芯者",
+    "type": "单位",
+    "unit-type": "无芯者",
     "clan": "熔尸",
     "rarity": "高级",
     "cost": "1",
@@ -230,7 +248,8 @@ export const UNITS = [
   {
     "name": "巨型蜡油",
     "english-name": "BattleDancer",
-    "type": "无芯者",
+    "type": "单位",
+    "unit-type": "无芯者",
     "clan": "熔尸",
     "rarity": "稀有",
     "cost": "2",
@@ -244,7 +263,8 @@ export const UNITS = [
   {
     "name": "无形小孩",
     "english-name": "BattleDancer",
-    "type": "墓灵",
+    "type": "单位",
+    "unit-type": "墓灵",
     "clan": "熔尸",
     "rarity": "稀有",
     "cost": "2",
@@ -258,7 +278,8 @@ export const UNITS = [
   {
     "name": "烛人大军",
     "english-name": "BattleDancer",
-    "type": "烛人",
+    "type": "单位",
+    "unit-type": "烛人",
     "clan": "熔尸",
     "rarity": "稀有",
     "cost": "2",

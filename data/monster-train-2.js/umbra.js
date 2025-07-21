@@ -7,7 +7,9 @@ export const CHAMPIONS = [
   {
     "name": "影祖",
     "english-name": "Fel",
-    "type": "勇者",
+    "type": "单位",
+    "unit-type": "勇者",
+    "rarity": "勇者",
     "clan": "影主",
     "cost": "0",
     "effect": "",
@@ -19,7 +21,9 @@ export const CHAMPIONS = [
   {
     "name": "原基",
     "english-name": "Fel",
-    "type": "勇者",
+    "type": "单位",
+    "unit-type": "勇者",
+    "rarity": "勇者",
     "clan": "影主",
     "cost": "0",
     "effect": "[自助餐] 3. [被吞食]: 使被吞食者获得此单位的 [攻击力] 和 [生命值]",
@@ -34,7 +38,8 @@ export const UNITS = [
   {
     "name": "影者影裔",
     "english-name": "BattleDancer",
-    "type": "影裔",
+    "type": "单位",
+    "unit-type": "影裔",
     "clan": "影主",
     "rarity": "高级",
     "cost": "0",
@@ -48,7 +53,8 @@ export const UNITS = [
   {
     "name": "熔岩影裔",
     "english-name": "BattleDancer",
-    "type": "影裔",
+    "type": "单位",
+    "unit-type": "影裔",
     "clan": "影主",
     "rarity": "高级",
     "cost": "0",
@@ -62,7 +68,8 @@ export const UNITS = [
   {
     "name": "影裔采掘者",
     "english-name": "BattleDancer",
-    "type": "影裔",
+    "type": "单位",
+    "unit-type": "影裔",
     "clan": "影主",
     "rarity": "高级",
     "cost": "0",
@@ -76,7 +83,8 @@ export const UNITS = [
   {
     "name": "影裔宝石匠",
     "english-name": "BattleDancer",
-    "type": "影裔",
+    "type": "单位",
+    "unit-type": "影裔",
     "clan": "影主",
     "rarity": "高级",
     "cost": "0",
@@ -90,7 +98,8 @@ export const UNITS = [
   {
     "name": "影裔矿工",
     "english-name": "BattleDancer",
-    "type": "影裔",
+    "type": "单位",
+    "unit-type": "影裔",
     "clan": "影主",
     "rarity": "稀有",
     "cost": "0",
@@ -104,7 +113,8 @@ export const UNITS = [
   {
     "name": "影裔清道夫",
     "english-name": "BattleDancer",
-    "type": "影裔",
+    "type": "单位",
+    "unit-type": "影裔",
     "clan": "影主",
     "rarity": "普通",
     "cost": "0",
@@ -118,7 +128,8 @@ export const UNITS = [
   {
     "name": "合金构造体",
     "english-name": "BattleDancer",
-    "type": "构装",
+    "type": "单位",
+    "unit-type": "构装",
     "clan": "影主",
     "rarity": "高级",
     "cost": "1",
@@ -132,7 +143,8 @@ export const UNITS = [
   {
     "name": "熔炉收藏家",
     "english-name": "BattleDancer",
-    "type": "雾影",
+    "type": "单位",
+    "unit-type": "雾影",
     "clan": "影主",
     "rarity": "高级",
     "cost": "1",
@@ -146,7 +158,8 @@ export const UNITS = [
   {
     "name": "熔炉看守者",
     "english-name": "BattleDancer",
-    "type": "雾影",
+    "type": "单位",
+    "unit-type": "雾影",
     "clan": "影主",
     "rarity": "高级",
     "cost": "1",
@@ -160,7 +173,8 @@ export const UNITS = [
   {
     "name": "余烬锻炉",
     "english-name": "BattleDancer",
-    "type": "构装",
+    "type": "单位",
+    "unit-type": "构装",
     "clan": "影主",
     "rarity": "高级",
     "cost": "1",
@@ -174,7 +188,8 @@ export const UNITS = [
   {
     "name": "影裔宿主",
     "english-name": "BattleDancer",
-    "type": "雾影",
+    "type": "单位",
+    "unit-type": "雾影",
     "clan": "影主",
     "rarity": "高级",
     "cost": "1",
@@ -188,7 +203,8 @@ export const UNITS = [
    {
     "name": "影裔造物",
     "english-name": "BattleDancer",
-    "type": "构装",
+    "type": "单位",
+    "unit-type": "构装",
     "clan": "影主",
     "rarity": "稀有",
     "cost": "2",
@@ -202,7 +218,8 @@ export const UNITS = [
   {
     "name": "影裔制造者",
     "english-name": "BattleDancer",
-    "type": "雾影",
+    "type": "单位",
+    "unit-type": "雾影",
     "clan": "影主",
     "rarity": "高级",
     "cost": "2",
@@ -216,7 +233,8 @@ export const UNITS = [
   {
     "name": "狂食者",
     "english-name": "BattleDancer",
-    "type": "雾影",
+    "type": "单位",
+    "unit-type": "雾影",
     "clan": "影主",
     "rarity": "稀有",
     "cost": "2",
@@ -230,7 +248,8 @@ export const UNITS = [
   {
     "name": "噬影者",
     "english-name": "BattleDancer",
-    "type": "雾影",
+    "type": "单位",
+    "unit-type": "雾影",
     "clan": "影主",
     "rarity": "高级",
     "cost": "2",
@@ -244,7 +263,8 @@ export const UNITS = [
      {
     "name": "暗影破城傀儡",
     "english-name": "BattleDancer",
-    "type": "构装",
+    "type": "单位",
+    "unit-type": "构装",
     "clan": "影主",
     "rarity": "稀有",
     "cost": "6",

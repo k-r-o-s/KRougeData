@@ -4,47 +4,52 @@ export class SearchPanel extends HTMLElement {
   static TAG_NAME = 'search-panel'
 
   constructor() {
-    // 必须调用 super()
     super();
 
-    // 获取 template 内容
     const template = document.getElementById(SearchPanel.TEMPLATE_ID);
-    if (template) {
-      // 复制 template 的内容并添加到 Shadow DOM
-      const content = template.content.cloneNode(true);
-      this.appendChild(content);
-
-      const divider = this.querySelector('#divider');
-      if (!divider) {
-        console.error('template with ID "' + SearchPanel.TEMPLATE_ID + '" clone failed, <div id=\"divider\"> not found');
-      }
-      this.divider = divider;
-    } else {
+    if (!template) {
       console.error('Template with ID "' + SearchPanel.TEMPLATE_ID + '" not found.');
+      return;
     }
+    const content = template.content.cloneNode(true);
+    this.appendChild(content);
+
+    this.searchButton = this.querySelector('#search-button');
+    this.searchInput = this.querySelector("#search-input");
+
+    this.toggleButtons = [];
+    ["clan-section", "type-section", "rarity-section", "cost-section"].forEach(eleId => {
+      const section = this.querySelector("#" + eleId);
+      if (!section) { console.error("Can't find section: [" + eleId + "]"); }
+      const buttons = Array.from(section.querySelectorAll("image-toggle-button"));
+      this.toggleButtons.push(...buttons);
+    });
   }
 
-  // 可选：定义生命周期回调函数
-  connectedCallback() {
-    // console.log('SearchPanel 已连接到文档111。');
+  // // 可选：定义生命周期回调函数
+  // connectedCallback() { }
+  // disconnectedCallback() { }
+  // attributeChangedCallback(name, oldValue, newValue) { }
+  // static get observedAttributes() {  return [];  } // 监听的属性列表
+
+  ///////////////////////////////////////////////////////
+  get searchText (){
+    return this.searchInput.value;
   }
 
-  disconnectedCallback() {
-    // console.log('SearchPanel 已从文档断开。');
+  get searchConditions() {
+    const conditons = [];
+    this.toggleButtons.forEach(btn => {
+      if (!btn || btn.isOff()) { return; }
+      const condition = btn.condition.split(";")
+      if (condition) { conditons.push(...condition); }
+    });
+    return conditons;
   }
-
-  attributeChangedCallback(name, oldValue, newValue) {
-    switch (name) {
-      case "text":
-        this.divider.textContent = newValue;
-        break;
-      default:
-        console.error("unsupported attribute type: [" + name + "]");
-    }
-  }
-
-  static get observedAttributes() {
-    return ['text']; // 监听的属性列表
+  #processSearchingText(text) {
+    const regex = /[&:|]/g;
+    searchText.replace(regex, '');
+    return text;
   }
 }
 

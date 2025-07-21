@@ -7,7 +7,9 @@ export const CHAMPIONS = [
   {
     "name": "智者",
     "english-name": "Fel",
-    "type": "勇者",
+    "type": "单位",
+    "unit-type": "勇者",
+    "rarity": "勇者",
     "clan": "觉者",
     "cost": "0",
     "effect": "",
@@ -19,7 +21,9 @@ export const CHAMPIONS = [
   {
     "name": "威尔丹顿",
     "english-name": "Fel",
-    "type": "勇者",
+    "type": "单位",
+    "unit-type": "勇者",
+    "rarity": "勇者",
     "clan": "觉者",
     "cost": "0",
     "effect": "",
@@ -34,7 +38,8 @@ export const UNITS = [
   {
     "name": "极速蔓灵",
     "english-name": "BattleDancer",
-    "type": "蔓灵",
+    "type": "单位",
+    "unit-type": "蔓灵",
     "clan": "觉者",
     "rarity": "高级",
     "cost": "1",
@@ -48,7 +53,8 @@ export const UNITS = [
   {
     "name": "刚毅蔓灵",
     "english-name": "BattleDancer",
-    "type": "蔓灵",
+    "type": "单位",
+    "unit-type": "蔓灵",
     "clan": "觉者",
     "rarity": "高级",
     "cost": "1",
@@ -62,7 +68,8 @@ export const UNITS = [
   {
     "name": "觉者空灵",
     "english-name": "BattleDancer",
-    "type": "空灵",
+    "type": "单位",
+    "unit-type": "空灵",
     "clan": "觉者",
     "rarity": "高级",
     "cost": "1",
@@ -76,7 +83,8 @@ export const UNITS = [
   {
     "name": "隐修会",
     "english-name": "BattleDancer",
-    "type": "通灵者",
+    "type": "单位",
+    "unit-type": "通灵者",
     "clan": "觉者",
     "rarity": "高级",
     "cost": "1",
@@ -90,7 +98,8 @@ export const UNITS = [
   {
     "name": "坚壳隐者",
     "english-name": "BattleDancer",
-    "type": "蔓灵",
+    "type": "单位",
+    "unit-type": "蔓灵",
     "clan": "觉者",
     "rarity": "高级",
     "cost": "1",
@@ -104,7 +113,8 @@ export const UNITS = [
   {
     "name": "碎片通灵者",
     "english-name": "BattleDancer",
-    "type": "通灵者",
+    "type": "单位",
+    "unit-type": "通灵者",
     "clan": "觉者",
     "rarity": "稀有",
     "cost": "1",
@@ -118,7 +128,8 @@ export const UNITS = [
   {
     "name": "破碎坚壳",
     "english-name": "BattleDancer",
-    "type": "蔓灵",
+    "type": "单位",
+    "unit-type": "蔓灵",
     "clan": "觉者",
     "rarity": "高级",
     "cost": "1",
@@ -132,7 +143,8 @@ export const UNITS = [
   {
     "name": "荆棘空灵",
     "english-name": "BattleDancer",
-    "type": "空灵",
+    "type": "单位",
+    "unit-type": "空灵",
     "clan": "觉者",
     "rarity": "高级",
     "cost": "1",
@@ -146,7 +158,8 @@ export const UNITS = [
   {
     "name": "藤蔓之母",
     "english-name": "BattleDancer",
-    "type": "空灵",
+    "type": "单位",
+    "unit-type": "空灵",
     "clan": "觉者",
     "rarity": "稀有",
     "cost": "1",
@@ -160,7 +173,8 @@ export const UNITS = [
   {
     "name": "野林看守人",
     "english-name": "BattleDancer",
-    "type": "通灵者",
+    "type": "单位",
+    "unit-type": "通灵者",
     "clan": "觉者",
     "rarity": "高级",
     "cost": "1",
@@ -174,7 +188,8 @@ export const UNITS = [
   {
     "name": "枯萎白木",
     "english-name": "BattleDancer",
-    "type": "空灵",
+    "type": "单位",
+    "unit-type": "空灵",
     "clan": "觉者",
     "rarity": "稀有",
     "cost": "2",
@@ -188,7 +203,8 @@ export const UNITS = [
   {
     "name": "钢铁歌者",
     "english-name": "BattleDancer",
-    "type": "空灵",
+    "type": "单位",
+    "unit-type": "空灵",
     "clan": "觉者",
     "rarity": "稀有",
     "cost": "3",

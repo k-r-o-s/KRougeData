@@ -4,75 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>响应式 Flexbox 网格</title>
-    <style>
-        .container {
-            width: 90%; /* 给容器一个相对宽度 */
-            max-width: 1200px; /* 限制最大宽度 */
-            margin: 20px auto; /* 居中容器 */
-            border: 2px solid #333;
-            padding: 10px;
-            box-sizing: border-box;
-
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px; /* 元素之间的固定间距 */
-        }
-
-        .item {
-            /* 默认样式：一行一个，或者在很窄的屏幕上 */
-            flex: 0 0 100%; /* 不放大，不缩小，基础宽度100% */
-            max-width: 100%; /* 最大宽度100% */
-            height: 100px;
-            background-color: lightblue;
-            border: 1px solid steelblue;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-sizing: border-box;
-        }
-
-        /* --- 媒体查询实现响应式布局 --- */
-
-        /* 当屏幕宽度至少为 600px 时，一行显示 4 个元素 */
-        @media (min-width: 600px) {
-            .item {
-                /* 计算宽度：(100% - (3 * gap)) / 4 */
-                /* 假设 gap 是 10px，这里需要用 calc() */
-                flex: 0 0 calc(25% - 7.5px); /* 7.5px = 30px / 4 */
-                max-width: calc(25% - 7.5px);
-            }
-        }
-
-        /* 当屏幕宽度至少为 900px 时，一行显示 6 个元素 */
-        @media (min-width: 900px) {
-            .item {
-                /* 计算宽度：(100% - (5 * gap)) / 6 */
-                /* 5个间距，被6个元素瓜分，所以每个元素分到 5/6 个间距 */
-                flex: 0 0 calc(16.6667% - 12px); /* 12px = (6 * 10px) / 5 */
-                max-width: calc(16.6667% - 12px);
-            }
-        }
-
-        /* 当屏幕宽度至少为 1200px 时，一行显示 8 个元素 */
-        @media (min-width: 1200px) {
-            .item {
-                /* 计算宽度：(100% - (7 * gap)) / 8 */
-                /* 7个间距，被8个元素瓜分，所以每个元素分到 7/8 个间距 */
-                flex: 0 0 calc(12.5% - 8.75px); /* 8.75px = (7 * 10px) / 8 */
-                max-width: calc(12.5% - 8.75px);
-            }
-        }
-
-        /* 优化：为了避免计算复杂的 calc()，也可以使用 margin 来替代 gap，
-           或者让 item 的 width 稍小一点，通过 justify-content: space-between; 来分配剩余空间
-           但你的 flex: 0 0 N% 配合 gap 是精确控制列数的推荐做法。
-           calc() 是必要的，因为 flex-basis 计算的是元素本身的宽度，不包含 gap。
-           gap 是在元素之间应用的。
-        */
-    </style>
+    <link rel="stylesheet" href="_style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="card-list-view">
         <div class="item">1</div>
         <div class="item">2</div>
         <div class="item">3</div>

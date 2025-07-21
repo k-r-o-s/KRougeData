@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Web Page</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="script.js" defer></script>
+
   <script type="module" src="./script/image-toggle-button.js"></script>
   <script type="module" src="./script/section-divider.js"></script>
+  <script type="module" src="./script/search-panel.js"></script>
+  <script type="module" src="./script/item-card.js"></script>
 </head>
 
 <body>
@@ -16,84 +18,26 @@
     <h1>Welcome to My Web Page</h1>
   </header>
   <main>
-    <div class="left-panel">
-      <div class="cell button">Cell 1</div>
-      <div class="cell button">Cell 2</div>
-      <div class="cell button">Cell 3</div>
-      <div class="cell button">Cell 4</div>
-      <div class="cell button">Cell 5</div>
-      <div class="cell button">Cell 6</div>
-      <div class="cell button">Cell 7</div>
-      <div class="cell button">Cell 8</div>
-      <div class="cell button">Cell 9</div>
-      <div class="cell button">Cell 10</div>
-      <div class="cell button">Cell 11</div>
-      <div class="cell button">Cell 12</div>
-      <div class="cell button">Cell 13</div>
-      <div class="cell button">Cell 14</div>
-      <div class="cell button">Cell 15</div>
-      <div class="cell button">Cell 16</div>
-      <div class="cell button">Cell 17</div>
-      <div class="cell button">Cell 18</div>
-      <div class="cell button">Cell 19</div>
-      <div class="cell button">Cell 20</div>
-      <div class="cell button">Cell 21</div>
-      <div class="cell button">Cell 22</div>
-      <div class="cell button">Cell 23</div>
+    <div class="left-panel card-list-view">
+      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
+      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
+      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
+      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
+      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
+      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
+      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
+      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
+      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
+      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
+      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
+      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
+      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
+      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
+      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
+      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
     </div>
     <!-- 查询条件面板 -->
-    <div class="right-panel">
-      <!-- 查询输入框和按钮区 -->
-      <div class="search-container">
-        <input type="text" id="search-input" placeholder="请输入搜索条件...">
-        <button id="search-button">🔎</button>
-      </div>
-      <!-- 卡牌氏族选取区 -->
-      <section-divider text="氏族"></section-divider>
-      <div id="clan-section" class="image-toggle-button-group">
-        <image-toggle-button src="image/other/流放者.webp" title="流放者"></image-toggle-button>
-        <image-toggle-button src="image/other/薪龙族.webp" title="薪龙族"></image-toggle-button>
-        <image-toggle-button src="image/other/月巫团.webp" title="月巫团"></image-toggle-button>
-        <image-toggle-button src="image/other/地下菌团.webp" title="地下菌团"></image-toggle-button>
-        <image-toggle-button src="image/other/拉撒路联盟.webp" title="拉撒路联盟"></image-toggle-button>
-        <image-toggle-button src="image/other/狱魔.webp" title="狱魔"></image-toggle-button>
-        <image-toggle-button src="image/other/觉者.webp" title="觉者"></image-toggle-button>
-        <image-toggle-button src="image/other/冥卫.webp" title="冥卫"></image-toggle-button>
-        <image-toggle-button src="image/other/影主.webp" title="影主"></image-toggle-button>
-        <image-toggle-button src="image/other/熔尸.webp" title="熔尸"></image-toggle-button>
-        <image-toggle-button src="image/other/无氏族.webp" title="无氏族"></image-toggle-button>
-      </div>
-      <!-- 卡牌类型选取区 -->
-      <section-divider text="类型"></section-divider>
-      <div id="type-section" class="image-toggle-button-group">
-        <image-toggle-button src="image/other/单位.webp" title="单位"></image-toggle-button>
-        <image-toggle-button src="image/other/法术.webp" title="法术"></image-toggle-button>
-        <image-toggle-button src="image/other/装备.webp" title="装备"></image-toggle-button>
-        <image-toggle-button src="image/other/房间.webp" title="房间"></image-toggle-button>
-        <image-toggle-button src="image/other/神器.webp" title="神器"></image-toggle-button>
-        <image-toggle-button src="image/other/祸患.webp" title="祸患"></image-toggle-button>
-        <image-toggle-button src="image/other/天灾.webp" title="天灾"></image-toggle-button>
-      </div>
-      <!-- 卡牌稀有度选取区 -->
-      <section-divider text="稀有度"></section-divider>
-      <div id="rarity-section" class="image-toggle-button-group">
-        <image-toggle-button src="image/other/勇者.webp" title="勇者" size="small"></image-toggle-button>
-        <image-toggle-button src="image/other/普通.webp" title="普通" size="small"></image-toggle-button>
-        <image-toggle-button src="image/other/高级.webp" title="高级" size="small"></image-toggle-button>
-        <image-toggle-button src="image/other/稀有.webp" title="稀有" size="small"></image-toggle-button>
-      </div>
-      <!-- 卡牌费用选取区 -->
-      <section-divider text="费用"></section-divider>
-      <div id="cost-section" class="image-toggle-button-group">
-        <image-toggle-button src="" text="0" size="small"></image-toggle-button>
-        <image-toggle-button src="" text="1" size="small"></image-toggle-button>
-        <image-toggle-button src="" text="2" size="small"></image-toggle-button>
-        <image-toggle-button src="" text="3" size="small"></image-toggle-button>
-        <image-toggle-button src="" text="4+" size="small"></image-toggle-button>
-        <image-toggle-button src="" text="X" size="small"></image-toggle-button>
-      </div>
-      <!-- 标签选取区 -->
-      <section-divider text="标签"></section-divider>
+    <search-panel class="right-panel"></search-panel>
   </main>
   <footer>
     <p>&copy; 2023 My Web Page</p>
@@ -105,29 +49,91 @@
     <div class="card-tooltip"></div>
   </template>
   <template id="image-toggle-button-template">
-    <button div class="image-toggle-button image-toggle-button-medium" id="button">
+    <button div class="image-toggle-button button-size56x56" id="button">
       <img id="image">
     </button>
   </template>
   <template id="section-divider-template">
     <div class="section-divider" id="divider"></div>
   </template>
+  <template id="search-panel-template">
+    <!-- 查询输入框和按钮区 -->
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="请输入搜索条件...">
+      <button id="search-button">🔎</button>
+    </div>
+    <!-- 卡牌氏族选取区 -->
+    <section-divider text="氏族"></section-divider>
+    <div id="clan-section" class="image-toggle-button-group">
+      <image-toggle-button src="image/other/流放者.webp" condition="clan:流放者" title="流放者"></image-toggle-button>
+      <image-toggle-button src="image/other/薪龙族.webp" condition="clan:薪龙族" title="薪龙族"></image-toggle-button>
+      <image-toggle-button src="image/other/月巫团.webp" condition="clan:月巫团" title="月巫团"></image-toggle-button>
+      <image-toggle-button src="image/other/地下菌团.webp" condition="clan:地下菌团" title="地下菌团"></image-toggle-button>
+      <image-toggle-button src="image/other/拉撒路联盟.webp" condition="clan:拉撒路联盟" title="拉撒路联盟"></image-toggle-button>
+      <image-toggle-button src="image/other/狱魔.webp" condition="clan:狱魔" title="狱魔"></image-toggle-button>
+      <image-toggle-button src="image/other/觉者.webp" condition="clan:觉者" title="觉者"></image-toggle-button>
+      <image-toggle-button src="image/other/冥卫.webp" condition="clan:冥卫" title="冥卫"></image-toggle-button>
+      <image-toggle-button src="image/other/影主.webp" condition="clan:影主" title="影主"></image-toggle-button>
+      <image-toggle-button src="image/other/熔尸.webp" condition="clan:熔尸" title="熔尸"></image-toggle-button>
+      <image-toggle-button src="image/other/无氏族.webp" condition="clan:无氏族" title="无氏族"></image-toggle-button>
+    </div>
+    <!-- 卡牌类型选取区 -->
+    <section-divider text="类型"></section-divider>
+    <div id="type-section" class="image-toggle-button-group">
+      <image-toggle-button src="image/other/单位.webp" condition="type:单位" title="单位" size="42x48"></image-toggle-button>
+      <image-toggle-button src="image/other/法术.webp" condition="type:法术" title="法术" size="42x48"></image-toggle-button>
+      <image-toggle-button src="image/other/装备.webp" condition="type:装备" title="装备" size="42x48"></image-toggle-button>
+      <image-toggle-button src="image/other/房间.webp" condition="type:房间" title="房间" size="42x48"></image-toggle-button>
+      <image-toggle-button src="image/other/神器.webp" condition="type:神器" title="神器" size="42x48"></image-toggle-button>
+      <image-toggle-button src="image/other/祸患.webp" condition="type:祸患" title="祸患" size="42x48"></image-toggle-button>
+      <image-toggle-button src="image/other/天灾.webp" condition="type:天灾" title="天灾" size="42x48"></image-toggle-button>
+    </div>
+    <!-- 卡牌稀有度选取区 -->
+    <section-divider text="稀有度"></section-divider>
+    <div id="rarity-section" class="image-toggle-button-group">
+      <image-toggle-button src="image/other/勇者.webp" condition="rarity:勇者" title="勇者" size="42x42"></image-toggle-button>
+      <image-toggle-button src="image/other/普通.webp" condition="rarity:普通" title="普通" size="42x42"></image-toggle-button>
+      <image-toggle-button src="image/other/高级.webp" condition="rarity:高级" title="高级" size="42x42"></image-toggle-button>
+      <image-toggle-button src="image/other/稀有.webp" condition="rarity:稀有" title="稀有" size="42x42"></image-toggle-button>
+    </div>
+    <!-- 卡牌费用选取区 -->
+    <section-divider text="费用"></section-divider>
+    <div id="cost-section" class="image-toggle-button-group">
+      <image-toggle-button src="" text="0" condition="cost:0" size="42x42"></image-toggle-button>
+      <image-toggle-button src="" text="1" condition="cost:1" size="42x42"></image-toggle-button>
+      <image-toggle-button src="" text="2" condition="cost:2" size="42x42"></image-toggle-button>
+      <image-toggle-button src="" text="3" condition="cost:3" size="42x42"></image-toggle-button>
+      <image-toggle-button src="" text="4+" condition="cost:4;cost:5;cost:6;cost:7;cost:8" size="42x42"></image-toggle-button>
+      <image-toggle-button src="" text="X" condition="cost:X" size="42x42"></image-toggle-button>
+    </div>
+    <!-- 标签选取区 -->
+    <section-divider text="标签"></section-divider>
+  </template>
   <script>
-    const searchButton = document.getElementById("search-button");
-    const searchInput = document.getElementById("search-input");
-    const toggleButtons = [];
-    ["clan-secton", "type-secton", "rarity-secton", "cost-secton"].forEach(eleId => {
-      const section = document.getElementById(eleId);
-      if (!section) { console.error("Can't find section: [" + eleId + "]"); }
-      const buttons = Array.from(section.querySelectorAll("image-toggle-button"));
-      toggleButtons.push(...buttons);
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchPanel = document.querySelector('.right-panel');
+      searchPanel.searchButton.addEventListener('click', () => {
+        doSearch();
+      });
+      searchPanel.searchInput.addEventListener('keyup', () => {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          doSearch();
+        }
+      });
     });
-    searchButton.addEventListener('click', ()=> {
-      const searchConditions = [];
-      let searchText = searchInput.value;
-      const regex = /[&:|]/g;
-      searchText.replace(regex, '');
-    })
+
+    function doSearch() {
+      const searchPanel = document.querySelector('.right-panel');
+      // 搜索文本 alert(searchPanel.searchInput.value)
+      
+    }
+
+    function createCardList() {
+      const list = document.querySelector('.left-panel');
+      list.innerHTML = '';
+      
+    }
   </script>
 </body>
 

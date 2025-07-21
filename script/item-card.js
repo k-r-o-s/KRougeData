@@ -1,10 +1,20 @@
 export class ItemCard extends HTMLElement {
+
+  static TEMPLATE_ID = 'item-card-template';
+  static TAG_NAME = 'item-card'
+
   constructor() {
     // 必须调用 super()
     super();
 
     // 创建 Shadow DOM
     const shadowRoot = this.attachShadow({ mode: 'open' });
+
+    // 创建 link 元素并添加到 shadowRoot
+    const linkElem = document.createElement('link');
+    linkElem.setAttribute('rel', 'stylesheet');
+    linkElem.setAttribute('href', '../proto/item-card/style.css'); // 指向你的 CSS 文件
+    this.shadowRoot.appendChild(linkElem);
 
     // 获取 template 内容
     const template = document.getElementById('item-card-template');
@@ -14,14 +24,14 @@ export class ItemCard extends HTMLElement {
       shadowRoot.appendChild(content);
 
       // 获取按钮并添加事件监听器
-      const image = shadowRoot.querySelector('#image');
-      if (image) {
-        button.addEventListener('click', () => {
-          alert('Custom Element 按钮被点击了!');
-        });
+      this.image = shadowRoot.querySelector('#image');
+      if (!this.image) {
+        console.error('Template with ID "item-card-template" not found.');
+        return;
       }
-    } else {
-      console.error('Template with ID "item-card-template" not found.');
+      this.image.addEventListener('click', () => {
+        alert('Custom Element 按钮被点击了!');
+      });
     }
   }
 
@@ -35,10 +45,17 @@ export class ItemCard extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    console.log(`属性 ${name} 从 ${oldValue} 变为 ${newValue}。`);
+    switch (name) {
+      case "src":
+        this.image.src = newValue;
+        break;
+      default: break;
+    }
   }
 
   static get observedAttributes() {
-    return ['some-attribute']; // 监听的属性
+    return ['src']; // 监听的属性
   }
 }
+
+customElements.define(ItemCard.TAG_NAME, ItemCard);

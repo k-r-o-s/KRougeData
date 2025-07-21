@@ -7,7 +7,9 @@ export const CHAMPIONS = [
   {
     "name": "阿杜恩",
     "english-name": "Arduhn",
-    "type": "勇者",
+    "type": "单位",
+    "unit-type": "勇者",
+    "rarity": "勇者",
     "clan": "月巫团",
     "cost": "0",
     "effect": "[魔刃] 2",
@@ -19,7 +21,9 @@ export const CHAMPIONS = [
   {
     "name": "艾卡",
     "english-name": "Ekka",
-    "type": "勇者",
+    "type": "单位",
+    "unit-type": "勇者",
+    "rarity": "勇者",
     "clan": "月巫团",
     "cost": "0",
     "effect": "[能力: 飞行]",
@@ -34,7 +38,8 @@ export const UNITS = [
   {
     "name": "占星师",
     "english-name": "Astrologer",
-    "type": "月神女",
+    "type": "单位",
+    "unit-type": "月神女",
     "clan": "月巫团",
     "rarity": "高级",
     "cost": "1",
@@ -48,7 +53,8 @@ export const UNITS = [
   {
     "name": "灵气编织者",
     "english-name": "Aurora Weaver",
-    "type": "月神女",
+    "type": "单位",
+    "unit-type": "月神女",
     "clan": "月巫团",
     "rarity": "高级",
     "cost": "1",
@@ -62,7 +68,8 @@ export const UNITS = [
   {
     "name": "优雅小仙女",
     "english-name": "Ethereal Seelie",
-    "type": "妖精",
+    "type": "单位",
+    "unit-type": "妖精",
     "clan": "月巫团",
     "rarity": "稀有",
     "cost": "1",
@@ -76,7 +83,8 @@ export const UNITS = [
   {
     "name": "月亮祭司",
     "english-name": "Lunar Priestess",
-    "type": "月神女",
+    "type": "单位",
+    "unit-type": "月神女",
     "clan": "月巫团",
     "rarity": "高级",
     "cost": "1",
@@ -90,7 +98,8 @@ export const UNITS = [
   {
     "name": "搞事精",
     "english-name": "Meddler",
-    "type": "妖精",
+    "type": "单位",
+    "unit-type": "妖精",
     "clan": "月巫团",
     "rarity": "普通",
     "cost": "1",
@@ -104,7 +113,8 @@ export const UNITS = [
   {
     "name": "月之仙子",
     "english-name": "Moon Pixie",
-    "type": "妖精",
+    "type": "单位",
+    "unit-type": "妖精",
     "clan": "月巫团",
     "rarity": "普通",
     "cost": "1",
@@ -118,7 +128,8 @@ export const UNITS = [
   {
     "name": "唤月者",
     "english-name": "Mooncaller",
-    "type": "月神女",
+    "type": "单位",
+    "unit-type": "月神女",
     "clan": "月巫团",
     "rarity": "高级",
     "cost": "1",
@@ -132,7 +143,8 @@ export const UNITS = [
   {
     "name": "夜莺",
     "english-name": "Nightingale",
-    "type": "寂静者",
+    "type": "单位",
+    "unit-type": "寂静者",
     "clan": "月巫团",
     "rarity": "高级",
     "cost": "1",
@@ -146,7 +158,8 @@ export const UNITS = [
   {
     "name": "寂静者哨兵",
     "english-name": "Silent Sentinel",
-    "type": "寂静者",
+    "type": "单位",
+    "unit-type": "寂静者",
     "clan": "月巫团",
     "rarity": "高级",
     "cost": "1",
@@ -161,7 +174,8 @@ export const UNITS = [
   {
     "name": "月之守卫",
     "english-name": "Moonguard",
-    "type": "寂静者",
+    "type": "单位",
+    "unit-type": "寂静者",
     "clan": "月巫团",
     "rarity": "稀有",
     "cost": "2",
@@ -175,7 +189,8 @@ export const UNITS = [
   {
     "name": "代笔人",
     "english-name": "Scrivener",
-    "type": "月神女",
+    "type": "单位",
+    "unit-type": "月神女",
     "clan": "月巫团",
     "rarity": "稀有",
     "cost": "2",
@@ -189,7 +204,8 @@ export const UNITS = [
   {
     "name": "月神女侍从",
     "english-name": "Selene Acolyte",
-    "type": "月神女",
+    "type": "单位",
+    "unit-type": "月神女",
     "clan": "月巫团",
     "rarity": "高级",
     "cost": "2",
@@ -203,7 +219,8 @@ export const UNITS = [
   {
     "name": "阴影守卫",
     "english-name": "Shadeguard",
-    "type": "寂静者",
+    "type": "单位",
+    "unit-type": "寂静者",
     "clan": "月巫团",
     "rarity": "高级",
     "cost": "2",

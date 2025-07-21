@@ -22,15 +22,20 @@
   background-color: transparent;
 }
 
-/* 中号 和 小号 */
-.image-toggle-button-medium {
+/* button sizes */
+.button-size56x56 {
   padding: 4px;
   width: 56px;
   height: 56px;
 }
-.image-toggle-button-small {
+.button-size42x42 {
   padding: 0px;
   width: 42px;
   height: 42px;
+}
+.button-size42x48 {
+  padding: 0px;
+  width: 42px;
+  height: 48px;
 }
 

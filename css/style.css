@@ -1,6 +1,7 @@
 /* @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"; */
 @import "../proto/layout/layout.css";
 @import "../proto/image-toggle-button/style.css";
+@import "../proto/card-list-view/style.css";
 @import "../css/default.css";
 
 .search-container {

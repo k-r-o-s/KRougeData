@@ -16,7 +16,6 @@ class ImageToggleButton extends HTMLElement {
     linkElem.setAttribute('href', '../proto/image-toggle-button/style.css'); // 指向你的 CSS 文件
     this.shadowRoot.appendChild(linkElem);
 
-
     // 获取 template 内容
     const template = document.getElementById(ImageToggleButton.TEMPLATE_ID);
     if (template) {
@@ -66,10 +65,13 @@ class ImageToggleButton extends HTMLElement {
         this.button.textContent = newValue;
         break;
       case "size":
-        // image-toggle-button-medium by default
-        if (newValue == "small") {
-          this.button.classList.remove("image-toggle-button-medium");
-          this.button.classList.add("image-toggle-button-small");
+        // button-size56x56 by default
+        if (newValue == "42x42") {
+          this.button.classList.remove("button-size56x56");
+          this.button.classList.add("button-size42x42");
+        } else if (newValue == "42x48") {
+          this.button.classList.remove("button-size56x56");
+          this.button.classList.add("button-size42x48");
         }
         break;
       default:

@@ -10,7 +10,8 @@ export const UNITS = [
   {
     "name": "白骨犬",
     "english-name": "Bone Dog",
-    "type": "犬",
+    "type": "单位",
+    "unit-type": "犬",
     "clan": "无氏族",
     "rarity": "稀有",
     "cost": "0",
@@ -24,7 +25,8 @@ export const UNITS = [
   {
     "name": "追随者",
     "english-name": "Follower",
-    "type": "圣教徒",
+    "type": "单位",
+    "unit-type": "圣教徒",
     "clan": "无氏族",
     "rarity": "普通",
     "cost": "0",
@@ -38,7 +40,8 @@ export const UNITS = [
   {
     "name": "玩偶盒",
     "english-name": "Jack in the Box",
-    "type": "盒",
+    "type": "单位",
+    "unit-type": "盒",
     "clan": "无氏族",
     "rarity": "高级",
     "cost": "0",
@@ -52,7 +55,8 @@ export const UNITS = [
   {
     "name": "盾牌乘务员",
     "english-name": "Shield Steward",
-    "type": "乘务员",
+    "type": "单位",
+    "unit-type": "乘务员",
     "clan": "无氏族",
     "rarity": "普通",
     "cost": "1",
@@ -66,7 +70,8 @@ export const UNITS = [
   {
     "name": "长矛乘务员",
     "english-name": "Spear steward",
-    "type": "乘务员",
+    "type": "单位",
+    "unit-type": "乘务员",
     "clan": "无氏族",
     "rarity": "普通",
     "cost": "1",
@@ -80,7 +85,8 @@ export const UNITS = [
   {
     "name": "可靠的但丁",
     "english-name": "Dante the Dependable",
-    "type": "但丁",
+    "type": "单位",
+    "unit-type": "但丁",
     "clan": "无氏族",
     "rarity": "稀有",
     "cost": "2",

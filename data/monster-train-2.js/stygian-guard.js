@@ -7,7 +7,9 @@ export const CHAMPIONS = [
   {
     "name": "烈士索尔加德",
     "english-name": "Fel",
-    "type": "勇者",
+    "type": "单位",
+    "unit-type": "勇者",
+    "rarity": "勇者",
     "clan": "冥卫",
     "cost": "0",
     "effect": "[咒语]: 获得 [碎片] 1",
@@ -19,7 +21,9 @@ export const CHAMPIONS = [
   {
     "name": "泰西斯·泰坦之灾",
     "english-name": "Fel",
-    "type": "勇者",
+    "type": "单位",
+    "unit-type": "勇者",
+    "rarity": "勇者",
     "clan": "冥卫",
     "cost": "0",
     "effect": "",
@@ -34,7 +38,8 @@ export const UNITS = [
   {
     "name": "邪术乌贼",
     "english-name": "BattleDancer",
-    "type": "法师",
+    "type": "单位",
+    "unit-type": "法师",
     "clan": "冥卫",
     "rarity": "普通",
     "cost": "0",
@@ -48,7 +53,8 @@ export const UNITS = [
   {
     "name": "寒流",
     "english-name": "BattleDancer",
-    "type": "海妖",
+    "type": "单位",
+    "unit-type": "海妖",
     "clan": "冥卫",
     "rarity": "高级",
     "cost": "1",
@@ -62,7 +68,8 @@ export const UNITS = [
   {
     "name": "寒冰封印",
     "english-name": "BattleDancer",
-    "type": "图腾",
+    "type": "单位",
+    "unit-type": "图腾",
     "clan": "冥卫",
     "rarity": "高级",
     "cost": "1",
@@ -76,7 +83,8 @@ export const UNITS = [
   {
     "name": "无名者护卫",
     "english-name": "BattleDancer",
-    "type": "海妖",
+    "type": "单位",
+    "unit-type": "海妖",
     "clan": "冥卫",
     "rarity": "高级",
     "cost": "1",
@@ -90,7 +98,8 @@ export const UNITS = [
   {
     "name": "冥卫之石",
     "english-name": "BattleDancer",
-    "type": "图腾",
+    "type": "单位",
+    "unit-type": "图腾",
     "clan": "冥卫",
     "rarity": "高级",
     "cost": "1",
@@ -104,7 +113,8 @@ export const UNITS = [
   {
     "name": "寒冰之子",
     "english-name": "BattleDancer",
-    "type": "海妖",
+    "type": "单位",
+    "unit-type": "海妖",
     "clan": "冥卫",
     "rarity": "高级",
     "cost": "1",
@@ -118,7 +128,8 @@ export const UNITS = [
   {
     "name": "软体法师",
     "english-name": "BattleDancer",
-    "type": "法师",
+    "type": "单位",
+    "unit-type": "法师",
     "clan": "冥卫",
     "rarity": "普通",
     "cost": "1",
@@ -132,7 +143,8 @@ export const UNITS = [
   {
     "name": "无名海妖",
     "english-name": "BattleDancer",
-    "type": "海妖",
+    "type": "单位",
+    "unit-type": "海妖",
     "clan": "冥卫",
     "rarity": "高级",
     "cost": "1",
@@ -146,7 +158,8 @@ export const UNITS = [
   {
     "name": "祭品石碑",
     "english-name": "BattleDancer",
-    "type": "图腾",
+    "type": "单位",
+    "unit-type": "图腾",
     "clan": "冥卫",
     "rarity": "稀有",
     "cost": "1",
@@ -160,7 +173,8 @@ export const UNITS = [
   {
     "name": "深海海妖",
     "english-name": "BattleDancer",
-    "type": "海妖",
+    "type": "单位",
+    "unit-type": "海妖",
     "clan": "冥卫",
     "rarity": "高级",
     "cost": "1",
@@ -174,7 +188,8 @@ export const UNITS = [
   {
     "name": "泰坦哨兵",
     "english-name": "BattleDancer",
-    "type": "海妖",
+    "type": "单位",
+    "unit-type": "海妖",
     "clan": "冥卫",
     "rarity": "高级",
     "cost": "1",
@@ -188,7 +203,8 @@ export const UNITS = [
   {
     "name": "鳗鱼戈耳工",
     "english-name": "BattleDancer",
-    "type": "法师",
+    "type": "单位",
+    "unit-type": "法师",
     "clan": "冥卫",
     "rarity": "稀有",
     "cost": "2",
@@ -202,7 +218,8 @@ export const UNITS = [
   {
     "name": "磁石图腾",
     "english-name": "BattleDancer",
-    "type": "图腾",
+    "type": "单位",
+    "unit-type": "图腾",
     "clan": "冥卫",
     "rarity": "稀有",
     "cost": "3",
