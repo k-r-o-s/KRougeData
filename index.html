@@ -49,7 +49,9 @@
     <div class="card-container">
       <img class="card-image">
       <div class="card-name"></div>
-      <div class="card-effect-area"><p class="card-effect"></p></div>
+      <div class="card-effect-area">
+        <p class="card-effect"></p>
+      </div>
     </div>
   </template>
   <template id="image-toggle-button-template">
@@ -88,11 +90,10 @@
       <image-toggle-button src="image/other/法术.webp" condition="type:法术" title="法术" size="42x48"></image-toggle-button>
       <image-toggle-button src="image/other/装备.webp" condition="type:装备" title="装备" size="42x48"></image-toggle-button>
       <image-toggle-button src="image/other/房间.webp" condition="type:房间" title="房间" size="42x48"></image-toggle-button>
-      <image-toggle-button src="image/other/神器.webp" condition="type:神器" title="神器" size="42x48"></image-toggle-button>
-      <image-toggle-button src="image/other/升级石.webp" condition="type:升级石" title="升级石"
-        size="42x48"></image-toggle-button>
-      <image-toggle-button src="image/other/祸患.webp" condition="type:祸患" title="祸患" size="42x48"></image-toggle-button>
-      <image-toggle-button src="image/other/天灾.webp" condition="type:天灾" title="天灾" size="42x48"></image-toggle-button>
+      <image-toggle-button src="image/other/神器.webp" condition="type:神器" title="神器" size="42x48" off></image-toggle-button>
+      <image-toggle-button src="image/other/升级石.webp" condition="type:升级石" title="升级石" size="42x48" off></image-toggle-button>
+      <image-toggle-button src="image/other/祸患.webp" condition="type:祸患" title="祸患" size="42x48" off></image-toggle-button>
+      <image-toggle-button src="image/other/天灾.webp" condition="type:天灾" title="天灾" size="42x48" off></image-toggle-button>
     </div>
     <!-- 卡牌稀有度选取区 -->
     <section-divider text="稀有度"></section-divider>
@@ -126,6 +127,8 @@
 
     let ztooltip = null;
     let leftPanel = null;
+    let animationFrameId = 0;
+
     document.addEventListener('DOMContentLoaded', () => {
       ztooltip = document.querySelector('#z-tooltip');
       leftPanel = document.querySelector('.left-panel');
@@ -149,6 +152,11 @@
     });
 
     function doSearch() {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+      }
+
       const searchPanel = document.querySelector('.right-panel');
       const search = {
         // 移除一些特殊字符 !@#$%^&*\/ 和 空白字符
@@ -186,7 +194,7 @@
     }
 
     function createCardList(result) {
-      function createCard(item) {
+      function createCard(item, animating) {
         // <item-card src="image/cards/不朽交易.webp" class=""></item-card>
         const card = document.createElement('item-card');
         card.item = item;
@@ -201,7 +209,6 @@
             card.setAttribute("src", "image/cards/" + item.name + ".webp");
             break;
         }
-        card.setAttribute("text", item.name + "---------------------------------------");
         card.addEventListener('mouseenter', (e) => {
           const mouseX = event.pageX;
           const mouseY = event.pageY;
@@ -229,11 +236,38 @@
         card.addEventListener('mouseleave', (e) => {
           ztooltip.style.visibility = 'hidden';
         })
-        
+        card.onAdded(animating);
+
         return card;
       }
-      leftPanel.innerHTML = '';
-      result.map((item) => leftPanel.appendChild(createCard(item)));
+      const cardList = leftPanel.querySelectorAll("item-card");
+      for (let i = 0; i < cardList.length; i++) {
+        cardList[i].onBeingRemoved();
+      }
+      leftPanel.innerHTML = "";
+      let count = result.length;
+      if (count > 30) {
+        result.map((item) => leftPanel.appendChild(createCard(item, false)));
+      } else {
+        if (count < 1) { return; }
+        let i = 0;
+        let lastAddTime = 0;
+        function createCardWithAnimation(currentTime) {
+          if (currentTime - lastAddTime >= 160) {
+            leftPanel.appendChild(createCard(result[i], true));
+            if (++i >= count) {
+              cancelAnimationFrame(animationFrameId);
+              animationFrameId = null;
+              return;
+            }
+            lastAddTime = currentTime; // 更新上次添加时间
+          }
+
+          // 继续请求下一帧动画
+          animationFrameId = requestAnimationFrame(createCardWithAnimation);
+        }
+        animationFrameId = requestAnimationFrame(createCardWithAnimation);
+      }
     }
   </script>
 </body>

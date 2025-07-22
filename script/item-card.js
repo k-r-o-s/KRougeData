@@ -1,5 +1,8 @@
 import { MT_DATA } from "../data/monster-train-2/index.js";
 
+function CardClickedHandler() {
+  alert('Custom Element 按钮被点击了!');
+}
 export class ItemCard extends HTMLElement {
 
   static TEMPLATE_ID = 'item-card-template';
@@ -28,6 +31,11 @@ export class ItemCard extends HTMLElement {
     const content = template.content.cloneNode(true);
     shadowRoot.appendChild(content);
 
+    this.cardContainer = shadowRoot.querySelector('.card-container');
+    if (!this.cardContainer) {
+      console.error('.card-container in template with ID "item-card-template" not found.');
+      return;
+    }
     this.image = shadowRoot.querySelector('.card-image');
     if (!this.image) {
       console.error('.card-image in template with ID "item-card-template" not found.');
@@ -39,7 +47,7 @@ export class ItemCard extends HTMLElement {
       return;
     }
     this.nameDiv.style.display = "none";
-    
+
     this.effectArea = shadowRoot.querySelector('.card-effect-area');
     if (!this.effectArea) {
       console.error('.card-effect-area in template with ID "item-card-template" not found.');
@@ -51,10 +59,8 @@ export class ItemCard extends HTMLElement {
       return;
     }
     this.effectArea.style.display = "none";
-
-    this.image.addEventListener('click', () => {
-      alert('Custom Element 按钮被点击了!');
-    });
+    this._cickHandler = CardClickedHandler.bind(this);
+    this.image.addEventListener('click', this._cickHandler);
   }
 
   // 可选：定义生命周期回调函数
@@ -77,13 +83,24 @@ export class ItemCard extends HTMLElement {
 
   static get observedAttributes() {
     return [
-      "src", 
+      "src",
     ];
+  }
+  onAdded(animating) {
+    if (!animating) { return; }
+    this.cardContainer.classList.add('entering');
+    setTimeout(() => {
+      this.cardContainer.classList.remove('entering');
+      this.cardContainer.classList.add('entered');
+    }, 10); // 小延迟确保样式应用
+  }
+  onBeingRemoved() {
+    this.image.removeEventListener('click', this._cickHandler);
   }
 
   set item(value) {
     this._item = value;
-    if(value && value.type == "神器" || value.type == "升级石") {
+    if (value && value.type == "神器" || value.type == "升级石") {
       this.nameDiv.style.display = "block";
       this.effectArea.style.display = "block";
       this.nameDiv.textContent = value.name;
@@ -110,7 +127,7 @@ export class ItemCard extends HTMLElement {
         term = match[1];
         if (!term || terms.has(term)) { continue; }
         termData = MT_DATA.get(term);
-        if (!termData) { console.error("[" + term + "] 的数据未配置, 请在 terms.js 中配置"); continue;}
+        if (!termData) { console.error("[" + term + "] 的数据未配置, 请在 terms.js 中配置"); continue; }
         terms.set(term, termData);
         if (termData.effect && term.effect != "-") {
           getTerms(terms, termData.effect);

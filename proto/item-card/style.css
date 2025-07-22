@@ -11,6 +11,26 @@
 
   border: 2px solid #dac78c;
   padding: 8px;
+  transition: transform 0.5s ease-in-out/*, opacity 0.5s ease-in-out;*/
+}
+
+/* 元素进入时的初始状态 */
+.card-container.entering {
+  /* opacity: 0.4; */
+  /* 动画效果 */
+  transform: translateX(70px);
+}
+
+/* 元素进入后的最终状态 */
+.card-container.entered {
+  /* opacity: 1; */
+  transform: translateX(0);
+}
+
+/* 元素离开时的最终状态 */
+.card-container.leaving {
+  opacity: 0;
+  transform: translateY(-20px);
 }
 
 .card-container>.card-image {

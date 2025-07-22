@@ -74,6 +74,9 @@ class ImageToggleButton extends HTMLElement {
           this.button.classList.add("button-size42x48");
         }
         break;
+      case "off":
+        this.button.classList.add("toggle-off");
+        break;
       default:
         console.error("unsupported attribute type: [" + name + "]");
     }
@@ -84,7 +87,7 @@ class ImageToggleButton extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['src', 'title', 'text', 'size']; // 监听的属性列表
+    return ['src', 'title', 'text', 'size', "off"]; // 监听的属性列表
   }
 }
 
