@@ -2,54 +2,137 @@
   /* 想要使用 position: absolute; 来精确地定位一个元素,  */
   /* 需要为它的父元素或者最近的定位祖先元素设置一个非 static 的 position 值。 */
   position: relative;
+  box-sizing: border-box;
 
-  width: 140px;
+  width: 240px;
   /* 固定 div 的宽度 */
-  height: 260px;
+  height: 360px;
   /* 固定 div 的高度 */
 
-  border: 2px solid #333;
-  padding: 10px;
+  border: 2px solid #dac78c;
+  padding: 8px;
 }
 
-.card-container img {
-  width: 100%;
-  /* 图片宽度填充 div 宽度 */
-  height: 100%;
-  /* 图片高度填充 div 高度 */
+.card-container>.card-image {
+  box-sizing: border-box;
   object-fit: contain;
   /* !!! 关键 !!! 等比缩放并覆盖整个容器 */
   display: block;
   /* 移除图片底部可能存在的额外空间 */
 }
 
-.card-container::before {
-  content: "提示信息";
-  position: absolute;
-
-  /* 定位在按钮上方 */
-  top: 0px;
-  left: calc(100% + 10px);
-  z-index: 1000;
-
-  background-color: black;
+.card-container>.card-name {
+  box-sizing: border-box;
+  width: 100%;
+  height: 34px;
+  font-size: 18px;
+  font-weight: 800;
+  border: 4px solid #777c7c;
+  background-color: #323a39;
   color: white;
-  padding: 5px 10px;
-  border-radius: 4px;
-  white-space: nowrap;
-
-  /* 默认隐藏 */
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
-
-  /* 确保它不阻碍鼠标事件 */
-  pointer-events: none;
+  text-align: center;
 }
 
-/* 关键在这里：当鼠标悬停在 .card-container 上时，改变 .card-container 的 ::before 伪元素的样式 */
-.card-container:hover::before {
-  opacity: 1;
-  /* 显示 */
-  visibility: visible;
+.card-container>.card-effect-area {
+  box-sizing: border-box;
+  width: 90%;
+  height: 120px;
+  padding: 4px;
+  font-size: 12pt;
+  line-height: 1.3;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: #323a39;
+  color: white;
+  text-align: center;
+  border-top: 0px;
+  border-right: 4px solid #777c7c;
+  border-bottom: 4px solid #777c7c;
+  border-left: 4px solid #777c7c;
+  display: flex;
+  align-items: center;
+}
+
+.card-img-small {
+  width: 110px;
+  height: 110px;
+  margin: 32px auto 28px auto;
+  border: 6px solid #b97b44;
+  padding: 6px 0;
+}
+
+.card-img-normal {
+  width: 100%;
+  /* 图片宽度填充 div 宽度 */
+  height: 100%;
+  /* 图片高度填充 div 高度 */
+}
+
+.term-basic {
+  background-color: #1b434b;
+  width: 360px;
+  word-wrap: break-word;
+  border: 4px solid#2f7282;
+  margin: 2px;
+  padding: 4px;
+}
+
+.term-ability {
+  background-color: #612a00;
+  width: 360px;
+  word-wrap: break-word;
+  border: 4px solid#a34d20;
+  margin: 2px;
+  padding: 4px;
+}
+
+.term-trgger {
+  background-color: #592378;
+  width: 360px;
+  word-wrap: break-word;
+  border: 4px solid#b54bd6;
+  margin: 2px;
+  padding: 4px;
+}
+
+.term-feature {
+  background-color: #8e5e20;
+  width: 360px;
+  word-wrap: break-word;
+  border: 4px solid#e4b943;
+  margin: 2px;
+  padding: 4px;
+}
+
+.term-buff {
+  background-color: #165a38;
+  width: 360px;
+  word-wrap: break-word;
+  border: 4px solid#2ba96c;
+  margin: 2px;
+  padding: 4px;
+}
+
+.term-debuff {
+  background-color: #852521;
+  width: 360px;
+  word-wrap: break-word;
+  border: 4px solid#a42a26;
+  margin: 2px;
+  padding: 4px;
+}
+
+.term-title {
+  color: white;
+  font-size: 14pt;
+  font-weight: 1000;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.term-effect {
+  color: white;
+  font-size: 12pt;
+  line-height: 1.3;
+  margin: 0;
 }

@@ -14,6 +14,8 @@ import * as Upgrades from "./upgrades.js"
 
 import { __log_data } from "../../script/util.js"
 
+// 因为目前只有几百条数据, 这里没有太注重效率
+// 如果数据量非常大, 可以加几层 Map
 export const MT_DATA = [
   Awoken,
   Banished,
@@ -73,3 +75,9 @@ export const MT_DATA = [
     }
     return accumulator;
   }, new Map());
+
+MT_DATA.forEach((item) => {
+  if (!item.effect) { return; }
+  // text 属性是为了搜索用的时候避免方括号造成干扰, 在这里去掉 [ 和 ]
+  item.text = item.effect.replace(/\[\]/g, '');
+})

@@ -8,51 +8,62 @@ body {
 
 /* 使用 Flexbox 使页面内容布局 */
 body {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
 
 header {
-  background-color: #4CAF50;
+  box-sizing: border-box;
+  background-color: #925a05;
   color: white;
-  padding: 5px;
-  text-align: center;
+  padding: 0px;
 
   flex-shrink: 0;
-  height: 40px; /* 固定高度 */
+  height: 30px; /* 固定高度 */
+  max-height: 30px; /* 固定高度 */
+}
+
+header p{
+  margin: 0px;
 }
 
 main {
+  box-sizing: border-box;
   flex: 1;
   /* 占据剩余空间 */
   background-color: #f4f4f4;
+  margin: 0px;
   padding: 4px;
 
   display: flex;
   flex-direction: row;
-  overflow-y: auto;
+  max-height: calc(100vh - 60px);
 }
 
 footer {
-  background-color: #333;
+  box-sizing: border-box;
+  background-color: #925a05;
   color: white;
   text-align: center;
-  padding: 5px;
+  padding: 0px;
 
   flex-shrink: 0;
-  height: 40px; /* 固定高度 */
+  height: 30px; /* 固定高度 */
+  max-height: 30px;
 }
-
+footer p{
+  margin: 0px;
+}
 /* ///////////////////////////////////////////////////////////////////////// */
 .left-panel {
+  box-sizing: border-box;
   background-color: beige;
   flex: 1;
 }
 .right-panel {
+  box-sizing: border-box;
   width: 380px; /* 固定宽度 */
   flex-shrink: 0;
-}
-.grid {
-  margin: 20px;
 }
 /* ///////////////////////////////////////////////////////////////////////// */

@@ -1,3 +1,6 @@
+header, main, footer, div, p, img {
+    box-sizing: border-box;
+}
 hr {
     border: none; /* 移除浏览器默认的边框 */
     height: 1px;  /* 设置线条的粗细（高度）*/

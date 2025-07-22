@@ -2,6 +2,7 @@
 @import "../proto/layout/layout.css";
 @import "../proto/image-toggle-button/style.css";
 @import "../proto/card-list-view/style.css";
+@import "../proto/item-card/style.css";
 @import "../css/default.css";
 
 .search-container {

@@ -37,15 +37,16 @@ export class SearchPanel extends HTMLElement {
     return this.searchInput.value;
   }
 
-  get searchConditions() {
+  get conditions() {
     const conditons = [];
     this.toggleButtons.forEach(btn => {
-      if (!btn || btn.isOff()) { return; }
-      const condition = btn.condition.split(";")
+      if (!btn || btn.isOff) { return; }
+      const condition = btn.getAttribute("condition").split(";")
       if (condition) { conditons.push(...condition); }
     });
     return conditons;
   }
+  
   #processSearchingText(text) {
     const regex = /[&:|]/g;
     searchText.replace(regex, '');

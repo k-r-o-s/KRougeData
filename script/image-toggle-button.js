@@ -41,11 +41,11 @@ class ImageToggleButton extends HTMLElement {
 
   // 可选：定义生命周期回调函数
   connectedCallback() {
-    console.log('ImageToggleButton 已连接到文档111。');
+    // console.log('ImageToggleButton 已连接到文档');
   }
 
   disconnectedCallback() {
-    console.log('ImageToggleButton 已从文档断开。');
+    // console.log('ImageToggleButton 已从文档断开。');
   }
 
   attributeChangedCallback(name, oldValue, newValue) {

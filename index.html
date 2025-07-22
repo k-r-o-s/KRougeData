@@ -11,11 +11,13 @@
   <script type="module" src="./script/section-divider.js"></script>
   <script type="module" src="./script/search-panel.js"></script>
   <script type="module" src="./script/item-card.js"></script>
+  <script type="module" src="./script/util.js"></script>
+  <script type="module" src="./data/monster-train-2/index.js"></script>
 </head>
 
 <body>
   <header>
-    <h1>Welcome to My Web Page</h1>
+    <p>Welcome to My Web Page</p>
   </header>
   <main>
     <div class="left-panel card-list-view">
@@ -40,13 +42,15 @@
     <search-panel class="right-panel"></search-panel>
   </main>
   <footer>
-    <p>&copy; 2023 My Web Page</p>
+    <p>&copy; Jul 2025 By Kros</p>
   </footer>
+  <div id="z-tooltip" style="position: fixed; pointer-events: none;"></div>
   <template id="item-card-template" id="button">
     <div class="card-container">
-      <img id="image">
+      <img class="card-image">
+      <div class="card-name"></div>
+      <div class="card-effect-area"><p class="card-effect"></p></div>
     </div>
-    <div class="card-tooltip"></div>
   </template>
   <template id="image-toggle-button-template">
     <button div class="image-toggle-button button-size56x56" id="button">
@@ -85,16 +89,22 @@
       <image-toggle-button src="image/other/装备.webp" condition="type:装备" title="装备" size="42x48"></image-toggle-button>
       <image-toggle-button src="image/other/房间.webp" condition="type:房间" title="房间" size="42x48"></image-toggle-button>
       <image-toggle-button src="image/other/神器.webp" condition="type:神器" title="神器" size="42x48"></image-toggle-button>
+      <image-toggle-button src="image/other/升级石.webp" condition="type:升级石" title="升级石"
+        size="42x48"></image-toggle-button>
       <image-toggle-button src="image/other/祸患.webp" condition="type:祸患" title="祸患" size="42x48"></image-toggle-button>
       <image-toggle-button src="image/other/天灾.webp" condition="type:天灾" title="天灾" size="42x48"></image-toggle-button>
     </div>
     <!-- 卡牌稀有度选取区 -->
     <section-divider text="稀有度"></section-divider>
     <div id="rarity-section" class="image-toggle-button-group">
-      <image-toggle-button src="image/other/勇者.webp" condition="rarity:勇者" title="勇者" size="42x42"></image-toggle-button>
-      <image-toggle-button src="image/other/普通.webp" condition="rarity:普通" title="普通" size="42x42"></image-toggle-button>
-      <image-toggle-button src="image/other/高级.webp" condition="rarity:高级" title="高级" size="42x42"></image-toggle-button>
-      <image-toggle-button src="image/other/稀有.webp" condition="rarity:稀有" title="稀有" size="42x42"></image-toggle-button>
+      <image-toggle-button src="image/other/勇者.webp" condition="rarity:勇者" title="勇者"
+        size="42x42"></image-toggle-button>
+      <image-toggle-button src="image/other/普通.webp" condition="rarity:普通" title="普通"
+        size="42x42"></image-toggle-button>
+      <image-toggle-button src="image/other/高级.webp" condition="rarity:高级" title="高级"
+        size="42x42"></image-toggle-button>
+      <image-toggle-button src="image/other/稀有.webp" condition="rarity:稀有" title="稀有"
+        size="42x42"></image-toggle-button>
     </div>
     <!-- 卡牌费用选取区 -->
     <section-divider text="费用"></section-divider>
@@ -103,36 +113,127 @@
       <image-toggle-button src="" text="1" condition="cost:1" size="42x42"></image-toggle-button>
       <image-toggle-button src="" text="2" condition="cost:2" size="42x42"></image-toggle-button>
       <image-toggle-button src="" text="3" condition="cost:3" size="42x42"></image-toggle-button>
-      <image-toggle-button src="" text="4+" condition="cost:4;cost:5;cost:6;cost:7;cost:8" size="42x42"></image-toggle-button>
+      <image-toggle-button src="" text="4+" condition="cost:4;cost:5;cost:6;cost:7;cost:8"
+        size="42x42"></image-toggle-button>
       <image-toggle-button src="" text="X" condition="cost:X" size="42x42"></image-toggle-button>
     </div>
     <!-- 标签选取区 -->
     <section-divider text="标签"></section-divider>
   </template>
-  <script>
+  <script type="module">
+    import { __DEBUG } from './script/util.js'
+    import { MT_DATA } from './data/monster-train-2/index.js'
+
+    let ztooltip = null;
+    let leftPanel = null;
     document.addEventListener('DOMContentLoaded', () => {
+      ztooltip = document.querySelector('#z-tooltip');
+      leftPanel = document.querySelector('.left-panel');
       const searchPanel = document.querySelector('.right-panel');
-      searchPanel.searchButton.addEventListener('click', () => {
-        doSearch();
-      });
+      // 搜索文本框
       searchPanel.searchInput.addEventListener('keyup', () => {
+        // 按回车
         if (event.key === 'Enter') {
           event.preventDefault();
           doSearch();
         }
       });
+      // 搜索按钮
+      searchPanel.searchButton.addEventListener('click', () => { doSearch(); });
+      // 各个氏族/种类/... 按钮
+      searchPanel.toggleButtons.map((btn) => {
+        btn.addEventListener('click', () => { doSearch(); })
+      });
+
+      doSearch();
     });
 
     function doSearch() {
       const searchPanel = document.querySelector('.right-panel');
-      // 搜索文本 alert(searchPanel.searchInput.value)
-      
+      const search = {
+        // 移除一些特殊字符 !@#$%^&*\/ 和 空白字符
+        "text": searchPanel.searchInput.value.replace(/!@#\$%\^&\*\\\/\s/g, ''),
+        "clan": [],
+        "type": [],
+        "rarity": [],
+        "cost": [],
+      };
+      searchPanel.conditions.map((condition) => {
+        const pair = condition.split(":");
+        if (!pair || pair.length != 2) {
+          console.error("invalid condition: [" + condition + "]"); return;
+        }
+        if (__DEBUG) {
+          if (!["clan", "type", "rarity", "cost"].includes(pair[0])) {
+            console.error("invalid condition: [" + condition + "]"); return;
+          }
+        }
+        search[pair[0]].push(pair[1]);
+      })
+      const result = [];
+      MT_DATA.forEach((item) => {
+        if (!search.clan.includes(item.clan)) { return; }
+        if (!search.type.includes(item.type)) { return; }
+        if (!["神器", "升级石"].includes(item.type)) {
+          if (!search.rarity.includes(item.rarity)) { return; }
+          if (!search.cost.includes(item.cost)) { return; }
+        }
+        if (search.text && (!item.text || !item.text.includes(search.text))) { return; }
+        result.push(item);
+      });
+
+      createCardList(result);
     }
 
-    function createCardList() {
-      const list = document.querySelector('.left-panel');
-      list.innerHTML = '';
-      
+    function createCardList(result) {
+      function createCard(item) {
+        // <item-card src="image/cards/不朽交易.webp" class=""></item-card>
+        const card = document.createElement('item-card');
+        card.item = item;
+        switch (item.type) {
+          case "神器":
+            card.setAttribute("src", "image/artifacts/" + item.name + ".webp");
+            break;
+          case "升级石":
+            card.setAttribute("src", "image/other/" + item.name + ".webp");
+            break;
+          default:
+            card.setAttribute("src", "image/cards/" + item.name + ".webp");
+            break;
+        }
+        card.setAttribute("text", item.name + "---------------------------------------");
+        card.addEventListener('mouseenter', (e) => {
+          const mouseX = event.pageX;
+          const mouseY = event.pageY;
+          ztooltip.innerHTML = e.target.termsHtml;
+
+          const panelRect = leftPanel.getBoundingClientRect();
+          const cardRect = e.target.getBoundingClientRect();
+          const tooltipRect = ztooltip.getBoundingClientRect();
+          ztooltip.style.left = cardRect.right + "px";
+          // 避免过于靠下
+          // 不是很靠下
+          if (cardRect.top + tooltipRect.height < panelRect.bottom) {
+            ztooltip.style.top = cardRect.top + "px";
+          }
+          // 靠下
+          else {
+            ztooltip.style.top = panelRect.bottom - tooltipRect.height - 2 + "px";
+          }
+          // 避免过于靠上
+          if (cardRect.top < panelRect.top) {
+            ztooltip.style.top = panelRect.top + "px";
+          }
+          ztooltip.style.visibility = 'visible';
+        });
+        card.addEventListener('mouseleave', (e) => {
+          ztooltip.style.visibility = 'hidden';
+        })
+        
+        return card;
+      }
+      leftPanel.innerHTML = '';
+      result.map((item) => leftPanel.appendChild(createCard(item)));
     }
   </script>
 </body>
