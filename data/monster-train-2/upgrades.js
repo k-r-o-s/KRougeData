@@ -1,5 +1,6 @@
 export const module_name = "升级石";
 
+// TODO: 一些种族特有的升级石还没添加
 export const UPGRADES = [
   {
     "name": "巨型石",

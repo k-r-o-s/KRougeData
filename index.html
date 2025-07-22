@@ -186,7 +186,10 @@
           if (!search.rarity.includes(item.rarity)) { return; }
           if (!search.cost.includes(item.cost)) { return; }
         }
-        if (search.text && (!item.text || !item.text.includes(search.text))) { return; }
+        if (search.text 
+          && (!item.text || !item.text.includes(search.text))
+          && (!item.name || !item.name.includes(search.text))
+        ) { return; }
         result.push(item);
       });
 
