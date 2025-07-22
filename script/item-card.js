@@ -128,10 +128,9 @@ export class ItemCard extends HTMLElement {
         if (!term || terms.has(term)) { continue; }
         termData = MT_DATA.get(term);
         if (!termData) { console.error("[" + term + "] 的数据未配置, 请在 terms.js 中配置"); continue; }
+        if (!termData.effect || termData.effect == "-") { continue; }
         terms.set(term, termData);
-        if (termData.effect && term.effect != "-") {
-          getTerms(terms, termData.effect);
-        }
+        getTerms(terms, termData.effect);
       }
     }
     getTerms(dataOfTerms, this._item.effect);
@@ -155,6 +154,9 @@ export class ItemCard extends HTMLElement {
           break;
         case "减益":
           html += `<div class="term-debuff">`
+          break;
+        case "属性":
+          html += `<div class="term-property">`
           break;
         default: // TODO: 生成单位 和 生成卡牌, 以及重复名字的词条: 复生
           return;

@@ -142,6 +142,15 @@
   padding: 4px;
 }
 
+.term-property {
+  background-color: #2a2e2f;
+  width: 360px;
+  word-wrap: break-word;
+  border: 4px solid#6f787f;
+  margin: 2px;
+  padding: 4px;
+}
+
 .term-title {
   color: white;
   font-size: 14pt;

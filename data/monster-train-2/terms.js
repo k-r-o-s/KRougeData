@@ -46,6 +46,16 @@ export const TERMS = [
     "effect": "每场战斗只能使用一次",
   },
   {
+    "name": "触发",
+    "type": "基础",
+    "effect": "-",
+  },
+  {
+    "name": "能力",
+    "type": "基础",
+    "effect": "-",
+  },
+  {
     "name": "能力: 飞行",
     "type": "能力",
     "effect": "移动到任意层的任意位置",
