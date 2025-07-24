@@ -16,6 +16,7 @@ export class SearchPanel extends HTMLElement {
 
     this.searchButton = this.querySelector('#search-button');
     this.searchInput = this.querySelector("#search-input");
+    this.searchTagList = this.querySelector(".search-tag-list");
 
     this.toggleButtons = [];
     ["clan-section", "type-section", "rarity-section", "cost-section"].forEach(eleId => {
@@ -24,6 +25,8 @@ export class SearchPanel extends HTMLElement {
       const buttons = Array.from(section.querySelectorAll("image-toggle-button"));
       this.toggleButtons.push(...buttons);
     });
+
+    this.tagClickCallbacks = new Map();
   }
 
   // // 可选：定义生命周期回调函数
@@ -33,7 +36,7 @@ export class SearchPanel extends HTMLElement {
   // static get observedAttributes() {  return [];  } // 监听的属性列表
 
   ///////////////////////////////////////////////////////
-  get searchText (){
+  get searchText() {
     return this.searchInput.value;
   }
 
@@ -46,11 +49,42 @@ export class SearchPanel extends HTMLElement {
     });
     return conditons;
   }
-  
-  #processSearchingText(text) {
-    const regex = /[&:|]/g;
-    searchText.replace(regex, '');
-    return text;
+  addSearchTag(text, clickCallback) {
+    const MAX_TAG_COUNT = 30;
+    let tag = null;
+    const list = this.searchTagList;
+    let isNew = true;
+    for (let i = 0; i < list.childNodes.length; i++) {
+      const node = list.childNodes[i];
+      if (node.text == text) {
+        tag = node;
+        isNew = false;
+        break;
+      }
+    }
+    if (isNew) {
+      tag = document.createElement("search-tag");
+      tag.setAttribute("text", text);
+    }
+    // 即使它是原有的元素, insert 操作依然会把它从旧的位置移除并插入到第一个位置
+    list.insertBefore(tag, list.firstElementChild);
+    if (isNew && list.childNodes.length > MAX_TAG_COUNT) {
+      list.removeChild(list.lastElementChild);
+    }
+    if (isNew) {
+      tag.addEventListener('click', clickCallback);
+      tag.clickCallback = clickCallback;
+      const clearCallback = () => {
+        this.removeSearchTag(tag);
+      }
+      tag.clearButton.addEventListener('click', clearCallback);
+      tag.clearCallback = clearCallback;
+    }
+  }
+  removeSearchTag(tag) {
+    tag.removeEventListener('click', tag.clickCallback);
+    tag.clearButton.removeEventListener('click', tag.clearCallback);
+    tag.parentElement.removeChild(tag);
   }
 }
 

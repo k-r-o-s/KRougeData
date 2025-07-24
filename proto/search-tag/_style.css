@@ -1,0 +1,12 @@
+@import "./style.css";
+
+.search-tag-list {
+  box-sizing: border-box;
+  width: 300px;
+  height: 260px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  padding: 10px;
+  gap: 2px;
+}

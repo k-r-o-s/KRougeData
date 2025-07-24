@@ -11,6 +11,7 @@
   <script type="module" src="./script/section-divider.js"></script>
   <script type="module" src="./script/search-panel.js"></script>
   <script type="module" src="./script/item-card.js"></script>
+  <script type="module" src="./script/search-tag.js"></script>
   <script type="module" src="./script/util.js"></script>
   <script type="module" src="./data/monster-train-2/index.js"></script>
 </head>
@@ -62,12 +63,37 @@
   <template id="section-divider-template">
     <div class="section-divider" id="divider"></div>
   </template>
+  <template id="search-tag-template">
+    <div class="search-tag-text">
+      <span></span>
+      <button class="search-tag-clear-button">❌</button>
+    </div>
+  </template>
   <template id="search-panel-template">
     <!-- 查询输入框和按钮区 -->
     <div class="search-container">
-      <input type="text" id="search-input" placeholder="请输入搜索条件...">
+      <input type="search" id="search-input" placeholder="请输入搜索条件..." list="search-list">
+      <datalist id="search-list">
+        <option value="迅捷">
+        <option value="横扫">
+        <option value="多重攻击">
+        <option value="英勇">
+        <option value="薪火熔胶">
+        <option value="月相循环">
+        <option value="导流">
+        <option value="生长">
+        <option value="散播">
+        <option value="不稳定">
+        <option value="狂怒">
+        <option value="护甲">
+        <option value="尖刺">
+        <option value="舍弃">
+        <option value="暴食">
+        <option value="燃命">
+      </datalist>
       <button id="search-button">🔎</button>
     </div>
+    <div class="search-tag-list"></div>
     <!-- 卡牌氏族选取区 -->
     <section-divider text="氏族"></section-divider>
     <div id="clan-section" class="image-toggle-button-group">
@@ -91,9 +117,12 @@
       <image-toggle-button src="image/other/装备.webp" condition="type:装备" title="装备" size="42x48"></image-toggle-button>
       <image-toggle-button src="image/other/房间.webp" condition="type:房间" title="房间" size="42x48"></image-toggle-button>
       <image-toggle-button src="image/other/神器.webp" condition="type:神器" title="神器" size="42x48"></image-toggle-button>
-      <image-toggle-button src="image/other/升级石.webp" condition="type:升级石" title="升级石" size="42x48"></image-toggle-button>
-      <image-toggle-button src="image/other/祸患.webp" condition="type:祸患" title="祸患" size="42x48" off></image-toggle-button>
-      <image-toggle-button src="image/other/天灾.webp" condition="type:天灾" title="天灾" size="42x48" off></image-toggle-button>
+      <image-toggle-button src="image/other/升级石.webp" condition="type:升级石" title="升级石"
+        size="42x48"></image-toggle-button>
+      <image-toggle-button src="image/other/祸患.webp" condition="type:祸患" title="祸患" size="42x48"
+        off></image-toggle-button>
+      <image-toggle-button src="image/other/天灾.webp" condition="type:天灾" title="天灾" size="42x48"
+        off></image-toggle-button>
     </div>
     <!-- 卡牌稀有度选取区 -->
     <section-divider text="稀有度"></section-divider>
@@ -186,7 +215,7 @@
           if (!search.rarity.includes(item.rarity)) { return; }
           if (!search.cost.includes(item.cost)) { return; }
         }
-        if (search.text 
+        if (search.text
           && (!item.text || !item.text.includes(search.text))
           && (!item.name || !item.name.includes(search.text))
         ) { return; }
@@ -194,6 +223,13 @@
       });
 
       createCardList(result);
+      const text = search.text;
+      if (result.length > 0 && text.length > 0) {
+        searchPanel.addSearchTag(text, () => {
+          searchPanel.searchInput.value = text;
+          doSearch();
+        });
+      }
     }
 
     function createCardList(result) {
