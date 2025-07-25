@@ -6,7 +6,7 @@ export const module_name = "拉撒路联盟";
 export const CHAMPIONS = [
   {
     "name": "格雷尔男爵",
-    "english-name": "Fel",
+    "english-name": "Baron Grael",
     "type": "单位",
     "unit-type": "勇者",
     "rarity": "勇者",
@@ -20,7 +20,7 @@ export const CHAMPIONS = [
   },
   {
     "name": "奥莱奇",
-    "english-name": "Fel",
+    "english-name": "Orechi",
     "type": "单位",
     "unit-type": "勇者",
     "rarity": "勇者",
@@ -37,7 +37,7 @@ export const CHAMPIONS = [
 export const UNITS = [
   {
     "name": "古怪助手",
-    "english-name": "BattleDancer",
+    "english-name": "Erratic Assistant",
     "type": "单位",
     "unit-type": "助手",
     "clan": "拉撒路联盟",
@@ -52,7 +52,7 @@ export const UNITS = [
   },
   {
     "name": "过劳的助手",
-    "english-name": "BattleDancer",
+    "english-name": "Overworked Assistant",
     "type": "单位",
     "unit-type": "助手",
     "clan": "拉撒路联盟",
@@ -67,7 +67,7 @@ export const UNITS = [
   },
   {
     "name": "双刃卫士",
-    "english-name": "BattleDancer",
+    "english-name": "Double-Edged Bearer",
     "type": "单位",
     "unit-type": "助手",
     "clan": "拉撒路联盟",
@@ -82,7 +82,7 @@ export const UNITS = [
   },
   {
     "name": "临时魔像",
-    "english-name": "BattleDancer",
+    "english-name": "Makeshift Golem",
     "type": "单位",
     "unit-type": "怪异造物",
     "clan": "拉撒路联盟",
@@ -97,7 +97,7 @@ export const UNITS = [
   },
   {
     "name": "肉钩",
-    "english-name": "BattleDancer",
+    "english-name": "Meathook",
     "type": "单位",
     "unit-type": "怪异造物",
     "clan": "拉撒路联盟",
@@ -112,7 +112,7 @@ export const UNITS = [
   },
   {
     "name": "扎针怪",
-    "english-name": "BattleDancer",
+    "english-name": "Pincushion",
     "type": "单位",
     "unit-type": "怪异造物",
     "clan": "拉撒路联盟",
@@ -127,7 +127,7 @@ export const UNITS = [
   },
   {
     "name": "河豚人",
-    "english-name": "BattleDancer",
+    "english-name": "Pufferflesh",
     "type": "单位",
     "unit-type": "助手",
     "clan": "拉撒路联盟",
@@ -142,7 +142,7 @@ export const UNITS = [
   },
   {
     "name": "重组软泥怪",
-    "english-name": "BattleDancer",
+    "english-name": "Reforming Ooze",
     "type": "单位",
     "unit-type": "怪异造物",
     "clan": "拉撒路联盟",
@@ -157,7 +157,7 @@ export const UNITS = [
   },
   {
     "name": "乐观的助手",
-    "english-name": "BattleDancer",
+    "english-name": "Sanguine Assistant",
     "type": "单位",
     "unit-type": "助手",
     "clan": "拉撒路联盟",
@@ -172,7 +172,7 @@ export const UNITS = [
   },
   {
     "name": "扭曲的助手",
-    "english-name": "BattleDancer",
+    "english-name": "Twisted Assistant",
     "type": "单位",
     "unit-type": "助手",
     "clan": "拉撒路联盟",
@@ -187,7 +187,7 @@ export const UNITS = [
   },
   {
     "name": "笨拙大块头",
-    "english-name": "BattleDancer",
+    "english-name": "Hulking Mass",
     "type": "单位",
     "unit-type": "怪异造物",
     "clan": "拉撒路联盟",
@@ -202,7 +202,7 @@ export const UNITS = [
   },
   {
     "name": "恐怖多臂怪",
-    "english-name": "BattleDancer",
+    "english-name": "Hydra Armed Horror",
     "type": "单位",
     "unit-type": "怪异造物",
     "clan": "拉撒路联盟",
@@ -217,7 +217,7 @@ export const UNITS = [
   },
   {
     "name": "九命梦魇",
-    "english-name": "BattleDancer",
+    "english-name": "Nine-Lived Nightmare",
     "type": "单位",
     "unit-type": "怪异造物",
     "clan": "拉撒路联盟",
@@ -232,7 +232,7 @@ export const UNITS = [
   },
   {
     "name": "瘟疫医生",
-    "english-name": "BattleDancer",
+    "english-name": "Plague Doctor",
     "type": "单位",
     "unit-type": "助手",
     "clan": "拉撒路联盟",
@@ -247,7 +247,7 @@ export const UNITS = [
   },
   {
     "name": "实验对象阿尔法",
-    "english-name": "BattleDancer",
+    "english-name": "Test Subject Alpha",
     "type": "单位",
     "unit-type": "怪异造物",
     "clan": "拉撒路联盟",
@@ -265,7 +265,7 @@ export const UNITS = [
 export const SPELLS = [
   {
     "name": "联盟道钉",
-    "english-name": "DragonEgg",
+    "english-name": "Spike of the League",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -275,7 +275,7 @@ export const SPELLS = [
   },
   {
     "name": "酸液淋浴",
-    "english-name": "DragonEgg",
+    "english-name": "Acid Shower",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -285,7 +285,7 @@ export const SPELLS = [
   },
   {
     "name": "劣质躯体",
-    "english-name": "DragonEgg",
+    "english-name": "Faulty Body",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -295,7 +295,7 @@ export const SPELLS = [
   },
   {
     "name": "永恒精华",
-    "english-name": "DragonEgg",
+    "english-name": "Forevermore Serum",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -305,7 +305,7 @@ export const SPELLS = [
   },
   {
     "name": "惊骇",
-    "english-name": "DragonEgg",
+    "english-name": "Horrify",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -315,7 +315,7 @@ export const SPELLS = [
   },
   {
     "name": "无尽饥饿",
-    "english-name": "DragonEgg",
+    "english-name": "Insatiable Hunger",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -325,7 +325,7 @@ export const SPELLS = [
   },
   {
     "name": "它活了",
-    "english-name": " DragonEgg",
+    "english-name": "It's Alive!",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -335,7 +335,7 @@ export const SPELLS = [
   },
   {
     "name": "伪科学",
-    "english-name": "DragonEgg",
+    "english-name": "Pseudoscience",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -345,7 +345,7 @@ export const SPELLS = [
   },
   {
     "name": "风险操作",
-    "english-name": "DragonEgg",
+    "english-name": "Risky Operation",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -355,7 +355,7 @@ export const SPELLS = [
   },
   {
     "name": "零部件废料",
-    "english-name": "DragonEgg",
+    "english-name": "Scrap for Parts",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -365,7 +365,7 @@ export const SPELLS = [
   },
   {
     "name": "秘密成分",
-    "english-name": "DragonEgg",
+    "english-name": "Secret Ingredient",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -375,7 +375,7 @@ export const SPELLS = [
   },
   {
     "name": "手术式打击",
-    "english-name": "DragonEgg",
+    "english-name": "Surgical Strike",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -385,7 +385,7 @@ export const SPELLS = [
   },
   {
     "name": "武器化义肢",
-    "english-name": "DragonEgg",
+    "english-name": "Weaponized Prosthetic",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -395,7 +395,7 @@ export const SPELLS = [
   },
   {
     "name": "大脑转移",
-    "english-name": "DragonEgg",
+    "english-name": "Brain Transfer",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -405,7 +405,7 @@ export const SPELLS = [
   },
   {
     "name": "爆炸反应",
-    "english-name": "DragonEgg",
+    "english-name": "Explosive Reaction",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -415,7 +415,7 @@ export const SPELLS = [
   },
   {
     "name": "调配技术",
-    "english-name": "DragonEgg",
+    "english-name": "Mixology",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -425,7 +425,7 @@ export const SPELLS = [
   },
   {
     "name": "自我意识",
-    "english-name": "DragonEgg",
+    "english-name": "Minds of their Own",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -435,7 +435,7 @@ export const SPELLS = [
   },
   {
     "name": "复制光线",
-    "english-name": "DragonEgg",
+    "english-name": "Replicator Ray",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -445,7 +445,7 @@ export const SPELLS = [
   },
   {
     "name": "恐怖之书",
-    "english-name": "DragonEgg",
+    "english-name": "Tome of Horrors",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -458,7 +458,7 @@ export const SPELLS = [
 export const EQUIPMENTS = [
   {
     "name": "剪刀手",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Scissor Hands",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -468,7 +468,7 @@ export const EQUIPMENTS = [
   },
   {
     "name": "燃烧服",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Combustion Suit",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -479,7 +479,7 @@ export const EQUIPMENTS = [
   },
   {
     "name": "双刃臂",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Double-Edged Arms",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -489,7 +489,7 @@ export const EQUIPMENTS = [
   },
   {
     "name": "器官采集器",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Organ Harvester",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -499,7 +499,7 @@ export const EQUIPMENTS = [
   },
   {
     "name": "药剂套装",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Potion Kit",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -510,7 +510,7 @@ export const EQUIPMENTS = [
   },
   {
     "name": "尖刺皮肤",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Spiky Skin",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -520,7 +520,7 @@ export const EQUIPMENTS = [
   },
   {
     "name": "扭曲脊背",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Twisted Back",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -530,7 +530,7 @@ export const EQUIPMENTS = [
   },
   {
     "name": "吸血鬼之牙",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Vampire's Tooth",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -543,7 +543,7 @@ export const EQUIPMENTS = [
 export const ROOMS = [
    {
     "name": "电力室",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Electricity Chamber",
     "type": "房间",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -552,7 +552,7 @@ export const ROOMS = [
   },
    {
     "name": "复生实验室",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Reanimation Lab",
     "type": "房间",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -564,77 +564,77 @@ export const ROOMS = [
 export const ARTIFACTS = [
    {
     "name": "高级增长剂",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Advanced Growth",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "当拥有装备的单位死亡时, 其装备永久获得 [攻击力] 4",
   },
    {
     "name": "催化剂",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Catalyzing Agent",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "每回合战斗结束时, [不稳定] 层数 +5",
   },
    {
     "name": "应急计划书",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Contingency Plans",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "怪物造物进入战斗时获得 [尖刺] 7",
   },
    {
     "name": "狂热药剂",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Frenzystesia",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "每回合友方单位首次穿戴装备时, 获得 [余烬] 1",
   },
    {
     "name": "混种生物的头发",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Hair of the Hybrid",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "为一个友方单位穿戴装备时, 若其生命值小于 50% 则获得 [护甲] 10, 否则获得 [狂怒] 5",
   },
    {
     "name": "英伽的烧杯",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Inga's Beaker",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "当使用 [调配] 时, 选择的数量 +1",
   },
    {
     "name": "保命外衣",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Life Insurer",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "使用 [复活] 增益复活单位时, 使其获得 [护甲] 14",
   },
    {
     "name": "毒性液体",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Nefarious Overflow",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "[不稳定] 爆炸造成的伤害翻倍",
   },
    {
     "name": "零件工厂",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Part Factory",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "在 [部署阶段] 时, 随机将一个 [嫁接] 单位加入手牌",
   },
    {
     "name": "进度起搏器",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Progress Pacemaker",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "每回合第一次 [调配] 时, 再次 [调配]",
   },
    {
     "name": "外科医生的缝合线",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Surgeon's Suture",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "为一个友方单位穿戴装备时, 恢复其所有生命值",

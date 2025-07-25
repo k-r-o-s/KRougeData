@@ -6,7 +6,7 @@ export const module_name = "觉者";
 export const CHAMPIONS = [
   {
     "name": "智者",
-    "english-name": "Fel",
+    "english-name": "The Sentient",
     "type": "单位",
     "unit-type": "勇者",
     "rarity": "勇者",
@@ -16,11 +16,11 @@ export const CHAMPIONS = [
     "size": 2,
     "attack": 0,
     "health": 10,
-    "description": "菲尔是流放者中才华横溢且足智多谋的指挥官，她发誓要将天堂从她哥哥的暴政中解放出来。然而，她曾受的心伤能否痊愈，还是未知之数",
+    "description": "",
   },
   {
     "name": "威尔丹顿",
-    "english-name": "Fel",
+    "english-name": "Wyldenten",
     "type": "单位",
     "unit-type": "勇者",
     "rarity": "勇者",
@@ -37,7 +37,7 @@ export const CHAMPIONS = [
 export const UNITS = [
   {
     "name": "极速蔓灵",
-    "english-name": "BattleDancer",
+    "english-name": "Animus of Speed",
     "type": "单位",
     "unit-type": "蔓灵",
     "clan": "觉者",
@@ -52,7 +52,7 @@ export const UNITS = [
   },
   {
     "name": "刚毅蔓灵",
-    "english-name": "BattleDancer",
+    "english-name": "Animus of Will",
     "type": "单位",
     "unit-type": "蔓灵",
     "clan": "觉者",
@@ -67,7 +67,7 @@ export const UNITS = [
   },
   {
     "name": "觉者空灵",
-    "english-name": "BattleDancer",
+    "english-name": "Awoken Hollow",
     "type": "单位",
     "unit-type": "空灵",
     "clan": "觉者",
@@ -82,7 +82,7 @@ export const UNITS = [
   },
   {
     "name": "隐修会",
-    "english-name": "BattleDancer",
+    "english-name": "Edge Prior",
     "type": "单位",
     "unit-type": "通灵者",
     "clan": "觉者",
@@ -97,7 +97,7 @@ export const UNITS = [
   },
   {
     "name": "坚壳隐者",
-    "english-name": "BattleDancer",
+    "english-name": "Husk Hermit",
     "type": "单位",
     "unit-type": "蔓灵",
     "clan": "觉者",
@@ -112,7 +112,7 @@ export const UNITS = [
   },
   {
     "name": "碎片通灵者",
-    "english-name": "BattleDancer",
+    "english-name": "Shard Channeler",
     "type": "单位",
     "unit-type": "通灵者",
     "clan": "觉者",
@@ -127,7 +127,7 @@ export const UNITS = [
   },
   {
     "name": "破碎坚壳",
-    "english-name": "BattleDancer",
+    "english-name": "Shattered Shell",
     "type": "单位",
     "unit-type": "蔓灵",
     "clan": "觉者",
@@ -142,7 +142,7 @@ export const UNITS = [
   },
   {
     "name": "荆棘空灵",
-    "english-name": "BattleDancer",
+    "english-name": "Thorned Hollow",
     "type": "单位",
     "unit-type": "空灵",
     "clan": "觉者",
@@ -157,7 +157,7 @@ export const UNITS = [
   },
   {
     "name": "藤蔓之母",
-    "english-name": "BattleDancer",
+    "english-name": "Vinemother",
     "type": "单位",
     "unit-type": "空灵",
     "clan": "觉者",
@@ -172,7 +172,7 @@ export const UNITS = [
   },
   {
     "name": "野林看守人",
-    "english-name": "BattleDancer",
+    "english-name": "Wildwood Custodian",
     "type": "单位",
     "unit-type": "通灵者",
     "clan": "觉者",
@@ -187,7 +187,7 @@ export const UNITS = [
   },
   {
     "name": "枯萎白木",
-    "english-name": "BattleDancer",
+    "english-name": "Wilting Sapwood",
     "type": "单位",
     "unit-type": "空灵",
     "clan": "觉者",
@@ -202,7 +202,7 @@ export const UNITS = [
   },
   {
     "name": "钢铁歌者",
-    "english-name": "BattleDancer",
+    "english-name": "Steelsinger",
     "type": "单位",
     "unit-type": "空灵",
     "clan": "觉者",
@@ -220,7 +220,7 @@ export const UNITS = [
 export const SPELLS = [
   {
     "name": "觉者道钉",
-    "english-name": "DragonEgg",
+    "english-name": "Awoken's Rail Spike",
     "type": "法术",
     "clan": "觉者",
     "rarity": "稀有",
@@ -230,7 +230,7 @@ export const SPELLS = [
   },
   {
     "name": "诱捕",
-    "english-name": "DragonEgg",
+    "english-name": "Ensnare",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -240,7 +240,7 @@ export const SPELLS = [
   },
   {
     "name": "薪火丰壤",
-    "english-name": "DragonEgg",
+    "english-name": "Pyre-Gro",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -250,7 +250,7 @@ export const SPELLS = [
   },
   {
     "name": "钢铁强化剂",
-    "english-name": "DragonEgg",
+    "english-name": "Steel Enhancer",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -260,7 +260,7 @@ export const SPELLS = [
   },
   {
     "name": "蛰刺",
-    "english-name": "DragonEgg",
+    "english-name": "Sting",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -270,7 +270,7 @@ export const SPELLS = [
   },
   {
     "name": "藤蔓纠缠",
-    "english-name": "DragonEgg",
+    "english-name": "Vine Grasp",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -280,7 +280,7 @@ export const SPELLS = [
   },
   {
     "name": "通灵之歌",
-    "english-name": "DragonEgg",
+    "english-name": "Channelsong",
     "type": "法术",
     "clan": "觉者",
     "rarity": "稀有",
@@ -290,7 +290,7 @@ export const SPELLS = [
   },
   {
     "name": "藤蔓嫁接",
-    "english-name": "DragonEgg",
+    "english-name": "Engraft",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -300,7 +300,7 @@ export const SPELLS = [
   },
   {
     "name": "微光",
-    "english-name": "DragonEgg",
+    "english-name": "Glimmer",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -310,7 +310,7 @@ export const SPELLS = [
   },
   {
     "name": "振奋药剂",
-    "english-name": "DragonEgg",
+    "english-name": "Invigorating Solution",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -320,7 +320,7 @@ export const SPELLS = [
   },
   {
     "name": "贮藏荆棘",
-    "english-name": "DragonEgg",
+    "english-name": "Preserved Thorns",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -330,7 +330,7 @@ export const SPELLS = [
   },
   {
     "name": "薪火碎片",
-    "english-name": "DragonEgg",
+    "english-name": "Pyre Shards",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -340,7 +340,7 @@ export const SPELLS = [
   },
   {
     "name": "剃刀利刃",
-    "english-name": "DragonEgg",
+    "english-name": "Razorsharp Edge",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -350,7 +350,7 @@ export const SPELLS = [
   },
   {
     "name": "治疗爆破",
-    "english-name": "DragonEgg",
+    "english-name": "Restoration Detonation",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -360,7 +360,7 @@ export const SPELLS = [
   },
   {
     "name": "恢复",
-    "english-name": "DragonEgg",
+    "english-name": "Restore",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -370,7 +370,7 @@ export const SPELLS = [
   },
   {
     "name": "撤退治疗",
-    "english-name": "DragonEgg",
+    "english-name": "Restoring Retreat",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -380,7 +380,7 @@ export const SPELLS = [
   },
   {
     "name": "根须之种",
-    "english-name": "DragonEgg",
+    "english-name": "Rootseeds",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -390,7 +390,7 @@ export const SPELLS = [
   },
   {
     "name": "扩散孢子",
-    "english-name": "DragonEgg",
+    "english-name": "Spreading Spores",
     "type": "法术",
     "clan": "觉者",
     "rarity": "稀有",
@@ -400,7 +400,7 @@ export const SPELLS = [
   },
   {
     "name": "野林之力",
-    "english-name": "DragonEgg",
+    "english-name": "Unleash the Wildwood",
     "type": "法术",
     "clan": "觉者",
     "rarity": "稀有",
@@ -410,7 +410,7 @@ export const SPELLS = [
   },
   {
     "name": "野林树液",
-    "english-name": "DragonEgg",
+    "english-name": "Wildwood Sap",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -420,7 +420,7 @@ export const SPELLS = [
   },
   {
     "name": "野林之书",
-    "english-name": "DragonEgg",
+    "english-name": "Wildwood Tome",
     "type": "法术",
     "clan": "觉者",
     "rarity": "稀有",
@@ -430,7 +430,7 @@ export const SPELLS = [
   },
   {
     "name": "突变进化",
-    "english-name": "DragonEgg",
+    "english-name": "Adaptive Mutation",
     "type": "法术",
     "clan": "觉者",
     "rarity": "稀有",
@@ -440,7 +440,7 @@ export const SPELLS = [
   },
   {
     "name": "荆棘鞭笞",
-    "english-name": "DragonEgg",
+    "english-name": "Bramble Lash",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -450,7 +450,7 @@ export const SPELLS = [
   },
   {
     "name": "专注成长",
-    "english-name": "DragonEgg",
+    "english-name": "Focused Growth",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -460,7 +460,7 @@ export const SPELLS = [
   },
   {
     "name": "磨砺武器",
-    "english-name": "DragonEgg",
+    "english-name": "Sharpen",
     "type": "法术",
     "clan": "觉者",
     "rarity": "普通",
@@ -470,7 +470,7 @@ export const SPELLS = [
   },
   {
     "name": "觉醒",
-    "english-name": "DragonEgg",
+    "english-name": "Awake",
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
@@ -480,7 +480,7 @@ export const SPELLS = [
   },
   {
     "name": "生命轮回",
-    "english-name": "DragonEgg",
+    "english-name": "Cycle of Life",
     "type": "法术",
     "clan": "觉者",
     "rarity": "稀有",
@@ -499,77 +499,77 @@ export const ROOMS = [
 export const ARTIFACTS = [
   {
     "name": "通灵之心",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Channelheart",
     "type": "神器",
     "clan": "觉者",
     "effect": "[蛰刺] 获得 +20 [魔法强度]",
   },
   {
     "name": "诅咒藤蔓",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Cursed Vines",
     "type": "神器",
     "clan": "觉者",
     "effect": "回合开始时, 添加一张带有 [短暂] 的 [藤蔓纠缠] 法术加入手牌",
   },
   {
     "name": "流亡者徽章",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Emblem of the Exiles",
     "type": "神器",
     "clan": "觉者",
     "effect": "回合开始时, 每层的前排友方单位获得 [生命值] 15",
   },
   {
     "name": "扭曲根须",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Gnarled Root",
     "type": "神器",
     "clan": "觉者",
     "effect": "友方单位每层 [尖刺] 获得 [攻击力] 1",
   },
   {
     "name": "石化熔炉",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Petrified Crucible",
     "type": "神器",
     "clan": "觉者",
     "effect": "友方单位每层 [尖刺] 造成的伤害 +1",
   },
   {
     "name": "隐修披风",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Priory's Cloak",
     "type": "神器",
     "clan": "觉者",
     "effect": "对友方单位恢复生命时, 对前排敌方单位造成同等的伤害",
   },
   {
     "name": "根须面具",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Rootsplit Mask",
     "type": "神器",
     "clan": "觉者",
     "effect": "当敌方单位进入薪火室下方的楼层时, 对其施加 [缠绕]",
   },
   {
     "name": "树液吸取",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Sap Tap",
     "type": "神器",
     "clan": "觉者",
     "effect": "每回合友方单位首次获得治疗时, 抽 1 张牌",
   },
   {
     "name": "肿胀真菌",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "The Bloating Fungus",
     "type": "神器",
     "clan": "觉者",
     "effect": "每层 [再生] 恢复的生命值 +1",
   },
   {
     "name": "荆棘套",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Thorn Casing",
     "type": "神器",
     "clan": "觉者",
     "effect": "[蛰刺] 获得 +10 [魔法强度] 和 [穿刺]",
   },
   {
     "name": "荆棘果实",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Thornfruit",
     "type": "神器",
     "clan": "觉者",
     "effect": "回合开始时, 将一张 [蛰刺] 加入手牌",

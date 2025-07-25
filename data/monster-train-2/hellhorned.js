@@ -6,7 +6,7 @@ export const module_name = "狱魔";
 export const CHAMPIONS = [
   {
     "name": "断角王子",
-    "english-name": "Fel",
+    "english-name": "Hornbreaker Prince",
     "type": "单位",
     "unit-type": "勇者",
     "rarity": "勇者",
@@ -16,11 +16,11 @@ export const CHAMPIONS = [
     "size": 2,
     "attack": 6,
     "health": 6,
-    "description": "菲尔是流放者中才华横溢且足智多谋的指挥官，她发誓要将天堂从她哥哥的暴政中解放出来。然而，她曾受的心伤能否痊愈，还是未知之数",
+    "description": "",
   },
   {
     "name": "碎尾女王",
-    "english-name": "Fel",
+    "english-name": "Shardtail Queen",
     "unit-type": "勇者",
     "type": "单位",
     "rarity": "勇者",
@@ -30,14 +30,14 @@ export const CHAMPIONS = [
     "size": 2,
     "attack": 10,
     "health": 10,
-    "description": "菲尔是流放者中才华横溢且足智多谋的指挥官，她发誓要将天堂从她哥哥的暴政中解放出来。然而，她曾受的心伤能否痊愈，还是未知之数",
+    "description": "",
   },
 ];
 // 狱魔 单位
 export const UNITS = [
   {
     "name": "巅峰小鬼",
-    "english-name": "BattleDancer",
+    "english-name": "Apex Imp",
     "type": "单位",
     "unit-type": "恶魔小鬼",
     "clan": "狱魔",
@@ -52,7 +52,7 @@ export const UNITS = [
   },
   {
     "name": "烙印武士",
-    "english-name": "BattleDancer",
+    "english-name": "Branded Warrior",
     "type": "单位",
     "unit-type": "恶魔",
     "clan": "狱魔",
@@ -67,7 +67,7 @@ export const UNITS = [
   },
   {
     "name": "狂乱蛮兽",
-    "english-name": "BattleDancer",
+    "english-name": "Deranged Brute",
     "type": "单位",
     "unit-type": "恶魔",
     "clan": "狱魔",
@@ -82,7 +82,7 @@ export const UNITS = [
   },
   {
     "name": "懵懂小鬼",
-    "english-name": "BattleDancer",
+    "english-name": "Fledgling Imp",
     "type": "单位",
     "unit-type": "恶魔小鬼",
     "clan": "狱魔",
@@ -97,7 +97,7 @@ export const UNITS = [
   },
   {
     "name": "长角武士",
-    "english-name": "BattleDancer",
+    "english-name": "Horned Warrior",
     "type": "单位",
     "unit-type": "恶魔",
     "clan": "狱魔",
@@ -112,7 +112,7 @@ export const UNITS = [
   },
   {
     "name": "小鬼学者",
-    "english-name": "BattleDancer",
+    "english-name": "Impish Scholar",
     "type": "单位",
     "unit-type": "恶魔小鬼",
     "clan": "狱魔",
@@ -127,7 +127,7 @@ export const UNITS = [
   },
   {
     "name": "蜕皮小鬼",
-    "english-name": "BattleDancer",
+    "english-name": "Molting Imp",
     "type": "单位",
     "unit-type": "恶魔小鬼",
     "clan": "狱魔",
@@ -142,7 +142,7 @@ export const UNITS = [
   },
   {
     "name": "薪火暴食者",
-    "english-name": "BattleDancer",
+    "english-name": "Pyre Chomper",
     "type": "单位",
     "unit-type": "恶魔小鬼",
     "clan": "狱魔",
@@ -157,7 +157,7 @@ export const UNITS = [
   },
   {
     "name": "女王的小鬼",
-    "english-name": "BattleDancer",
+    "english-name": "Queen's Impling",
     "type": "单位",
     "unit-type": "恶魔小鬼",
     "clan": "狱魔",
@@ -172,7 +172,7 @@ export const UNITS = [
   },
   {
     "name": "锻铁者",
-    "english-name": "BattleDancer",
+    "english-name": "Railbeater",
     "type": "单位",
     "unit-type": "恶魔",
     "clan": "狱魔",
@@ -187,7 +187,7 @@ export const UNITS = [
   },
   {
     "name": "锻铁工人",
-    "english-name": "BattleDancer",
+    "english-name": "Steelworker",
     "type": "单位",
     "unit-type": "恶魔",
     "clan": "狱魔",
@@ -202,7 +202,7 @@ export const UNITS = [
   },
   {
     "name": "焊工助手",
-    "english-name": "BattleDancer",
+    "english-name": "Welder Helper",
     "type": "单位",
     "unit-type": "恶魔小鬼",
     "clan": "狱魔",
@@ -217,7 +217,7 @@ export const UNITS = [
   },
   {
     "name": "恐魔领主",
-    "english-name": "BattleDancer",
+    "english-name": "Alpha Fiend",
     "type": "单位",
     "unit-type": "恶魔",
     "clan": "狱魔",
@@ -232,7 +232,7 @@ export const UNITS = [
   },
   {
     "name": "超凡小鬼",
-    "english-name": "BattleDancer",
+    "english-name": "Transcendimp",
     "type": "单位",
     "unit-type": "恶魔小鬼",
     "clan": "狱魔",
@@ -247,7 +247,7 @@ export const UNITS = [
   },
   {
     "name": "地狱恶魔",
-    "english-name": "BattleDancer",
+    "english-name": "Demon Fiend",
     "type": "单位",
     "unit-type": "恶魔",
     "clan": "狱魔",
@@ -262,7 +262,7 @@ export const UNITS = [
   },
   {
     "name": "皇冠吞噬者",
-    "english-name": "BattleDancer",
+    "english-name": "Consumer of Crowns",
     "type": "单位",
     "unit-type": "恶魔",
     "clan": "狱魔",
@@ -280,7 +280,7 @@ export const UNITS = [
 export const SPELLS = [
   {
     "name": "狱魔道钉",
-    "english-name": "DragonEgg",
+    "english-name": "Spike of the Hellhorned",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "稀有",
@@ -290,7 +290,7 @@ export const SPELLS = [
   },
   {
     "name": "排气",
-    "english-name": "DragonEgg",
+    "english-name": "Vent",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "普通",
@@ -300,7 +300,7 @@ export const SPELLS = [
   },
   {
     "name": "黑暗交易",
-    "english-name": "DragonEgg",
+    "english-name": "Dark Deal",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "稀有",
@@ -310,7 +310,7 @@ export const SPELLS = [
   },
   {
     "name": "硬化",
-    "english-name": "DragonEgg",
+    "english-name": "Fortify",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "普通",
@@ -320,7 +320,7 @@ export const SPELLS = [
   },
   {
     "name": "小鬼礼盒",
-    "english-name": "DragonEgg",
+    "english-name": "Imp-in-a-Box",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -330,7 +330,7 @@ export const SPELLS = [
   },
   {
     "name": "鬼功神力",
-    "english-name": "DragonEgg",
+    "english-name": "Imp-portant Work",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -340,7 +340,7 @@ export const SPELLS = [
   },
   {
     "name": "狂怒精华",
-    "english-name": "DragonEgg",
+    "english-name": "Rage Serum",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -350,7 +350,7 @@ export const SPELLS = [
   },
   {
     "name": "远古合金",
-    "english-name": "DragonEgg",
+    "english-name": "Alloy of the Ancients",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "稀有",
@@ -360,7 +360,7 @@ export const SPELLS = [
   },
   {
     "name": "隐秘通道",
-    "english-name": "DragonEgg",
+    "english-name": "Hidden Passage",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "普通",
@@ -370,7 +370,7 @@ export const SPELLS = [
   },
   {
     "name": "断角",
-    "english-name": "DragonEgg",
+    "english-name": "Horn Break",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "普通",
@@ -380,7 +380,7 @@ export const SPELLS = [
   },
   {
     "name": "鬼头鬼脑",
-    "english-name": "DragonEgg",
+    "english-name": "Imp-olate",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "稀有",
@@ -390,7 +390,7 @@ export const SPELLS = [
   },
   {
     "name": "鬼斧神工",
-    "english-name": "DragonEgg",
+    "english-name": "Imp-pressive",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -400,7 +400,7 @@ export const SPELLS = [
   },
   {
     "name": "盾墙冲锋",
-    "english-name": "DragonEgg",
+    "english-name": "March of Shields",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -410,7 +410,7 @@ export const SPELLS = [
   },
   {
     "name": "火把",
-    "english-name": "DragonEgg",
+    "english-name": "Torch",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "普通",
@@ -420,7 +420,7 @@ export const SPELLS = [
   },
   {
     "name": "烙印仪式",
-    "english-name": "DragonEgg",
+    "english-name": "Branding Rite",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -430,7 +430,7 @@ export const SPELLS = [
   },
   {
     "name": "烈火焚身",
-    "english-name": "DragonEgg",
+    "english-name": "Enflame",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -440,7 +440,7 @@ export const SPELLS = [
   },
   {
     "name": "累人的攀爬",
-    "english-name": "DragonEgg",
+    "english-name": "Tiresome Climb",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -450,7 +450,7 @@ export const SPELLS = [
   },
   {
     "name": "攻城战槌",
-    "english-name": "DragonEgg",
+    "english-name": "Battering Ram",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -460,7 +460,7 @@ export const SPELLS = [
   },
   {
     "name": "地狱火",
-    "english-name": "DragonEgg",
+    "english-name": "Inferno",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "高级",
@@ -470,7 +470,7 @@ export const SPELLS = [
   },
   {
     "name": "背水一战",
-    "english-name": "DragonEgg",
+    "english-name": "Last Stand",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "稀有",
@@ -480,7 +480,7 @@ export const SPELLS = [
   },
   {
     "name": "护甲增强",
-    "english-name": "DragonEgg",
+    "english-name": "Reinforce",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "稀有",
@@ -490,7 +490,7 @@ export const SPELLS = [
   },
   {
     "name": "战斗仪式",
-    "english-name": "DragonEgg",
+    "english-name": "Ritual of Battle",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "普通",
@@ -500,7 +500,7 @@ export const SPELLS = [
   },
   {
     "name": "断角之书",
-    "english-name": "DragonEgg",
+    "english-name": "Onehorn's Tome",
     "type": "法术",
     "clan": "狱魔",
     "rarity": "稀有",
@@ -519,77 +519,77 @@ export const ROOMS = [
 export const ARTIFACTS = [
   {
     "name": "死者骨灰",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Ashes of the Fallen",
     "type": "神器",
     "clan": "狱魔",
     "effect": "[召唤] 额外触发一次",
   },
   {
     "name": "尾巴收藏品",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Collection of Tails",
     "type": "神器",
     "clan": "狱魔",
     "effect": "友方单位的 [狂怒] 不会减少",
   },
   {
     "name": "圣者桂冠",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Consumed Crown",
     "type": "神器",
     "clan": "狱魔",
     "effect": "友方单位 [杀戮] 时获得 [攻击力] 3",
   },
   {
     "name": "格鲁格的刺棍",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Grrrg's Goad",
     "type": "神器",
     "clan": "狱魔",
     "effect": "恶魔单位获得 [多重攻击] 1",
   },
   {
     "name": "小鬼回收",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Imp-cicle",
     "type": "神器",
     "clan": "狱魔",
     "effect": "回合开始时, 随机将一个小鬼牌加入手牌",
   },
   {
     "name": "女王之尾",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Queen's Tail",
     "type": "神器",
     "clan": "狱魔",
     "effect": "每回合第一次 [召唤] 小鬼单位时, 获得 [余烬] 1 并抽 1 张牌",
   },
   {
     "name": "铁道锻锤",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Railhammer",
     "type": "神器",
     "clan": "狱魔",
     "effect": "友方单位获得 [护甲] 时, 获得的层数 + 4",
   },
   {
     "name": "回响碎片",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Resonant Shard",
     "type": "神器",
     "clan": "狱魔",
     "effect": "每层 [狂怒] 获得的 [攻击力] 额外 +1",
   },
   {
     "name": "灼热锻钢",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Scorched Steel",
     "type": "神器",
     "clan": "狱魔",
     "effect": "友方单位进入战斗时, 获得 [护甲] 5",
   },
   {
     "name": "灼热枷锁",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Scorching Restraints",
     "type": "神器",
     "clan": "狱魔",
     "effect": "友方单位进入战斗时, 获得 [狂怒] 3",
   },
   {
     "name": "不折之角",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "The Unbroken Horn",
     "type": "神器",
     "clan": "狱魔",
     "effect": "未使用的 [余烬] 保留至下一回合",

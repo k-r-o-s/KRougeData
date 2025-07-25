@@ -6,7 +6,7 @@ export const module_name = "影主";
 export const CHAMPIONS = [
   {
     "name": "影祖",
-    "english-name": "Fel",
+    "english-name": "Penumbra",
     "type": "单位",
     "unit-type": "勇者",
     "rarity": "勇者",
@@ -20,7 +20,7 @@ export const CHAMPIONS = [
   },
   {
     "name": "原基",
-    "english-name": "Fel",
+    "english-name": "Primordium",
     "type": "单位",
     "unit-type": "勇者",
     "rarity": "勇者",
@@ -37,7 +37,7 @@ export const CHAMPIONS = [
 export const UNITS = [
   {
     "name": "影者影裔",
-    "english-name": "BattleDancer",
+    "english-name": "Antumbra Morsel",
     "type": "单位",
     "unit-type": "影裔",
     "clan": "影主",
@@ -52,7 +52,7 @@ export const UNITS = [
   },
   {
     "name": "熔岩影裔",
-    "english-name": "BattleDancer",
+    "english-name": "Magma Morsel",
     "type": "单位",
     "unit-type": "影裔",
     "clan": "影主",
@@ -67,7 +67,7 @@ export const UNITS = [
   },
   {
     "name": "影裔采掘者",
-    "english-name": "BattleDancer",
+    "english-name": "Morsel Excavator",
     "type": "单位",
     "unit-type": "影裔",
     "clan": "影主",
@@ -82,7 +82,7 @@ export const UNITS = [
   },
   {
     "name": "影裔宝石匠",
-    "english-name": "BattleDancer",
+    "english-name": "Morsel Jeweler",
     "type": "单位",
     "unit-type": "影裔",
     "clan": "影主",
@@ -97,7 +97,7 @@ export const UNITS = [
   },
   {
     "name": "影裔矿工",
-    "english-name": "BattleDancer",
+    "english-name": "Morsel Miner",
     "type": "单位",
     "unit-type": "影裔",
     "clan": "影主",
@@ -112,7 +112,7 @@ export const UNITS = [
   },
   {
     "name": "影裔清道夫",
-    "english-name": "BattleDancer",
+    "english-name": "Rubble Morsel",
     "type": "单位",
     "unit-type": "影裔",
     "clan": "影主",
@@ -127,7 +127,7 @@ export const UNITS = [
   },
   {
     "name": "合金构造体",
-    "english-name": "BattleDancer",
+    "english-name": "Alloyed Construct",
     "type": "单位",
     "unit-type": "构装",
     "clan": "影主",
@@ -142,7 +142,7 @@ export const UNITS = [
   },
   {
     "name": "熔炉收藏家",
-    "english-name": "BattleDancer",
+    "english-name": "Crucible Collector",
     "type": "单位",
     "unit-type": "雾影",
     "clan": "影主",
@@ -157,7 +157,7 @@ export const UNITS = [
   },
   {
     "name": "熔炉看守者",
-    "english-name": "BattleDancer",
+    "english-name": "Crucible Warden",
     "type": "单位",
     "unit-type": "雾影",
     "clan": "影主",
@@ -172,7 +172,7 @@ export const UNITS = [
   },
   {
     "name": "余烬锻炉",
-    "english-name": "BattleDancer",
+    "english-name": "Ember Forge",
     "type": "单位",
     "unit-type": "构装",
     "clan": "影主",
@@ -187,7 +187,7 @@ export const UNITS = [
   },
   {
     "name": "影裔宿主",
-    "english-name": "BattleDancer",
+    "english-name": "Morselmaster",
     "type": "单位",
     "unit-type": "雾影",
     "clan": "影主",
@@ -202,7 +202,7 @@ export const UNITS = [
   },
    {
     "name": "影裔造物",
-    "english-name": "BattleDancer",
+    "english-name": "Morsel-Made",
     "type": "单位",
     "unit-type": "构装",
     "clan": "影主",
@@ -217,7 +217,7 @@ export const UNITS = [
   },
   {
     "name": "影裔制造者",
-    "english-name": "BattleDancer",
+    "english-name": "Morselmaker",
     "type": "单位",
     "unit-type": "雾影",
     "clan": "影主",
@@ -232,7 +232,7 @@ export const UNITS = [
   },
   {
     "name": "狂食者",
-    "english-name": "BattleDancer",
+    "english-name": "Overgorger",
     "type": "单位",
     "unit-type": "雾影",
     "clan": "影主",
@@ -247,7 +247,7 @@ export const UNITS = [
   },
   {
     "name": "噬影者",
-    "english-name": "BattleDancer",
+    "english-name": "Shadoweater",
     "type": "单位",
     "unit-type": "雾影",
     "clan": "影主",
@@ -262,7 +262,7 @@ export const UNITS = [
   },
      {
     "name": "暗影破城傀儡",
-    "english-name": "BattleDancer",
+    "english-name": "Shadowsiege",
     "type": "单位",
     "unit-type": "构装",
     "clan": "影主",
@@ -280,7 +280,7 @@ export const UNITS = [
 export const SPELLS = [
   {
     "name": "永恒吞噬",
-    "english-name": "DragonEgg",
+    "english-name": "Forever Consumed",
     "type": "法术",
     "clan": "影主",
     "rarity": "稀有",
@@ -290,7 +290,7 @@ export const SPELLS = [
   },
   {
     "name": "火焰激发",
-    "english-name": "DragonEgg",
+    "english-name": "Kindle",
     "type": "法术",
     "clan": "影主",
     "rarity": "稀有",
@@ -300,7 +300,7 @@ export const SPELLS = [
   },
   {
     "name": "矿井塌方",
-    "english-name": "DragonEgg",
+    "english-name": "Mine Collapse",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -310,7 +310,7 @@ export const SPELLS = [
   },
   {
     "name": "棱晶提取",
-    "english-name": "DragonEgg",
+    "english-name": "Prism Retrieval",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -320,7 +320,7 @@ export const SPELLS = [
   },
   {
     "name": "棱晶之尘",
-    "english-name": "DragonEgg",
+    "english-name": "Prismal Dust",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -330,7 +330,7 @@ export const SPELLS = [
   },
   {
     "name": "雾影道钉",
-    "english-name": "DragonEgg",
+    "english-name": "Shroud Spike",
     "type": "法术",
     "clan": "影主",
     "rarity": "稀有",
@@ -340,7 +340,7 @@ export const SPELLS = [
   },
   {
     "name": "盛宴",
-    "english-name": "DragonEgg",
+    "english-name": "Feast",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -350,7 +350,7 @@ export const SPELLS = [
   },
   {
     "name": "不朽交易",
-    "english-name": "DragonEgg",
+    "english-name": "Immortal Trade",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -360,7 +360,7 @@ export const SPELLS = [
   },
   {
     "name": "瓶装影裔",
-    "english-name": "DragonEgg",
+    "english-name": "Packed Morsels",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -370,7 +370,7 @@ export const SPELLS = [
   },
   {
     "name": "生产风险",
-    "english-name": "DragonEgg",
+    "english-name": "Perils of Production",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -380,7 +380,7 @@ export const SPELLS = [
   },
   {
     "name": "反胃",
-    "english-name": "DragonEgg",
+    "english-name": "Retch",
     "type": "法术",
     "clan": "影主",
     "rarity": "稀有",
@@ -390,7 +390,7 @@ export const SPELLS = [
   },
   {
     "name": "空间棱晶",
-    "english-name": "DragonEgg",
+    "english-name": "Space Prism",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -400,7 +400,7 @@ export const SPELLS = [
   },
   {
     "name": "影者猛袭",
-    "english-name": "DragonEgg",
+    "english-name": "Antumbra Assault",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -410,7 +410,7 @@ export const SPELLS = [
   },
   {
     "name": "自相残杀",
-    "english-name": "DragonEgg",
+    "english-name": "Cannibalize",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -420,7 +420,7 @@ export const SPELLS = [
   },
   {
     "name": "余烬贮藏",
-    "english-name": "DragonEgg",
+    "english-name": "Ember Cache",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -430,7 +430,7 @@ export const SPELLS = [
   },
   {
     "name": "引擎升级",
-    "english-name": "DragonEgg",
+    "english-name": "Engine Upgrade",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -440,7 +440,7 @@ export const SPELLS = [
   },
   {
     "name": "创造影裔",
-    "english-name": "DragonEgg",
+    "english-name": "Making of a Morsel",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -450,7 +450,7 @@ export const SPELLS = [
   },
   {
     "name": "随意射击",
-    "english-name": "DragonEgg",
+    "english-name": "Plink",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -460,7 +460,7 @@ export const SPELLS = [
   },
   {
     "name": "暗影分裂",
-    "english-name": "DragonEgg",
+    "english-name": "Shadesplitter",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -470,7 +470,7 @@ export const SPELLS = [
   },
   {
     "name": "雾影分裂",
-    "english-name": "DragonEgg",
+    "english-name": "Shroud Mitosis",
     "type": "法术",
     "clan": "影主",
     "rarity": "稀有",
@@ -480,7 +480,7 @@ export const SPELLS = [
   },
   {
     "name": "虚空禁锢",
-    "english-name": "DragonEgg",
+    "english-name": "Void Binding",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -490,7 +490,7 @@ export const SPELLS = [
   },
   {
     "name": "洞窟崩塌",
-    "english-name": "DragonEgg",
+    "english-name": "Cave In",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -500,7 +500,7 @@ export const SPELLS = [
   },
   {
     "name": "熔炉延展",
-    "english-name": "DragonEgg",
+    "english-name": "Crucible Extension",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -510,7 +510,7 @@ export const SPELLS = [
   },
   {
     "name": "能量窃取",
-    "english-name": "DragonEgg",
+    "english-name": "Furnace Tap",
     "type": "法术",
     "clan": "影主",
     "rarity": "稀有",
@@ -520,7 +520,7 @@ export const SPELLS = [
   },
   {
     "name": "卑躬屈膝",
-    "english-name": "DragonEgg",
+    "english-name": "Grovel",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -530,7 +530,7 @@ export const SPELLS = [
   },
   {
     "name": "影主之石",
-    "english-name": "DragonEgg",
+    "english-name": "Umbra Stone",
     "type": "法术",
     "clan": "影主",
     "rarity": "稀有",
@@ -540,7 +540,7 @@ export const SPELLS = [
   },
   {
     "name": "灼热钢钉",
-    "english-name": "DragonEgg",
+    "english-name": "Blazing Bolts",
     "type": "法术",
     "clan": "影主",
     "rarity": "稀有",
@@ -550,7 +550,7 @@ export const SPELLS = [
   },
   {
     "name": "爆裂喷发",
-    "english-name": "DragonEgg",
+    "english-name": "Excavation Eruption",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -560,7 +560,7 @@ export const SPELLS = [
   },
   {
     "name": "宝石秘库",
-    "english-name": "DragonEgg",
+    "english-name": "Gem Trove",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -579,77 +579,77 @@ export const ROOMS = [
 export const ARTIFACTS = [
   {
     "name": "被遗弃的影者",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Abandoned Antumbra",
     "type": "神器",
     "clan": "影主",
     "effect": "回合开始时, 将 1 个普通或高级影裔单位加入手牌",
   },
   {
     "name": "宝石项链",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Chain of Gems",
     "type": "神器",
     "clan": "影主",
     "effect": "每回合首个被召唤的友方单位获得 [伤害护盾] 2",
   },
   {
     "name": "纪念道钉",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Commemorative Spike",
     "type": "神器",
     "clan": "影主",
     "effect": "战斗开始时, 每一层都会召唤 1 个 [影裔矿工]",
   },
   {
     "name": "化石尖牙",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Fossilized Fangs",
     "type": "神器",
     "clan": "影主",
     "effect": "[暴食] 额外触发一次",
   },
   {
     "name": "影祖面具",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Mask of Penumbra",
     "type": "神器",
     "clan": "影主",
     "effect": "每回合召唤影裔单位时, 抽 1 张牌",
   },
   {
     "name": "矿用千斤顶",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Mine Jacks",
     "type": "神器",
     "clan": "影主",
     "effect": "中间层 +2 [容量]",
   },
   {
     "name": "虚空精酿",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Refined Void",
     "type": "神器",
     "clan": "影主",
     "effect": "友方单位进入战斗时, 获得 [吸血] 2",
   },
   {
     "name": "暗影灯",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Shadelamp",
     "type": "神器",
     "clan": "影主",
     "effect": "每回合第一个敌方单位死亡时, 将 2 个影裔单位加入手牌",
   },
   {
     "name": "投影箱",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Shadowbox",
     "type": "神器",
     "clan": "影主",
     "effect": "当你在一场战斗召唤了第 20 个影裔单位时, 对所有层的所有单位造成 200 点伤害",
   },
   {
     "name": "金牙",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Teeth of Gold",
     "type": "神器",
     "clan": "影主",
     "effect": "当一个单位 [被吞食] 时, 对后排敌方单位造成 5 点伤害",
   },
   {
     "name": "翼族技术",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Winged Technology",
     "type": "神器",
     "clan": "影主",
     "effect": "影裔单位进入战斗时, 获得 [伤害护盾] 1",

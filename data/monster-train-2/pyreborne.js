@@ -6,7 +6,7 @@ export const module_name = "薪龙族";
 export const CHAMPIONS = [
   {
     "name": "吉尔达女士",
-    "english-name": "Fel",
+    "english-name": "Lady Gilda",
     "type": "单位",
     "unit-type": "勇者",
     "rarity": "勇者",
@@ -20,7 +20,7 @@ export const CHAMPIONS = [
   },
   {
     "name": "菲尼克斯大人",
-    "english-name": "Fel",
+    "english-name": "Lord Fenix",
     "type": "单位",
     "unit-type": "勇者",
     "rarity": "勇者",
@@ -37,7 +37,7 @@ export const CHAMPIONS = [
 export const UNITS = [
   {
     "name": "膨胀幼龙",
-    "english-name": "BattleDancer",
+    "english-name": "Bloated Whelp",
     "type": "单位",
     "unit-type": "幼龙",
     "clan": "薪龙族",
@@ -52,7 +52,7 @@ export const UNITS = [
   },
   {
     "name": "金蛋龙",
-    "english-name": "BattleDancer",
+    "english-name": "Gildmonger",
     "type": "单位",
     "unit-type": "龙",
     "clan": "薪龙族",
@@ -67,7 +67,7 @@ export const UNITS = [
   },
   {
     "name": "熔岩锤击者",
-    "english-name": "BattleDancer",
+    "english-name": "Magma Mauler",
     "type": "单位",
     "unit-type": "龙",
     "clan": "薪龙族",
@@ -82,7 +82,7 @@ export const UNITS = [
   },
   {
     "name": "守财奴",
-    "english-name": "BattleDancer",
+    "english-name": "Miser",
     "type": "单位",
     "unit-type": "龙",
     "clan": "薪龙族",
@@ -97,7 +97,7 @@ export const UNITS = [
   },
   {
     "name": "流涕幼龙",
-    "english-name": "BattleDancer",
+    "english-name": "Snotty Whelp",
     "type": "单位",
     "unit-type": "幼龙",
     "clan": "薪龙族",
@@ -112,7 +112,7 @@ export const UNITS = [
   },
   {
     "name": "自大的幼龙",
-    "english-name": "BattleDancer",
+    "english-name": "Stuck Up Whelp",
     "type": "单位",
     "unit-type": "幼龙",
     "clan": "薪龙族",
@@ -127,7 +127,7 @@ export const UNITS = [
   },
   {
     "name": "土豪幼龙",
-    "english-name": "BattleDancer",
+    "english-name": "Wealthy Whelp",
     "type": "单位",
     "unit-type": "幼龙",
     "clan": "薪龙族",
@@ -142,7 +142,7 @@ export const UNITS = [
   },
   {
     "name": "金牙",
-    "english-name": "BattleDancer",
+    "english-name": "Goldtooth",
     "type": "单位",
     "unit-type": "龙",
     "clan": "薪龙族",
@@ -157,7 +157,7 @@ export const UNITS = [
   },
   {
     "name": "贪婪之龙",
-    "english-name": "BattleDancer",
+    "english-name": "Greed Dragon",
     "type": "单位",
     "unit-type": "龙",
     "clan": "薪龙族",
@@ -172,7 +172,7 @@ export const UNITS = [
   },
   {
     "name": "吞火龙",
-    "english-name": "BattleDancer",
+    "english-name": "Hot Head",
     "type": "单位",
     "unit-type": "龙",
     "clan": "薪龙族",
@@ -187,7 +187,7 @@ export const UNITS = [
   },
   {
     "name": "岩浆圣教徒",
-    "english-name": "BattleDancer",
+    "english-name": "Magma Cultist",
     "type": "单位",
     "unit-type": "龙",
     "clan": "薪龙族",
@@ -202,7 +202,7 @@ export const UNITS = [
   },
   {
     "name": "薪血龙",
-    "english-name": "BattleDancer",
+    "english-name": "Pyreblooded",
     "type": "单位",
     "unit-type": "龙",
     "clan": "薪龙族",
@@ -217,7 +217,7 @@ export const UNITS = [
   },
   {
     "name": "狂热者",
-    "english-name": "BattleDancer",
+    "english-name": "Zealot",
     "type": "单位",
     "unit-type": "龙",
     "clan": "薪龙族",
@@ -234,8 +234,8 @@ export const UNITS = [
 // 薪龙族 法术
 export const SPELLS = [
   {
-    "name": "薪龙族脑钉",
-    "english-name": "DragonEgg",
+    "name": "薪龙族道钉",
+    "english-name": "Pyreborne Brainspike",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "高级",
@@ -245,7 +245,7 @@ export const SPELLS = [
   },
   {
     "name": "火星",
-    "english-name": "Pyreborne Glue",
+    "english-name": "Flicker",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "普通",
@@ -255,7 +255,7 @@ export const SPELLS = [
   },
   {
     "name": "熔岩流",
-    "english-name": "Pyreborne Glue",
+    "english-name": "Lava Flow",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "普通",
@@ -265,7 +265,7 @@ export const SPELLS = [
   },
   {
     "name": "雇佣兵",
-    "english-name": "Pyreborne Glue",
+    "english-name": "Soldier of Fortune",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "稀有",
@@ -275,7 +275,7 @@ export const SPELLS = [
   },
   {
     "name": "邪恶交易",
-    "english-name": "Pyreborne Glue",
+    "english-name": "Devilish Details",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "稀有",
@@ -285,7 +285,7 @@ export const SPELLS = [
   },
   {
     "name": "煽风点火",
-    "english-name": "Pyreborne Glue",
+    "english-name": "Fanning the Flame",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "高级",
@@ -295,7 +295,7 @@ export const SPELLS = [
   },
   {
     "name": "引火",
-    "english-name": "Pyreborne Glue",
+    "english-name": "Firestarter",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "普通",
@@ -305,7 +305,7 @@ export const SPELLS = [
   },
   {
     "name": "贪婪",
-    "english-name": "Pyreborne Glue",
+    "english-name": "Greed",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "高级",
@@ -315,7 +315,7 @@ export const SPELLS = [
   },
   {
     "name": "非等价交换",
-    "english-name": "Pyreborne Glue",
+    "english-name": "Inequivalent Exchange",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "高级",
@@ -325,7 +325,7 @@ export const SPELLS = [
   },
   {
     "name": "燃烧经费",
-    "english-name": "Pyreborne Glue",
+    "english-name": "Make It Rain",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "高级",
@@ -335,7 +335,7 @@ export const SPELLS = [
   },
   {
     "name": "薪火桶",
-    "english-name": "Pyreborne Glue",
+    "english-name": "Pyrecask",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "普通",
@@ -345,7 +345,7 @@ export const SPELLS = [
   },
   {
     "name": "合同之书",
-    "english-name": "Pyreborne Glue",
+    "english-name": "Tome of Contracts",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "稀有",
@@ -355,7 +355,7 @@ export const SPELLS = [
   },
   {
     "name": "点金手",
-    "english-name": "Pyreborne Glue",
+    "english-name": "Golden Touch",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "普通",
@@ -365,7 +365,7 @@ export const SPELLS = [
   },
   {
     "name": "投资回报",
-    "english-name": "Pyreborne Glue",
+    "english-name": "Pay Off",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "高级",
@@ -375,7 +375,7 @@ export const SPELLS = [
   },
   {
     "name": "薪火球",
-    "english-name": "Pyreborne Glue",
+    "english-name": "Pyreball",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "普通",
@@ -385,7 +385,7 @@ export const SPELLS = [
   },
   {
     "name": "炼金术",
-    "english-name": "Pyreborne Glue",
+    "english-name": "Alchemy",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "普通",
@@ -395,7 +395,7 @@ export const SPELLS = [
   },
   {
     "name": "死亡咆哮",
-    "english-name": "Pyreborne Glue",
+    "english-name": "Deathroar",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "稀有",
@@ -405,7 +405,7 @@ export const SPELLS = [
   },
   {
     "name": "龙息",
-    "english-name": "Pyreborne Glue",
+    "english-name": "Dragon's Breath",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "高级",
@@ -415,7 +415,7 @@ export const SPELLS = [
   },
   {
     "name": "过热",
-    "english-name": "Pyreborne Glue",
+    "english-name": "Superheated",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "稀有",
@@ -425,7 +425,7 @@ export const SPELLS = [
   },
   {
     "name": "薪火爆发",
-    "english-name": "Pyreborne Glue",
+    "english-name": "Pyreclasm",
     "type": "法术",
     "clan": "薪龙族",
     "rarity": "稀有",
@@ -439,7 +439,7 @@ export const SPELLS = [
 export const EQUIPMENTS = [
   {
     "name": "熔岩护甲",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Lava Armor",
     "type": "装备",
     "clan": "薪龙族",
     "rarity": "普通",
@@ -449,7 +449,7 @@ export const EQUIPMENTS = [
   },
   {
     "name": "思维牢笼",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Mind Cage",
     "type": "装备",
     "clan": "薪龙族",
     "rarity": "高级",
@@ -460,7 +460,7 @@ export const EQUIPMENTS = [
   },
   {
     "name": "被诅咒的龙杖",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Cursed Dragonstaff",
     "type": "装备",
     "clan": "薪龙族",
     "rarity": "稀有",
@@ -470,7 +470,7 @@ export const EQUIPMENTS = [
   },
   {
     "name": "熔魂者",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Soulsmelter",
     "type": "装备",
     "clan": "薪龙族",
     "rarity": "高级",
@@ -483,7 +483,7 @@ export const EQUIPMENTS = [
 export const ROOMS = [
   {
     "name": "地狱熔炉",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Hellfurnace",
     "type": "房间",
     "clan": "薪龙族",
     "rarity": "稀有",
@@ -492,7 +492,7 @@ export const ROOMS = [
   },
   {
     "name": "献祭室",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Sacrificial Chamber",
     "type": "房间",
     "clan": "薪龙族",
     "rarity": "高级",
@@ -504,7 +504,7 @@ export const ROOMS = [
 export const ARTIFACTS = [
   {
     "name": "协调镣铐",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Attuned Manacles",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": false,
@@ -512,7 +512,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "更大的宝箱",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Expanded Coffers",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": false,
@@ -520,7 +520,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "菲拉的地狱火",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Fhyra's Inferno",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": false,
@@ -528,7 +528,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "熔胶注射器",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Gel Transfusor",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": false,
@@ -536,7 +536,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "金手套",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Golden Gloves",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": false,
@@ -544,7 +544,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "地狱之心",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Hellheart",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": false,
@@ -552,7 +552,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "岩浆核心",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Magma Core",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": false,
@@ -560,7 +560,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "棱彩龙鳞",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Prismatic Dragonscale",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": false,
@@ -568,7 +568,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "献祭波纹匕首",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Sacrificial Kris",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": false,
@@ -576,7 +576,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "火花石催化剂",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Sparkflint Catalyst",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": false,
@@ -584,7 +584,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "挫志电荷",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Spiritbreaker's Charge",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": false,
@@ -592,7 +592,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "余烬充能",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Ember Charge",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": true,
@@ -600,7 +600,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "菲拉之息",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Fhyra's Breath",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": true,
@@ -608,7 +608,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "燃烧利爪",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Flaming Talons",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": true,
@@ -616,7 +616,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "地狱火风箱",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Hellfire Bellows",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": true,
@@ -624,7 +624,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "隐藏宝库",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Hidden Coffers",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": true,
@@ -632,7 +632,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "优越勋章",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Medallion of Superiority",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": true,
@@ -640,7 +640,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "薪龙徽记",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "yreborne's Insignia",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": true,
@@ -648,7 +648,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "岩石外甲",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Shaleshell",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": true,
@@ -656,7 +656,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "尖锐之牙",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Sharpened Teeth",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": true,
@@ -664,7 +664,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "嘶鸣烟花",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Sizzling Firecracker",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": true,
@@ -672,7 +672,7 @@ export const ARTIFACTS = [
   },
   {
     "name": "工头的鞭子",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Taskmaster's Lash",
     "type": "神器",
     "clan": "薪龙族",
     "is-dragons-hoard": true,

@@ -236,7 +236,7 @@ export const UNITS = [
 export const SPELLS = [
   {
     "name": "月巫团道钉",
-    "english-name": "DragonEgg",
+    "english-name": "Coven's Spike",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "稀有",
@@ -246,7 +246,7 @@ export const SPELLS = [
   },
   {
     "name": "月相魔导",
-    "english-name": "DragonEgg",
+    "english-name": "Lunacy",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "高级",
@@ -256,7 +256,7 @@ export const SPELLS = [
   },
   {
     "name": "月光轰击",
-    "english-name": "DragonEgg",
+    "english-name": "Moonbeam",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "高级",
@@ -266,7 +266,7 @@ export const SPELLS = [
   },
   {
     "name": "月之仪式",
-    "english-name": "DragonEgg",
+    "english-name": "Moon Ritual",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "普通",
@@ -276,7 +276,7 @@ export const SPELLS = [
   },
   {
     "name": "月出时分",
-    "english-name": "DragonEgg",
+    "english-name": "Moonrise",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "高级",
@@ -286,7 +286,7 @@ export const SPELLS = [
   },
   {
     "name": "魔纺术",
-    "english-name": "DragonEgg",
+    "english-name": "Witchweave",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "普通",
@@ -296,7 +296,7 @@ export const SPELLS = [
   },
   {
     "name": "夜幕掩护",
-    "english-name": "DragonEgg",
+    "english-name": "Cover of Night",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "高级",
@@ -306,7 +306,7 @@ export const SPELLS = [
   },
   {
     "name": "二元性",
-    "english-name": "DragonEgg",
+    "english-name": "Duality",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "稀有",
@@ -316,7 +316,7 @@ export const SPELLS = [
   },
   {
     "name": "妖精祝福",
-    "english-name": "DragonEgg",
+    "english-name": "Fae's Blessing",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "普通",
@@ -326,7 +326,7 @@ export const SPELLS = [
   },
   {
     "name": "闪光饮剂",
-    "english-name": "DragonEgg",
+    "english-name": "Glittering Draught",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "高级",
@@ -336,7 +336,7 @@ export const SPELLS = [
   },
   {
     "name": "重力",
-    "english-name": "DragonEgg",
+    "english-name": "Gravity",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "普通",
@@ -346,7 +346,7 @@ export const SPELLS = [
   },
   {
     "name": "银光闪击",
-    "english-name": "DragonEgg",
+    "english-name": "Silver Strike",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "普通",
@@ -356,7 +356,7 @@ export const SPELLS = [
   },
   {
     "name": "星尘祈愿",
-    "english-name": "DragonEgg",
+    "english-name": "Stardust Invocation",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "稀有",
@@ -366,7 +366,7 @@ export const SPELLS = [
   },
   {
     "name": "星尘冲击",
-    "english-name": "DragonEgg",
+    "english-name": "Starstruck",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "普通",
@@ -376,7 +376,7 @@ export const SPELLS = [
   },
   {
     "name": "血月",
-    "english-name": "DragonEgg",
+    "english-name": "Bloody Moon",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "普通",
@@ -386,7 +386,7 @@ export const SPELLS = [
   },
   {
     "name": "宇宙闪电",
-    "english-name": "DragonEgg",
+    "english-name": "Cosmic Bolt",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "高级",
@@ -396,7 +396,7 @@ export const SPELLS = [
   },
   {
     "name": "妖术飞升",
-    "english-name": "DragonEgg",
+    "english-name": "Hexscalation",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "高级",
@@ -406,7 +406,7 @@ export const SPELLS = [
   },
   {
     "name": "仪式之书",
-    "english-name": "DragonEgg",
+    "english-name": "Ritual Tome",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "稀有",
@@ -416,7 +416,7 @@ export const SPELLS = [
   },
   {
     "name": "天体风暴",
-    "english-name": "DragonEgg",
+    "english-name": "Celestial Storm",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "普通",
@@ -426,7 +426,7 @@ export const SPELLS = [
   },
   {
     "name": "银墨粉",
-    "english-name": "DragonEgg",
+    "english-name": "Silver Ink",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "稀有",
@@ -436,7 +436,7 @@ export const SPELLS = [
   },
   {
     "name": "潮汐之舞",
-    "english-name": "DragonEgg",
+    "english-name": "Tidal Turning",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "稀有",
@@ -446,7 +446,7 @@ export const SPELLS = [
   },
   {
     "name": "苍穹坠落",
-    "english-name": "DragonEgg",
+    "english-name": "Heavenfall",
     "type": "法术",
     "clan": "月巫团",
     "rarity": "稀有",
@@ -459,7 +459,7 @@ export const SPELLS = [
 export const EQUIPMENTS = [
   {
     "name": "月相循环法杖",
-    "english-name": "Imprisoned",
+    "english-name": "Luna Cyclestaff",
     "type": "装备",
     "clan": "月巫团",
     "rarity": "稀有",
@@ -468,7 +468,7 @@ export const EQUIPMENTS = [
   },
   {
     "name": "月光弯刃剑",
-    "english-name": "Imprisoned",
+    "english-name": "Moonlit Glaive",
     "type": "装备",
     "clan": "月巫团",
     "rarity": "高级",
@@ -481,7 +481,7 @@ export const EQUIPMENTS = [
 export const ROOMS = [
   {
     "name": "月食室",
-    "english-name": "Imprisoned",
+    "english-name": "Eclipse Chamber",
     "type": "房间",
     "clan": "月巫团",
     "rarity": "高级",
@@ -490,7 +490,7 @@ export const ROOMS = [
   },
   {
     "name": "天文馆",
-    "english-name": "Imprisoned",
+    "english-name": "Planetarium",
     "type": "房间",
     "clan": "月巫团",
     "rarity": "高级",
@@ -502,77 +502,77 @@ export const ROOMS = [
 export const ARTIFACTS = [
   {
     "name": "占星师的星象仪",
-    "english-name": "Imprisoned",
+    "english-name": "Astrologer's Orrery",
     "type": "神器",
     "clan": "月巫团",
     "effect": "每回合月相首次变为 [满月] 时, 获得 [余烬] 1",
   },
   {
     "name": "星界之帆",
-    "english-name": "Imprisoned",
+    "english-name": "Celestial Sails",
     "type": "神器",
     "clan": "月巫团",
     "effect": "[部署阶段] 期间, 从卡组中抽取一张非伤害性法术, 并使其 [余烬] -1",
   },
   {
     "name": "循环之轮",
-    "english-name": "Imprisoned",
+    "english-name": "Circle of Cycles",
     "type": "神器",
     "clan": "月巫团",
     "effect": "[月相循环] 时, 生命值最低的友方单位恢复 10 点生命值",
   },
   {
     "name": "妖精隐匿处",
-    "english-name": "Imprisoned",
+    "english-name": "Fae's Nook",
     "type": "神器",
     "clan": "月巫团",
     "effect": "[月相循环] 时, 妖精获得 [导流] 1 和 [攻击力] 5",
   },
   {
     "name": "王国之泪",
-    "english-name": "Imprisoned",
+    "english-name": "Kingdom's Tears",
     "type": "神器",
     "clan": "月巫团",
     "effect": "法术治疗效果提高 10",
   },
   {
     "name": "月亮灯",
-    "english-name": "Imprisoned",
+    "english-name": "Lunar Lantern",
     "type": "神器",
     "clan": "月巫团",
     "effect": "[满月] 期间, 月神女单位获得 [攻击力] 20. [新月] 期间, 寂静者单位获得 [攻击力] 20",
   },
   {
     "name": "月之石",
-    "english-name": "Imprisoned",
+    "english-name": "Moonstone",
     "type": "神器",
     "clan": "月巫团",
     "effect": "回合结束时, 若月相为 [满月], 手牌中的法术牌获得 [魔法强度] 10",
   },
   {
     "name": "锋锐月牙",
-    "english-name": "Imprisoned",
+    "english-name": "Razorthin Crescent",
     "type": "神器",
     "clan": "月巫团",
     "effect": "每层 [魔刃] 额外获得 [攻击力] 1",
   },
   {
     "name": "先知之球",
-    "english-name": "Imprisoned",
+    "english-name": "Seer Orb",
     "type": "神器",
     "clan": "月巫团",
     "effect": "当施加 [法术易伤] 时, 额外施加 1 层",
   },
   {
     "name": "寂静者符文",
-    "english-name": "Imprisoned",
+    "english-name": "Silent Sigil",
     "type": "神器",
     "clan": "月巫团",
     "effect": "当月相变化为 [新月] 时, 寂静者单位获得 [护甲] 10",
   },
   {
     "name": "星尘点心",
-    "english-name": "Imprisoned",
+    "english-name": "Stardust Treat",
     "type": "神器",
     "clan": "月巫团",
     "effect": "每回合召唤的第一个单位获得 [导流] 4",

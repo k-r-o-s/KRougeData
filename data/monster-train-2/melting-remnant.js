@@ -6,7 +6,7 @@ export const module_name = "熔尸";
 export const CHAMPIONS = [
   {
     "name": "小菲德",
-    "english-name": "Fel",
+    "english-name": "Little Fade",
     "type": "单位",
     "unit-type": "勇者",
     "rarity": "勇者",
@@ -20,7 +20,7 @@ export const CHAMPIONS = [
   },
   {
     "name": "雷克特·烛焰",
-    "english-name": "Fel",
+    "english-name": "Rector Flicker",
     "type": "单位",
     "unit-type": "勇者",
     "rarity": "勇者",
@@ -37,7 +37,7 @@ export const CHAMPIONS = [
 export const UNITS = [
   {
     "name": "蜡渣",
-    "english-name": "BattleDancer",
+    "english-name": "Dreg",
     "type": "单位",
     "unit-type": "烛人",
     "clan": "熔尸",
@@ -52,7 +52,7 @@ export const UNITS = [
   },
   {
     "name": "宿主残渣",
-    "english-name": "BattleDancer",
+    "english-name": "Remnant Host",
     "type": "单位",
     "unit-type": "墓灵",
     "clan": "熔尸",
@@ -67,7 +67,7 @@ export const UNITS = [
   },
   {
     "name": "许愿烛灵",
-    "english-name": "BattleDancer",
+    "english-name": "Votivary",
     "type": "单位",
     "unit-type": "烛人",
     "clan": "熔尸",
@@ -82,7 +82,7 @@ export const UNITS = [
   },
   {
     "name": "赏金猎手",
-    "english-name": "BattleDancer",
+    "english-name": "Bounty Stalker",
     "type": "单位",
     "unit-type": "无芯者",
     "clan": "熔尸",
@@ -97,7 +97,7 @@ export const UNITS = [
   },
   {
     "name": "死亡吞没者",
-    "english-name": "BattleDancer",
+    "english-name": "Devourer of Death",
     "type": "单位",
     "unit-type": "无芯者",
     "clan": "熔尸",
@@ -112,7 +112,7 @@ export const UNITS = [
   },
   {
     "name": "重塑烛人",
-    "english-name": "BattleDancer",
+    "english-name": "Draff",
     "type": "单位",
     "unit-type": "烛人",
     "clan": "熔尸",
@@ -127,7 +127,7 @@ export const UNITS = [
   },
   {
     "name": "蜡封炸弹",
-    "english-name": "BattleDancer",
+    "english-name": "Entombed Explosive",
     "type": "单位",
     "unit-type": "墓灵",
     "clan": "熔尸",
@@ -142,7 +142,7 @@ export const UNITS = [
   },
   {
     "name": "蜡神夫人",
-    "english-name": "BattleDancer",
+    "english-name": "Lady of the House",
     "type": "单位",
     "unit-type": "烛人",
     "clan": "熔尸",
@@ -157,7 +157,7 @@ export const UNITS = [
   },
   {
     "name": "移形夫人",
-    "english-name": "BattleDancer",
+    "english-name": "Lady of the Reformed",
     "type": "单位",
     "unit-type": "烛人",
     "clan": "熔尸",
@@ -172,7 +172,7 @@ export const UNITS = [
   },
   {
     "name": "燃烧蜡液",
-    "english-name": "BattleDancer",
+    "english-name": "Molten Encasement",
     "type": "单位",
     "unit-type": "墓灵",
     "clan": "熔尸",
@@ -187,7 +187,7 @@ export const UNITS = [
   },
   {
     "name": "石蜡执法者",
-    "english-name": "BattleDancer",
+    "english-name": "Paraffin Enforcer",
     "type": "单位",
     "unit-type": "无芯者",
     "clan": "熔尸",
@@ -202,7 +202,7 @@ export const UNITS = [
   },
   {
     "name": "石蜡暴徒",
-    "english-name": "BattleDancer",
+    "english-name": "Paraffin Thug",
     "type": "单位",
     "unit-type": "无芯者",
     "clan": "熔尸",
@@ -217,7 +217,7 @@ export const UNITS = [
   },
   {
     "name": "无芯男爵",
-    "english-name": "BattleDancer",
+    "english-name": "Wickless Baron",
     "type": "单位",
     "unit-type": "无芯者",
     "clan": "熔尸",
@@ -232,7 +232,7 @@ export const UNITS = [
   },
   {
     "name": "无芯大亨",
-    "english-name": "BattleDancer",
+    "english-name": "Wickless Tycoon",
     "type": "单位",
     "unit-type": "无芯者",
     "clan": "熔尸",
@@ -247,7 +247,7 @@ export const UNITS = [
   },
   {
     "name": "巨型蜡油",
-    "english-name": "BattleDancer",
+    "english-name": "Big Sludge",
     "type": "单位",
     "unit-type": "无芯者",
     "clan": "熔尸",
@@ -262,7 +262,7 @@ export const UNITS = [
   },
   {
     "name": "无形小孩",
-    "english-name": "BattleDancer",
+    "english-name": "Formless Child",
     "type": "单位",
     "unit-type": "墓灵",
     "clan": "熔尸",
@@ -277,7 +277,7 @@ export const UNITS = [
   },
   {
     "name": "烛人大军",
-    "english-name": "BattleDancer",
+    "english-name": "Legion of Wax",
     "type": "单位",
     "unit-type": "烛人",
     "clan": "熔尸",
@@ -295,7 +295,7 @@ export const UNITS = [
 export const SPELLS = [
   {
     "name": "烛人道钉",
-    "english-name": "DragonEgg",
+    "english-name": "Waxen Spike",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "稀有",
@@ -305,7 +305,7 @@ export const SPELLS = [
   },
   {
     "name": "神圣滴注",
-    "english-name": "DragonEgg",
+    "english-name": "Hallowed Drippings",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "普通",
@@ -315,7 +315,7 @@ export const SPELLS = [
   },
   {
     "name": "熔化者的记忆",
-    "english-name": "DragonEgg",
+    "english-name": "Memories of the Melted",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -325,7 +325,7 @@ export const SPELLS = [
   },
   {
     "name": "精华洗礼",
-    "english-name": "DragonEgg",
+    "english-name": "Purifying Cleanse",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "普通",
@@ -335,7 +335,7 @@ export const SPELLS = [
   },
   {
     "name": "神圣烛芯",
-    "english-name": "DragonEgg",
+    "english-name": "Sacred Wicks",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -345,7 +345,7 @@ export const SPELLS = [
   },
   {
     "name": "牺牲重塑",
-    "english-name": "DragonEgg",
+    "english-name": "Sacrificial Resurrection",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "稀有",
@@ -355,7 +355,7 @@ export const SPELLS = [
   },
   {
     "name": "招募无芯者",
-    "english-name": "DragonEgg",
+    "english-name": "Wickless Recruitment",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "稀有",
@@ -365,7 +365,7 @@ export const SPELLS = [
   },
   {
     "name": "致命重碾",
-    "english-name": "DragonEgg",
+    "english-name": "Crushing Demise",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -375,7 +375,7 @@ export const SPELLS = [
   },
   {
     "name": "烛油滴落",
-    "english-name": "DragonEgg",
+    "english-name": "Dripfall",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "普通",
@@ -385,7 +385,7 @@ export const SPELLS = [
   },
   {
     "name": "一心求死",
-    "english-name": "DragonEgg",
+    "english-name": "Intent on Death",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "稀有",
@@ -395,7 +395,7 @@ export const SPELLS = [
   },
   {
     "name": "重铸",
-    "english-name": "DragonEgg",
+    "english-name": "Molded",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "普通",
@@ -405,7 +405,7 @@ export const SPELLS = [
   },
   {
     "name": "原始模具",
-    "english-name": "DragonEgg",
+    "english-name": "Primitive Mold",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "普通",
@@ -415,7 +415,7 @@ export const SPELLS = [
   },
   {
     "name": "熔尸誓约",
-    "english-name": "DragonEgg",
+    "english-name": "Remnant Pact",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "稀有",
@@ -425,7 +425,7 @@ export const SPELLS = [
   },
   {
     "name": "树脂剥落",
-    "english-name": "DragonEgg",
+    "english-name": "Resin Removal",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -435,7 +435,7 @@ export const SPELLS = [
   },
   {
     "name": "无尽刀锋",
-    "english-name": "DragonEgg",
+    "english-name": "Subsuming Blade",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -445,7 +445,7 @@ export const SPELLS = [
   },
   {
     "name": "加速燃烧",
-    "english-name": "DragonEgg",
+    "english-name": "Wicklash",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "普通",
@@ -455,7 +455,7 @@ export const SPELLS = [
   },
   {
     "name": "致命熔炼",
-    "english-name": "DragonEgg",
+    "english-name": "A Fatal Melting",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -465,7 +465,7 @@ export const SPELLS = [
   },
   {
     "name": "烟雾缭绕",
-    "english-name": "DragonEgg",
+    "english-name": "Engulfed in Smoke",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -475,7 +475,7 @@ export const SPELLS = [
   },
   {
     "name": "空荡大厅",
-    "english-name": "DragonEgg",
+    "english-name": "Hallowed Halls",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "稀有",
@@ -485,7 +485,7 @@ export const SPELLS = [
   },
   {
     "name": "烛芯速燃",
-    "english-name": "DragonEgg",
+    "english-name": "Wicked Blaze",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -495,7 +495,7 @@ export const SPELLS = [
   },
   {
     "name": "死亡纪念",
-    "english-name": "DragonEgg",
+    "english-name": "Memento Mori",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -505,7 +505,7 @@ export const SPELLS = [
   },
   {
     "name": "致命陷阱",
-    "english-name": "DragonEgg",
+    "english-name": "Mortal Entrapment",
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
@@ -524,77 +524,77 @@ export const ROOMS = [
 export const ARTIFACTS = [
   {
     "name": "易燃蜡",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Combustible Wax",
     "type": "神器",
     "clan": "熔尸",
     "effect": "当一个友方单位获得 [燃命] 时, 获得层数 +3",
   },
   {
     "name": "蜡衣余烬",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Encased Ember",
     "type": "神器",
     "clan": "熔尸",
     "effect": "每当一个墓灵单位死亡时, 获得 5 [余烬]",
   },
   {
     "name": "爆裂蜡烛",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Exploding Candle",
     "type": "神器",
     "clan": "熔尸",
     "effect": "当一个 [燃命] 单位死亡时, 对所有敌方单位造成 5 点伤害",
   },
   {
     "name": "菲德的第一把剑",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Fade's First Blade",
     "type": "神器",
     "clan": "熔尸",
     "effect": "友方单位每失去一层 [燃命], 便会获得 [狂怒] 3",
   },
   {
     "name": "烛焰的烈酒",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Flicker's Liquor",
     "type": "神器",
     "clan": "熔尸",
     "effect": "[部署阶段] 之后, 当你打出一个单位时, 该回合的一张随机卡牌费用会降为 [余烬] 0, 直到其被打出或丢弃",
   },
   {
     "name": "熔蜡喷壶",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Melting Spout",
     "type": "神器",
     "clan": "熔尸",
     "effect": "墓灵单位获得 +30 [生命值] 和 [燃命] 1",
   },
   {
     "name": "纪念基金",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Memorial Fund",
     "type": "神器",
     "clan": "熔尸",
     "effect": "每当一个友方单位死亡时, 获得 5 [金币]",
   },
   {
     "name": "模具束带",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Mold Braces",
     "type": "神器",
     "clan": "熔尸",
     "effect": "友方单位在 [亡语] 时, 对前排友方单位施加 [护甲] 5",
   },
   {
     "name": "树脂外皮",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Resin Block",
     "type": "神器",
     "clan": "熔尸",
     "effect": "当一个友方单位死亡时, 使其获得 +10 [攻击力]",
   },
   {
     "name": "蜡神之钥",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Votive Key",
     "type": "神器",
     "clan": "熔尸",
     "effect": "每回合打出的首个友方单位获得 [复生]",
   },
   {
     "name": "烛人阴燃者",
-    "english-name": "ImprisonedZephyr",
+    "english-name": "Waxer Snuffer",
     "type": "神器",
     "clan": "熔尸",
     "effect": "[亡语] 额外触发一次",
