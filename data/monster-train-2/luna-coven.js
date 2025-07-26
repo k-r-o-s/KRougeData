@@ -579,3 +579,173 @@ export const ARTIFACTS = [
   },
 ];
 
+export const PATHS = [
+  {
+    "name": "神秘之锤 ",
+    "champion": "阿杜恩",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 10,
+        "health": 30,
+        "size": 2,
+        "effect": "[魔刃] 2. [能力: 暗影施法]. [新月]: +50 [攻击力]",
+      },
+      {
+        "rank": 2,
+        "attack": 25,
+        "health": 45,
+        "size": 2,
+        "effect": "[魔刃] 2. [能力: 暗影施法]. [新月]: +100 [攻击力]",
+      },
+      {
+        "rank": 3,
+        "attack": 50,
+        "health": 90,
+        "size": 2,
+        "effect": "[魔刃] 2. [能力: 暗影施法]. [新月]: +150 [攻击力]",
+      },
+    ]
+  },
+  {
+    "name": "战狂",
+    "champion": "阿杜恩",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 20,
+        "health": 12,
+        "size": 2,
+        "effect": "[魔刃] 2. [杀戮]: 永久 +1 [导流]",
+      },
+      {
+        "rank": 2,
+        "attack": 35,
+        "health": 20,
+        "size": 2,
+        "effect": "[魔刃] 4. [杀戮]: 永久 +1 [导流]",
+      },
+      {
+        "rank": 3,
+        "attack": 50,
+        "health": 30,
+        "size": 2,
+        "effect": "[魔刃] 6. [杀戮]: 永久 +1 [导流]",
+      },
+    ]
+  },
+  {
+    "name": "圣职者",
+    "champion": "阿杜恩",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 20,
+        "health": 20,
+        "size": 2,
+        "effect": "[魔刃] 2. [咒语]: 使所有友方单位获得 [护甲] 3, [寂静者] 获得双倍",
+      },
+      {
+        "rank": 2,
+        "attack": 30,
+        "health": 30,
+        "size": 2,
+        "effect": "[魔刃] 2. [咒语]: 使所有友方单位获得 [护甲] 3, [寂静者] 获得双倍",
+      },
+      {
+        "rank": 3,
+        "attack": 50,
+        "health": 50,
+        "size": 2,
+        "effect": "[魔刃] 2. [咒语]: 使所有友方单位获得 [护甲] 4, [寂静者] 获得双倍",
+      },
+    ]
+  },
+  {
+    "name": "天界织法者",
+    "champion": "艾卡",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 15,
+        "health": 8,
+        "size": 2,
+        "effect": "[导流] 6. [咒语]: 获得 [导流] 1",
+      },
+      {
+        "rank": 2,
+        "attack": 25,
+        "health": 8,
+        "size": 2,
+        "effect": "[导流] 6. [咒语]: 获得 [导流] 2",
+      },
+      {
+        "rank": 3,
+        "attack": 35,
+        "health": 8,
+        "size": 2,
+        "effect": "[导流] 6. [咒语]: 获得 [导流] 3",
+      },
+    ]
+  },
+  {
+    "name": "银光女皇",
+    "champion": "艾卡",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 15,
+        "health": 10,
+        "size": 2,
+        "effect": "[能力: 月之回响]. 满月: +15 [导流]",
+      },
+      {
+        "rank": 2,
+        "attack": 20,
+        "health": 15,
+        "size": 2,
+        "effect": "[能力: 月之回响]. 满月: +40 [导流]",
+      },
+      {
+        "rank": 3,
+        "attack": 30,
+        "health": 20,
+        "size": 2,
+        "effect": "[能力: 月之回响]. 满月: +70 [导流]",
+      },
+    ]
+  },
+  {
+    "name": "月相师",
+    "champion": "艾卡",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 10,
+        "health": 10,
+        "size": 2,
+        "effect": "[月相循环]: 使所有友方单位获得 +1 [攻击力] 和 +1 [生命值]",
+      },
+      {
+        "rank": 2,
+        "attack": 15,
+        "health": 15,
+        "size": 2,
+        "effect": "[月相循环]: 使所有友方单位获得 +2 [攻击力] 和 +2 [生命值]",
+      },
+      {
+        "rank": 3,
+        "attack": 20,
+        "health": 20,
+        "size": 2,
+        "effect": "[月相循环]: 使所有友方单位获得 +3 [攻击力] 和 +3 [生命值]",
+      },
+    ]
+  },
+]

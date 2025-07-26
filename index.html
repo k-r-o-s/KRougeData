@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Web Page</title>
+  <title>怪物火车 2 数据查询</title>
   <link rel="stylesheet" href="css/style.css">
 
   <script type="module" src="./script/image-toggle-button.js"></script>
@@ -18,22 +18,10 @@
 
 <body>
   <header>
-    <p>Welcome to My Web Page</p>
+    <p>怪物火车 2 数据查询</p>
   </header>
   <main>
     <div class="left-panel card-list-view">
-      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
-      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
-      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
-      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
-      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
-      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
-      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
-      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
-      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
-      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
-      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
-      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
       <item-card src="image/cards/不朽交易.webp" class=""></item-card>
       <item-card src="image/cards/不朽交易.webp" class=""></item-card>
       <item-card src="image/cards/不朽交易.webp" class=""></item-card>
@@ -43,7 +31,7 @@
     <search-panel class="right-panel"></search-panel>
   </main>
   <footer>
-    <p>&copy; Jul 2025 By Kros</p>
+    <p>&copy; 2025 By K_r_o_s</p>
   </footer>
   <div id="z-tooltip" style="position: fixed; pointer-events: none;"></div>
   <template id="item-card-template" id="button">
@@ -120,9 +108,9 @@
       <image-toggle-button src="image/other/升级石.webp" condition="type:升级石" title="升级石"
         size="42x48"></image-toggle-button>
       <image-toggle-button src="image/other/祸患.webp" condition="type:祸患" title="祸患" size="42x48"
-        off></image-toggle-button>
+        off="1"></image-toggle-button>
       <image-toggle-button src="image/other/天灾.webp" condition="type:天灾" title="天灾" size="42x48"
-        off></image-toggle-button>
+        off="1"></image-toggle-button>
     </div>
     <!-- 卡牌稀有度选取区 -->
     <section-divider text="稀有度"></section-divider>
@@ -151,7 +139,7 @@
     <section-divider text="标签"></section-divider>
   </template>
   <script type="module">
-    import { __DEBUG } from './script/util.js'
+    import { __DEBUG, __log_data } from './script/util.js'
     import { MT_DATA } from './data/monster-train-2/index.js'
 
     let ztooltip = null;
@@ -162,6 +150,10 @@
       ztooltip = document.querySelector('#z-tooltip');
       leftPanel = document.querySelector('.left-panel');
       const searchPanel = document.querySelector('.right-panel');
+
+      // 加载上次页面最后一次搜索条件
+      loadSavedQuery();
+
       // 搜索文本框
       searchPanel.searchInput.addEventListener('keyup', () => {
         // 按回车
@@ -172,14 +164,25 @@
       });
       // 搜索按钮
       searchPanel.searchButton.addEventListener('click', () => { doSearch(); });
-      // 各个氏族/种类/... 按钮
+      // 各个氏族/种类/稀有度/费用 等按钮
       searchPanel.toggleButtons.map((btn) => {
         btn.addEventListener('click', () => { doSearch(); })
+        btn.addEventListener('dblclick', () => { doSearch(); })
       });
 
       doSearch();
     });
-
+    function loadSavedQuery() {
+      const queryString = localStorage.getItem('queryState');
+      try {
+        const query = JSON.parse(queryString);
+        __log_data("loaded query", query);
+        const searchPanel = document.querySelector('.right-panel');
+        searchPanel.setQuery(query);
+      } catch (e) {
+        console.error("query string: [" + queryString + "] is not valid");
+      }
+    }
     function doSearch() {
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
@@ -187,7 +190,7 @@
       }
 
       const searchPanel = document.querySelector('.right-panel');
-      const search = {
+      const query = {
         // 移除一些特殊字符 !@#$%^&*\/ 和 空白字符
         "text": searchPanel.searchInput.value.replace(/!@#\$%\^&\*\\\/\s/g, ''),
         "clan": [],
@@ -205,25 +208,26 @@
             console.error("invalid condition: [" + condition + "]"); return;
           }
         }
-        search[pair[0]].push(pair[1]);
+        query[pair[0]].push(pair[1]);
       })
+      localStorage.setItem('queryState', JSON.stringify(query));
       const result = [];
       MT_DATA.forEach((item) => {
-        if (!search.clan.includes(item.clan)) { return; }
-        if (!search.type.includes(item.type)) { return; }
+        if (!query.clan.includes(item.clan)) { return; }
+        if (!query.type.includes(item.type)) { return; }
         if (!["神器", "升级石"].includes(item.type)) {
-          if (!search.rarity.includes(item.rarity)) { return; }
-          if (!search.cost.includes(item.cost)) { return; }
+          if (!query.rarity.includes(item.rarity)) { return; }
+          if (!query.cost.includes(item.cost)) { return; }
         }
-        if (search.text
-          && (!item.text || !item.text.includes(search.text))
-          && (!item.name || !item.name.includes(search.text))
+        if (query.text
+          && (!item.text || !item.text.includes(query.text))
+          && (!item.name || !item.name.includes(query.text))
         ) { return; }
         result.push(item);
       });
 
       createCardList(result);
-      const text = search.text;
+      const text = query.text;
       if (result.length > 0 && text.length > 0) {
         searchPanel.addSearchTag(text, () => {
           searchPanel.searchInput.value = text;

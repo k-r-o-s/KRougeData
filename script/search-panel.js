@@ -1,3 +1,5 @@
+import { ImageToggleButton } from './image-toggle-button.js'
+
 export class SearchPanel extends HTMLElement {
 
   static TEMPLATE_ID = 'search-panel-template';
@@ -85,6 +87,38 @@ export class SearchPanel extends HTMLElement {
     tag.removeEventListener('click', tag.clickCallback);
     tag.clearButton.removeEventListener('click', tag.clearCallback);
     tag.parentElement.removeChild(tag);
+  }
+  //
+  // query = {
+  //   "text": "月相"
+  //   "clan": [],
+  //   "type": [],
+  //   "rarity": [],
+  //   "cost": [],
+  // };
+  setQuery(query) {
+    this.searchInput.value = query.text;
+    ["clan", "type", "rarity", "cost"].forEach(sectionId => {
+      const section = this.querySelector("#" + sectionId + "-section");
+      const buttons = section.querySelectorAll(ImageToggleButton.TAG_NAME);
+      if (!query[sectionId] || query[sectionId].length == 0) {
+        buttons.forEach(ele => ele.setAttribute('off', '0'));
+      } else {
+        buttons.forEach(ele => {
+          const eleConditon = ele.getAttribute('condition');
+          if (!eleConditon) { return; }
+          // 一个按钮的 condition可能包含多个条件, 先用分号拆分, 然后在用冒号拆分
+          // 例子: <image-toggle-button text="4+" condition="cost:4;cost:5;cost:6;cost:7;cost:8">
+          const buttonConditions = eleConditon.split(';');
+          const conditionValue = buttonConditions[0].split(':')[1];
+          if (query[sectionId].includes(conditionValue)) {
+            ele.setAttribute('off', '0');
+          } else {
+            ele.setAttribute('off', '1');
+          }
+        })
+      }
+    });
   }
 }
 

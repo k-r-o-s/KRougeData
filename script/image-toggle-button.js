@@ -1,4 +1,4 @@
-class ImageToggleButton extends HTMLElement {
+export class ImageToggleButton extends HTMLElement {
 
   static TEMPLATE_ID = 'image-toggle-button-template';
   static TAG_NAME = 'image-toggle-button'
@@ -31,6 +31,17 @@ class ImageToggleButton extends HTMLElement {
       }
       button.addEventListener('click', () => {
         button.classList.toggle("toggle-off");
+      });
+      button.addEventListener('dblclick', () => {
+        if (!this.parentElement) { return; }
+        const siblings = this.parentElement.childNodes;
+        const tagName = ImageToggleButton.TAG_NAME.toUpperCase();
+        for (let i = 0; i < siblings.length; i++) {
+          const ele = siblings[i];
+          if (ele.nodeName == tagName) {
+            ele.setAttribute('off', ele != this ? '1' : '0');
+          }
+        }
       });
       this.image = image;
       this.button = button;
@@ -75,7 +86,7 @@ class ImageToggleButton extends HTMLElement {
         }
         break;
       case "off":
-        this.button.classList.add("toggle-off");
+        newValue == "1" ? this.button.classList.add("toggle-off") : this.button.classList.remove("toggle-off");;
         break;
       default:
         console.error("unsupported attribute type: [" + name + "]");

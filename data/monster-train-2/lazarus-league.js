@@ -640,3 +640,173 @@ export const ARTIFACTS = [
     "effect": "为一个友方单位穿戴装备时, 恢复其所有生命值",
   },
 ];
+export const PATHS = [
+  {
+    "name": "调配大师",
+    "champion": "奥莱奇",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 20,
+        "health": 20,
+        "size": 2,
+        "effect": "[能力: 小份调和]",
+      },
+      {
+        "rank": 2,
+        "attack": 45,
+        "health": 35,
+        "size": 2,
+        "effect": "[能力: 中份调和]",
+      },
+      {
+        "rank": 3,
+        "attack": 75,
+        "health": 40,
+        "size": 2,
+        "effect": "[能力: 大份调和]",
+      },
+    ]
+  },
+  {
+    "name": "复生者",
+    "champion": "奥莱奇",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 15,
+        "health": 6,
+        "size": 2,
+        "effect": "[结算]: 获得 [复活] 1 和 [不稳定] 6",
+      },
+      {
+        "rank": 2,
+        "attack": 20,
+        "health": 12,
+        "size": 2,
+        "effect": "[复活] 1. [结算]: 获得 [复活] 1 和 [不稳定] 12",
+      },
+      {
+        "rank": 3,
+        "attack": 30,
+        "health": 16,
+        "size": 2,
+        "effect": "[复活] 2. [结算]: 获得 [复活] 1 和 [不稳定] 18",
+      },
+    ]
+  },
+  {
+    "name": "疯狂科学家",
+    "champion": "奥莱奇",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 15,
+        "health": 25,
+        "size": 2,
+        "effect": "[咒语]: 对所有敌方单位施加 [不稳定] 4",
+      },
+      {
+        "rank": 2,
+        "attack": 15,
+        "health": 45,
+        "size": 2,
+        "effect": "[咒语]: 对所有敌方单位施加 [不稳定] 8",
+      },
+      {
+        "rank": 3,
+        "attack": 15,
+        "health": 70,
+        "size": 2,
+        "effect": "[咒语]: 对所有敌方单位施加 [不稳定] 16",
+      },
+    ]
+  },
+  {
+    "name": "活体护甲",
+    "champion": "格雷尔男爵",
+    "type": "path",
+    "path": [
+       {
+        "rank": 1,
+        "attack": 8,
+        "health": 10,
+        "size": 2,
+        "effect": "[已装备]: 使所有友方单位 +8 [攻击力]",
+      },
+      {
+        "rank": 2,
+        "attack": 16,
+        "health": 20,
+        "size": 2,
+        "effect": "[已装备]: 使所有友方单位 +16 [攻击力]",
+      },
+      {
+        "rank": 3,
+        "attack": 24,
+        "health": 40,
+        "size": 2,
+        "effect": "[已装备]: 使所有友方单位 +24 [攻击力]",
+      },
+    ]
+  },
+  {
+    "name": "肢体学习",
+    "champion": "格雷尔男爵",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 15,
+        "health": 25,
+        "size": 2,
+        "effect": "[巧匠]: 附加装备永久 +2 [攻击力]",
+      },
+      {
+        "rank": 2,
+        "attack": 30,
+        "health": 40,
+        "size": 2,
+        "effect": "[巧匠]: 附加装备永久 +4 [攻击力]",
+      },
+      {
+        "rank": 3,
+        "attack": 60,
+        "health": 60,
+        "size": 2,
+        "effect": "[巧匠]: 附加装备永久 +6 [攻击力]",
+      },
+    ]
+  },
+  {
+    "name": "饥饿者",
+    "champion": "格雷尔男爵",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 10,
+        "health": 25,
+        "size": 2,
+        "effect": "[能力: 吞噬]",
+      },
+      {
+        "rank": 2,
+        "attack": 15,
+        "health": 45,
+        "size": 2,
+        "effect": "[能力: 吞噬 II]",
+      },
+      {
+        "rank": 3,
+        "attack": 20,
+        "health": 85,
+        "size": 2,
+        "effect": "[能力: 吞噬 III]",
+      },
+    ]
+  },
+]

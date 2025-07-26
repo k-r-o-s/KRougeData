@@ -578,3 +578,174 @@ export const ARTIFACTS = [
     "effect": "当一个单位死于 [腐朽] 时, 将其减益效果施加于另一个随机敌方单位",
   },
 ];
+
+export const PATHS = [
+  {
+    "name": "领头人",
+    "champion": "断头台纽甘君",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 30,
+        "health": 20,
+        "size": 3,
+        "effect": "[践踏]. [杀戮]: 所有友方单位 [散播] 1",
+      },
+      {
+        "rank": 2,
+        "attack": 60,
+        "health": 25,
+        "size": 3,
+        "effect": "[践踏]. [杀戮]: 所有友方单位 [散播] 2",
+      },
+      {
+        "rank": 3,
+        "attack": 100,
+        "health": 30,
+        "size": 3,
+        "effect": "[践踏]. [杀戮]: 所有友方单位 [散播] 4",
+      },
+    ]
+  },
+  {
+    "name": "刽子手",
+    "champion": "断头台纽甘君",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 15,
+        "health": 30,
+        "size": 3,
+        "effect": "[收割]: 获得 [再生] 1 和 [狂怒] 2",
+      },
+      {
+        "rank": 2,
+        "attack": 20,
+        "health": 60,
+        "size": 3,
+        "effect": "[收割]: 获得 [再生] 2 和 [狂怒] 3",
+      },
+      {
+        "rank": 3,
+        "attack": 30,
+        "health": 100,
+        "size": 3,
+        "effect": "[收割]: 获得 [再生] 3 和 [狂怒] 4",
+      },
+    ]
+  },
+  {
+    "name": "巣群意识",
+    "champion": "断头台纽甘君",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 15,
+        "health": 25,
+        "size": 3,
+        "effect": "[集结]: 永久 +1 [攻击力]",
+      },
+      {
+        "rank": 2,
+        "attack": 25,
+        "health": 35,
+        "size": 3,
+        "effect": "[集结]: 永久 +1 [攻击力] 和 +1 [生命值]",
+      },
+      {
+        "rank": 3,
+        "attack": 35,
+        "health": 45,
+        "size": 3,
+        "effect": "[集结]: 永久 +2 [攻击力] 和 +2 [生命值]",
+      },
+    ]
+  },
+  {
+    "name": "永恒之花",
+    "champion": "狮鬃夫人",
+    "type": "path",
+    "path": [
+       {
+        "rank": 1,
+        "attack": 25,
+        "health": 10,
+        "size": 2,
+        "effect": "[咒语]: [生成] 1",
+      },
+      {
+        "rank": 2,
+        "attack": 45,
+        "health": 15,
+        "size": 2,
+        "effect": "[咒语]: [生成] 1. [蚀刻]: [生成] 2",
+      },
+      {
+        "rank": 3,
+        "attack": 65,
+        "health": 20,
+        "size": 2,
+        "effect": "[咒语]: [生成] 1. [蚀刻]: [生成] 4",
+      },
+    ]
+  },
+  {
+    "name": "噬人者",
+    "champion": "狮鬃夫人",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 5,
+        "health": 10,
+        "size": 2,
+        "effect": "[能力: 噬人]",
+      },
+      {
+        "rank": 2,
+        "attack": 10,
+        "health": 15,
+        "size": 2,
+        "effect": "[能力: 噬人 II]",
+      },
+      {
+        "rank": 3,
+        "attack": 20,
+        "health": 20,
+        "size": 2,
+        "effect": "[能力: 噬人 III]",
+      },
+    ]
+  },
+  {
+    "name": "孢子歌手",
+    "champion": "狮鬃夫人",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 8,
+        "health": 16,
+        "size": 2,
+        "effect": "[行动]: 对所有敌方单位施加 [腐朽] 1. 当一个单位获得 [腐朽] 时, 获得的层数 +2",
+      },
+      {
+        "rank": 2,
+        "attack": 12,
+        "health": 24,
+        "size": 2,
+        "effect": "[行动]: 对所有敌方单位施加 [腐朽] 1. 当一个单位获得 [腐朽] 时, 获得的层数 +3",
+      },
+      {
+        "rank": 3,
+        "attack": 20,
+        "health": 40,
+        "size": 2,
+        "effect": "[行动]: 对所有敌方单位施加 [腐朽] 1. 当一个单位获得 [腐朽] 时, 获得的层数 +4",
+      },
+    ]
+  },
+]
