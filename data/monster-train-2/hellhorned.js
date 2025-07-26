@@ -595,3 +595,173 @@ export const ARTIFACTS = [
     "effect": "未使用的 [余烬] 保留至下一回合",
   },
 ];
+export const PATHS = [
+  {
+    "name": "殴斗者",
+    "champion": "断角王子",
+    "type": "path",
+    "path": [
+     {
+        "rank": 1,
+        "attack": 6,
+        "health": 6,
+        "size": 2,
+        "effect": "[护甲] 10. [多重攻击] 1",
+      },
+      {
+        "rank": 2,
+        "attack": 6,
+        "health": 6,
+        "size": 2,
+        "effect": "[护甲] 15. [多重攻击] 2",
+      },
+      {
+        "rank": 3,
+        "attack": 6,
+        "health": 6,
+        "size": 2,
+        "effect": "[护甲] 20. [多重攻击] 4",
+      },
+    ]
+  },
+  {
+    "name": "收割者",
+    "champion": "断角王子",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 30,
+        "health": 6,
+        "size": 2,
+        "effect": "[杀戮]: +15 [攻击力]",
+      },
+      {
+        "rank": 2,
+        "attack": 60,
+        "health": 12,
+        "size": 2,
+        "effect": "[杀戮]: +25 [攻击力]",
+      },
+      {
+        "rank": 3,
+        "attack": 120,
+        "health": 24,
+        "size": 2,
+        "effect": "[杀戮]: +50 [攻击力]",
+      },
+    ]
+  },
+  {
+    "name": "暴怒",
+    "champion": "断角王子",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 15,
+        "health": 15,
+        "size": 2,
+        "effect": "[杀戮]: 获得 [护甲] 10. [复仇]: 获得 [狂怒] 3",
+      },
+      {
+        "rank": 2,
+        "attack": 25,
+        "health": 25,
+        "size": 2,
+        "effect": "[杀戮]: 获得 [护甲] 15. [复仇]: 获得 [狂怒] 4",
+      },
+      {
+        "rank": 3,
+        "attack": 40,
+        "health": 40,
+        "size": 2,
+        "effect": "[杀戮]: 获得 [护甲] 25. [复仇]: 获得 [狂怒] 6",
+      },
+    ]
+  },
+  {
+    "name": "百鬼游行",
+    "champion": "碎尾女王",
+    "type": "path",
+    "path": [
+       {
+        "rank": 1,
+        "attack": 30,
+        "health": 15,
+        "size": 2,
+        "effect": "[结算]: 将一张 [女王的小鬼] 加入手牌. 在本层中, [小鬼] 的费用 -1 [余烬]",
+      },
+      {
+        "rank": 2,
+        "attack": 60,
+        "health": 20,
+        "size": 2,
+        "effect": "[结算]: 将一张 [懵懂小鬼] 加入手牌. 在本层中, [小鬼] 的费用 -1 [余烬]",
+      },
+      {
+        "rank": 3,
+        "attack": 120,
+        "health": 25,
+        "size": 2,
+        "effect": "[结算]: 将一张 [懵懂小鬼] 和 [焊工助手] 加入手牌. 在本层中, [小鬼] 的费用 -1 [余烬]",
+      },
+    ]
+  },
+  {
+    "name": "王权",
+    "champion": "碎尾女王",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 10,
+        "health": 10,
+        "size": 2,
+        "effect": "[集结]: +10 [攻击力]",
+      },
+      {
+        "rank": 2,
+        "attack": 10,
+        "health": 20,
+        "size": 2,
+        "effect": "[集结]: +15 [攻击力]",
+      },
+      {
+        "rank": 3,
+        "attack": 10,
+        "health": 40,
+        "size": 2,
+        "effect": "[集结]: +25 [攻击力]",
+      },
+    ]
+  },
+  {
+    "name": "帝国主义者",
+    "champion": "碎尾女王",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 10,
+        "health": 20,
+        "size": 2,
+        "effect": "[行动]: 击杀所有小鬼单位, 每个小鬼对敌方单位造成 20 点伤害",
+      },
+      {
+        "rank": 2,
+        "attack": 20,
+        "health": 40,
+        "size": 2,
+        "effect": "[行动]: 击杀所有小鬼单位, 每个小鬼对敌方单位造成 40 点伤害",
+      },
+      {
+        "rank": 3,
+        "attack": 50,
+        "health": 80,
+        "size": 2,
+        "effect": "[行动]: 击杀所有小鬼单位, 每个小鬼对敌方单位造成 60 点伤害",
+      },
+    ]
+  },
+]

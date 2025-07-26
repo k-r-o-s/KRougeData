@@ -575,3 +575,174 @@ export const ARTIFACTS = [
     "effect": "回合开始时, 将一张 [蛰刺] 加入手牌",
   },
 ];
+
+export const PATHS = [
+  {
+    "name": "爆炸",
+    "champion": "智者",
+    "type": "path",
+    "path": [
+     {
+        "rank": 1,
+        "attack": 0,
+        "health": 30,
+        "size": 2,
+        "effect": "[复原]: 对前排敌方单位造成 30 点伤害",
+      },
+      {
+        "rank": 2,
+        "attack": 0,
+        "health": 60,
+        "size": 2,
+        "effect": "[复原]: 对前排敌方单位造成 60 点伤害",
+      },
+      {
+        "rank": 3,
+        "attack": 0,
+        "health": 120,
+        "size": 2,
+        "effect": "[复原]: 对前排敌方单位造成 120 点伤害",
+      },
+    ]
+  },
+  {
+    "name": "培育",
+    "champion": "智者",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 0,
+        "health": 40,
+        "size": 2,
+        "effect": "[复仇]: [滋养] 2. 每回合抽牌数 +1",
+      },
+      {
+        "rank": 2,
+        "attack": 0,
+        "health": 80,
+        "size": 2,
+        "effect": "[复仇]: [滋养] 3. 每回合抽牌数 +1",
+      },
+      {
+        "rank": 3,
+        "attack": 0,
+        "health": 160,
+        "size": 2,
+        "effect": "[复仇]: [滋养] 4. 每回合抽牌数 +1",
+      },
+    ]
+  },
+  {
+    "name": "怒火中烧",
+    "champion": "智者",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 0,
+        "health": 40,
+        "size": 2,
+        "effect": "[尖刺]: 15",
+      },
+      {
+        "rank": 2,
+        "attack": 0,
+        "health": 80,
+        "size": 2,
+        "effect": "[尖刺]: 25",
+      },
+      {
+        "rank": 3,
+        "attack": 0,
+        "health": 150,
+        "size": 2,
+        "effect": "[尖刺]: 50",
+      },
+    ]
+  },
+  {
+    "name": "荆棘领主",
+    "champion": "威尔丹顿",
+    "type": "path",
+    "path": [
+       {
+        "rank": 1,
+        "attack": 5,
+        "health": 40,
+        "size": 3,
+        "effect": "[召唤]: 将 3 张带有 [冻结] 的 [蛰刺] 法术加入手牌. [咒语]: +2 [攻击力]",
+      },
+      {
+        "rank": 2,
+        "attack": 10,
+        "health": 70,
+        "size": 3,
+        "effect": "[召唤]: 将 3 张带有 [冻结] 的 [蛰刺] 法术加入手牌. [咒语]: +3 [攻击力]",
+      },
+      {
+        "rank": 3,
+        "attack": 20,
+        "health": 100,
+        "size": 3,
+        "effect": "[召唤]: 将 3 张带有 [冻结] 的 [蛰刺] 法术加入手牌. [咒语]: +4 [攻击力]",
+      },
+    ]
+  },
+  {
+    "name": "扼杀者",
+    "champion": "威尔丹顿",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 10,
+        "health": 40,
+        "size": 3,
+        "effect": "[横扫]. [攻击]: 对被攻击的单位施加 [缠绕]",
+      },
+      {
+        "rank": 2,
+        "attack": 20,
+        "health": 65,
+        "size": 3,
+        "effect": "[横扫]. [攻击]: 对被攻击的单位施加 [缠绕]",
+      },
+      {
+        "rank": 3,
+        "attack": 40,
+        "health": 90,
+        "size": 3,
+        "effect": "[横扫]. [攻击]: 对被攻击的单位施加 [缠绕]",
+      },
+    ]
+  },
+  {
+    "name": "掠夺者",
+    "champion": "威尔丹顿",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 20,
+        "health": 30,
+        "size": 3,
+        "effect": "[迅捷]. [附魔]: 获得 [迅捷]",
+      },
+      {
+        "rank": 2,
+        "attack": 20,
+        "health": 30,
+        "size": 3,
+        "effect": "[迅捷]. [多重攻击] 1. [附魔]: 获得 [迅捷]",
+      },
+      {
+        "rank": 3,
+        "attack": 25,
+        "health": 30,
+        "size": 3,
+        "effect": "[迅捷]. [多重攻击] 2. [附魔]: 获得 [迅捷]",
+      },
+    ]
+  },
+]

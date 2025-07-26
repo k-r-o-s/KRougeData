@@ -200,7 +200,7 @@ export const UNITS = [
     "health": 10,
     "description": ""
   },
-   {
+  {
     "name": "影裔造物",
     "english-name": "Morsel-Made",
     "type": "单位",
@@ -260,7 +260,7 @@ export const UNITS = [
     "health": 50,
     "description": ""
   },
-     {
+  {
     "name": "暗影破城傀儡",
     "english-name": "Shadowsiege",
     "type": "单位",
@@ -655,3 +655,174 @@ export const ARTIFACTS = [
     "effect": "影裔单位进入战斗时, 获得 [伤害护盾] 1",
   },
 ];
+
+export const PATHS = [
+  {
+    "name": "建筑师",
+    "champion": "影祖",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 25,
+        "health": 20,
+        "size": 3,
+        "effect": "[召唤]: 本层 +2 [容量]",
+      },
+      {
+        "rank": 2,
+        "attack": 50,
+        "health": 30,
+        "size": 3,
+        "effect": "[召唤]: 本层 +3 [容量]",
+      },
+      {
+        "rank": 3,
+        "attack": 100,
+        "health": 40,
+        "size": 3,
+        "effect": "[召唤]: 本层 +4 [容量]",
+      },
+    ]
+  },
+  {
+    "name": "畸怪",
+    "champion": "影祖",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 50,
+        "health": 30,
+        "size": 4,
+        "effect": "[践踏]",
+      },
+      {
+        "rank": 2,
+        "attack": 125,
+        "health": 60,
+        "size": 5,
+        "effect": "[践踏]",
+      },
+      {
+        "rank": 3,
+        "attack": 250,
+        "health": 120,
+        "size": 6,
+        "effect": "[践踏]",
+      },
+    ]
+  },
+  {
+    "name": "贪食者",
+    "champion": "影祖",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 20,
+        "health": 20,
+        "size": 3,
+        "effect": "[吸血] 2. [暴食]: +4 [攻击力] +2 [生命值]",
+      },
+      {
+        "rank": 2,
+        "attack": 20,
+        "health": 20,
+        "size": 3,
+        "effect": "[吸血] 2. [暴食]: +9 [攻击力] +4 [生命值]",
+      },
+      {
+        "rank": 3,
+        "attack": 20,
+        "health": 20,
+        "size": 3,
+        "effect": "[吸血] 2. [暴食]: +15 [攻击力] +6 [生命值]",
+      },
+    ]
+  },
+  {
+    "name": "超级食品",
+    "champion": "原基",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 3,
+        "health": 10,
+        "size": 2,
+        "effect": "[自助餐] 3. [被吞食]: 使被吞食者获得此单位的 [攻击力], [生命值] 和状态效果",
+      },
+      {
+        "rank": 2,
+        "attack": 3,
+        "health": 10,
+        "size": 2,
+        "effect": "[自助餐] 3. [伤害护盾] 2. [被吞食]: 使被吞食者获得此单位的 [攻击力], [生命值] 和状态效果",
+      },
+      {
+        "rank": 3,
+        "attack": 3,
+        "health": 10,
+        "size": 2,
+        "effect": "[自助餐] 3. [伤害护盾] 4. [被吞食]: 使被吞食者获得此单位的 [攻击力], [生命值] 和状态效果",
+      },
+    ]
+  },
+  {
+    "name": "耐吃的零食",
+    "champion": "原基",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 3,
+        "health": 3,
+        "size": 2,
+        "effect": "[自助餐] 5. [被吞食]: 使被吞食者获得此单位的 [攻击力] 和 [生命值]",
+      },
+      {
+        "rank": 2,
+        "attack": 3,
+        "health": 3,
+        "size": 2,
+        "effect": "[自助餐] 8. [被吞食]: 使被吞食者获得此单位的 [攻击力] 和 [生命值]",
+      },
+      {
+        "rank": 3,
+        "attack": 3,
+        "health": 3,
+        "size": 2,
+        "effect": "[自助餐] 12. [被吞食]: 使被吞食者获得此单位的 [攻击力] 和 [生命值]",
+      },
+    ]
+  },
+  {
+    "name": "强力食品",
+    "champion": "原基",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 15,
+        "health": 3,
+        "size": 2,
+        "effect": "[自助餐] 3. [被吞食]: 使被吞食者获得此单位的 [攻击力] 和 [生命值]",
+      },
+      {
+        "rank": 2,
+        "attack": 30,
+        "health": 3,
+        "size": 2,
+        "effect": "[自助餐] 3. [被吞食]: 使被吞食者获得此单位的 [攻击力] 和 [生命值]",
+      },
+      {
+        "rank": 3,
+        "attack": 60,
+        "health": 3,
+        "size": 2,
+        "effect": "[自助餐] 3. [被吞食]: 使被吞食者获得此单位的 [攻击力] 和 [生命值]",
+      },
+    ]
+  },
+]

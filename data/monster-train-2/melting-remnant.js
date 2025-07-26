@@ -600,3 +600,174 @@ export const ARTIFACTS = [
     "effect": "[亡语] 额外触发一次",
   },
 ];
+
+export const PATHS = [
+  {
+    "name": "光芒四射",
+    "champion": "雷克特·烛焰",
+    "type": "path",
+    "path": [
+     {
+        "rank": 1,
+        "attack": 50,
+        "health": 50,
+        "size": 2,
+        "effect": "[燃命] 3",
+      },
+      {
+        "rank": 2,
+        "attack": 100,
+        "health": 100,
+        "size": 2,
+        "effect": "[燃命] 3",
+      },
+      {
+        "rank": 3,
+        "attack": 200,
+        "health": 200,
+        "size": 2,
+        "effect": "[燃命] 3",
+      },
+    ]
+  },
+  {
+    "name": "蓄能",
+    "champion": "雷克特·烛焰",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 10,
+        "health": 15,
+        "size": 2,
+        "effect": "[收割]: +1 [攻击力] +5 [生命值]",
+      },
+      {
+        "rank": 2,
+        "attack": 15,
+        "health": 25,
+        "size": 2,
+        "effect": "[收割]: +2 [攻击力] +10 [生命值]",
+      },
+      {
+        "rank": 3,
+        "attack": 30,
+        "health": 50,
+        "size": 2,
+        "effect": "[收割]: +4 [攻击力] +20 [生命值]",
+      },
+    ]
+  },
+  {
+    "name": "黑暗呼唤",
+    "champion": "雷克特·烛焰",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 15,
+        "health": 15,
+        "size": 2,
+        "effect": "[结算]: 随机改造 2 个单位, 使其获得 +10 [攻击力]",
+      },
+      {
+        "rank": 2,
+        "attack": 30,
+        "health": 30,
+        "size": 2,
+        "effect": "[结算]: 随机改造 2 个单位, 使其获得 +15 [攻击力]",
+      },
+      {
+        "rank": 3,
+        "attack": 50,
+        "health": 50,
+        "size": 2,
+        "effect": "[结算]: 随机改造 2 个单位, 使其获得 +20 [攻击力]",
+      },
+    ]
+  },
+  {
+    "name": "火光",
+    "champion": "小菲德",
+    "type": "path",
+    "path": [
+       {
+        "rank": 1,
+        "attack": 5,
+        "health": 1,
+        "size": 1,
+        "effect": "[亡语]: 使友方单位获得 +5 [攻击力], +5 [生命值] 和 [燃命] 2",
+      },
+      {
+        "rank": 2,
+       "attack": 5,
+        "health": 1,
+        "size": 1,
+        "effect": "[亡语]: 使友方单位获得 +12 [攻击力], +5 [生命值] 和 [燃命] 2",
+      },
+      {
+        "rank": 3,
+        "attack": 5,
+        "health": 1,
+        "size": 1,
+        "effect": "[亡语]: 使友方单位获得 +20 [攻击力], +5 [生命值] 和 [燃命] 2",
+      },
+    ]
+  },
+  {
+    "name": "永恒之火",
+    "champion": "小菲德",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+        "attack": 5,
+        "health": 1,
+        "size": 1,
+        "effect": "[迅捷]. [复生]. [亡语]: +15 [攻击力], +1 [生命值]",
+      },
+      {
+        "rank": 2,
+       "attack": 5,
+        "health": 1,
+        "size": 1,
+        "effect": "[迅捷]. [复生]. [亡语]: +30 [攻击力], +2 [生命值]",
+      },
+      {
+        "rank": 3,
+        "attack": 5,
+        "health": 1,
+        "size": 1,
+        "effect": "[迅捷]. [复生]. [亡语]: +60 [攻击力], +3 [生命值]",
+      },
+    ]
+  },
+  {
+    "name": "小蜡翼人",
+    "champion": "小菲德",
+    "type": "path",
+    "path": [
+      {
+        "rank": 1,
+       "attack": 5,
+        "health": 1,
+        "size": 1,
+        "effect": "[尖刺] 5. [杀戮]: 永久获得 +2 [攻击力] 和 [尖刺] 2",
+      },
+      {
+        "rank": 2,
+       "attack": 5,
+        "health": 1,
+        "size": 1,
+        "effect": "[尖刺] 5. [杀戮]: 永久获得 +3 [攻击力] 和 [尖刺] 3",
+      },
+      {
+        "rank": 3,
+       "attack": 5,
+        "health": 1,
+        "size": 1,
+        "effect": "[尖刺] 5. [杀戮]: 永久获得 +4 [攻击力] 和 [尖刺] 4",
+      },
+    ]
+  },
+]

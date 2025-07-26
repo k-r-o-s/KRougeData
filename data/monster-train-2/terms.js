@@ -839,7 +839,7 @@ export const TERMS = [
   {
     "name": "碎片",
     "type": "特性",
-    "effect": "强化烈士索尔加德的技能",
+    "effect": "强化 [烈士索尔加德] 的技能",
   },
   {
     "name": "自助餐",
@@ -870,5 +870,10 @@ export const TERMS = [
     "name": "泰坦之躯",
     "type": "特性",
     "effect": "该单位收到的伤害减半",
+  },
+  {
+    "name": "静滞",
+    "type": "特性",
+    "effect": "无法攻击. 无法以任何形式收到伤害或成为目标",
   },
 ];
