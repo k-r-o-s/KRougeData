@@ -1,6 +1,12 @@
+const template = document.createElement('template');
+template.innerHTML = `
+  <div class="search-tag-text">
+    <span></span>
+    <button class="search-tag-clear-button">❌</button>
+  </div>`;
+
 export class SearchTag extends HTMLElement {
 
-  static TEMPLATE_ID = 'search-tag-template';
   static TAG_NAME = 'search-tag'
 
   constructor() {
@@ -16,21 +22,11 @@ export class SearchTag extends HTMLElement {
     linkElem.setAttribute('href', '../proto/search-tag/style.css'); // 指向你的 CSS 文件
     shadowRoot.appendChild(linkElem);
 
-    // 获取 template 内容
-    const template = document.getElementById('search-tag-template');
-    if (!template) {
-      console.error('Template with ID "search-tag-template" not found.');
-      return;
-    }
     // 复制 template 的内容并添加到 Shadow DOM
     const content = template.content.cloneNode(true);
     shadowRoot.appendChild(content);
 
     this.textSpan = shadowRoot.querySelector('span');
-    if (!this.textSpan) {
-      console.error('.text in template with ID "search-tag-template" not found.');
-      return;
-    }
   }
 
   // 可选：定义生命周期回调函数

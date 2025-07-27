@@ -1,18 +1,94 @@
 import { ImageToggleButton } from './image-toggle-button.js'
 
+const template = document.createElement('template');
+template.innerHTML = `
+  <!-- 查询输入框和按钮区 -->
+  <div class="search-container">
+    <input type="search" id="search-input" placeholder="请输入搜索条件..." list="search-list">
+    <datalist id="search-list">
+      <option value="迅捷">
+      <option value="横扫">
+      <option value="多重攻击">
+      <option value="英勇">
+      <option value="薪火熔胶">
+      <option value="月相循环">
+      <option value="导流">
+      <option value="生长">
+      <option value="散播">
+      <option value="不稳定">
+      <option value="狂怒">
+      <option value="护甲">
+      <option value="尖刺">
+      <option value="舍弃">
+      <option value="暴食">
+      <option value="燃命">
+    </datalist>
+    <button id="search-button">🔎</button>
+  </div>
+  <div class="search-tag-list"></div>
+  <!-- 卡牌氏族选取区 -->
+  <section-divider text="氏族"></section-divider>
+  <div id="clan-section" class="image-toggle-button-group">
+    <image-toggle-button src="image/other/流放者.webp" condition="clan:流放者" title="流放者"></image-toggle-button>
+    <image-toggle-button src="image/other/薪龙族.webp" condition="clan:薪龙族" title="薪龙族"></image-toggle-button>
+    <image-toggle-button src="image/other/月巫团.webp" condition="clan:月巫团" title="月巫团"></image-toggle-button>
+    <image-toggle-button src="image/other/地下菌团.webp" condition="clan:地下菌团" title="地下菌团"></image-toggle-button>
+    <image-toggle-button src="image/other/拉撒路联盟.webp" condition="clan:拉撒路联盟" title="拉撒路联盟"></image-toggle-button>
+    <image-toggle-button src="image/other/狱魔.webp" condition="clan:狱魔" title="狱魔"></image-toggle-button>
+    <image-toggle-button src="image/other/觉者.webp" condition="clan:觉者" title="觉者"></image-toggle-button>
+    <image-toggle-button src="image/other/冥卫.webp" condition="clan:冥卫" title="冥卫"></image-toggle-button>
+    <image-toggle-button src="image/other/影主.webp" condition="clan:影主" title="影主"></image-toggle-button>
+    <image-toggle-button src="image/other/熔尸.webp" condition="clan:熔尸" title="熔尸"></image-toggle-button>
+    <image-toggle-button src="image/other/无氏族.webp" condition="clan:无氏族" title="无氏族"></image-toggle-button>
+  </div>
+  <!-- 卡牌类型选取区 -->
+  <section-divider text="类型"></section-divider>
+  <div id="type-section" class="image-toggle-button-group">
+    <image-toggle-button src="image/other/单位.webp" condition="type:单位" title="单位" size="42x48"></image-toggle-button>
+    <image-toggle-button src="image/other/法术.webp" condition="type:法术" title="法术" size="42x48"></image-toggle-button>
+    <image-toggle-button src="image/other/装备.webp" condition="type:装备" title="装备" size="42x48"></image-toggle-button>
+    <image-toggle-button src="image/other/房间.webp" condition="type:房间" title="房间" size="42x48"></image-toggle-button>
+    <image-toggle-button src="image/other/神器.webp" condition="type:神器" title="神器" size="42x48"></image-toggle-button>
+    <image-toggle-button src="image/other/升级石.webp" condition="type:升级石" title="升级石"
+      size="42x48"></image-toggle-button>
+    <image-toggle-button src="image/other/祸患.webp" condition="type:祸患" title="祸患" size="42x48"
+      off="1"></image-toggle-button>
+    <image-toggle-button src="image/other/天灾.webp" condition="type:天灾" title="天灾" size="42x48"
+      off="1"></image-toggle-button>
+  </div>
+  <!-- 卡牌稀有度选取区 -->
+  <section-divider text="稀有度"></section-divider>
+  <div id="rarity-section" class="image-toggle-button-group">
+    <image-toggle-button src="image/other/勇者.webp" condition="rarity:勇者" title="勇者"
+      size="42x42"></image-toggle-button>
+    <image-toggle-button src="image/other/普通.webp" condition="rarity:普通" title="普通"
+      size="42x42"></image-toggle-button>
+    <image-toggle-button src="image/other/高级.webp" condition="rarity:高级" title="高级"
+      size="42x42"></image-toggle-button>
+    <image-toggle-button src="image/other/稀有.webp" condition="rarity:稀有" title="稀有"
+      size="42x42"></image-toggle-button>
+  </div>
+  <!-- 卡牌费用选取区 -->
+  <section-divider text="费用"></section-divider>
+  <div id="cost-section" class="image-toggle-button-group">
+    <image-toggle-button src="" text="0" condition="cost:0" size="42x42"></image-toggle-button>
+    <image-toggle-button src="" text="1" condition="cost:1" size="42x42"></image-toggle-button>
+    <image-toggle-button src="" text="2" condition="cost:2" size="42x42"></image-toggle-button>
+    <image-toggle-button src="" text="3" condition="cost:3" size="42x42"></image-toggle-button>
+    <image-toggle-button src="" text="4+" condition="cost:4;cost:5;cost:6;cost:7;cost:8"
+      size="42x42"></image-toggle-button>
+    <image-toggle-button src="" text="X" condition="cost:X" size="42x42"></image-toggle-button>
+  </div>
+  <!-- 标签选取区 -->
+  <section-divider text="标签"></section-divider>`;
+
 export class SearchPanel extends HTMLElement {
 
-  static TEMPLATE_ID = 'search-panel-template';
   static TAG_NAME = 'search-panel'
 
   constructor() {
     super();
 
-    const template = document.getElementById(SearchPanel.TEMPLATE_ID);
-    if (!template) {
-      console.error('Template with ID "' + SearchPanel.TEMPLATE_ID + '" not found.');
-      return;
-    }
     const content = template.content.cloneNode(true);
     this.appendChild(content);
 

@@ -1,6 +1,8 @@
-class SectionDivider extends HTMLElement {
+const template = document.createElement('template');
+template.innerHTML = `<div class="section-divider" id="divider"></div>`;
 
-  static TEMPLATE_ID = 'section-divider-template';
+export class SectionDivider extends HTMLElement {
+
   static TAG_NAME = 'section-divider'
 
   constructor() {
@@ -17,45 +19,40 @@ class SectionDivider extends HTMLElement {
     this.shadowRoot.appendChild(linkElem);
 
 
-    // 获取 template 内容
-    const template = document.getElementById(SectionDivider.TEMPLATE_ID);
-    if (template) {
-      // 复制 template 的内容并添加到 Shadow DOM
-      const content = template.content.cloneNode(true);
-      shadowRoot.appendChild(content);
+    // 复制 template 的内容并添加到 Shadow DOM
+    const content = template.content.cloneNode(true);
+    shadowRoot.appendChild(content);
 
-      const divider = shadowRoot.querySelector('#divider');
-      if (!divider) {
-        console.error('template with ID "' + SectionDivider.TEMPLATE_ID + '" clone failed, <div id=\"divider\"> not found');
-      }
-      this.divider = divider;
-    } else {
-      console.error('Template with ID "' + SectionDivider.TEMPLATE_ID + '" not found.');
+    const divider = shadowRoot.querySelector('#divider');
+    if (!divider) {
+      console.error('template with ID "' + SectionDivider.TEMPLATE_ID + '" clone failed, <div id=\"divider\"> not found');
     }
+    this.divider = divider;
   }
+}
 
-  // 可选：定义生命周期回调函数
-  connectedCallback() {
-    // console.log('SectionDivider 已连接到文档111。');
-  }
+// 可选：定义生命周期回调函数
+connectedCallback() {
+  // console.log('SectionDivider 已连接到文档111。');
+}
 
-  disconnectedCallback() {
-    // console.log('SectionDivider 已从文档断开。');
-  }
+disconnectedCallback() {
+  // console.log('SectionDivider 已从文档断开。');
+}
 
-  attributeChangedCallback(name, oldValue, newValue) {
-    switch (name) {
-      case "text":
-        this.divider.textContent = newValue;
-        break;
-      default:
-        console.error("unsupported attribute type: [" + name + "]");
-    }
+attributeChangedCallback(name, oldValue, newValue) {
+  switch (name) {
+    case "text":
+      this.divider.textContent = newValue;
+      break;
+    default:
+      console.error("unsupported attribute type: [" + name + "]");
   }
+}
 
   static get observedAttributes() {
-    return ['text']; // 监听的属性列表
-  }
+  return ['text']; // 监听的属性列表
+}
 }
 
 customElements.define(SectionDivider.TAG_NAME, SectionDivider);

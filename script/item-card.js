@@ -3,9 +3,19 @@ import { MT_DATA } from "../data/monster-train-2/index.js";
 function CardClickedHandler() {
   alert('Custom Element 按钮被点击了!');
 }
+
+const template = document.createElement('template');
+template.innerHTML = `
+  <div class="card-container">
+    <img class="card-image">
+    <div class="card-name"></div>
+    <div class="card-effect-area">
+      <p class="card-effect"></p>
+    </div>
+  </div>`;
+
 export class ItemCard extends HTMLElement {
 
-  static TEMPLATE_ID = 'item-card-template';
   static TAG_NAME = 'item-card'
 
   constructor() {
@@ -21,43 +31,17 @@ export class ItemCard extends HTMLElement {
     linkElem.setAttribute('href', '../proto/item-card/style.css'); // 指向你的 CSS 文件
     shadowRoot.appendChild(linkElem);
 
-    // 获取 template 内容
-    const template = document.getElementById('item-card-template');
-    if (!template) {
-      console.error('Template with ID "item-card-template" not found.');
-      return;
-    }
     // 复制 template 的内容并添加到 Shadow DOM
     const content = template.content.cloneNode(true);
     shadowRoot.appendChild(content);
 
     this.cardContainer = shadowRoot.querySelector('.card-container');
-    if (!this.cardContainer) {
-      console.error('.card-container in template with ID "item-card-template" not found.');
-      return;
-    }
     this.image = shadowRoot.querySelector('.card-image');
-    if (!this.image) {
-      console.error('.card-image in template with ID "item-card-template" not found.');
-      return;
-    }
     this.nameDiv = shadowRoot.querySelector('.card-name');
-    if (!this.nameDiv) {
-      console.error('.card-name in template with ID "item-card-template" not found.');
-      return;
-    }
     this.nameDiv.style.display = "none";
 
     this.effectArea = shadowRoot.querySelector('.card-effect-area');
-    if (!this.effectArea) {
-      console.error('.card-effect-area in template with ID "item-card-template" not found.');
-      return;
-    }
     this.effectElement = shadowRoot.querySelector('.card-effect');
-    if (!this.effectElement) {
-      console.error('.card-effect in template with ID "item-card-template" not found.');
-      return;
-    }
     this.effectArea.style.display = "none";
     this._cickHandler = CardClickedHandler.bind(this);
     this.image.addEventListener('click', this._cickHandler);

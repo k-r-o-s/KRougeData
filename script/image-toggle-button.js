@@ -1,6 +1,11 @@
+const template = document.createElement('template');
+template.innerHTML = `
+  <button div class="image-toggle-button button-size56x56" id="button">
+    <img id="image">
+  </button>`;
+
 export class ImageToggleButton extends HTMLElement {
 
-  static TEMPLATE_ID = 'image-toggle-button-template';
   static TAG_NAME = 'image-toggle-button'
 
   constructor() {
@@ -16,38 +21,32 @@ export class ImageToggleButton extends HTMLElement {
     linkElem.setAttribute('href', '../proto/image-toggle-button/style.css'); // 指向你的 CSS 文件
     this.shadowRoot.appendChild(linkElem);
 
-    // 获取 template 内容
-    const template = document.getElementById(ImageToggleButton.TEMPLATE_ID);
-    if (template) {
-      // 复制 template 的内容并添加到 Shadow DOM
-      const content = template.content.cloneNode(true);
-      shadowRoot.appendChild(content);
+    // 复制 template 的内容并添加到 Shadow DOM
+    const content = template.content.cloneNode(true);
+    shadowRoot.appendChild(content);
 
-      // 获取按钮并添加事件监听器
-      const image = shadowRoot.querySelector('#image');
-      const button = shadowRoot.querySelector('#button');
-      if (!image || !button) {
-        console.error('template with ID "' + ImageToggleButton.TEMPLATE_ID + '" clone failed, <image> not found');
-      }
-      button.addEventListener('click', () => {
-        button.classList.toggle("toggle-off");
-      });
-      button.addEventListener('dblclick', () => {
-        if (!this.parentElement) { return; }
-        const siblings = this.parentElement.childNodes;
-        const tagName = ImageToggleButton.TAG_NAME.toUpperCase();
-        for (let i = 0; i < siblings.length; i++) {
-          const ele = siblings[i];
-          if (ele.nodeName == tagName) {
-            ele.setAttribute('off', ele != this ? '1' : '0');
-          }
-        }
-      });
-      this.image = image;
-      this.button = button;
-    } else {
-      console.error('Template with ID "' + ImageToggleButton.TEMPLATE_ID + '" not found.');
+    // 获取按钮并添加事件监听器
+    const image = shadowRoot.querySelector('#image');
+    const button = shadowRoot.querySelector('#button');
+    if (!image || !button) {
+      console.error('template with ID "' + ImageToggleButton.TEMPLATE_ID + '" clone failed, <image> not found');
     }
+    button.addEventListener('click', () => {
+      button.classList.toggle("toggle-off");
+    });
+    button.addEventListener('dblclick', () => {
+      if (!this.parentElement) { return; }
+      const siblings = this.parentElement.childNodes;
+      const tagName = ImageToggleButton.TAG_NAME.toUpperCase();
+      for (let i = 0; i < siblings.length; i++) {
+        const ele = siblings[i];
+        if (ele.nodeName == tagName) {
+          ele.setAttribute('off', ele != this ? '1' : '0');
+        }
+      }
+    });
+    this.image = image;
+    this.button = button;
   }
 
   // 可选：定义生命周期回调函数
