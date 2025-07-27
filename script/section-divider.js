@@ -29,30 +29,29 @@ export class SectionDivider extends HTMLElement {
     }
     this.divider = divider;
   }
-}
 
-// 可选：定义生命周期回调函数
-connectedCallback() {
-  // console.log('SectionDivider 已连接到文档111。');
-}
-
-disconnectedCallback() {
-  // console.log('SectionDivider 已从文档断开。');
-}
-
-attributeChangedCallback(name, oldValue, newValue) {
-  switch (name) {
-    case "text":
-      this.divider.textContent = newValue;
-      break;
-    default:
-      console.error("unsupported attribute type: [" + name + "]");
+  // 可选：定义生命周期回调函数
+  connectedCallback() {
+    // console.log('SectionDivider 已连接到文档111。');
   }
-}
+
+  disconnectedCallback() {
+    // console.log('SectionDivider 已从文档断开。');
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    switch (name) {
+      case "text":
+        this.divider.textContent = newValue;
+        break;
+      default:
+        console.error("unsupported attribute type: [" + name + "]");
+    }
+  }
 
   static get observedAttributes() {
-  return ['text']; // 监听的属性列表
-}
+    return ['text']; // 监听的属性列表
+  }
 }
 
 customElements.define(SectionDivider.TAG_NAME, SectionDivider);
