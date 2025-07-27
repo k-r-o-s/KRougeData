@@ -1,0 +1,21 @@
+@import './style.css';
+@import '../../css/default.css';
+@import '../layout/layout.css';
+
+header {
+  box-sizing: border-box;
+  border: 2px solid #222222;
+  color: white;
+  padding: 0px;
+
+  /* 垂直居中子项 */
+  display: flex;
+  align-items: center;
+}
+
+header p {
+  background-color: burlywood;
+  font-weight: 1000;
+  font-size: 18px;
+  width: 100%;
+}

@@ -15,17 +15,27 @@ body {
 
 header {
   box-sizing: border-box;
-  background-color: #925a05;
+  background-color: beige;
+  border-bottom: 1px solid #555555;
   color: white;
   padding: 0px;
 
+  /* 垂直居中子项 */
+  display: flex;
+  align-items: center;
+
+  /* 固定高度 */
   flex-shrink: 0;
-  height: 30px; /* 固定高度 */
-  max-height: 30px; /* 固定高度 */
+  height: 90px;
+  max-height: 90px;
 }
 
-header p{
+header header-content {
+  background-color: #9b7329;
   margin: 0px;
+  width: 100%;
+  font-weight: 1000;
+  font-size: 18px;
 }
 
 main {
@@ -38,32 +48,40 @@ main {
 
   display: flex;
   flex-direction: row;
-  max-height: calc(100vh - 60px);
+  max-height: calc(100vh - 120px);
 }
 
 footer {
   box-sizing: border-box;
-  background-color: #925a05;
+  background-color: #9b7329;
+  border-top: 1px solid #555555;
   color: white;
   text-align: center;
   padding: 0px;
 
   flex-shrink: 0;
-  height: 30px; /* 固定高度 */
+  height: 30px;
+  /* 固定高度 */
   max-height: 30px;
 }
-footer p{
+
+footer p {
   margin: 0px;
+  font-weight: 1000;
 }
+
 /* ///////////////////////////////////////////////////////////////////////// */
 .left-panel {
   box-sizing: border-box;
   background-color: beige;
   flex: 1;
 }
+
 .right-panel {
   box-sizing: border-box;
-  width: 380px; /* 固定宽度 */
+  width: 380px;
+  /* 固定宽度 */
   flex-shrink: 0;
 }
+
 /* ///////////////////////////////////////////////////////////////////////// */

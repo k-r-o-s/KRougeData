@@ -1,0 +1,13 @@
+.header-icon {
+  position: relative;
+  display: inline-block;
+  width: 140px;
+  margin-left: 30px;
+}
+
+.header-icon img {
+  position: absolute;
+  width: 140px;
+  height: auto;
+  transform: translateY(-60%);
+}
