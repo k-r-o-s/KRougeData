@@ -27,12 +27,12 @@
   padding: 10px 10px;
   border: 1px solid #ddd;
   border-radius: 6px 0 0 6px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 #search-button {
   padding: 4px 4px;
-  background-color: #8abff8;
+  background-color: var(--krs-button-face-color);
   color: white;
   border: none;
   border-radius: 0 6px 6px 0;
@@ -41,6 +41,10 @@
   font-size: 20px;
   white-space: nowrap;
   /* 防止按钮文本换行 */
+}
+
+#search-button:hover {
+  background-color: var(--krs-button-face-color-hover);
 }
 
 .search-tag-list {

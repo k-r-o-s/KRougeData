@@ -1,0 +1,103 @@
+/************************************ path 区 ***************************************/
+.tabs-container {
+  max-width: 800px;
+  border-radius: 8px;
+  padding: 0 10px;
+}
+
+/* 隐藏实际的 radio 按钮 */
+.tabs-container input[type="radio"] {
+  display: none;
+}
+
+/* Tab 标题样式 */
+.tabs-container label {
+  display: inline-block;
+  padding: 4px 20px;
+  cursor: pointer;
+  background-color: var(--krs-button-face-color);
+  border-radius: 5px 5px 0 0;
+  margin-right: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #555;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Tab 标题鼠标悬停效果 */
+.tabs-container label:hover {
+  background-color: var(--krs-button-face-color-hover);
+  color: #333;
+}
+
+/* 选中 Tab 标题的样式 */
+.tabs-container input[type="radio"]:checked+label {
+  background-color: var(--krs-button-face-color-checked);
+  /* 蓝色选中效果 */
+  color: #fff;
+}
+
+/* Tab 内容区域样式 */
+.tabs-container .tab-content {
+  /* 默认隐藏所有内容 */
+  display: none;
+
+  padding: 4px;
+  border: 1px solid #ddd;
+  /* 移除顶部边框，与 Tab 标题衔接 */
+  border-top: none;
+
+  --krs-card-width: 200px;
+  background-color: var(--krs-card-bgcolor);
+  border-radius: 0 0 8px 8px;
+
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* 当对应的 radio 按钮被选中时，显示其后的 tab-content */
+.tabs-container input[type="radio"]:checked+label+.tab-content {
+  display: flex;
+  /* 显示选中 Tab 的内容 */
+}
+
+/************************************ basic 区 ***************************************/
+.dialog-content {
+  width: 800px;
+  margin: 10px auto;
+  background-color: var(--krs-main-bgcolor);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dialog-content div {
+  margin: 0;
+}
+
+/************************************ basic 区 ***************************************/
+.card-basic-info {
+  display: flex;
+  flex-direction: row;
+  --krs-card-width: 300px;
+  --krs-card-height: calc(300px * 6 / 4);
+}
+
+.card-basic-info .card-terms {
+  flex: 2 0;
+
+}
+
+.card-basic-info item-card {
+  flex: 1 0;
+}
+
+.card-basic-info .card-details {
+  flex: 2 0;
+
+}
+
+.card-notes {
+  width: 100%;
+  height: 300px;
+  overflow-y: scroll;
+}

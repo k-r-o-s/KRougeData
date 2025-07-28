@@ -4,14 +4,16 @@
   position: relative;
   box-sizing: border-box;
 
-  width: 240px;
+  width: var(--krs-card-width);
   /* 固定 div 的宽度 */
-  height: 360px;
+  height: var(--krs-card-height);
   /* 固定 div 的高度 */
 
-  border: 2px solid #dac78c;
+  border: 2px solid var(--krs-card-border-color); 
   padding: 8px;
-  transition: transform 0.5s ease-in-out/*, opacity 0.5s ease-in-out;*/
+  background-color: var(--krs-card-bgcolor);
+  transition: transform 0.5s ease-in-out
+    /*, opacity 0.5s ease-in-out;*/
 }
 
 /* 元素进入时的初始状态 */
@@ -82,15 +84,14 @@
 }
 
 .card-img-normal {
-  width: 100%;
-  /* 图片宽度填充 div 宽度 */
-  height: 100%;
+  height: calc(100% - 12px);
   /* 图片高度填充 div 高度 */
+  margin: 6px auto;
 }
 
 .term-basic {
   background-color: #1b434b;
-  width: 360px;
+  width: var(--krs-term-width);
   word-wrap: break-word;
   border: 4px solid#2f7282;
   margin: 2px;
@@ -99,7 +100,7 @@
 
 .term-ability {
   background-color: #612a00;
-  width: 360px;
+  width: var(--krs-term-width);
   word-wrap: break-word;
   border: 4px solid#a34d20;
   margin: 2px;
@@ -108,7 +109,7 @@
 
 .term-trgger {
   background-color: #592378;
-  width: 360px;
+  width: var(--krs-term-width);
   word-wrap: break-word;
   border: 4px solid#b54bd6;
   margin: 2px;
@@ -117,7 +118,7 @@
 
 .term-feature {
   background-color: #8e5e20;
-  width: 360px;
+  width: var(--krs-term-width);
   word-wrap: break-word;
   border: 4px solid#e4b943;
   margin: 2px;
@@ -126,7 +127,7 @@
 
 .term-buff {
   background-color: #165a38;
-  width: 360px;
+  width: var(--krs-term-width);
   word-wrap: break-word;
   border: 4px solid#2ba96c;
   margin: 2px;
@@ -135,7 +136,7 @@
 
 .term-debuff {
   background-color: #852521;
-  width: 360px;
+  width: var(--krs-term-width);
   word-wrap: break-word;
   border: 4px solid#a42a26;
   margin: 2px;
@@ -144,7 +145,7 @@
 
 .term-property {
   background-color: #2a2e2f;
-  width: 360px;
+  width: var(--krs-term-width);
   word-wrap: break-word;
   border: 4px solid#6f787f;
   margin: 2px;

@@ -15,7 +15,7 @@ body {
 
 header {
   box-sizing: border-box;
-  background-color: beige;
+  background-color: var(--krs-main-bgcolor);
   border-bottom: 1px solid #555555;
   color: white;
   padding: 0px;
@@ -31,7 +31,7 @@ header {
 }
 
 header header-content {
-  background-color: #9b7329;
+  background-color: var(--krs-main-bgcolor-dark);
   margin: 0px;
   width: 100%;
   font-weight: 1000;
@@ -53,7 +53,7 @@ main {
 
 footer {
   box-sizing: border-box;
-  background-color: #9b7329;
+  background-color: var(--krs-main-bgcolor-dark);
   border-top: 1px solid #555555;
   color: white;
   text-align: center;
@@ -73,7 +73,7 @@ footer p {
 /* ///////////////////////////////////////////////////////////////////////// */
 .left-panel {
   box-sizing: border-box;
-  background-color: beige;
+  background-color: var(--krs-main-bgcolor);
   flex: 1;
 }
 

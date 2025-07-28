@@ -1,6 +1,8 @@
 .image-toggle-button {
-  background-color: rgb(206, 181, 114);
-  font-weight: 1000;
+  background-color: var(--krs-button-face-color);
+  font-weight: bold;
+  font-size: 14px;
+  border-color: var(--krs-button-border-color);
 }
 
 .image-toggle-button img {

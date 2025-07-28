@@ -1,0 +1,10 @@
+@import "../../css/default.css";
+@import "./style.css";
+@import "../item-card/style.css";
+
+item-card img {
+  /* 相当于 .card-img-normal */
+  height: calc(100% - 12px);
+  /* 图片高度填充 div 高度 */
+  margin: 6px auto;
+}

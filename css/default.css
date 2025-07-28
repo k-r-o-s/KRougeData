@@ -1,3 +1,22 @@
+:root {
+    /* 主要配色 */
+    --krs-main-bgcolor-dark: #9b7329;
+    --krs-main-bgcolor: beige;
+    --krs-button-face-color: #dfc47b;
+    --krs-button-face-color-checked: #534827;
+    --krs-button-face-color-hover: #b8a164;
+    --krs-button-border-color: #bbbbbb;
+    --krs-card-border-color: #dac78c;;
+    --krs-card-bgcolor: #e2d3bd;
+
+    /* 卡牌, 神器等卡片的显示尺寸 */
+    --krs-card-width: 240px;
+    --krs-card-height: calc(var(--krs-card-width) * 6 / 4);
+
+    /* 词条的宽度 */
+    --krs-term-width: 360px;
+}
+
 header, main, footer, div, p, img {
     box-sizing: border-box;
 }
@@ -5,6 +24,6 @@ hr {
     border: none; /* 移除浏览器默认的边框 */
     height: 1px;  /* 设置线条的粗细（高度）*/
     background-color: #ccc; /* 设置线条的颜色 */
-    margin: 20px 0; /* 控制线条上下与周围元素的间距 */
+    margin: 8px 0; /* 控制线条上下与周围元素的间距 */
     width: 100%; /* 默认线条宽度与父容器相同 */
 }
