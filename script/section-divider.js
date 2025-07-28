@@ -15,9 +15,9 @@ export class SectionDivider extends HTMLElement {
     // 创建 link 元素并添加到 shadowRoot
     const linkElem = document.createElement('link');
     linkElem.setAttribute('rel', 'stylesheet');
-    linkElem.setAttribute('href', '../proto/section-divider/style.css'); // 指向你的 CSS 文件
+    const styleUrl = new URL('../proto/section-divider/style.css', import.meta.url);
+    linkElem.setAttribute('href', styleUrl.href);
     this.shadowRoot.appendChild(linkElem);
-
 
     // 复制 template 的内容并添加到 Shadow DOM
     const content = template.content.cloneNode(true);

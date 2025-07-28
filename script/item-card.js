@@ -28,7 +28,9 @@ export class ItemCard extends HTMLElement {
     // 创建 link 元素并添加到 shadowRoot
     const linkElem = document.createElement('link');
     linkElem.setAttribute('rel', 'stylesheet');
-    linkElem.setAttribute('href', '../proto/item-card/style.css'); // 指向你的 CSS 文件
+
+    const styleUrl = new URL('../proto/item-card/style.css', import.meta.url);
+    linkElem.setAttribute('href', styleUrl.href);
     shadowRoot.appendChild(linkElem);
 
     // 复制 template 的内容并添加到 Shadow DOM
@@ -45,6 +47,7 @@ export class ItemCard extends HTMLElement {
     this.effectArea.style.display = "none";
     this._cickHandler = CardClickedHandler.bind(this);
     this.image.addEventListener('click', this._cickHandler);
+    this.image.classList.add("card-img-normal");
   }
 
   // 可选：定义生命周期回调函数
@@ -89,8 +92,12 @@ export class ItemCard extends HTMLElement {
       this.effectArea.style.display = "block";
       this.nameDiv.textContent = value.name;
       this.effectElement.textContent = value.effect;
+      this.image.classList.remove("card-img-normal");
       this.image.classList.add("card-img-small");
     } else {
+      this.nameDiv.style.display = "none";
+      this.effectArea.style.display = "none";
+      this.image.classList.remove("card-img-small");
       this.image.classList.add("card-img-normal");
     }
   }
@@ -99,56 +106,41 @@ export class ItemCard extends HTMLElement {
   }
 
   get termsHtml() {
-    if (!this._item || !this._item.effect) { return ""; }
+    if (!this._item) { return ""; }
 
-    const dataOfTerms = new Map();
-    function getTerms(terms, effect) {
-      const regex = /\[(.*?)\]/g;
-      let term = "";
-      let termData = undefined;
-      let match = undefined;
-      while (match = regex.exec(effect)) {
-        term = match[1];
-        if (!term || terms.has(term)) { continue; }
-        termData = MT_DATA.get(term);
-        if (!termData) { console.error("[" + term + "] 的数据未配置, 请在 terms.js 中配置"); continue; }
-        if (!termData.effect || termData.effect == "-") { continue; }
-        terms.set(term, termData);
-        getTerms(terms, termData.effect);
-      }
-    }
-    getTerms(dataOfTerms, this._item.effect);
     let html = "";
-    dataOfTerms.forEach(item => {
-      switch (item.type) {
-        case "基础":
-          html += `<div class="term-basic">`
-          break;
-        case "能力":
-          html += `<div class="term-ability">`
-          break;
-        case "触发":
-          html += `<div class="term-trgger">`
-          break;
-        case "特性":
-          html += `<div class="term-feature">`
-          break;
-        case "增益":
-          html += `<div class="term-buff">`
-          break;
-        case "减益":
-          html += `<div class="term-debuff">`
-          break;
-        case "属性":
-          html += `<div class="term-property">`
-          break;
-        default: // TODO: 生成单位 和 生成卡牌, 以及重复名字的词条: 复生
-          return;
-      }
-      html += `<p class="term-title">${item.name}</p>
-        <p class="term-effect">${item.effect}</p>
-        </div>`;
-    });
+    if (this._item.terms) {
+      this._item.terms.forEach(item => {
+        switch (item.type) {
+          case "基础":
+            html += `<div class="term-basic">`
+            break;
+          case "能力":
+            html += `<div class="term-ability">`
+            break;
+          case "触发":
+            html += `<div class="term-trgger">`
+            break;
+          case "特性":
+            html += `<div class="term-feature">`
+            break;
+          case "增益":
+            html += `<div class="term-buff">`
+            break;
+          case "减益":
+            html += `<div class="term-debuff">`
+            break;
+          case "属性":
+            html += `<div class="term-property">`
+            break;
+          default: // TODO: 生成单位 和 生成卡牌, 以及重复名字的词条: 复生
+            return;
+        }
+        html += `<p class="term-title">${item.name}</p>
+          <p class="term-effect">${item.effect}</p>
+          </div>`;
+      });
+    }
     return html;
   }
 }

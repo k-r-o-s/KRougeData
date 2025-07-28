@@ -17,7 +17,8 @@ export class HeaderContent extends HTMLElement {
     // 创建 link 元素并添加到 shadowRoot
     const linkElem = document.createElement('link');
     linkElem.setAttribute('rel', 'stylesheet');
-    linkElem.setAttribute('href', '../proto/header-content/style.css'); // 指向你的 CSS 文件
+    const styleUrl = new URL('../proto/header-content/style.css', import.meta.url);
+    linkElem.setAttribute('href', styleUrl.href);
     this.shadowRoot.appendChild(linkElem);
 
 
