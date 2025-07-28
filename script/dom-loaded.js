@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 function loadSavedQuery() {
   const queryString = localStorage.getItem('queryState');
+  if (!queryString) { return; }
   try {
     const query = JSON.parse(queryString);
     __log_data("loaded query", query);
@@ -78,11 +79,37 @@ function doSearch() {
       if (!query.rarity.includes(item.rarity)) { return; }
       if (!query.cost.includes(item.cost)) { return; }
     }
-    if (query.text
-      && (!item.text || !item.text.includes(query.text))
-      && (!item.name || !item.name.includes(query.text))
-    ) { return; }
-    result.push(item);
+    let found = false;
+    let queryText = query.text;
+    // 如果搜索字符串为空, 即不需要通过内容过滤
+    if (!queryText) {
+      found = true;
+    } 
+    // 还没找到的话, 在 name 字段查找
+    if (!found && item.name && item.name.includes(queryText)) {
+      found = true;
+    }
+    // 还没找到的话, 在 text 字段查找
+    if (!found && item.text && item.text.includes(queryText)) {
+      found = true;
+    }
+    // 还没找到的话, 在 terms 字段查找
+    if (!found && item.terms && item.terms.has(queryText)) {
+      found = true;
+    }
+    // 还没找到的话, 在 paths 字段查找
+    if (!found && item.paths) {
+      for (let pathData of item.paths) {
+        for (let step of pathData.path) {
+          if (step.effect && step.effect.includes(queryText)) {
+            found = true;
+            break;
+          }
+        }
+        if (found) { break; }
+      }
+    }
+    if (found) { result.push(item); }
   });
 
   createCardList(result);

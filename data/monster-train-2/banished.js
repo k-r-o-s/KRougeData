@@ -7,7 +7,8 @@ export const CHAMPIONS = [
   {
     "name": "菲尔",
     "english-name": "Fel",
-    "type": "勇者",
+    "type": "单位",
+    "unit-type": "勇者",
     "rarity": "勇者",
     "clan": "流放者",
     "cost": "0",
@@ -20,7 +21,8 @@ export const CHAMPIONS = [
   {
     "name": "塔洛丝",
     "english-name": "Talos",
-    "type": "勇者",
+    "type": "单位",
+    "unit-type": "勇者",
     "rarity": "勇者",
     "clan": "流放者",
     "cost": "0",
@@ -36,7 +38,8 @@ export const UNITS = [
   {
     "name": "战斗舞者",
     "english-name": "Battle Dancer",
-    "type": "天使",
+    "type": "单位",
+    "unit-type": "天使",
     "clan": "流放者",
     "rarity": "高级",
     "cost": "1",
@@ -50,7 +53,8 @@ export const UNITS = [
   {
     "name": "死亡舞者",
     "english-name": "Death's Dancer",
-    "type": "天使",
+    "type": "单位",
+    "unit-type": "天使",
     "clan": "流放者",
     "rarity": "高级",
     "cost": "1",
@@ -64,7 +68,8 @@ export const UNITS = [
   {
     "name": "恶魔新兵",
     "english-name": "Demonic Fledgling",
-    "type": "天使",
+    "type": "单位",
+    "unit-type": "天使",
     "clan": "流放者",
     "rarity": "高级",
     "cost": "1",
@@ -78,7 +83,8 @@ export const UNITS = [
   {
     "name": "神圣舞者",
     "english-name": "Divine Dancer",
-    "type": "天使",
+    "type": "单位",
+    "unit-type": "天使",
     "clan": "流放者",
     "rarity": "稀有",
     "cost": "1",
@@ -92,7 +98,8 @@ export const UNITS = [
   {
     "name": "领唱鸣鸟",
     "english-name": "Lead Songbird",
-    "type": "圣乐团成员",
+    "type": "单位",
+    "unit-type": "圣乐团成员",
     "clan": "流放者",
     "rarity": "高级",
     "cost": "1",
@@ -106,7 +113,8 @@ export const UNITS = [
   {
     "name": "朋克吉他手",
     "english-name": "Punk Shredder",
-    "type": "圣乐团成员",
+    "type": "单位",
+    "unit-type": "圣乐团成员",
     "clan": "流放者",
     "rarity": "高级",
     "cost": "1",
@@ -120,7 +128,8 @@ export const UNITS = [
   {
     "name": "坚毅十字军",
     "english-name": "Steadfast Crusader",
-    "type": "天使",
+    "type": "单位",
+    "unit-type": "天使",
     "clan": "流放者",
     "rarity": "高级",
     "cost": "1",
@@ -134,7 +143,8 @@ export const UNITS = [
   {
     "name": "持剑侍女",
     "english-name": "Swordmaiden",
-    "type": "天使",
+    "type": "单位",
+    "unit-type": "天使",
     "clan": "流放者",
     "rarity": "高级",
     "cost": "1",
@@ -148,7 +158,8 @@ export const UNITS = [
   {
     "name": "林莺号手",
     "english-name": "Upbeat Warbler",
-    "type": "圣乐团成员",
+    "type": "单位",
+    "unit-type": "圣乐团成员",
     "clan": "流放者",
     "rarity": "普通",
     "cost": "1",
@@ -162,7 +173,8 @@ export const UNITS = [
   {
     "name": "复仇者",
     "english-name": "Avenger",
-    "type": "天使",
+    "type": "单位",
+    "unit-type": "天使",
     "clan": "流放者",
     "rarity": "高级",
     "cost": "2",
@@ -176,7 +188,8 @@ export const UNITS = [
   {
     "name": "放火者",
     "english-name": "Firebrand",
-    "type": "天使",
+    "type": "单位",
+    "unit-type": "天使",
     "clan": "流放者",
     "rarity": "高级",
     "cost": "2",
@@ -190,7 +203,8 @@ export const UNITS = [
   {
     "name": "军团守卫",
     "english-name": "Hostguard",
-    "type": "天使",
+    "type": "单位",
+    "unit-type": "天使",
     "clan": "流放者",
     "rarity": "稀有",
     "cost": "3",
@@ -204,7 +218,8 @@ export const UNITS = [
   {
     "name": "死亡金属竖琴手",
     "english-name": "Deathmetal Hymnist",
-    "type": "圣乐团成员",
+    "type": "单位",
+    "unit-type": "圣乐团成员",
     "clan": "流放者",
     "rarity": "稀有",
     "cost": "4",
@@ -596,7 +611,7 @@ export const PATHS = [
         "attack": 9,
         "health": 32,
         "size": 2,
-        "effect": "[多重攻击] 1. [转移] 永久获得 [英勇] 1. [勇气] 达到 75 时, 获得 [多重打击] 1",
+        "effect": "[多重攻击] 1. [转移] 永久获得 [英勇] 1. [英勇] 达到 75 时, 获得 [多重攻击] 1",
       },
     ]
   },

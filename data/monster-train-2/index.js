@@ -14,6 +14,24 @@ import * as Upgrades from "./upgrades.js"
 
 import { __log_data } from "../../script/util.js"
 
+function getTerms(terms, effect) {
+  if (!effect || !terms) { return; }
+
+  const regex = /\[(.*?)\]/g;
+  let term = "";
+  let termData = undefined;
+  let match = undefined;
+  while (match = regex.exec(effect)) {
+    term = match[1];
+    if (!term || terms.has(term)) { continue; }
+    termData = MT_DATA.get(term);
+    if (!termData) { console.error("[" + term + "] 的数据未配置, 请在 terms.js 中配置"); continue; }
+    if (!termData.effect || termData.effect == "-") { continue; }
+    terms.set(term, termData);
+    getTerms(terms, termData.effect);
+  }
+}
+
 // 因为目前只有几百条数据, 这里没有太注重效率
 // 如果数据量非常大, 可以加几层 Map
 export const MT_DATA = [
@@ -73,11 +91,43 @@ export const MT_DATA = [
       group.UPGRADES.map(item => accumulator.set(item.name, item));
       __log_data("获取数据 UPGRADES", accumulator);
     }
+    if (group.PATHS) {
+      group.PATHS.map(item => {
+        if (!item.champion) {
+          console.error("path data don't have champion:");
+          console.log(item);
+          return;
+        }
+
+        const championData = accumulator.get(item.champion);
+        if (!championData) {
+          console.error("can't find data of champion [" + item.champion + "]");
+          return;
+        }
+        if (!championData.paths) { championData.paths = []; }
+        championData.paths.push(item);
+      });
+      __log_data("获取数据 PATHS", accumulator);
+    }
     return accumulator;
   }, new Map());
 
 MT_DATA.forEach((item) => {
-  if (!item.effect) { return; }
-  // text 属性是为了搜索用的时候避免方括号造成干扰, 在这里去掉 [ 和 ]
-  item.text = item.effect.replace(/\[\]/g, '');
-})
+  const terms = new Map();
+  item.terms = terms;
+
+  if (item.effect) {
+    // text 属性是为了搜索用的时候避免方括号造成干扰, 在这里去掉 [ 和 ]
+    item.text = item.effect.replace(/[\[\]]/g, '');
+    getTerms(terms, item.effect);
+  }
+  if (!Array.isArray(item.paths)) { return; }
+  item.paths.forEach(pathData => {
+    if (!pathData.path || !Array.isArray(pathData.path)) { return; }
+    pathData.path.forEach((step) => {
+      getTerms(terms, step.effect);
+    });
+  })
+});
+
+__log_data("数据加载完成", MT_DATA);
