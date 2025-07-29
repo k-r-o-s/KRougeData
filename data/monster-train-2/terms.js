@@ -626,14 +626,6 @@ export const TERMS = [
     "effect": "[牺牲]. 对前排敌方单位造成 50 点伤害",
   },
   {
-    "name": "剪刀手",
-    "type": "嫁接装备",
-    "cost": "0",
-    "attack": 9,
-    "health": 0,
-    "effect": "",
-  },
-  {
     "name": "复活",
     "type": "增益",
     "effect": "当带有 [复活] 的单位被击杀时, 将以 1 [生命值] 复活, 并失去 1 层 [复活]",
@@ -642,14 +634,6 @@ export const TERMS = [
     "name": "嫁接",
     "type": "特性",
     "effect": "该单位嫁接了装备, 在其死亡时, 装备会被切除并加入手牌",
-  },
-  {
-    "name": "双刃臂",
-    "type": "嫁接装备",
-    "cost": "1",
-    "attack": 10,
-    "health": 0,
-    "effect": "[多重攻击] 1",
   },
   {
     "name": "能力: 钩手",
@@ -680,30 +664,7 @@ export const TERMS = [
     "type": "触发",
     "effect": "该单位穿戴装备时触发",
   },
-  {
-    "name": "尖刺皮肤",
-    "type": "嫁接装备",
-    "cost": "1",
-    "attack": 0,
-    "health": 10,
-    "effect": "[复仇]: 获得 [尖刺] 3",
-  },
-  {
-    "name": "吸血鬼之牙",
-    "type": "嫁接装备",
-    "cost": "1",
-    "attack": 15,
-    "health": 0,
-    "effect": "[吸血] 1. [结算]: 获得 [吸血] 1",
-  },
-  {
-    "name": "扭曲脊背",
-    "type": "嫁接装备",
-    "cost": "1",
-    "attack": 15,
-    "health": 0,
-    "effect": "[践踏]. [攻击]: 获得 [狂怒] 2",
-  },
+  
   {
     "name": "复生",
     "type": "触发",

@@ -178,6 +178,9 @@ export class ItemCard extends HTMLElement {
           case "法术":
             html += `<div class="term-summon">`;
             break;
+          case "装备":
+            html += `<div class="term-summon">`;
+            break;
           default:
             console.error('无法显示的词条: [' + item.name + ']', item);
             return;
@@ -196,6 +199,14 @@ export class ItemCard extends HTMLElement {
           html += `<p class="term-title">添加法术</p>
           <p class="term-effect">${item.name} ${item.cost}${this.#iconHtml('余烬')}</p>
           <p class="term-effect">${item.type}</p>
+          <p class="term-effect">${this.#effectToHtml(item.effect)}</p>
+          </div>`;
+        }
+        else if (item.type == "装备") {
+          html += `<p class="term-title">嫁接装备</p>
+          <p class="term-effect">${item.name} ${item.cost}${this.#iconHtml('余烬')}</p>
+          <p class="term-effect">${item.type}</p>
+          <p class="term-effect">${item.attack || 0}${this.#iconHtml('攻击力')}${item.health || 0}${this.#iconHtml('生命值')}</p>
           <p class="term-effect">${this.#effectToHtml(item.effect)}</p>
           </div>`;
         }

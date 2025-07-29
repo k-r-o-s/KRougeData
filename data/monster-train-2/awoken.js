@@ -30,7 +30,7 @@ export const CHAMPIONS = [
     "size": 3,
     "attack": 5,
     "health": 30,
-    "description": "菲尔是流放者中才华横溢且足智多谋的指挥官，她发誓要将天堂从她哥哥的暴政中解放出来。然而，她曾受的心伤能否痊愈，还是未知之数",
+    "description": "",
   },
 ];
 // 觉者 单位

@@ -16,7 +16,7 @@ export const CHAMPIONS = [
     "size": 2,
     "attack": 5,
     "health": 5,
-    "description": "菲尔是流放者中才华横溢且足智多谋的指挥官，她发誓要将天堂从她哥哥的暴政中解放出来。然而，她曾受的心伤能否痊愈，还是未知之数",
+    "description": "",
   },
   {
     "name": "奥莱奇",
@@ -30,7 +30,7 @@ export const CHAMPIONS = [
     "size": 2,
     "attack": 0,
     "health": 5,
-    "description": "菲尔是流放者中才华横溢且足智多谋的指挥官，她发誓要将天堂从她哥哥的暴政中解放出来。然而，她曾受的心伤能否痊愈，还是未知之数",
+    "description": "",
   },
 ];
 // 拉撒路联盟 单位
@@ -485,7 +485,7 @@ export const EQUIPMENTS = [
     "rarity": "稀有",
     "cost": "1",
     "attack": 10,
-    "description": "[多重攻击] 1",
+    "effect": "[多重攻击] 1",
   },
   {
     "name": "器官采集器",
@@ -516,7 +516,7 @@ export const EQUIPMENTS = [
     "rarity": "高级",
     "cost": "1",
     "health": 10,
-    "description": "[复仇]: 获得 [尖刺] 3",
+    "effect": "[复仇]: 获得 [尖刺] 3",
   },
   {
     "name": "扭曲脊背",
@@ -526,7 +526,7 @@ export const EQUIPMENTS = [
     "rarity": "普通",
     "cost": "1",
     "attack": 15,
-    "description": "[践踏]. [攻击]: 获得 [狂怒] 2",
+    "effect": "[践踏]. [攻击]: 获得 [狂怒] 2",
   },
   {
     "name": "吸血鬼之牙",
@@ -536,7 +536,7 @@ export const EQUIPMENTS = [
     "rarity": "普通",
     "cost": "1",
     "attack": 15,
-    "description": "[吸血] 1. [结算]: 获得 [吸血] 1",
+    "effect": "[吸血] 1. [结算]: 获得 [吸血] 1",
   },
 ];
 // 拉撒路联盟 房间

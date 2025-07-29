@@ -108,7 +108,7 @@ export const UNITS = [
     "size": 1,
     "attack": 2,
     "health": 2,
-    "description": "舞蹈是一首诗, 每一次杀戮都是一段舞步"
+    "description": ""
   },
   {
     "name": "朋克吉他手",
@@ -123,7 +123,7 @@ export const UNITS = [
     "size": 1,
     "attack": 2,
     "health": 2,
-    "description": "舞蹈是一首诗, 每一次杀戮都是一段舞步"
+    "description": ""
   },
   {
     "name": "坚毅十字军",
@@ -138,7 +138,7 @@ export const UNITS = [
     "size": 2,
     "attack": 5,
     "health": 30,
-    "description": "舞蹈是一首诗, 每一次杀戮都是一段舞步"
+    "description": ""
   },
   {
     "name": "持剑侍女",
@@ -153,7 +153,7 @@ export const UNITS = [
     "size": 2,
     "attack": 10,
     "health": 20,
-    "description": "舞蹈是一首诗, 每一次杀戮都是一段舞步"
+    "description": ""
   },
   {
     "name": "林莺号手",
@@ -168,7 +168,7 @@ export const UNITS = [
     "size": 1,
     "attack": 2,
     "health": 2,
-    "description": "舞蹈是一首诗, 每一次杀戮都是一段舞步"
+    "description": ""
   },
   {
     "name": "复仇者",
@@ -183,7 +183,7 @@ export const UNITS = [
     "size": 2,
     "attack": 20,
     "health": 40,
-    "description": "舞蹈是一首诗, 每一次杀戮都是一段舞步"
+    "description": ""
   },
   {
     "name": "放火者",
@@ -198,7 +198,7 @@ export const UNITS = [
     "size": 2,
     "attack": 15,
     "health": 30,
-    "description": "舞蹈是一首诗, 每一次杀戮都是一段舞步"
+    "description": ""
   },
   {
     "name": "军团守卫",
@@ -213,7 +213,7 @@ export const UNITS = [
     "size": 3,
     "attack": 25,
     "health": 60,
-    "description": "舞蹈是一首诗, 每一次杀戮都是一段舞步"
+    "description": ""
   },
   {
     "name": "死亡金属竖琴手",
@@ -228,7 +228,7 @@ export const UNITS = [
     "size": 1,
     "attack": 2,
     "health": 2,
-    "description": "舞蹈是一首诗, 每一次杀戮都是一段舞步"
+    "description": ""
   },
 ];
 // 流放者 法术

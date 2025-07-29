@@ -16,7 +16,7 @@ export const CHAMPIONS = [
     "size": 3,
     "attack": 10,
     "health": 20,
-    "description": "吉尔达女士是流放者中才华横溢且足智多谋的指挥官，她发誓要将天堂从她哥哥的暴政中解放出来。然而，她曾受的心伤能否痊愈，还是未知之数",
+    "description": "",
   },
   {
     "name": "菲尼克斯大人",
@@ -30,7 +30,7 @@ export const CHAMPIONS = [
     "size": 3,
     "attack": 15,
     "health": 20,
-    "description": "吉尔达女士是流放者中才华横溢且足智多谋的指挥官，她发誓要将天堂从她哥哥的暴政中解放出来。然而，她曾受的心伤能否痊愈，还是未知之数",
+    "description": "",
   },
 ];
 // 薪龙族 单位
