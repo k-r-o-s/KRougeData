@@ -6,6 +6,7 @@ template.innerHTML = `
       <span class="inline-image-wrapper">
         <img src="">
       </span><span class="title-text"></span>
+      <span class="title-tooltip fading">英文名已复制到剪切板</span>
     </p>
     <div class="card-basic-info">
       <item-card id="card" src="../../image/cards/不朽交易.webp" class=""></item-card>
@@ -61,6 +62,8 @@ export class CardDetails extends HTMLElement {
     linkElem = document.createElement('style');
     linkElem.textContent = `
       .card-title {
+        position: relative;
+
         width: 100%;
         background-color: var(--krs-main-bgcolor-dark);
         color: white;
@@ -75,11 +78,20 @@ export class CardDetails extends HTMLElement {
       .inline-image-wrapper {
         width: 4em;
       }
+      .title-tooltip {
+        font-size: 14px;
+        color: black;
+        position: absolute;
+        top: -30px;
+        z-index: 1;
+        opacity: 0;
+      }
+      .fading {
+        transition: opacity 4s ease-in;
+      }
     `;
     this.shadowRoot.appendChild(linkElem);
 
-
-    // 复制 template 的内容并添加到 Shadow DOM
     const content = template.content.cloneNode(true);
     shadowRoot.appendChild(content);
 
@@ -88,6 +100,18 @@ export class CardDetails extends HTMLElement {
       radio.addEventListener('change', () => {
         this.#onTabSelected(id);
       });
+    });
+
+    const title = shadowRoot.querySelector('.title-text');
+    const titleTooltip = shadowRoot.querySelector('.title-tooltip');
+    title.addEventListener('click', () => {
+      titleTooltip.classList.remove('fading');
+      titleTooltip.style.opacity = 1;
+      navigator.clipboard.writeText(title.textContent);
+      setTimeout(()=> {
+        titleTooltip.classList.add('fading');
+        titleTooltip.style.opacity = 0;
+      }, 10);
     });
   }
 
