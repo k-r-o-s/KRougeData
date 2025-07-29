@@ -27,3 +27,12 @@ export function __check_entities(items) {
   }
   return Array.from(entitiesNotFound).sort();
 }
+
+export function createCssLink(cssUrl) {
+  const linkElem = document.createElement('link');
+  linkElem.setAttribute('rel', 'stylesheet');
+  const styleUrl = new URL(cssUrl, import.meta.url);
+  linkElem.setAttribute('href', styleUrl.href);
+
+  return linkElem;
+}

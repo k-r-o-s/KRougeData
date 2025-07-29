@@ -31,8 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('dblclick', () => { doSearch(); })
   });
 
+  const dlg = document.querySelector('#card-detail-dlg');
+  dlg.addEventListener('click', (e) => {
+    // 检查点击事件的目标是否是 dialog 元素本身
+    // 这意味着点击发生在 dialog 元素的 padding/border 区域，
+    // 而不是 dialog 内部的任何内容元素上。
+    if (e.target === dlg) {
+      dlg.close();
+    }
+  });
   doSearch();
 });
+
 function loadSavedQuery() {
   const queryString = localStorage.getItem('queryState');
   if (!queryString) { return; }
@@ -44,6 +54,7 @@ function loadSavedQuery() {
     console.error("query string: [" + queryString + "] is not valid");
   }
 }
+
 function doSearch() {
   if (animationFrameId) {
     cancelAnimationFrame(animationFrameId);
@@ -84,7 +95,7 @@ function doSearch() {
     // 如果搜索字符串为空, 即不需要通过内容过滤
     if (!queryText) {
       found = true;
-    } 
+    }
     // 还没找到的话, 在 name 字段查找
     if (!found && item.name && item.name.includes(queryText)) {
       found = true;
@@ -121,6 +132,7 @@ function doSearch() {
     });
   }
 }
+
 function onCardMouseEnter(e) {
   ztooltip.innerHTML = e.target.termsHtml;
 
@@ -143,9 +155,11 @@ function onCardMouseEnter(e) {
   }
   ztooltip.style.visibility = 'visible';
 }
+
 function onCardMouseLeave(e) {
   ztooltip.style.visibility = 'hidden';
 }
+
 function createCardList(result) {
   function createCard(item, animating) {
     // <item-card src="image/cards/不朽交易.webp" class=""></item-card>
@@ -166,6 +180,7 @@ function createCardList(result) {
     card.addEventListener('mouseenter', onCardMouseEnter);
     card.addEventListener('mouseleave', onCardMouseLeave);
     card.onAdded(animating);
+    card.onClickHandler = () => { openCardDetailDlg(card.item); }
 
     return card;
   }
@@ -200,4 +215,11 @@ function createCardList(result) {
     }
     animationFrameId = requestAnimationFrame(createCardWithAnimation);
   }
+}
+
+function openCardDetailDlg(item) {
+  const dlg = document.querySelector('#card-detail-dlg');
+  const detail = dlg.querySelector("card-details");
+  detail.item = item;
+  dlg.showModal();
 }

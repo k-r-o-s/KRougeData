@@ -1,0 +1,37 @@
+.inline-image-wrapper {
+  /* relative 很重要, 这样图片的 absolute 定位才能起作用 */
+  position: relative;
+  display: inline-block;
+  /* 确保它在文本流中占据一个位置 */
+  /* 宽度可以设为 1em 或更小，只占据图片实际在行内“站位”的宽度 */
+  width: 1.2em;
+  /* 确保这个 wrapper 不会撑开行高，让它的高度与文本基线对齐 */
+  height: 1em;
+  vertical-align: middle;
+  /* 或者 baseline, text-bottom */
+  overflow: visible;
+  /* 确保内部图片可以溢出 */
+}
+
+.inline-image-wrapper img {
+  /* 关键：将图片设置为绝对定位 */
+  position: absolute;
+  width: auto;
+  /* 保持比例 */
+  /* 设定你希望图片显示的高度，这里设置为父元素行高的 1.6 倍 */
+  height: calc(1em * 1.6);
+
+  /* 根据 vertical-align: middle 的效果调整 top */
+  /* top: 50% 将图片的顶部对齐到 wrapper 的中心线 */
+  /* transform: translateY(-50%) 将图片自身向上移动其高度的一半，实现垂直居中 */
+  top: 50%;
+  transform: translateY(-50%) translateX(-3px);
+
+  /* 调整 left/right 来控制水平位置 */
+  /* 如果 wrapper width 为 1em，left: 0; 意味着图片从 wrapper 左侧开始 */
+  left: 0;
+
+  /* 确保图片层级在文字上方 (可选，通常不需要) */
+  z-index: 1;
+}
+

@@ -8,3 +8,14 @@ item-card img {
   /* 图片高度填充 div 高度 */
   margin: 6px auto;
 }
+
+.dialog-content {
+  width: 800px;
+  margin: 10px auto;
+  background-color: var(--krs-main-bgcolor);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dialog-content div {
+  margin: 0;
+}

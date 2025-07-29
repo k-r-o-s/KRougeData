@@ -1,0 +1,29 @@
+@import "../../css/default.css";
+@import "./style.css";
+
+.text-line {
+  background-color: #e0f7fa;
+  /* 用于可视化行高背景 */
+  padding: 5px 0;
+  margin-bottom: 10px;
+  /* 关键：设置 position: relative; 让内部的绝对定位图片参照它 */
+  /* overflow: hidden; 如果图片超出容器边界则隐藏，这里通常不设 */
+}
+
+/* 另一个示例，图片稍微向下溢出 */
+.inline-image-wrapper.down img {
+  /* 将图片底部对齐到 wrapper 的底部，然后让其向上溢出 */
+  bottom: 0;
+  top: auto;
+  /* 重置 top */
+  transform: none;
+  /* 重置 transform */
+  height: calc(1em * 1.8);
+  /* 更高一点 */
+}
+
+.note {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 20px;
+}

@@ -64,3 +64,18 @@ search-tag {
   box-sizing: border-box;
   line-height: 1.8;
 }
+
+/***************************************************************************/
+dialog {
+  min-width: 650px;
+  max-height: 90vh;
+}
+.dialog-content {
+  width: 800px;
+  margin: 10px auto;
+  background-color: var(--krs-main-bgcolor);
+}
+
+.dialog-content div {
+  margin: 0;
+}

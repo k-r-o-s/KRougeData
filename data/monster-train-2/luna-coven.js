@@ -581,7 +581,7 @@ export const ARTIFACTS = [
 
 export const PATHS = [
   {
-    "name": "神秘之锤 ",
+    "name": "神秘之锤",
     "champion": "阿杜恩",
     "type": "path",
     "path": [

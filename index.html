@@ -22,6 +22,8 @@
   <script type="module" src="./script/search-tag.js"></script>
   <!-- 控件: 整个查询区 -->
   <script type="module" src="./script/search-panel.js"></script>
+  <!-- 控件: 卡片详情对话框 -->
+  <script type="module" src="./script/card-detail-dialog.js"></script>
   <!-- 辅助工具类 -->
   <script type="module" src="./script/util.js"></script>
   <!-- DOM 加载完成后的事件处理 -->
@@ -52,7 +54,9 @@
   <div id="z-tooltip" style="position: fixed; pointer-events: none;"></div>
 
   <!-- 模态对话框 -->
-  <dialog id=""></dialog>
+  <dialog id="card-detail-dlg">
+    <card-details class="dialog-content"></card-details>
+  </dialog>
 </body>
 
 </html>

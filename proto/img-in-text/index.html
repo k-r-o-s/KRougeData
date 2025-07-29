@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字行中的图片</title>
+    <link rel="stylesheet" href="./_style.css">
+</head>
+<body>
+
+    <h2>文字行中的图片</h2>
+    <h4>图片溢出行高而不撑开文字行</h4>
+
+    <p class="text-line">
+        这是一行普通的文字，用来展示其默认的行高效果。你可以看到背景色完美地填充了行高区域。
+    </p>
+
+    <p class="text-line">
+        这是包含一个
+        <span class="inline-image-wrapper">
+            <img src="../../image/other/余烬石.webp" alt="😁">
+        </span>
+        图标的文字，这个图标的高度设计为**高于行高**，但它**不会撑开当前文字行**。
+        文字的背景色仍然保持其正常的行高范围，图标仿佛“浮”在文字上方。
+    </p>
+
+    <p class="text-line">
+        再来一个，这次让图标
+        <span class="inline-image-wrapper down">
+            <img src="../../image/other/余烬石.webp" alt="🌟">
+        </span>
+        稍微向下溢出多一点。这样处理可以实现很多有趣的排版效果。
+    </p>
+
+    <div class="note">
+        **注意：** 为了更直观地看到行高未被撑开，这里为段落添加了背景色。
+        图片是通过 **绝对定位** 脱离了文档流，所以不会影响其父元素的布局，但它仍然是其父元素的视觉内容一部分。
+        `inline-image-wrapper` 这个 `<span>` 元素会占据 `1em` 的水平空间和 `1em` 的垂直空间，
+        而真正的图片则在这个 `<span>` 内部通过绝对定位进行偏移，从而实现“溢出”效果。
+    </div>
+
+</body>
+</html>

@@ -1,7 +1,9 @@
 import { MT_DATA } from "../data/monster-train-2/index.js";
 
 function CardClickedHandler() {
-  alert('Custom Element 按钮被点击了!');
+  if (typeof this._onClickHandler == 'function') {
+    this._onClickHandler();
+  }
 }
 
 const template = document.createElement('template');
@@ -101,6 +103,11 @@ export class ItemCard extends HTMLElement {
       this.image.classList.add("card-img-normal");
     }
   }
+
+  set onClickHandler(handler) {
+    this._onClickHandler = handler;
+  }
+
   get item() {
     return this._item;
   }

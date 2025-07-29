@@ -6,7 +6,8 @@
     --krs-button-face-color-checked: #534827;
     --krs-button-face-color-hover: #b8a164;
     --krs-button-border-color: #bbbbbb;
-    --krs-card-border-color: #dac78c;;
+    --krs-card-border-color: #dac78c;
+    ;
     --krs-card-bgcolor: #e2d3bd;
 
     /* 卡牌, 神器等卡片的显示尺寸 */
@@ -17,13 +18,44 @@
     --krs-term-width: 360px;
 }
 
-header, main, footer, div, p, img {
+header,
+main,
+footer,
+div,
+p,
+img {
     box-sizing: border-box;
 }
+
 hr {
-    border: none; /* 移除浏览器默认的边框 */
-    height: 1px;  /* 设置线条的粗细（高度）*/
-    background-color: #ccc; /* 设置线条的颜色 */
-    margin: 8px 0; /* 控制线条上下与周围元素的间距 */
-    width: 100%; /* 默认线条宽度与父容器相同 */
+    border: none;
+    /* 移除浏览器默认的边框 */
+    height: 1px;
+    /* 设置线条的粗细（高度）*/
+    background-color: #ccc;
+    /* 设置线条的颜色 */
+    margin: 8px 0;
+    /* 控制线条上下与周围元素的间距 */
+    width: 100%;
+    /* 默认线条宽度与父容器相同 */
+}
+
+dialog {
+    box-sizing: border-box;
+    background-color: var(--krs-main-bgcolor);
+    border: none;
+    /* 多数情况下，用阴影替代边框 */
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+}
+
+dialog:focus-visible {
+  outline: 2px solid var(--krs-main-bgcolor-dark);
+  outline-offset: 2px;     /* 使边框离元素远一点，不遮盖 */
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6); /* 半透明黑色 */
+  backdrop-filter: blur(4px); /* 模糊背景 */
 }
