@@ -224,7 +224,7 @@ export const UNITS = [
     "clan": "月巫团",
     "rarity": "高级",
     "cost": "2",
-    "effect": "[结算]: 若月相为 [新月], 获得 [生命值] 15 和 [攻击力] 10",
+    "effect": "[结算]: 若月相为新月, 获得 [生命值] 15 和 [攻击力] 10",
     "banner-unit": true,
     "size": 3,
     "attack": 15,
@@ -301,7 +301,7 @@ export const SPELLS = [
     "clan": "月巫团",
     "rarity": "高级",
     "cost": "1",
-    "effect": "[消耗]. [月相变化] 至 [新月]. 使所有友方单位获得 [攻击力] 5 和 [潜行] 1",
+    "effect": "[消耗]. [月相变化] 至新月. 使所有友方单位获得 [攻击力] 5 和 [潜行] 1",
     "description": ""
   },
   {
@@ -540,7 +540,7 @@ export const ARTIFACTS = [
     "english-name": "Lunar Lantern",
     "type": "神器",
     "clan": "月巫团",
-    "effect": "[满月] 期间, 月神女单位获得 [攻击力] 20. [新月] 期间, 寂静者单位获得 [攻击力] 20",
+    "effect": "满月期间, 月神女单位获得 [攻击力] 20. 新月期间, 寂静者单位获得 [攻击力] 20",
   },
   {
     "name": "月之石",
@@ -568,7 +568,7 @@ export const ARTIFACTS = [
     "english-name": "Silent Sigil",
     "type": "神器",
     "clan": "月巫团",
-    "effect": "当月相变化为 [新月] 时, 寂静者单位获得 [护甲] 10",
+    "effect": "当月相变化为新月时, 寂静者单位获得 [护甲] 10",
   },
   {
     "name": "星尘点心",

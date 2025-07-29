@@ -4,7 +4,7 @@
   display: inline-block;
   /* 确保它在文本流中占据一个位置 */
   /* 宽度可以设为 1em 或更小，只占据图片实际在行内“站位”的宽度 */
-  width: 1.2em;
+  width: 1.4em;
   /* 确保这个 wrapper 不会撑开行高，让它的高度与文本基线对齐 */
   height: 1em;
   vertical-align: middle;
@@ -37,4 +37,25 @@
 
 .bold-span {
   font-weight: bold;
+}
+.link-span {
+  position: relative; /* 为伪元素定位提供参考 */
+  display: inline-block; /* 确保元素可以有宽度和高度 */
+}
+
+.link-span::after {
+  content: ''; /* 伪元素必须有 content 属性 */
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* 调整下划线与文字的垂直位置 */
+  width: 100%; /* 下划线宽度与父元素相同 */
+  height: 1px; /* 下划线粗细 */
+  background-color: var(--krs-main-bgcolor-dark); /* 下划线颜色 */
+  /* 可以添加过渡效果 */
+  transition: width 0.3s ease-in-out;
+}
+
+/* 鼠标悬停时下划线动画效果 */
+.link-span:hover::after {
+  width: 0; 
 }

@@ -11,6 +11,7 @@ import * as Umbra from "./umbra.js"
 import * as Underlegion from "./underlegion.js"
 import * as Terms from "./terms.js"
 import * as Upgrades from "./upgrades.js"
+import * as Notes from "./notes.js"
 
 import { __log_data } from "../../script/util.js"
 
@@ -23,9 +24,6 @@ function getTerms(terms, effect) {
   let match = undefined;
   while (match = regex.exec(effect)) {
     term = match[1];
-    if (term == '蘑菇人') {
-      // debugger;
-    }
     if (!term || terms.has(term)) { continue; }
     termData = MT_DATA.get(term);
     if (!termData) { console.error("[" + term + "] 的数据未配置, 请在 terms.js 中配置"); continue; }
@@ -35,20 +33,22 @@ function getTerms(terms, effect) {
   }
 }
 
+const OBJ_TYPES_WITH_TIP = ["单位", "法术", "神器", "装备", "房间", "祸患", "天灾"];
+
 // 因为目前只有几百条数据, 这里没有太注重效率
 // 如果数据量非常大, 可以加几层 Map
 export const MT_DATA = [
-  Awoken,
   Banished,
-  Clanless,
-  Hellhorned,
-  LazarusLeague,
-  LunaCoven,
-  MeltingRemnants,
   PyreBorne,
+  LunaCoven,
+  Underlegion,
+  LazarusLeague,
+  Hellhorned,
+  Awoken,
   StygianGuard,
   Umbra,
-  Underlegion,
+  MeltingRemnants,
+  Clanless,
   Terms,
   Upgrades,
 ].reduce(
@@ -136,4 +136,18 @@ MT_DATA.forEach((item) => {
   })
 });
 
+Notes.NOTES.map(tip => {
+  const regex = /\[(.*?)\]/g;
+  let term = "";
+  let termData;
+  let match;
+  while (match = regex.exec(tip)) {
+    term = match[1];
+    if (!term) { continue; }
+    termData = MT_DATA.get(term);
+    if (!termData || !OBJ_TYPES_WITH_TIP.includes(termData.type)) { continue; }
+    if (!termData.tips) { termData.tips = []; }
+    termData.tips.push(tip);
+  }
+});
 __log_data("数据加载完成", MT_DATA);

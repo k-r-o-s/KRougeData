@@ -1,4 +1,6 @@
 import { createCssLink } from './util.js';
+import { ItemCard } from './item-card.js';
+import { MT_DATA } from '../data/monster-train-2/index.js';
 
 const template = document.createElement('template');
 template.innerHTML = `
@@ -31,8 +33,12 @@ template.innerHTML = `
       </div>
     </div>
     <hr>
-    <div class="card-notes"></div>`;
+    <div class="card-notes">
+      <ul class="card-note-list"></ul>
+    </div>
+    <div class="dlg-tooltip"></div>`;
 
+let tooltip;
 export class CardDetails extends HTMLElement {
 
   static TAG_NAME = 'card-details';
@@ -59,39 +65,6 @@ export class CardDetails extends HTMLElement {
     linkElem = createCssLink('../proto/card-detail-dialog/style.css');
     this.shadowRoot.appendChild(linkElem);
 
-    linkElem = document.createElement('style');
-    linkElem.textContent = `
-      .card-title {
-        position: relative;
-
-        width: 100%;
-        background-color: var(--krs-main-bgcolor-dark);
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        padding: 4px;
-      }
-      .card-title img {
-        width: 70px;
-        height: auto;
-      }
-      .card-title .inline-image-wrapper {
-        width: 4em;
-      }
-      .title-tooltip {
-        font-size: 14px;
-        color: black;
-        position: absolute;
-        top: -30px;
-        z-index: 1;
-        opacity: 0;
-      }
-      .fading {
-        transition: opacity 4s ease-in;
-      }
-    `;
-    this.shadowRoot.appendChild(linkElem);
-
     const content = template.content.cloneNode(true);
     shadowRoot.appendChild(content);
 
@@ -108,11 +81,13 @@ export class CardDetails extends HTMLElement {
       titleTooltip.classList.remove('fading');
       titleTooltip.style.opacity = 1;
       navigator.clipboard.writeText(title.textContent);
-      setTimeout(()=> {
+      setTimeout(() => {
         titleTooltip.classList.add('fading');
         titleTooltip.style.opacity = 0;
       }, 10);
     });
+
+    tooltip = shadowRoot.querySelector('.dlg-tooltip');
   }
 
   // 生命周期回调函数
@@ -171,6 +146,34 @@ export class CardDetails extends HTMLElement {
       championPathDiv.style.display = 'none';
       championPathHr.style.display = 'none';
     }
+    const noteList = this.shadowRoot.querySelector('.card-note-list');
+    let html = '';
+    if (value.tips) {
+      value.tips.forEach(tip => {
+        html += `<li>`;
+        html += tip.replace(/\[(.*?)\]/g, (match, content) => {
+          // 替换成图标
+          if (['生命值', '攻击力', '余烬', '部署阶段余烬', '金币', '容量', '龙族宝藏'].includes(content)) {
+            return ItemCard.iconHtml(content);
+          }
+          // 替换成粗体字
+          return `<span class="link-span">${content}</span>`;
+        });
+
+        html += `</li>`;
+      });
+    }
+    let links = noteList.querySelectorAll('.link-span');
+    links.forEach(link => {
+      link.removeEventListener('mouseenter', this.#onNoteMouseEnter);
+      link.removeEventListener('mouseleave', this.#onNoteMouseLeave);
+    });
+    noteList.innerHTML = html;
+    links = noteList.querySelectorAll('.link-span');
+    links.forEach(link => {
+      link.addEventListener('mouseenter', this.#onNoteMouseEnter);
+      link.addEventListener('mouseleave', this.#onNoteMouseLeave);
+    });
   }
   #onTabSelected(id) {
     if (!this._item || !this._item.paths) { return; }
@@ -185,6 +188,61 @@ export class CardDetails extends HTMLElement {
     const images = this.shadowRoot.querySelector('.tab-content').querySelectorAll('item-card');
     for (let i = 0; i < images.length; i++) {
       images[i].setAttribute('src', `/image/paths/${imgSrc + (i + 1)}.webp`);
+    }
+  }
+  #onNoteMouseEnter(e) {
+    if (!tooltip) { return; }
+    CardDetails.generateTooltip(e.target.textContent);
+
+    const linkRect = e.target.getBoundingClientRect();
+    const tooltipRect = tooltip.getBoundingClientRect();
+    let left = linkRect.left - (tooltipRect.width - linkRect.width) / 2;
+    if (left < 0) { left = 0; }
+    tooltip.style.left = left + "px";
+    tooltip.style.top = linkRect.top - tooltipRect.height + "px";
+    tooltip.style.visibility = 'visible';
+  }
+
+  #onNoteMouseLeave(e) {
+    if (!tooltip) { return; }
+    tooltip.style.visibility = 'hidden';
+  }
+  // 根据名字生成 html 字符串
+  // 如果是单位, 法术, 装备等, 生成对应的卡牌 html string
+  // 如果是词条, 生成词条的 html string
+  static generateTooltip(objName) {
+    const item = MT_DATA.get(objName);
+    if (!item) { return objName; }
+
+    let html = '';
+    let isCard = false;
+
+    // 如果是对象类型, 可以生成卡片
+    if (ItemCard.TYPES_WITH_CARD.includes(item.type)) {
+      switch (item.type) {
+        case "神器":
+          html = `<item-card src="/image/artifacts/${item.name}.webp"></item-card>`;
+          break;
+        case "升级石":
+          html = `<item-card src="/image/other/${item.name}.webp"></item-card>`;
+          break;
+        default:
+          html = `<item-card src="/image/cards/${item.name}.webp"></item-card>`;
+          break;
+      }
+      isCard = true;
+    }
+    // 如果是词条
+    else {
+      html = ItemCard.getTermHtml(item);
+    }
+
+    tooltip.innerHTML = html;
+    if (isCard) {
+      const card = tooltip.querySelector('item-card');
+      if (card) {
+        card.item = item;
+      }
     }
   }
 }

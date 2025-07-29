@@ -20,6 +20,7 @@ template.innerHTML = `
 export class ItemCard extends HTMLElement {
 
   static TAG_NAME = 'item-card'
+  static TYPES_WITH_CARD = ["召唤单位", "单位", "法术", "神器", "祸患", "天灾", "房间", "装备", "升级石"];
 
   constructor() {
     // 必须调用 super()
@@ -93,7 +94,7 @@ export class ItemCard extends HTMLElement {
       this.nameDiv.style.display = "block";
       this.effectArea.style.display = "block";
       this.nameDiv.textContent = value.name;
-      this.effectElement.innerHTML = this.#effectToHtml(value.effect);
+      this.effectElement.innerHTML = ItemCard.#effectToHtml(value.effect);
       this.image.classList.remove("card-img-normal");
       this.image.classList.add("card-img-small");
     } else {
@@ -104,7 +105,7 @@ export class ItemCard extends HTMLElement {
     }
   }
 
-  #effectToHtml(effect) {
+  static #effectToHtml(effect) {
     // 存在一个重名的词条 [复生], 其中一个意思是 复活时触发动作, 另一个是表示单位死亡后返回牌堆顶端
     // 所以为了方便初始, 词条库里把后者存储为 [永生] 加以区别
     let html = effect;
@@ -122,8 +123,8 @@ export class ItemCard extends HTMLElement {
     //   g：全局标志，确保替换所有匹配项而不仅仅是第一个。
     html = html.replace(/\[(.*?)\]/g, (match, content) => {
       // 替换成图标
-      if (['生命值', '攻击力', '余烬', '金币', '容量', '龙族宝藏'].includes(content)) {
-        return this.#iconHtml(content);
+      if (['生命值', '攻击力', '余烬', '部署阶段余烬', '金币', '容量', '龙族宝藏'].includes(content)) {
+        return ItemCard.iconHtml(content);
       }
       // 替换成粗体字
       return `<span class="bold-span">${content}</span>`;
@@ -132,7 +133,7 @@ export class ItemCard extends HTMLElement {
     return html;
   }
 
-  #iconHtml(iconName) {
+  static iconHtml(iconName) {
     return `<span class="inline-image-wrapper"><img src="/image/other/${iconName}.webp"></span>`;
   }
   set onClickHandler(handler) {
@@ -149,78 +150,100 @@ export class ItemCard extends HTMLElement {
     let html = "";
     if (this._item.terms) {
       this._item.terms.forEach(item => {
-        switch (item.type) {
-          case "基础":
-            html += `<div class="term-basic">`;
-            break;
-          case "能力":
-            html += `<div class="term-ability">`;
-            break;
-          case "触发":
-            html += `<div class="term-trigger">`;
-            break;
-          case "特性":
-            html += `<div class="term-feature">`;
-            break;
-          case "增益":
-            html += `<div class="term-buff">`;
-            break;
-          case "减益":
-            html += `<div class="term-debuff">`;
-            break;
-          case "属性":
-            html += `<div class="term-property">`;
-            break;
-          case "召唤单位":
-          case "单位":
-            html += `<div class="term-summon">`;
-            break;
-          case "法术":
-            html += `<div class="term-summon">`;
-            break;
-          case "装备":
-            html += `<div class="term-summon">`;
-            break;
-          default:
-            console.error('无法显示的词条: [' + item.name + ']', item);
-            return;
-        }
-        if (item.type == "召唤单位" || item.type == "单位") {
-          html += `<p class="term-title">召唤单位</p>
-          <p class="term-effect">${item.name} ${this.#iconHtml('容量').repeat(item.size)}</p>`;
-          if (item['unit-type']) {
-            html += `<p class="term-effect">${item['unit-type']}</p>`;
+        if (ItemCard.TYPES_WITH_CARD.includes(item.type)) {
+          html += `<div class="term-summon">`;
+          html += `<p class="term-title">${item.name}</p>`;
+          html += `<p class="term-effect">${item['unit-type'] ? item['unit-type'] : item.type}</p>`;
+          if (typeof item.size != 'undefined' || typeof item.cost != 'undefined'
+            || typeof item.attack != 'undefined' || typeof item.health != 'undefined') {
+            html += `<p class="term-effect">`;
+            if (item.attack || item.health) {
+              html += `${item.attack || 0} ${ItemCard.iconHtml('攻击力')} ${item.health || 0} ${ItemCard.iconHtml('生命值')}`;
+            }
+            if (typeof item.cost != 'undefined') {
+              html += ` ${item.cost} ${ItemCard.iconHtml('余烬')}`;
+            }
+            if (typeof item.size != 'undefined') {
+
+              html += ` ${item.size} ${ItemCard.iconHtml('容量')}`;
+            }
+            html += '</p>';
           }
-          html += `<p class="term-effect">${item.attack}${this.#iconHtml('攻击力')}${item.health}${this.#iconHtml('生命值')}</p>
-          <p class="term-effect">${this.#effectToHtml(item.effect)}</p>
-          </div>`;
-        }
-        else if (item.type == "法术") {
-          html += `<p class="term-title">添加法术</p>
-          <p class="term-effect">${item.name} ${item.cost}${this.#iconHtml('余烬')}</p>
-          <p class="term-effect">${item.type}</p>
-          <p class="term-effect">${this.#effectToHtml(item.effect)}</p>
-          </div>`;
-        }
-        else if (item.type == "装备") {
-          html += `<p class="term-title">嫁接装备</p>
-          <p class="term-effect">${item.name} ${item.cost}${this.#iconHtml('余烬')}</p>
-          <p class="term-effect">${item.type}</p>
-          <p class="term-effect">${item.attack || 0}${this.#iconHtml('攻击力')}${item.health || 0}${this.#iconHtml('生命值')}</p>
-          <p class="term-effect">${this.#effectToHtml(item.effect)}</p>
-          </div>`;
+          html += `<p class="term-effect">${ItemCard.#effectToHtml(item.effect)}</p></div>`;
         }
         else {
-          // 存在一个重名的词条 [复生], 其中一个意思是 复活时触发动作, 另一个是表示单位死亡后返回牌堆顶端
-          // 所以为了方便初始, 词条库里把后者存储为 [永生] 加以区别
-          const termName = item.name == "永生" ? "复生" : item.name;
-          html += `<p class="term-title">${termName}</p>
-          <p class="term-effect">${this.#effectToHtml(item.effect)}</p>
-          </div>`;
+          html += ItemCard.getTermHtml(item);
         }
       });
     }
     return html;
+  }
+
+  static getTermHtml(item) {
+    if (!item) { return ''; }
+    let html = '';
+
+    switch (item.type) {
+      case "基础":
+        html += `<div class="term-basic">`;
+        break;
+      case "能力":
+        html += `<div class="term-ability">`;
+        break;
+      case "触发":
+        html += `<div class="term-trigger">`;
+        break;
+      case "特性":
+        html += `<div class="term-feature">`;
+        break;
+      case "增益":
+        html += `<div class="term-buff">`;
+        break;
+      case "减益":
+        html += `<div class="term-debuff">`;
+        break;
+      case "属性":
+        html += `<div class="term-property">`;
+        break;
+      case "召唤单位":
+      case "单位":
+      case "法术":
+      case "祸患":
+      case "天灾":
+      case "房间":
+      case "装备":
+        html += `<div class="term-summon">`;
+        break;
+      default:
+        console.error('无法显示的词条: [' + item.name + ']', item);
+        return;
+    }
+
+    // 存在一个重名的词条 [复生], 其中一个意思是 复活时触发动作, 另一个是表示单位死亡后返回牌堆顶端
+    // 所以为了方便初始, 词条库里把后者存储为 [永生] 加以区别
+    const termName = item.name == "永生" ? "复生" : item.name;
+    html += `<p class="term-title">${termName}</p>
+          <p class="term-effect">${ItemCard.#effectToHtml(item.effect)}</p>
+          </div>`;
+
+    return html;
+  }
+  static createCard(item) {
+    // <item-card src="/image/cards/不朽交易.webp" class=""></item-card>
+    const card = document.createElement(ItemCard.TAG_NAME);
+    card.item = item;
+    switch (item.type) {
+      case "神器":
+        card.setAttribute("src", "/image/artifacts/" + item.name + ".webp");
+        break;
+      case "升级石":
+        card.setAttribute("src", "/image/other/" + item.name + ".webp");
+        break;
+      default:
+        card.setAttribute("src", "/image/cards/" + item.name + ".webp");
+        break;
+    }
+    return card;
   }
 }
 

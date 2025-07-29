@@ -1,5 +1,6 @@
 import { __DEBUG, __log_data } from './util.js'
 import { MT_DATA } from '../data/monster-train-2/index.js'
+import { ItemCard } from './item-card.js';
 
 let ztooltip = null;
 let leftPanel = null;
@@ -86,7 +87,7 @@ function doSearch() {
   MT_DATA.forEach((item) => {
     if (!query.clan.includes(item.clan)) { return; }
     if (!query.type.includes(item.type)) { return; }
-    if (!["神器", "升级石"].includes(item.type)) {
+    if (!["祸患", "天灾", "神器", "升级石"].includes(item.type)) {
       if (!query.rarity.includes(item.rarity)) { return; }
       if (!query.cost.includes(item.cost)) { return; }
     }
@@ -166,20 +167,7 @@ function onCardMouseLeave(e) {
 
 function createCardList(result) {
   function createCard(item, animating) {
-    // <item-card src="image/cards/不朽交易.webp" class=""></item-card>
-    const card = document.createElement('item-card');
-    card.item = item;
-    switch (item.type) {
-      case "神器":
-        card.setAttribute("src", "image/artifacts/" + item.name + ".webp");
-        break;
-      case "升级石":
-        card.setAttribute("src", "image/other/" + item.name + ".webp");
-        break;
-      default:
-        card.setAttribute("src", "image/cards/" + item.name + ".webp");
-        break;
-    }
+    const card = ItemCard.createCard(item);
 
     card.addEventListener('mouseenter', onCardMouseEnter);
     card.addEventListener('mouseleave', onCardMouseLeave);

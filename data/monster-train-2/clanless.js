@@ -96,9 +96,6 @@ export const UNITS = [
     "attack": 3,
     "health": 10,
     "description": "",
-    "tips":[
-      "配合 [永恒之光] 无敌",
-    ]
   },
 ]
 // 无氏族 法术
@@ -224,9 +221,6 @@ export const EQUIPMENTS = [
     "rarity": "稀有",
     "cost": "2",
     "effect": "[结算]. 若有可用的 [容量], 则获得 [容量] 1, [攻击力] 20 和 [生命值] 20",
-    "tips": [
-      "配合 [小石头] 无限生长且不消耗空间"
-    ]
   },
   {
     "name": "虚空武器",
@@ -594,7 +588,7 @@ export const ARTIFACTS = [
     "type": "神器",
     "clan": "无氏族",
     "celestial-alcove": true,
-    "effect": "薪火获得 25 最大生命值",
+    "effect": "薪火获得 25 [生命值]",
   },
   {
     "name": "搏击俱乐部模组",
