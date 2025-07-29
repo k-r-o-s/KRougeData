@@ -75,7 +75,7 @@ export class CardDetails extends HTMLElement {
         width: 70px;
         height: auto;
       }
-      .inline-image-wrapper {
+      .card-title .inline-image-wrapper {
         width: 4em;
       }
       .title-tooltip {

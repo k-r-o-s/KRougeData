@@ -1,4 +1,5 @@
-import { MT_DATA } from "../data/monster-train-2/index.js";
+
+import { createCssLink } from './util.js';
 
 function CardClickedHandler() {
   if (typeof this._onClickHandler == 'function') {
@@ -28,11 +29,10 @@ export class ItemCard extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
     // 创建 link 元素并添加到 shadowRoot
-    const linkElem = document.createElement('link');
-    linkElem.setAttribute('rel', 'stylesheet');
-
-    const styleUrl = new URL('../proto/item-card/style.css', import.meta.url);
-    linkElem.setAttribute('href', styleUrl.href);
+    let linkElem;
+    linkElem = createCssLink('../proto/item-card/style.css');
+    shadowRoot.appendChild(linkElem);
+    linkElem = createCssLink('../proto/img-in-text/style.css');
     shadowRoot.appendChild(linkElem);
 
     // 复制 template 的内容并添加到 Shadow DOM
@@ -93,7 +93,7 @@ export class ItemCard extends HTMLElement {
       this.nameDiv.style.display = "block";
       this.effectArea.style.display = "block";
       this.nameDiv.textContent = value.name;
-      this.effectElement.textContent = value.effect;
+      this.effectElement.innerHTML = this.#effectToHtml(value.effect);
       this.image.classList.remove("card-img-normal");
       this.image.classList.add("card-img-small");
     } else {
@@ -104,6 +104,37 @@ export class ItemCard extends HTMLElement {
     }
   }
 
+  #effectToHtml(effect) {
+    // 存在一个重名的词条 [复生], 其中一个意思是 复活时触发动作, 另一个是表示单位死亡后返回牌堆顶端
+    // 所以为了方便初始, 词条库里把后者存储为 [永生] 加以区别
+    let html = effect;
+
+    if (!html) { return ""; }
+    html = html.replaceAll('[永生]', '[复生]');
+
+    // 找到被中括号括起来的内容, 把它们根据情况替换成对应内容
+    // /\[(.*?)\]/g:
+    //   \[ 和 \]：匹配字面量的方括号。方括号在正则表达式中有特殊含义，所以需要用反斜杠转义。
+    //   (.*?)：这是一个捕获组。
+    //     .：匹配任何字符（除了换行符）。
+    //     *：匹配前一个字符零次或多次。
+    //     ?：使 * 成为非贪婪模式，确保它只匹配到最近的闭合方括号。
+    //   g：全局标志，确保替换所有匹配项而不仅仅是第一个。
+    html = html.replace(/\[(.*?)\]/g, (match, content) => {
+      // 替换成图标
+      if (['生命值', '攻击力', '余烬', '金币', '容量', '龙族宝藏'].includes(content)) {
+        return this.#iconHtml(content);
+      }
+      // 替换成粗体字
+      return `<span class="bold-span">${content}</span>`;
+    });
+
+    return html;
+  }
+
+  #iconHtml(iconName) {
+    return `<span class="inline-image-wrapper"><img src="/image/other/${iconName}.webp"></span>`;
+  }
   set onClickHandler(handler) {
     this._onClickHandler = handler;
   }
@@ -120,32 +151,62 @@ export class ItemCard extends HTMLElement {
       this._item.terms.forEach(item => {
         switch (item.type) {
           case "基础":
-            html += `<div class="term-basic">`
+            html += `<div class="term-basic">`;
             break;
           case "能力":
-            html += `<div class="term-ability">`
+            html += `<div class="term-ability">`;
             break;
           case "触发":
-            html += `<div class="term-trgger">`
+            html += `<div class="term-trigger">`;
             break;
           case "特性":
-            html += `<div class="term-feature">`
+            html += `<div class="term-feature">`;
             break;
           case "增益":
-            html += `<div class="term-buff">`
+            html += `<div class="term-buff">`;
             break;
           case "减益":
-            html += `<div class="term-debuff">`
+            html += `<div class="term-debuff">`;
             break;
           case "属性":
-            html += `<div class="term-property">`
+            html += `<div class="term-property">`;
             break;
-          default: // TODO: 生成单位 和 生成卡牌, 以及重复名字的词条: 复生
+          case "召唤单位":
+          case "单位":
+            html += `<div class="term-summon">`;
+            break;
+          case "法术":
+            html += `<div class="term-summon">`;
+            break;
+          default:
+            console.error('无法显示的词条: [' + item.name + ']', item);
             return;
         }
-        html += `<p class="term-title">${item.name}</p>
-          <p class="term-effect">${item.effect}</p>
+        if (item.type == "召唤单位" || item.type == "单位") {
+          html += `<p class="term-title">召唤单位</p>
+          <p class="term-effect">${item.name} ${this.#iconHtml('容量').repeat(item.size)}</p>`;
+          if (item['unit-type']) {
+            html += `<p class="term-effect">${item['unit-type']}</p>`;
+          }
+          html += `<p class="term-effect">${item.attack}${this.#iconHtml('攻击力')}${item.health}${this.#iconHtml('生命值')}</p>
+          <p class="term-effect">${this.#effectToHtml(item.effect)}</p>
           </div>`;
+        }
+        else if (item.type == "法术") {
+          html += `<p class="term-title">添加法术</p>
+          <p class="term-effect">${item.name} ${item.cost}${this.#iconHtml('余烬')}</p>
+          <p class="term-effect">${item.type}</p>
+          <p class="term-effect">${this.#effectToHtml(item.effect)}</p>
+          </div>`;
+        }
+        else {
+          // 存在一个重名的词条 [复生], 其中一个意思是 复活时触发动作, 另一个是表示单位死亡后返回牌堆顶端
+          // 所以为了方便初始, 词条库里把后者存储为 [永生] 加以区别
+          const termName = item.name == "永生" ? "复生" : item.name;
+          html += `<p class="term-title">${termName}</p>
+          <p class="term-effect">${this.#effectToHtml(item.effect)}</p>
+          </div>`;
+        }
       });
     }
     return html;

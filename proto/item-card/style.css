@@ -107,7 +107,7 @@
   padding: 4px;
 }
 
-.term-trgger {
+.term-trigger {
   background-color: #592378;
   width: var(--krs-term-width);
   word-wrap: break-word;
@@ -144,6 +144,15 @@
 }
 
 .term-property {
+  background-color: #2a2e2f;
+  width: var(--krs-term-width);
+  word-wrap: break-word;
+  border: 4px solid#6f787f;
+  margin: 2px;
+  padding: 4px;
+}
+
+.term-summon {
   background-color: #2a2e2f;
   width: var(--krs-term-width);
   word-wrap: break-word;

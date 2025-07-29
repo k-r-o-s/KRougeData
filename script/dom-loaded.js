@@ -104,6 +104,10 @@ function doSearch() {
     if (!found && item.text && item.text.includes(queryText)) {
       found = true;
     }
+    // 还没找到的话, 在 english-name 字段查找
+    if (!found && item["english-name"] && item["english-name"].includes(queryText)) {
+      found = true;
+    }
     // 还没找到的话, 在 terms 字段查找
     if (!found && item.terms && item.terms.has(queryText)) {
       found = true;

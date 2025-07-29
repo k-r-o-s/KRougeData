@@ -73,7 +73,7 @@ export const UNITS = [
     "clan": "熔尸",
     "rarity": "高级",
     "cost": "0",
-    "effect": "[复生]. [亡语]: 抽 1 张牌",
+    "effect": "[永生]. [亡语]: 抽 1 张牌",
     "banner-unit": false,
     "size": 1,
     "attack": 1,
@@ -420,7 +420,7 @@ export const SPELLS = [
     "clan": "熔尸",
     "rarity": "稀有",
     "cost": "1",
-    "effect": "[消耗]. 使一个友方单位获得 [复生]",
+    "effect": "[消耗]. 使一个友方单位获得 [永生]",
     "description": ""
   },
   {
@@ -590,7 +590,7 @@ export const ARTIFACTS = [
     "english-name": "Votive Key",
     "type": "神器",
     "clan": "熔尸",
-    "effect": "每回合打出的首个友方单位获得 [复生]",
+    "effect": "每回合打出的首个友方单位获得 [永生]",
   },
   {
     "name": "烛人阴燃者",
@@ -724,21 +724,21 @@ export const PATHS = [
         "attack": 5,
         "health": 1,
         "size": 1,
-        "effect": "[迅捷]. [复生]. [亡语]: +15 [攻击力], +1 [生命值]",
+        "effect": "[迅捷]. [永生]. [亡语]: +15 [攻击力], +1 [生命值]",
       },
       {
         "rank": 2,
        "attack": 5,
         "health": 1,
         "size": 1,
-        "effect": "[迅捷]. [复生]. [亡语]: +30 [攻击力], +2 [生命值]",
+        "effect": "[迅捷]. [永生]. [亡语]: +30 [攻击力], +2 [生命值]",
       },
       {
         "rank": 3,
         "attack": 5,
         "health": 1,
         "size": 1,
-        "effect": "[迅捷]. [复生]. [亡语]: +60 [攻击力], +3 [生命值]",
+        "effect": "[迅捷]. [永生]. [亡语]: +60 [攻击力], +3 [生命值]",
       },
     ]
   },

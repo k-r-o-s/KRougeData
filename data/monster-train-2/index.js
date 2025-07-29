@@ -23,10 +23,13 @@ function getTerms(terms, effect) {
   let match = undefined;
   while (match = regex.exec(effect)) {
     term = match[1];
+    if (term == '蘑菇人') {
+      // debugger;
+    }
     if (!term || terms.has(term)) { continue; }
     termData = MT_DATA.get(term);
     if (!termData) { console.error("[" + term + "] 的数据未配置, 请在 terms.js 中配置"); continue; }
-    if (!termData.effect || termData.effect == "-") { continue; }
+    if (termData.effect == "-") { continue; }
     terms.set(term, termData);
     getTerms(terms, termData.effect);
   }
@@ -118,7 +121,10 @@ MT_DATA.forEach((item) => {
 
   if (item.effect) {
     // text 属性是为了搜索用的时候避免方括号造成干扰, 在这里去掉 [ 和 ]
-    item.text = item.effect.replace(/[\[\]]/g, '');
+    item.text = item.effect.replace(/[\[\]]/g, '')
+    // 存在一个重名的词条 [复生], 其中一个意思是 复活时触发动作, 另一个是表示单位死亡后返回牌堆顶端
+    // 所以为了方便初始, 词条库里把后者存储为 [永生] 加以区别
+    item.text = item.text.replaceAll('永生', '复生');
     getTerms(terms, item.effect);
   }
   if (!Array.isArray(item.paths)) { return; }

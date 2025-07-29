@@ -80,7 +80,7 @@ export const UPGRADES = [
     "stone-type": "单位升级",
     "clan": "无氏族",
     "rarity": "高级",
-    "effect": "升级单位, 使其获得 [复生]",
+    "effect": "升级单位, 使其获得 [永生]",
   },
   {
     "name": "小石头",

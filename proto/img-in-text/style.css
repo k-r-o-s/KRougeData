@@ -35,3 +35,6 @@
   z-index: 1;
 }
 
+.bold-span {
+  font-weight: bold;
+}
