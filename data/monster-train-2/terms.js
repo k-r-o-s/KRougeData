@@ -448,6 +448,14 @@ export const TERMS = [
     "effect": "召唤 2 只 [微尘烛人] 并使它们获得此单位身上所有的升级和属性变化",
   },
   {
+    "name": "微尘烛人",
+    "type": "召唤单位",
+    "unit-type": "烛人",
+    "size": "1",
+    "attack": 2,
+    "health": 2,
+  },
+  {
     "name": "镀金龙蛋",
     "type": "召唤单位",
     "size": "1",

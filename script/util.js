@@ -1,9 +1,11 @@
 // 全局 DEBUG 模式开关
-export const __DEBUG = true;
+export const __DEBUG = false;
 
 // DEBUG 模式下打印数据
 export function __log_data(text, data) {
-  __DEBUG && console.log(text) || console.log(data);
+  if (!__DEBUG) { return; }
+  console.log(text);
+  console.log(data);
 }
 
 export function __check_entities(items) {

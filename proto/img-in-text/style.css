@@ -41,6 +41,7 @@
 .link-span {
   position: relative; /* 为伪元素定位提供参考 */
   display: inline-block; /* 确保元素可以有宽度和高度 */
+  cursor: pointer;
 }
 
 .link-span::after {

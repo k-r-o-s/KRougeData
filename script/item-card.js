@@ -237,7 +237,7 @@ export class ItemCard extends HTMLElement {
         card.setAttribute("src", "/image/artifacts/" + item.name + ".webp");
         break;
       case "升级石":
-        card.setAttribute("src", "/image/other/" + item.name + ".webp");
+        card.setAttribute("src", "/image/upgrades/" + item.name + ".webp");
         break;
       default:
         card.setAttribute("src", "/image/cards/" + item.name + ".webp");

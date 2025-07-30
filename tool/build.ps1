@@ -22,6 +22,7 @@ New-Item -Path $folderPath -ItemType Directory -Force
 # 编译 server.exe
 go build -o server.exe server/server.go
 
+# 拷贝所需文件
 Copy-Item -Path "server.exe" -Destination $folderPath # -Recurse
 Copy-Item -Path "README.md" -Destination $folderPath # -Recurse
 Copy-Item -Path "favicon.ico" -Destination $folderPath # -Recurse
@@ -32,4 +33,5 @@ Copy-Item -Path "image" -Destination $folderPath -Recurse
 Copy-Item -Path "proto" -Destination $folderPath -Recurse
 Copy-Item -Path "script" -Destination $folderPath -Recurse
 
+# 压缩
 Compress-Archive -Path "$parentDir\build\*" -DestinationPath "$parentDir\build\build.zip"

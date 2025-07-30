@@ -39,6 +39,8 @@ template.innerHTML = `
     <div class="dlg-tooltip"></div>`;
 
 let tooltip;
+let dialogInstance;
+
 export class CardDetails extends HTMLElement {
 
   static TAG_NAME = 'card-details';
@@ -88,6 +90,7 @@ export class CardDetails extends HTMLElement {
     });
 
     tooltip = shadowRoot.querySelector('.dlg-tooltip');
+    dialogInstance = this;
   }
 
   // 生命周期回调函数
@@ -121,7 +124,7 @@ export class CardDetails extends HTMLElement {
         card.setAttribute("src", "/image/artifacts/" + value.name + ".webp");
         break;
       case "升级石":
-        card.setAttribute("src", "/image/other/" + value.name + ".webp");
+        card.setAttribute("src", "/image/upgrades/" + value.name + ".webp");
         break;
       default:
         card.setAttribute("src", "/image/cards/" + value.name + ".webp");
@@ -167,12 +170,15 @@ export class CardDetails extends HTMLElement {
     links.forEach(link => {
       link.removeEventListener('mouseenter', this.#onNoteMouseEnter);
       link.removeEventListener('mouseleave', this.#onNoteMouseLeave);
+      link.removeEventListener('click', this.#onNoteClicked);
+      link.item = null;
     });
     noteList.innerHTML = html;
     links = noteList.querySelectorAll('.link-span');
     links.forEach(link => {
       link.addEventListener('mouseenter', this.#onNoteMouseEnter);
       link.addEventListener('mouseleave', this.#onNoteMouseLeave);
+      link.addEventListener('click', this.#onNoteClicked);
     });
   }
   #onTabSelected(id) {
@@ -192,7 +198,12 @@ export class CardDetails extends HTMLElement {
   }
   #onNoteMouseEnter(e) {
     if (!tooltip) { return; }
-    CardDetails.generateTooltip(e.target.textContent);
+
+    const item = MT_DATA.get(e.target.textContent);
+    if (!item) { return objName; }
+    
+    CardDetails.generateTooltip(item);
+    e.target.item = item;
 
     const linkRect = e.target.getBoundingClientRect();
     const tooltipRect = tooltip.getBoundingClientRect();
@@ -207,12 +218,19 @@ export class CardDetails extends HTMLElement {
     if (!tooltip) { return; }
     tooltip.style.visibility = 'hidden';
   }
+
+  #onNoteClicked(e) {
+    if (!e.target || !e.target.item) { return; }
+    const item = e.target.item;
+    if (ItemCard.TYPES_WITH_CARD.includes(item.type))
+    dialogInstance.item = item;
+    tooltip.style.visibility = 'hidden';
+  }
   // 根据名字生成 html 字符串
   // 如果是单位, 法术, 装备等, 生成对应的卡牌 html string
   // 如果是词条, 生成词条的 html string
-  static generateTooltip(objName) {
-    const item = MT_DATA.get(objName);
-    if (!item) { return objName; }
+  static generateTooltip(item) {
+    if (!item) { return ''; }
 
     let html = '';
     let isCard = false;
@@ -224,7 +242,7 @@ export class CardDetails extends HTMLElement {
           html = `<item-card src="/image/artifacts/${item.name}.webp"></item-card>`;
           break;
         case "升级石":
-          html = `<item-card src="/image/other/${item.name}.webp"></item-card>`;
+          html = `<item-card src="/image/upgrades/${item.name}.webp"></item-card>`;
           break;
         default:
           html = `<item-card src="/image/cards/${item.name}.webp"></item-card>`;

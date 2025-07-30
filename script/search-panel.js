@@ -29,6 +29,7 @@ template.innerHTML = `
   <!-- 卡牌氏族选取区 -->
   <section-divider text="氏族"></section-divider>
   <div id="clan-section" class="image-toggle-button-group">
+    <image-toggle-button src="image/other/无氏族.webp" condition="clan:无氏族" title="无氏族"></image-toggle-button>
     <image-toggle-button src="image/other/流放者.webp" condition="clan:流放者" title="流放者"></image-toggle-button>
     <image-toggle-button src="image/other/薪龙族.webp" condition="clan:薪龙族" title="薪龙族"></image-toggle-button>
     <image-toggle-button src="image/other/月巫团.webp" condition="clan:月巫团" title="月巫团"></image-toggle-button>
@@ -39,7 +40,6 @@ template.innerHTML = `
     <image-toggle-button src="image/other/冥卫.webp" condition="clan:冥卫" title="冥卫"></image-toggle-button>
     <image-toggle-button src="image/other/影主.webp" condition="clan:影主" title="影主"></image-toggle-button>
     <image-toggle-button src="image/other/熔尸.webp" condition="clan:熔尸" title="熔尸"></image-toggle-button>
-    <image-toggle-button src="image/other/无氏族.webp" condition="clan:无氏族" title="无氏族"></image-toggle-button>
   </div>
   <!-- 卡牌类型选取区 -->
   <section-divider text="类型"></section-divider>
