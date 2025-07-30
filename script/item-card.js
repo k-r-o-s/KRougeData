@@ -205,15 +205,6 @@ export class ItemCard extends HTMLElement {
       case "属性":
         html += `<div class="term-property">`;
         break;
-      case "召唤单位":
-      case "单位":
-      case "法术":
-      case "祸患":
-      case "天灾":
-      case "房间":
-      case "装备":
-        html += `<div class="term-summon">`;
-        break;
       default:
         console.error('无法显示的词条: [' + item.name + ']', item);
         return;
@@ -222,9 +213,11 @@ export class ItemCard extends HTMLElement {
     // 存在一个重名的词条 [复生], 其中一个意思是 复活时触发动作, 另一个是表示单位死亡后返回牌堆顶端
     // 所以为了方便初始, 词条库里把后者存储为 [永生] 加以区别
     const termName = item.name == "永生" ? "复生" : item.name;
-    html += `<p class="term-title">${termName}</p>
-          <p class="term-effect">${ItemCard.#effectToHtml(item.effect)}</p>
-          </div>`;
+    html += `<p class="term-title">${termName}</p>`;
+    if (item.type == "能力" && typeof item.cd != "undefined") {
+      html += `<p class="term-effect">冷却: ${item.cd}`;
+    }
+    html += `<p class="term-effect">${ItemCard.#effectToHtml(item.effect)}</p></div>`;
 
     return html;
   }
