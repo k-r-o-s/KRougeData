@@ -15,6 +15,7 @@ template.innerHTML = `
     <div class="card-effect-area">
       <p class="card-effect"></p>
     </div>
+    <img class="celestial-alcove-icon" src="/image/other/天界壁龛.webp">
   </div>`;
 
 export class ItemCard extends HTMLElement {
@@ -102,6 +103,13 @@ export class ItemCard extends HTMLElement {
       this.effectArea.style.display = "none";
       this.image.classList.remove("card-img-small");
       this.image.classList.add("card-img-normal");
+    }
+    
+    const celestialIcon = this.shadowRoot.querySelector(".celestial-alcove-icon");
+    if (value["celestial-alcove"]) {
+      celestialIcon.style.visibility = 'visible';
+    } else {
+      celestialIcon.style.visibility = 'hidden';
     }
   }
 
