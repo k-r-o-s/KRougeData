@@ -71,8 +71,13 @@
 
 源码在项目的 `server/server.go`. Mac 用户需要可自行编译
 
+## 开发和编译
+
+`/img` 目录下存放的是原始的 `png` 文件, 尺寸很大, 通过 `/tool/compress-img-*.bat` 文件转换为 `webp` 文件放在 `/image` 目录, 大概尺寸变为原来的 1/10
+
+打包通过 `/tool/build.ps1` 进行, 包括 `server/server.go` 的编译, 以及把必要的文件压缩为 `/build/build.zip` 文件
+
 ## TODO://
 
 * 来源于事件的部分升级石的中文名是从英文 wiki 翻译来的, 未和游戏中的翻译核对
 * 数据整理的匆忙, 未全面检查
-
