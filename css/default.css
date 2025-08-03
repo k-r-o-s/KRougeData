@@ -23,6 +23,7 @@ main,
 footer,
 div,
 p,
+input,
 img {
     box-sizing: border-box;
 }

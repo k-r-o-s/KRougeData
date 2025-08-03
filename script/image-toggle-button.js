@@ -26,37 +26,43 @@ export class ImageToggleButton extends HTMLElement {
     const content = template.content.cloneNode(true);
     shadowRoot.appendChild(content);
 
-    // 获取按钮并添加事件监听器
-    const image = shadowRoot.querySelector('#image');
-    const button = shadowRoot.querySelector('#button');
-    if (!image || !button) {
-      console.error('template with ID "' + ImageToggleButton.TEMPLATE_ID + '" clone failed, <image> not found');
-    }
-    button.addEventListener('click', () => {
+    /** @type { HTMLImageElement } */
+    this.image = shadowRoot.querySelector('#image');
+    /** 
+      * @type{ HTMLButtonElement & 
+      * {
+      *   _clickHandler: (this: HTMLButtonElement, ev: MouseEvent) => any
+      *   _dblClickHandler: (this: HTMLButtonElement, ev: MouseEvent) => any
+      * }
+      } */
+    this.button = (shadowRoot.querySelector('#button'));
+  }
+
+  // 可选：定义生命周期回调函数
+  connectedCallback() {
+    const button = this.button;
+    button._clickHandler = () => {
       button.classList.toggle("toggle-off");
-    });
-    button.addEventListener('dblclick', () => {
+    };
+    button._dblClickHandler = () => {
       if (!this.parentElement) { return; }
       const siblings = this.parentElement.childNodes;
       const tagName = ImageToggleButton.TAG_NAME.toUpperCase();
       for (let i = 0; i < siblings.length; i++) {
         const ele = siblings[i];
         if (ele.nodeName == tagName) {
-          ele.setAttribute('off', ele != this ? '1' : '0');
+          (/** @type { ImageToggleButton } */(ele)).setAttribute('off', ele != this ? '1' : '0');
         }
       }
-    });
-    this.image = image;
-    this.button = button;
-  }
-
-  // 可选：定义生命周期回调函数
-  connectedCallback() {
-    // console.log('ImageToggleButton 已连接到文档');
+    };
+    button.addEventListener('click', button._clickHandler);
+    button.addEventListener('dblclick', button._dblClickHandler);
   }
 
   disconnectedCallback() {
-    // console.log('ImageToggleButton 已从文档断开。');
+    const button = this.button;
+    button.removeEventListener('click', button._clickHandler);
+    button.removeEventListener('dblclick', button._dblClickHandler);
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -86,7 +92,9 @@ export class ImageToggleButton extends HTMLElement {
         }
         break;
       case "off":
-        newValue == "1" ? this.button.classList.add("toggle-off") : this.button.classList.remove("toggle-off");;
+        newValue == "1"
+          ? this.button.classList.add("toggle-off")
+          : this.button.classList.remove("toggle-off");
         break;
       default:
         console.error("unsupported attribute type: [" + name + "]");
@@ -99,6 +107,14 @@ export class ImageToggleButton extends HTMLElement {
 
   static get observedAttributes() {
     return ['src', 'title', 'text', 'size', "off"]; // 监听的属性列表
+  }
+
+  /**
+   * 
+   * @returns {ImageToggleButton}
+   */
+  static create() {
+    return /** @type {ImageToggleButton} */(document.createElement(ImageToggleButton.TAG_NAME));
   }
 }
 

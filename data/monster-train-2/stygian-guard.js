@@ -3,12 +3,13 @@
 export const module_name = "冥卫";
 
 // 冥卫 英雄
+/** @type { Unit[] } */
 export const CHAMPIONS = [
   {
     "name": "烈士索尔加德",
-    "english-name": "Solgard the Martyr",
+    "english_name": "Solgard the Martyr",
     "type": "单位",
-    "unit-type": "勇者",
+    "subtype": "勇者",
     "rarity": "勇者",
     "clan": "冥卫",
     "cost": "0",
@@ -20,9 +21,9 @@ export const CHAMPIONS = [
   },
   {
     "name": "泰西斯·泰坦之灾",
-    "english-name": "Tethys Titansbane",
+    "english_name": "Tethys Titansbane",
     "type": "单位",
-    "unit-type": "勇者",
+    "subtype": "勇者",
     "rarity": "勇者",
     "clan": "冥卫",
     "cost": "0",
@@ -34,17 +35,18 @@ export const CHAMPIONS = [
   },
 ];
 // 冥卫 单位
+/** @type { Unit[] } */
 export const UNITS = [
   {
     "name": "邪术乌贼",
-    "english-name": "Cuttlehex",
+    "english_name": "Cuttlehex",
     "type": "单位",
-    "unit-type": "法师",
+    "subtype": "法师",
     "clan": "冥卫",
     "rarity": "普通",
     "cost": "0",
     "effect": "[回合结束]: 随机 [冻结] 一张手牌",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 1,
     "attack": 5,
     "health": 3,
@@ -52,14 +54,14 @@ export const UNITS = [
   },
   {
     "name": "寒流",
-    "english-name": "Coldcaelia",
+    "english_name": "Coldcaelia",
     "type": "单位",
-    "unit-type": "海妖",
+    "subtype": "海妖",
     "clan": "冥卫",
     "rarity": "高级",
     "cost": "1",
     "effect": "[横扫]. [攻击]: 对被攻击的单位施加 [霜冻] 6",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 3,
     "health": 15,
@@ -67,14 +69,14 @@ export const UNITS = [
   },
   {
     "name": "寒冰封印",
-    "english-name": "Glacial Seal",
+    "english_name": "Glacial Seal",
     "type": "单位",
-    "unit-type": "图腾",
+    "subtype": "图腾",
     "clan": "冥卫",
     "rarity": "高级",
     "cost": "1",
     "effect": "[咒语]: 对所有敌方单位施加 [霜冻] 2",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 1,
     "attack": 0,
     "health": 1,
@@ -82,14 +84,14 @@ export const UNITS = [
   },
   {
     "name": "无名者护卫",
-    "english-name": "Guard of the Unnamed",
+    "english_name": "Guard of the Unnamed",
     "type": "单位",
-    "unit-type": "海妖",
+    "subtype": "海妖",
     "clan": "冥卫",
     "rarity": "高级",
     "cost": "1",
     "effect": "[咒语]: 获得 [护甲] 3",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 5,
     "health": 15,
@@ -97,14 +99,14 @@ export const UNITS = [
   },
   {
     "name": "冥卫之石",
-    "english-name": "Guardian Stone",
+    "english_name": "Guardian Stone",
     "type": "单位",
-    "unit-type": "图腾",
+    "subtype": "图腾",
     "clan": "冥卫",
     "rarity": "高级",
     "cost": "1",
     "effect": "[咒语]: 使所有友方单位获得 [护甲] 1",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 1,
     "attack": 0,
     "health": 1,
@@ -112,14 +114,14 @@ export const UNITS = [
   },
   {
     "name": "寒冰之子",
-    "english-name": "Icy Cilophyte",
+    "english_name": "Icy Cilophyte",
     "type": "单位",
-    "unit-type": "海妖",
+    "subtype": "海妖",
     "clan": "冥卫",
     "rarity": "高级",
     "cost": "1",
     "effect": "[横扫]. [攻击]: 对被攻击的单位施加 [法术易伤] 1",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 3,
     "health": 20,
@@ -127,14 +129,14 @@ export const UNITS = [
   },
   {
     "name": "软体法师",
-    "english-name": "Molluscmage",
+    "english_name": "Molluscmage",
     "type": "单位",
-    "unit-type": "法师",
+    "subtype": "法师",
     "clan": "冥卫",
     "rarity": "普通",
     "cost": "1",
     "effect": "[导流] 10",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 1,
     "attack": 5,
     "health": 3,
@@ -142,14 +144,14 @@ export const UNITS = [
   },
   {
     "name": "无名海妖",
-    "english-name": "Nameless Siren",
+    "english_name": "Nameless Siren",
     "type": "单位",
-    "unit-type": "海妖",
+    "subtype": "海妖",
     "clan": "冥卫",
     "rarity": "高级",
     "cost": "1",
     "effect": "[咒语]: 获得 [狂怒] 3",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 12,
     "health": 10,
@@ -157,14 +159,14 @@ export const UNITS = [
   },
   {
     "name": "祭品石碑",
-    "english-name": "Offering Monument",
+    "english_name": "Offering Monument",
     "type": "单位",
-    "unit-type": "图腾",
+    "subtype": "图腾",
     "clan": "冥卫",
     "rarity": "稀有",
     "cost": "1",
     "effect": "[咒语]: -5 [生命值], 抽 1 张牌",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 1,
     "attack": 0,
     "health": 40,
@@ -172,14 +174,14 @@ export const UNITS = [
   },
   {
     "name": "深海海妖",
-    "english-name": "Siren of the Sea",
+    "english_name": "Siren of the Sea",
     "type": "单位",
-    "unit-type": "海妖",
+    "subtype": "海妖",
     "clan": "冥卫",
     "rarity": "高级",
     "cost": "1",
     "effect": "[咒语]: 获得 [攻击力] 3 和 [生命值] 3",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 12,
     "health": 12,
@@ -187,14 +189,14 @@ export const UNITS = [
   },
   {
     "name": "泰坦哨兵",
-    "english-name": "Titan Sentry",
+    "english_name": "Titan Sentry",
     "type": "单位",
-    "unit-type": "海妖",
+    "subtype": "海妖",
     "clan": "冥卫",
     "rarity": "高级",
     "cost": "1",
     "effect": "[复仇]: 对所有敌方单位施加 [霜冻] 3",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 0,
     "health": 40,
@@ -202,14 +204,14 @@ export const UNITS = [
   },
   {
     "name": "鳗鱼戈耳工",
-    "english-name": "Eel Gorgon",
+    "english_name": "Eel Gorgon",
     "type": "单位",
-    "unit-type": "法师",
+    "subtype": "法师",
     "clan": "冥卫",
     "rarity": "稀有",
     "cost": "2",
     "effect": "[咒语]: 获得 [多重攻击] 1. [结算]: 移除所有状态效果",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 10,
     "health": 5,
@@ -217,14 +219,14 @@ export const UNITS = [
   },
   {
     "name": "磁石图腾",
-    "english-name": "Lodestone Totem",
+    "english_name": "Lodestone Totem",
     "type": "单位",
-    "unit-type": "图腾",
+    "subtype": "图腾",
     "clan": "冥卫",
     "rarity": "稀有",
     "cost": "3",
     "effect": "[咒语]: 对所有敌方单位施加 [弱化] 1",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 1,
     "attack": 0,
     "health": 1,
@@ -232,10 +234,11 @@ export const UNITS = [
   },
 ];
 // 冥卫 法术
+/** @type { Spell[] } */
 export const SPELLS = [
   {
     "name": "冥卫道钉",
-    "english-name": "Spike of the Stygian",
+    "english_name": "Spike of the Stygian",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "稀有",
@@ -245,7 +248,7 @@ export const SPELLS = [
   },
   {
     "name": "结晶之种",
-    "english-name": "Crystalline Seeds",
+    "english_name": "Crystalline Seeds",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -255,7 +258,7 @@ export const SPELLS = [
   },
   {
     "name": "能量虹吸",
-    "english-name": "Energy Siphon",
+    "english_name": "Energy Siphon",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "普通",
@@ -265,7 +268,7 @@ export const SPELLS = [
   },
   {
     "name": "遗弃之力",
-    "english-name": "Forgone Power",
+    "english_name": "Forgone Power",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "普通",
@@ -275,7 +278,7 @@ export const SPELLS = [
   },
   {
     "name": "献祭代币",
-    "english-name": "Offering Token",
+    "english_name": "Offering Token",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "普通",
@@ -285,7 +288,7 @@ export const SPELLS = [
   },
   {
     "name": "保存",
-    "english-name": "Preserve",
+    "english_name": "Preserve",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -295,7 +298,7 @@ export const SPELLS = [
   },
   {
     "name": "无名者之书",
-    "english-name": "Unnamed Tome",
+    "english_name": "Unnamed Tome",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -305,7 +308,7 @@ export const SPELLS = [
   },
   {
     "name": "海胆尖刺",
-    "english-name": "Urchin Spines",
+    "english_name": "Urchin Spines",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -315,7 +318,7 @@ export const SPELLS = [
   },
   {
     "name": "力竭",
-    "english-name": "Drain",
+    "english_name": "Drain",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -325,7 +328,7 @@ export const SPELLS = [
   },
   {
     "name": "急速冰冻",
-    "english-name": "Flash Freeze",
+    "english_name": "Flash Freeze",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "普通",
@@ -335,7 +338,7 @@ export const SPELLS = [
   },
   {
     "name": "凶残妖群",
-    "english-name": "Frenzied Swarm",
+    "english_name": "Frenzied Swarm",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -345,7 +348,7 @@ export const SPELLS = [
   },
   {
     "name": "寒冰长枪",
-    "english-name": "Frozen Lance",
+    "english_name": "Frozen Lance",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "普通",
@@ -355,7 +358,7 @@ export const SPELLS = [
   },
   {
     "name": "驾驭泰坦",
-    "english-name": "Harness the Titan",
+    "english_name": "Harness the Titan",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "稀有",
@@ -365,7 +368,7 @@ export const SPELLS = [
   },
   {
     "name": "寒冰和薪火",
-    "english-name": "Ice and Pyre",
+    "english_name": "Ice and Pyre",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "稀有",
@@ -375,7 +378,7 @@ export const SPELLS = [
   },
   {
     "name": "寒冰风暴",
-    "english-name": "Icestorm",
+    "english_name": "Icestorm",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -385,7 +388,7 @@ export const SPELLS = [
   },
   {
     "name": "海妖之歌",
-    "english-name": "Siren's Song",
+    "english_name": "Siren's Song",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "稀有",
@@ -395,7 +398,7 @@ export const SPELLS = [
   },
   {
     "name": "泰坦谢礼",
-    "english-name": "Titan's Gratitude",
+    "english_name": "Titan's Gratitude",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "普通",
@@ -405,7 +408,7 @@ export const SPELLS = [
   },
   {
     "name": "深渊祭礼",
-    "english-name": "Deep Offering",
+    "english_name": "Deep Offering",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "稀有",
@@ -415,7 +418,7 @@ export const SPELLS = [
   },
   {
     "name": "螺旋结晶",
-    "english-name": "Helical Crystalis",
+    "english_name": "Helical Crystalis",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "普通",
@@ -425,7 +428,7 @@ export const SPELLS = [
   },
   {
     "name": "远古协调",
-    "english-name": "Ancient Synergy",
+    "english_name": "Ancient Synergy",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "稀有",
@@ -435,7 +438,7 @@ export const SPELLS = [
   },
   {
     "name": "地穴建造器",
-    "english-name": "Crypt Builder",
+    "english_name": "Crypt Builder",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "普通",
@@ -445,7 +448,7 @@ export const SPELLS = [
   },
   {
     "name": "冥卫之礼",
-    "english-name": "Gifts for a Guard",
+    "english_name": "Gifts for a Guard",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "稀有",
@@ -455,7 +458,7 @@ export const SPELLS = [
   },
   {
     "name": "冥卫护符",
-    "english-name": "Guardian's Amulet",
+    "english_name": "Guardian's Amulet",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -465,7 +468,7 @@ export const SPELLS = [
   },
   {
     "name": "凝霜雕像",
-    "english-name": "Hoarfrost Effigy",
+    "english_name": "Hoarfrost Effigy",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "稀有",
@@ -475,7 +478,7 @@ export const SPELLS = [
   },
   {
     "name": "寒冰龙卷",
-    "english-name": "Ice Tornado",
+    "english_name": "Ice Tornado",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -485,7 +488,7 @@ export const SPELLS = [
   },
   {
     "name": "泰坦之牙",
-    "english-name": "Titanstooth",
+    "english_name": "Titanstooth",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "高级",
@@ -495,92 +498,95 @@ export const SPELLS = [
   },
 ];
 // 冥卫 装备
+/** @type { Equipment[] } */
 export const EQUIPMENTS = [
 ];
 // 冥卫 房间
+/** @type { Room[] } */
 export const ROOMS = [
 ];
 // 冥卫 神器
+/** @type { Artifact[] } */
 export const ARTIFACTS = [
   {
     "name": "遗忘之名",
-    "english-name": "A Forgotten Name",
+    "english_name": "A Forgotten Name",
     "type": "神器",
     "clan": "冥卫",
     "effect": "当本回合打出第三张法术时, 所有卡牌获得 +1 [魔法强度], 持续整场战斗",
   },
   {
     "name": "乌贼触须",
-    "english-name": "Cuttlebeard",
+    "english_name": "Cuttlebeard",
     "type": "神器",
     "clan": "冥卫",
     "effect": "当一个单位获得 [霜冻] 时, 获得的层数 +3, 且不会衰减",
   },
   {
     "name": "成立印记",
-    "english-name": "Founding Seal",
+    "english_name": "Founding Seal",
     "type": "神器",
     "clan": "冥卫",
     "effect": "[咒语] 额外触发一次",
   },
   {
     "name": "冰柱碎片",
-    "english-name": "Icicle Fracture",
+    "english_name": "Icicle Fracture",
     "type": "神器",
     "clan": "冥卫",
     "effect": "回合结束时, 随机 [冻结] 一张手牌",
   },
   {
     "name": "亲族石图腾",
-    "english-name": "Kinstone Totem",
+    "english_name": "Kinstone Totem",
     "type": "神器",
     "clan": "冥卫",
     "effect": "在回合结束前舍弃一张牌时, 获得 [余烬] 1",
   },
   {
     "name": "仪式律法",
-    "english-name": "Rules of Containment",
+    "english_name": "Rules of Containment",
     "type": "神器",
     "clan": "冥卫",
     "effect": "当敌方单位进入战斗时, 获得 [霜冻] 2",
   },
   {
     "name": "符文海藻",
-    "english-name": "Sigiled Seaweed",
+    "english_name": "Sigiled Seaweed",
     "type": "神器",
     "clan": "冥卫",
     "effect": "当敌方单位进入火车时, 对其施加 [沉默] 1",
   },
   {
     "name": "泰西斯之鳞",
-    "english-name": "Tethys' Scales",
+    "english_name": "Tethys' Scales",
     "type": "神器",
     "clan": "冥卫",
     "effect": "当敌方单位进入火车时, 50% 几率对其施加 [法术易伤] 1",
   },
   {
     "name": "泰坦之爪",
-    "english-name": "Titan's Claws",
+    "english_name": "Titan's Claws",
     "type": "神器",
     "clan": "冥卫",
     "effect": "回合结束时, [冻结] 的卡牌 [余烬] 降为 0, 直到打出或舍弃",
   },
   {
     "name": "毁约者代币",
-    "english-name": "Token of a Traitor",
+    "english_name": "Token of a Traitor",
     "type": "神器",
     "clan": "冥卫",
     "effect": "使用法术会随机对该层的一个敌方单位造成 2 点伤害",
   },
   {
     "name": "图腾碎片",
-    "english-name": "Totem Fragment",
+    "english_name": "Totem Fragment",
     "type": "神器",
     "clan": "冥卫",
     "effect": "当敌方单位进入薪火室下方的楼层时, 对其施加 [法术易伤] 2",
   },
 ];
-
+/** @type { Path[] } */
 export const PATHS = [
   {
     "name": "寒风",
@@ -751,3 +757,9 @@ export const PATHS = [
     ]
   },
 ]
+// 祸患
+/** @type {Blight[]} */
+export const BLIGHTS = [];
+// 天灾
+/** @type {Scourge[]} */
+export const SCOURGES = [];

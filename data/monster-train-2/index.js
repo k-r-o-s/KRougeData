@@ -15,6 +15,12 @@ import * as Notes from "./notes.js"
 
 import { __log_data } from "../../script/util.js"
 
+/**
+ * 
+ * @param {Map<string, ItemData>} terms 
+ * @param {string} effect 
+ * @returns 
+ */
 function getTerms(terms, effect) {
   if (!effect || !terms) { return; }
 
@@ -33,10 +39,13 @@ function getTerms(terms, effect) {
   }
 }
 
-const OBJ_TYPES_WITH_TIP = ["单位", "法术", "神器", "装备", "房间", "祸患", "天灾"];
+// const OBJ_TYPES_WITH_TIP = ["单位", "法术", "神器", "装备", "房间", "祸患", "天灾"];
+/** @type { Map<string, string[]>} */
+const GROUPED_TERMS = new Map();
 
 // 因为目前只有几百条数据, 这里没有太注重效率
 // 如果数据量非常大, 可以加几层 Map
+/** @type { Map<string, ItemData> & {groupedTerms?: Map<string, string[]>}} */
 export const MT_DATA = [
   Banished,
   PyreBorne,
@@ -49,8 +58,6 @@ export const MT_DATA = [
   Umbra,
   MeltingRemnants,
   Clanless,
-  Terms,
-  Upgrades,
 ].reduce(
   (accumulator, group) => {
     __log_data("------------------ 读取数据 " + group.module_name + "------------------", group);
@@ -86,14 +93,6 @@ export const MT_DATA = [
       group.SCOURGES.map(item => accumulator.set(item.name, item));
       __log_data("获取数据 SCOURGES", accumulator);
     }
-    if (group.TERMS) {
-      group.TERMS.map(item => accumulator.set(item.name, item));
-      __log_data("获取数据 TERMS", accumulator);
-    }
-    if (group.UPGRADES) {
-      group.UPGRADES.map(item => accumulator.set(item.name, item));
-      __log_data("获取数据 UPGRADES", accumulator);
-    }
     if (group.PATHS) {
       group.PATHS.map(item => {
         if (!item.champion) {
@@ -115,6 +114,21 @@ export const MT_DATA = [
     return accumulator;
   }, new Map());
 
+Terms.TERMS.map(item => {
+  MT_DATA.set(item.name, item);
+  let terms = GROUPED_TERMS.get(item.type);
+  if (!terms) {
+    terms = [];
+    GROUPED_TERMS.set(item.type, terms);
+  }
+  terms.push(item.name);
+});
+__log_data("获取数据 TERMS", MT_DATA);
+__log_data("获取数据 GROUPED_TERMS", GROUPED_TERMS);
+
+Upgrades.UPGRADES.map(item => MT_DATA.set(item.name, item));
+__log_data("获取数据 UPGRADES", MT_DATA);
+
 MT_DATA.forEach((item) => {
   const terms = new Map();
   item.terms = terms;
@@ -127,8 +141,9 @@ MT_DATA.forEach((item) => {
     item.text = item.text.replaceAll('永生', '复生');
     getTerms(terms, item.effect);
   }
-  if (!Array.isArray(item.paths)) { return; }
-  item.paths.forEach(pathData => {
+  if (!('paths' in item)) { return; }
+  const paths = /** @type { Path[] } */(item.paths);
+  paths.forEach((/** @type {Path} */pathData) => {
     if (!pathData.path || !Array.isArray(pathData.path)) { return; }
     pathData.path.forEach((step) => {
       getTerms(terms, step.effect);
@@ -136,6 +151,9 @@ MT_DATA.forEach((item) => {
   })
 });
 
+MT_DATA.groupedTerms = GROUPED_TERMS;
+
+// 把 Notes 的内容关联到对应卡牌数据的 tips 字段(类型 string[])
 Notes.NOTES.map(tip => {
   const regex = /\[(.*?)\]/g;
   let term = "";
@@ -145,7 +163,7 @@ Notes.NOTES.map(tip => {
     term = match[1];
     if (!term) { continue; }
     termData = MT_DATA.get(term);
-    if (!termData || !OBJ_TYPES_WITH_TIP.includes(termData.type)) { continue; }
+    if (!termData /* || !OBJ_TYPES_WITH_TIP.includes(termData.type) */) { continue; }
     if (!termData.tips) { termData.tips = []; }
     termData.tips.push(tip);
   }

@@ -2,6 +2,9 @@ import { createCssLink } from './util.js';
 import { ItemCard } from './item-card.js';
 import { MT_DATA } from '../data/monster-train-2/index.js';
 
+/**
+ * @typedef {HTMLSpanElement & {item: ItemData}} NoteLink
+ */
 const template = document.createElement('template');
 template.innerHTML = `
     <p class="card-title">
@@ -38,7 +41,9 @@ template.innerHTML = `
     </div>
     <div class="dlg-tooltip"></div>`;
 
+/** @type {HTMLDivElement} */
 let tooltip;
+/** @type {CardDetails} */
 let dialogInstance;
 
 export class CardDetails extends HTMLElement {
@@ -78,14 +83,14 @@ export class CardDetails extends HTMLElement {
     });
 
     const title = shadowRoot.querySelector('.title-text');
-    const titleTooltip = shadowRoot.querySelector('.title-tooltip');
+    const titleTooltip = /** @type {HTMLSpanElement} */(shadowRoot.querySelector('.title-tooltip'));
     title.addEventListener('click', () => {
       titleTooltip.classList.remove('fading');
-      titleTooltip.style.opacity = 1;
+      titleTooltip.style.opacity = '1';
       navigator.clipboard.writeText(title.textContent);
       setTimeout(() => {
         titleTooltip.classList.add('fading');
-        titleTooltip.style.opacity = 0;
+        titleTooltip.style.opacity = '0';
       }, 10);
     });
 
@@ -93,31 +98,20 @@ export class CardDetails extends HTMLElement {
     dialogInstance = this;
   }
 
-  // 生命周期回调函数
-  connectedCallback() {
-  }
-
-  disconnectedCallback() {
-    // console.log('CardDetails 已从文档断开。');
-  }
-  attributeChangedCallback(name, oldValue, newValue) {
-    switch (name) {
-      default:
-        console.error("unsupported attribute type: [" + name + "]");
-    }
-  }
-  static get observedAttributes() {
-    return [];
-  }
-
+  /**
+   * @param {ItemData} value 
+   */
   set item(value) {
+    const shadowRoot = this.shadowRoot;
     this._item = value;
     const title = this.shadowRoot.querySelector('.card-title');
-    title.querySelector(".title-text").textContent = value['english-name'];
+    if ('english_name' in value) {
+      title.querySelector(".title-text").textContent = value.english_name;
+    }
     const titleIcon = title.querySelector('img');
     titleIcon.setAttribute("src", "image/other/" + value.type + ".webp");
 
-    const card = this.shadowRoot.querySelector('#card');
+    const card = /** @type {ItemCard} */(shadowRoot.querySelector('#card'));
     card.item = value;
     switch (value.type) {
       case "神器":
@@ -131,25 +125,26 @@ export class CardDetails extends HTMLElement {
         break;
     }
 
-    const cardTermDiv = this.shadowRoot.querySelector('.card-terms');
+    const cardTermDiv = shadowRoot.querySelector('.card-terms');
     cardTermDiv.innerHTML = card.termsHtml;
 
-    const championPathDiv = this.shadowRoot.querySelector('.champion-paths');
-    const championPathHr = this.shadowRoot.querySelector('#champion-paths-hr');
-    if (value.paths) {
+    const championPathDiv = /** @type {HTMLDivElement} */(shadowRoot.querySelector('.champion-paths'));
+    const championPathHr = /** @type {HTMLHRElement} */(shadowRoot.querySelector('#champion-paths-hr'));
+    if ('paths' in value) {
       championPathDiv.style.display = 'flex';
       championPathHr.style.display = 'block';
 
-      for (let i = 0; i < value.paths.length; i++) {
-        this.shadowRoot.querySelector("#tab" + (i + 1) + "-label").textContent = value.paths[i].name;
-        this.shadowRoot.querySelector('#tab1').checked = true;
+      const paths = /** @type { Path[] } */(value.paths);
+      for (let i = 0; i < paths.length; i++) {
+        shadowRoot.querySelector("#tab" + (i + 1) + "-label").textContent = paths[i].name;
+        /** @type {HTMLInputElement} */(shadowRoot.querySelector('#tab1')).checked = true;
         this.#onTabSelected('tab1');
       }
     } else {
       championPathDiv.style.display = 'none';
       championPathHr.style.display = 'none';
     }
-    const noteList = this.shadowRoot.querySelector('.card-note-list');
+    const noteList = shadowRoot.querySelector('.card-note-list');
     let html = '';
     if (value.tips) {
       value.tips.forEach(tip => {
@@ -166,46 +161,59 @@ export class CardDetails extends HTMLElement {
         html += `</li>`;
       });
     }
-    let links = noteList.querySelectorAll('.link-span');
+    let links = /** @type {NodeListOf<NoteLink>} */(noteList.querySelectorAll('.link-span'));
     links.forEach(link => {
-      link.removeEventListener('mouseenter', this.#onNoteMouseEnter);
-      link.removeEventListener('mouseleave', this.#onNoteMouseLeave);
-      link.removeEventListener('click', this.#onNoteClicked);
+      link.removeEventListener('mouseenter', this.#onNoteLinkMouseEnter);
+      link.removeEventListener('mouseleave', this.#onNoteLinkMouseLeave);
+      link.removeEventListener('click', this.#onNoteLinkClicked);
       link.item = null;
     });
     noteList.innerHTML = html;
     links = noteList.querySelectorAll('.link-span');
     links.forEach(link => {
-      link.addEventListener('mouseenter', this.#onNoteMouseEnter);
-      link.addEventListener('mouseleave', this.#onNoteMouseLeave);
-      link.addEventListener('click', this.#onNoteClicked);
+      link.addEventListener('mouseenter', this.#onNoteLinkMouseEnter);
+      link.addEventListener('mouseleave', this.#onNoteLinkMouseLeave);
+      link.addEventListener('click', this.#onNoteLinkClicked);
     });
   }
+  /**
+   * 
+   * @param {string} id 
+   * @returns 
+   */
   #onTabSelected(id) {
-    if (!this._item || !this._item.paths) { return; }
-    const championPathDiv = this.shadowRoot.querySelector('.champion-paths');
-    const championPathHr = this.shadowRoot.querySelector('#champion-paths-hr');
+    if (!this._item || !('paths' in this._item)) { return; }
+    const shadowRoot = this.shadowRoot;
+    const championPathDiv = /** @type {HTMLDivElement} */(shadowRoot.querySelector('.champion-paths'));
+    const championPathHr = /** @type {HTMLHRElement} */(shadowRoot.querySelector('#champion-paths-hr'));
     championPathDiv.style.display = 'flex';
     championPathHr.style.display = 'block';
 
     const seq = parseInt(id[3]) - 1;
     if (isNaN(seq) || typeof seq == 'undefined' || seq < 0) { return; }
-    let imgSrc = this._item.name + "-" + this._item.paths[seq].name;
+
+    const paths = /** @type { Path[] } */(this._item.paths);
+    let imgSrc = this._item.name + "-" + paths[seq].name;
     const images = this.shadowRoot.querySelector('.tab-content').querySelectorAll('item-card');
     for (let i = 0; i < images.length; i++) {
       images[i].setAttribute('src', `/image/paths/${imgSrc + (i + 1)}.webp`);
     }
   }
-  #onNoteMouseEnter(e) {
+  /**
+   * 
+   * @param {MouseEvent} e 
+   */
+  #onNoteLinkMouseEnter(e) {
     if (!tooltip) { return; }
 
-    const item = MT_DATA.get(e.target.textContent);
-    if (!item) { return objName; }
-    
-    CardDetails.generateTooltip(item);
-    e.target.item = item;
+    const link = /** @type{NoteLink} */(e.target);
+    const item = MT_DATA.get(link.textContent);
+    if (!item) { return; }
 
-    const linkRect = e.target.getBoundingClientRect();
+    CardDetails.generateTooltip(item);
+    link.item = item;
+
+    const linkRect = link.getBoundingClientRect();
     const tooltipRect = tooltip.getBoundingClientRect();
     let left = linkRect.left - (tooltipRect.width - linkRect.width) / 2;
     if (left < 0) { left = 0; }
@@ -214,21 +222,35 @@ export class CardDetails extends HTMLElement {
     tooltip.style.visibility = 'visible';
   }
 
-  #onNoteMouseLeave(e) {
+  /**
+   * 
+   * @param {MouseEvent} e 
+   */
+  #onNoteLinkMouseLeave(e) {
     if (!tooltip) { return; }
     tooltip.style.visibility = 'hidden';
   }
+  /**
+   * 
+   * @param {MouseEvent} e 
+   */
+  #onNoteLinkClicked(e) {
+    const link = /** @type{NoteLink} */(e.target);
+    if (!link || !link.item) { return; }
 
-  #onNoteClicked(e) {
-    if (!e.target || !e.target.item) { return; }
-    const item = e.target.item;
+    const item = link.item;
     if (ItemCard.TYPES_WITH_CARD.includes(item.type))
-    dialogInstance.item = item;
+      dialogInstance.item = item;
     tooltip.style.visibility = 'hidden';
   }
   // 根据名字生成 html 字符串
   // 如果是单位, 法术, 装备等, 生成对应的卡牌 html string
   // 如果是词条, 生成词条的 html string
+  /**
+   * 
+   * @param {ItemData} item 
+   * @returns 
+   */
   static generateTooltip(item) {
     if (!item) { return ''; }
 
@@ -257,7 +279,7 @@ export class CardDetails extends HTMLElement {
 
     tooltip.innerHTML = html;
     if (isCard) {
-      const card = tooltip.querySelector('item-card');
+      const card = /** @type{ItemCard} */(tooltip.querySelector('item-card'));
       if (card) {
         card.item = item;
       }

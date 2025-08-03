@@ -1,6 +1,6 @@
 # KRougeData
 
-用于 `RougeLike` 游戏的信息搜索工具. 
+用于 `RougeLike` 游戏的信息搜索工具.
 
 ## 怪物火车 2
 

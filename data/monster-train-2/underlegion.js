@@ -3,12 +3,13 @@
 export const module_name = "地下菌团";
 
 // 地下菌团 英雄
+/** @type { Unit[] } */
 export const CHAMPIONS = [
   {
     "name": "断头台纽甘君",
-    "english-name": "Bolete the Guillotine",
+    "english_name": "Bolete the Guillotine",
     "type": "单位",
-    "unit-type": "勇者",
+    "subtype": "勇者",
     "rarity": "勇者",
     "clan": "地下菌团",
     "cost": "0",
@@ -20,9 +21,9 @@ export const CHAMPIONS = [
   },
   {
     "name": "狮鬃夫人",
-    "english-name": "Madame Lionsmane",
+    "english_name": "Madame Lionsmane",
     "type": "单位",
-    "unit-type": "勇者",
+    "subtype": "勇者",
     "rarity": "勇者",
     "clan": "地下菌团",
     "cost": "0",
@@ -35,17 +36,18 @@ export const CHAMPIONS = [
 ];
 
 // 地下菌团 单位
+/** @type { Unit[] } */
 export const UNITS = [
   {
     "name": "绿色新兵",
-    "english-name": "Green Recruit",
+    "english_name": "Green Recruit",
     "type": "单位",
-    "unit-type": "蘑菇",
+    "subtype": "蘑菇",
     "clan": "地下菌团",
     "rarity": "普通",
     "cost": "0",
     "effect": "[亡语]: [生成] 4",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 1,
     "attack": 5,
     "health": 5,
@@ -53,14 +55,14 @@ export const UNITS = [
   },
   {
     "name": "多情金菇",
-    "english-name": "Amorous Enoki",
+    "english_name": "Amorous Enoki",
     "type": "单位",
-    "unit-type": "蘑菇",
+    "subtype": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
     "cost": "1",
     "effect": "[集结]: 使所有友方单位获得 [再生] 1 和 [生命值] 1",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 10,
     "health": 10,
@@ -68,14 +70,14 @@ export const UNITS = [
   },
   {
     "name": "欢快毒鹅膏",
-    "english-name": "Cheery Deathcap",
+    "english_name": "Cheery Deathcap",
     "type": "单位",
-    "unit-type": "蘑菇",
+    "subtype": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
     "cost": "1",
     "effect": "[召唤]: 对所有敌方单位施加 [腐朽] 7",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 1,
     "attack": 5,
     "health": 3,
@@ -83,14 +85,14 @@ export const UNITS = [
   },
   {
     "name": "毒鹅膏先知",
-    "english-name": "Deathcapped Prophet",
+    "english_name": "Deathcapped Prophet",
     "type": "单位",
-    "unit-type": "蘑菇",
+    "subtype": "蘑菇",
     "clan": "地下菌团",
     "rarity": "稀有",
     "cost": "1",
     "effect": "[集结]: 下回合抽牌数量 +1",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 1,
     "attack": 3,
     "health": 8,
@@ -98,14 +100,14 @@ export const UNITS = [
   },
   {
     "name": "羊笃珺女士",
-    "english-name": "Morel Mistress",
+    "english_name": "Morel Mistress",
     "type": "单位",
-    "unit-type": "蘑菇",
+    "subtype": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
     "cost": "1",
     "effect": "[蚀刻]: 对所有敌方单位施加 [腐朽] 8",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 15,
     "health": 15,
@@ -113,14 +115,14 @@ export const UNITS = [
   },
   {
     "name": "多刺尘菌",
-    "english-name": "Prickly Puffball",
+    "english_name": "Prickly Puffball",
     "type": "单位",
-    "unit-type": "蘑菇",
+    "subtype": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
     "cost": "1",
     "effect": "[复仇]: 对攻击者施加 [腐朽] 5",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 0,
     "health": 35,
@@ -128,14 +130,14 @@ export const UNITS = [
   },
   {
     "name": "蘑菇兵长",
-    "english-name": "Squad Leader",
+    "english_name": "Squad Leader",
     "type": "单位",
-    "unit-type": "蘑菇",
+    "subtype": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
     "cost": "1",
     "effect": "使 [蘑菇人] 获得 [践踏], 每层 [部队] 额外获得 [攻击力] 2",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 1,
     "attack": 10,
     "health": 10,
@@ -143,14 +145,14 @@ export const UNITS = [
   },
   {
     "name": "松露犬",
-    "english-name": "Truffles",
+    "english_name": "Truffles",
     "type": "单位",
-    "unit-type": "蘑菇",
+    "subtype": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
     "cost": "1",
     "effect": "[能力: 接住]",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 1,
     "attack": 5,
     "health": 5,
@@ -158,14 +160,14 @@ export const UNITS = [
   },
   {
     "name": "滴蜡菌伞",
-    "english-name": "Waxcap",
+    "english_name": "Waxcap",
     "type": "单位",
-    "unit-type": "蘑菇",
+    "subtype": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
     "cost": "1",
     "effect": "[召唤]: 对所有敌方单位施加 [弱化] 3",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 1,
     "attack": 5,
     "health": 5,
@@ -173,14 +175,14 @@ export const UNITS = [
   },
   {
     "name": "菌簇上校",
-    "english-name": "Cluster Colonel",
+    "english_name": "Cluster Colonel",
     "type": "单位",
-    "unit-type": "蘑菇",
+    "subtype": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
     "cost": "2",
     "effect": "[护甲] 10. [结算]: [生成] 4",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 10,
     "health": 5,
@@ -188,14 +190,14 @@ export const UNITS = [
   },
   {
     "name": "孢子发射者",
-    "english-name": "Spore Launcher",
+    "english_name": "Spore Launcher",
     "type": "单位",
-    "unit-type": "蘑菇",
+    "subtype": "蘑菇",
     "clan": "地下菌团",
     "rarity": "高级",
     "cost": "2",
     "effect": "[集结]: 对所有敌方单位施加 [腐朽] 2",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 3,
     "attack": 30,
     "health": 30,
@@ -203,14 +205,14 @@ export const UNITS = [
   },
   {
     "name": "巴尔马贝洛",
-    "english-name": "Balmabello",
+    "english_name": "Balmabello",
     "type": "单位",
-    "unit-type": "蘑菇",
+    "subtype": "蘑菇",
     "clan": "地下菌团",
     "rarity": "稀有",
     "cost": "3",
     "effect": "[再生] 6. [尖刺] 6. [亡语]: 使所有友方单位获得该单位的 [增益] 层数",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 15,
     "health": 50,
@@ -218,14 +220,14 @@ export const UNITS = [
   },
   {
     "name": "迷人的贵妇人",
-    "english-name": "Enchantrelle",
+    "english_name": "Enchantrelle",
     "type": "单位",
-    "unit-type": "蘑菇",
+    "subtype": "蘑菇",
     "clan": "地下菌团",
     "rarity": "稀有",
     "cost": "3",
     "effect": "[集结]: 对所有敌方单位施加 [弱化] 1",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 8,
     "health": 8,
@@ -233,10 +235,11 @@ export const UNITS = [
   },
 ];
 // 地下菌团 法术
+/** @type {Spell[]} */
 export const SPELLS = [
   {
     "name": "菌团道钉",
-    "english-name": "DragonEgg",
+    "english_name": "DragonEgg",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "稀有",
@@ -246,7 +249,7 @@ export const SPELLS = [
   },
   {
     "name": "盖土",
-    "english-name": "Mulch",
+    "english_name": "Mulch",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -256,7 +259,7 @@ export const SPELLS = [
   },
   {
     "name": "热情新兵",
-    "english-name": "Eager Conscript",
+    "english_name": "Eager Conscript",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "普通",
@@ -266,7 +269,7 @@ export const SPELLS = [
   },
   {
     "name": "焕发光彩",
-    "english-name": "Glow Up",
+    "english_name": "Glow Up",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "普通",
@@ -276,7 +279,7 @@ export const SPELLS = [
   },
   {
     "name": "黏菌烧瓶",
-    "english-name": "Gooey Flask",
+    "english_name": "Gooey Flask",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -286,7 +289,7 @@ export const SPELLS = [
   },
   {
     "name": "大口吸入",
-    "english-name": "Inhale",
+    "english_name": "Inhale",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -296,7 +299,7 @@ export const SPELLS = [
   },
   {
     "name": "蘑菇云",
-    "english-name": "Mushroom Cloud",
+    "english_name": "Mushroom Cloud",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -306,7 +309,7 @@ export const SPELLS = [
   },
   {
     "name": "增殖",
-    "english-name": "Proliferate",
+    "english_name": "Proliferate",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "普通",
@@ -316,7 +319,7 @@ export const SPELLS = [
   },
   {
     "name": "孢子之触",
-    "english-name": "Sporetouch",
+    "english_name": "Sporetouch",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "普通",
@@ -326,7 +329,7 @@ export const SPELLS = [
   },
   {
     "name": "生息之书",
-    "english-name": "Tome of Evergrowth",
+    "english_name": "Tome of Evergrowth",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "稀有",
@@ -336,7 +339,7 @@ export const SPELLS = [
   },
   {
     "name": "挖掘宝藏",
-    "english-name": "Unearth Treasure",
+    "english_name": "Unearth Treasure",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "稀有",
@@ -346,7 +349,7 @@ export const SPELLS = [
   },
   {
     "name": "极度痛苦",
-    "english-name": "Wracking Pain",
+    "english_name": "Wracking Pain",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "稀有",
@@ -356,7 +359,7 @@ export const SPELLS = [
   },
   {
     "name": "传染",
-    "english-name": "Contagious",
+    "english_name": "Contagious",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "稀有",
@@ -366,7 +369,7 @@ export const SPELLS = [
   },
   {
     "name": "致命变形",
-    "english-name": "Deadly Variant",
+    "english_name": "Deadly Variant",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "稀有",
@@ -376,7 +379,7 @@ export const SPELLS = [
   },
   {
     "name": "深度挖掘",
-    "english-name": "Dig Deep",
+    "english_name": "Dig Deep",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -386,7 +389,7 @@ export const SPELLS = [
   },
   {
     "name": "沃土",
-    "english-name": "Fertile Ground",
+    "english_name": "Fertile Ground",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -396,7 +399,7 @@ export const SPELLS = [
   },
   {
     "name": "流行病",
-    "english-name": "Pandemic",
+    "english_name": "Pandemic",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -406,7 +409,7 @@ export const SPELLS = [
   },
   {
     "name": "孢子瘟疫",
-    "english-name": "Pox",
+    "english_name": "Pox",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -416,7 +419,7 @@ export const SPELLS = [
   },
   {
     "name": "出生荚囊",
-    "english-name": "Spawning Pods",
+    "english_name": "Spawning Pods",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "普通",
@@ -426,7 +429,7 @@ export const SPELLS = [
   },
   {
     "name": "蘑菇人活动盔甲",
-    "english-name": "Funguy in a Suit",
+    "english_name": "Funguy in a Suit",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "稀有",
@@ -436,7 +439,7 @@ export const SPELLS = [
   },
   {
     "name": "腐烂",
-    "english-name": "Rot",
+    "english_name": "Rot",
     "type": "法术",
     "clan": "地下菌团",
     "rarity": "普通",
@@ -446,10 +449,11 @@ export const SPELLS = [
   },
 ];
 // 地下菌团 装备
+/** @type { Equipment[] } */
 export const EQUIPMENTS = [
   {
     "name": "有丝分裂菌",
-    "english-name": "Mitosis Cap",
+    "english_name": "Mitosis Cap",
     "type": "装备",
     "clan": "地下菌团",
     "rarity": "稀有",
@@ -459,7 +463,7 @@ export const EQUIPMENTS = [
   },
   {
     "name": "沃土大衣",
-    "english-name": "Loamcoat",
+    "english_name": "Loamcoat",
     "type": "装备",
     "clan": "地下菌团",
     "rarity": "普通",
@@ -469,10 +473,11 @@ export const EQUIPMENTS = [
   },
 ];
 // 地下菌团 房间
+/** @type { Room[] } */
 export const ROOMS = [
   {
     "name": "生长室",
-    "english-name": "Grow Room",
+    "english_name": "Grow Room",
     "type": "房间",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -481,7 +486,7 @@ export const ROOMS = [
   },
   {
     "name": "传染源",
-    "english-name": "Infectory",
+    "english_name": "Infectory",
     "type": "房间",
     "clan": "地下菌团",
     "rarity": "普通",
@@ -490,7 +495,7 @@ export const ROOMS = [
   },
   {
     "name": "黏糊房间",
-    "english-name": "Mushy Room",
+    "english_name": "Mushy Room",
     "type": "房间",
     "clan": "地下菌团",
     "rarity": "高级",
@@ -499,86 +504,87 @@ export const ROOMS = [
   },
 ];
 // 地下菌团 神器
+/** @type { Artifact[] } */
 export const ARTIFACTS = [
   {
     "name": "远古之根",
-    "english-name": "Ancient Roots",
+    "english_name": "Ancient Roots",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "你的卡组每有 15 张牌, 每回合使用的第一张法术牌 [余烬] -1",
   },
   {
     "name": "皮层连接头盔",
-    "english-name": "Cortical Connector",
+    "english_name": "Cortical Connector",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "在 [收割] 时, 蘑菇单位获得 [再生] 1",
   },
   {
     "name": "不息之土",
-    "english-name": "EverChurning Soil",
+    "english_name": "EverChurning Soil",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "你的卡组每有 25 张牌, 每回合的抽卡数 +1",
   },
   {
     "name": "进化本能",
-    "english-name": "Evolutionary Instinct",
+    "english_name": "Evolutionary Instinct",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "当一个单位受到第三种独特状态影响时, [散播] 2",
   },
   {
     "name": "树液之泉",
-    "english-name": "Sapsuckling Spring",
+    "english_name": "Sapsuckling Spring",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "蘑菇单位在 [召唤] 时对敌方单位施加 [腐朽] 1",
   },
   {
     "name": "蘑菇水培",
-    "english-name": "Shroomponics",
+    "english_name": "Shroomponics",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "回合开始时, 友方单位 [散播] 1",
   },
   {
     "name": "斑点孢子",
-    "english-name": "Spotted Spore",
+    "english_name": "Spotted Spore",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "每层 [部队], [蘑菇人] 获得 [攻击力] 2",
   },
   {
     "name": "双重思维",
-    "english-name": "Twin Minds",
+    "english_name": "Twin Minds",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "每场战斗打出的第一张 [消耗] 牌创建一张永久复制体",
   },
   {
     "name": "扭曲的菌丝",
-    "english-name": "Twisting Mycelium",
+    "english_name": "Twisting Mycelium",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "回合开始时, 你的卡组每有 20 张牌, [生成] 1",
   },
   {
     "name": "新生循环",
-    "english-name": "Verdant Cycle",
+    "english_name": "Verdant Cycle",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "每回合首次使用带有 [消耗] 的卡牌时, 抽 1 张牌",
   },
   {
     "name": "终末菌株",
-    "english-name": "World-ending Strain",
+    "english_name": "World-ending Strain",
     "type": "神器",
     "clan": "地下菌团",
     "effect": "当一个单位死于 [腐朽] 时, 将其减益效果施加于另一个随机敌方单位",
   },
 ];
-
+/** @type { Path[] } */
 export const PATHS = [
   {
     "name": "领头人",
@@ -749,3 +755,9 @@ export const PATHS = [
     ]
   },
 ]
+// 祸患
+/** @type {Blight[]} */
+export const BLIGHTS = [];
+// 天灾
+/** @type {Scourge[]} */
+export const SCOURGES = [];

@@ -1,8 +1,11 @@
 
 import { createCssLink } from './util.js';
 
+/**
+ * @typedef {()=>undefined} CardClickedCallback
+ */
 function CardClickedHandler() {
-  if (typeof this._onClickHandler == 'function') {
+  if (this._onClickHandler) {
     this._onClickHandler();
   }
 }
@@ -15,7 +18,7 @@ template.innerHTML = `
     <div class="card-effect-area">
       <p class="card-effect"></p>
     </div>
-    <img class="celestial-alcove-icon" src="/image/other/天界壁龛.webp">
+    <img class="celestial_alcove-icon" src="/image/other/天界壁龛.webp">
   </div>`;
 
 export class ItemCard extends HTMLElement {
@@ -41,13 +44,13 @@ export class ItemCard extends HTMLElement {
     const content = template.content.cloneNode(true);
     shadowRoot.appendChild(content);
 
-    this.cardContainer = shadowRoot.querySelector('.card-container');
-    this.image = shadowRoot.querySelector('.card-image');
-    this.nameDiv = shadowRoot.querySelector('.card-name');
+    this.cardContainer = /**@type{HTMLDivElement}*/(shadowRoot.querySelector('.card-container'));
+    this.image = /**@type{HTMLImageElement}*/(shadowRoot.querySelector('.card-image'));
+    this.nameDiv = /**@type{HTMLDivElement}*/(shadowRoot.querySelector('.card-name'));
     this.nameDiv.style.display = "none";
 
-    this.effectArea = shadowRoot.querySelector('.card-effect-area');
-    this.effectElement = shadowRoot.querySelector('.card-effect');
+    this.effectArea = /**@type{HTMLDivElement}*/(shadowRoot.querySelector('.card-effect-area'));
+    this.effectElement = /**@type{HTMLParagraphElement}*/(shadowRoot.querySelector('.card-effect'));
     this.effectArea.style.display = "none";
     this._cickHandler = CardClickedHandler.bind(this);
     this.image.addEventListener('click', this._cickHandler);
@@ -63,6 +66,12 @@ export class ItemCard extends HTMLElement {
     // console.log('MyCustomElement 已从文档断开。');
   }
 
+  /**
+   * 
+   * @param {string} name 
+   * @param {*} oldValue 
+   * @param {*} newValue 
+   */
   attributeChangedCallback(name, oldValue, newValue) {
     switch (name) {
       case "src":
@@ -77,6 +86,11 @@ export class ItemCard extends HTMLElement {
       "src",
     ];
   }
+  /**
+   * 
+   * @param {boolean} animating 
+   * @returns 
+   */
   onAdded(animating) {
     if (!animating) { return; }
     this.cardContainer.classList.add('entering');
@@ -89,6 +103,9 @@ export class ItemCard extends HTMLElement {
     this.image.removeEventListener('click', this._cickHandler);
   }
 
+  /**
+   * @param {ItemData} value
+   */
   set item(value) {
     this._item = value;
     if (value && value.type == "神器" || value.type == "升级石") {
@@ -105,14 +122,20 @@ export class ItemCard extends HTMLElement {
       this.image.classList.add("card-img-normal");
     }
     
-    const celestialIcon = this.shadowRoot.querySelector(".celestial-alcove-icon");
-    if (value["celestial-alcove"]) {
+    const celestialIcon = /**@type{HTMLImageElement}*/(this
+      .shadowRoot.querySelector(".celestial_alcove-icon"));
+    if ('celestial_alcove' in value && value["celestial_alcove"]) {
       celestialIcon.style.visibility = 'visible';
     } else {
       celestialIcon.style.visibility = 'hidden';
     }
   }
 
+  /**
+   * 
+   * @param {string} effect 
+   * @returns 
+   */
   static #effectToHtml(effect) {
     // 存在一个重名的词条 [复生], 其中一个意思是 复活时触发动作, 另一个是表示单位死亡后返回牌堆顶端
     // 所以为了方便初始, 词条库里把后者存储为 [永生] 加以区别
@@ -141,9 +164,17 @@ export class ItemCard extends HTMLElement {
     return html;
   }
 
+  /**
+   * 
+   * @param {string} iconName 
+   * @returns 
+   */
   static iconHtml(iconName) {
     return `<span class="inline-image-wrapper"><img src="/image/other/${iconName}.webp"></span>`;
   }
+  /**
+   * @param {CardClickedCallback} handler 
+   */
   set onClickHandler(handler) {
     this._onClickHandler = handler;
   }
@@ -158,21 +189,20 @@ export class ItemCard extends HTMLElement {
     let html = "";
     if (this._item.terms) {
       this._item.terms.forEach(item => {
-        if (ItemCard.TYPES_WITH_CARD.includes(item.type)) {
+        if (ItemCard.TYPES_WITH_CARD.includes(item.type) 
+          || (item.type == '词条' && item.term_type == '召唤单位')) {
           html += `<div class="term-summon">`;
           html += `<p class="term-title">${item.name}</p>`;
-          html += `<p class="term-effect">${item['unit-type'] ? item['unit-type'] : item.type}</p>`;
-          if (typeof item.size != 'undefined' || typeof item.cost != 'undefined'
-            || typeof item.attack != 'undefined' || typeof item.health != 'undefined') {
+          html += `<p class="term-effect">${'subtype' in item ? item['subtype'] : item.type}</p>`;
+          if ('size' in item || 'cost' in item || 'attack' in item || 'health' in item) {
             html += `<p class="term-effect">`;
-            if (item.attack || item.health) {
-              html += `${item.attack || 0} ${ItemCard.iconHtml('攻击力')} ${item.health || 0} ${ItemCard.iconHtml('生命值')}`;
+            if ('attack' in item || 'health' in item) {
+              html += `${'attack' in item ? item.attack : 0} ${ItemCard.iconHtml('攻击力')} ${'attack' in item ? item.attack : 0} ${ItemCard.iconHtml('生命值')}`;
             }
-            if (typeof item.cost != 'undefined') {
+            if ('cost' in item) {
               html += ` ${item.cost} ${ItemCard.iconHtml('余烬')}`;
             }
-            if (typeof item.size != 'undefined') {
-
+            if ('size' in item) {
               html += ` ${item.size} ${ItemCard.iconHtml('容量')}`;
             }
             html += '</p>';
@@ -187,11 +217,17 @@ export class ItemCard extends HTMLElement {
     return html;
   }
 
+  /**
+   * 
+   * @param {ItemData} item 
+   * @returns {string}
+   */
   static getTermHtml(item) {
     if (!item) { return ''; }
     let html = '';
 
-    switch (item.type) {
+    if (item.type != '词条') { return; }
+    switch (item.term_type) {
       case "基础":
         html += `<div class="term-basic">`;
         break;
@@ -222,16 +258,21 @@ export class ItemCard extends HTMLElement {
     // 所以为了方便初始, 词条库里把后者存储为 [永生] 加以区别
     const termName = item.name == "永生" ? "复生" : item.name;
     html += `<p class="term-title">${termName}</p>`;
-    if (item.type == "能力" && typeof item.cd != "undefined") {
+    if (item.term_type == "能力" && 'cd' in item) {
       html += `<p class="term-effect">冷却: ${item.cd}`;
     }
     html += `<p class="term-effect">${ItemCard.#effectToHtml(item.effect)}</p></div>`;
 
     return html;
   }
+  /**
+   * 
+   * @param {ItemData} item 
+   * @returns {ItemCard}
+   */
   static createCard(item) {
     // <item-card src="/image/cards/不朽交易.webp" class=""></item-card>
-    const card = document.createElement(ItemCard.TAG_NAME);
+    const card = ItemCard.create();
     card.item = item;
     switch (item.type) {
       case "神器":
@@ -245,6 +286,13 @@ export class ItemCard extends HTMLElement {
         break;
     }
     return card;
+  }
+
+  /**
+   * @returns {ItemCard}
+   */
+  static create() {
+    return /** @type{ItemCard} */(document.createElement(ItemCard.TAG_NAME));
   }
 }
 

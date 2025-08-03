@@ -3,12 +3,13 @@
 export const module_name = "拉撒路联盟";
 
 // 拉撒路联盟 英雄
+/** @type { Unit[] } */
 export const CHAMPIONS = [
   {
     "name": "格雷尔男爵",
-    "english-name": "Baron Grael",
+    "english_name": "Baron Grael",
     "type": "单位",
-    "unit-type": "勇者",
+    "subtype": "勇者",
     "rarity": "勇者",
     "clan": "拉撒路联盟",
     "cost": "0",
@@ -20,9 +21,9 @@ export const CHAMPIONS = [
   },
   {
     "name": "奥莱奇",
-    "english-name": "Orechi",
+    "english_name": "Orechi",
     "type": "单位",
-    "unit-type": "勇者",
+    "subtype": "勇者",
     "rarity": "勇者",
     "clan": "拉撒路联盟",
     "cost": "0",
@@ -34,17 +35,18 @@ export const CHAMPIONS = [
   },
 ];
 // 拉撒路联盟 单位
+/** @type { Unit[] } */
 export const UNITS = [
   {
     "name": "古怪助手",
-    "english-name": "Erratic Assistant",
+    "english_name": "Erratic Assistant",
     "type": "单位",
-    "unit-type": "助手",
+    "subtype": "助手",
     "clan": "拉撒路联盟",
     "rarity": "普通",
     "cost": "0",
     "effect": "[嫁接]: [剪刀手]",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 1,
     "attack": 9,
     "health": 1,
@@ -52,14 +54,14 @@ export const UNITS = [
   },
   {
     "name": "过劳的助手",
-    "english-name": "Overworked Assistant",
+    "english_name": "Overworked Assistant",
     "type": "单位",
-    "unit-type": "助手",
+    "subtype": "助手",
     "clan": "拉撒路联盟",
     "rarity": "普通",
     "cost": "0",
     "effect": "[复活] 1. [咒语]: 获得 [不稳定] 4",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 1,
     "attack": 3,
     "health": 9,
@@ -67,14 +69,14 @@ export const UNITS = [
   },
   {
     "name": "双刃卫士",
-    "english-name": "Double-Edged Bearer",
+    "english_name": "Double-Edged Bearer",
     "type": "单位",
-    "unit-type": "助手",
+    "subtype": "助手",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
     "cost": "1",
     "effect": "[嫁接]: [双刃臂]",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 1,
     "attack": 10,
     "health": 1,
@@ -82,14 +84,14 @@ export const UNITS = [
   },
   {
     "name": "临时魔像",
-    "english-name": "Makeshift Golem",
+    "english_name": "Makeshift Golem",
     "type": "单位",
-    "unit-type": "怪异造物",
+    "subtype": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "高级",
     "cost": "1",
     "effect": "[护甲] 12. [亡语]: 使所有友方单位获得 [护甲] 12",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 12,
     "health": 12,
@@ -97,14 +99,14 @@ export const UNITS = [
   },
   {
     "name": "肉钩",
-    "english-name": "Meathook",
+    "english_name": "Meathook",
     "type": "单位",
-    "unit-type": "怪异造物",
+    "subtype": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "高级",
     "cost": "1",
     "effect": "[能力: 钩手]",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 25,
     "health": 15,
@@ -112,14 +114,14 @@ export const UNITS = [
   },
   {
     "name": "扎针怪",
-    "english-name": "Pincushion",
+    "english_name": "Pincushion",
     "type": "单位",
-    "unit-type": "怪异造物",
+    "subtype": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "高级",
     "cost": "1",
     "effect": "[已装备]: 永久获得 [攻击力] 3 和 [生命值] 3",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 12,
     "health": 12,
@@ -127,14 +129,14 @@ export const UNITS = [
   },
   {
     "name": "河豚人",
-    "english-name": "Pufferflesh",
+    "english_name": "Pufferflesh",
     "type": "单位",
-    "unit-type": "助手",
+    "subtype": "助手",
     "clan": "拉撒路联盟",
     "rarity": "高级",
     "cost": "1",
     "effect": "[嫁接]: [尖刺皮肤]",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 2,
     "attack": 12,
     "health": 12,
@@ -142,14 +144,14 @@ export const UNITS = [
   },
   {
     "name": "重组软泥怪",
-    "english-name": "Reforming Ooze",
+    "english_name": "Reforming Ooze",
     "type": "单位",
-    "unit-type": "怪异造物",
+    "subtype": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
     "cost": "1",
     "effect": "[复活] 1. [复生]: 永久获得 [攻击力] 6",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 12,
     "health": 12,
@@ -157,14 +159,14 @@ export const UNITS = [
   },
   {
     "name": "乐观的助手",
-    "english-name": "Sanguine Assistant",
+    "english_name": "Sanguine Assistant",
     "type": "单位",
-    "unit-type": "助手",
+    "subtype": "助手",
     "clan": "拉撒路联盟",
     "rarity": "普通",
     "cost": "1",
     "effect": "[嫁接]: [吸血鬼之牙]",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 1,
     "attack": 15,
     "health": 1,
@@ -172,14 +174,14 @@ export const UNITS = [
   },
   {
     "name": "扭曲的助手",
-    "english-name": "Twisted Assistant",
+    "english_name": "Twisted Assistant",
     "type": "单位",
-    "unit-type": "助手",
+    "subtype": "助手",
     "clan": "拉撒路联盟",
     "rarity": "普通",
     "cost": "1",
     "effect": "[嫁接]: [扭曲脊背]",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 1,
     "attack": 15,
     "health": 1,
@@ -187,14 +189,14 @@ export const UNITS = [
   },
   {
     "name": "笨拙大块头",
-    "english-name": "Hulking Mass",
+    "english_name": "Hulking Mass",
     "type": "单位",
-    "unit-type": "怪异造物",
+    "subtype": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "高级",
     "cost": "2",
     "effect": "[护甲] 40. [复生]: 获得 [护甲] 40",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 3,
     "attack": 15,
     "health": 20,
@@ -202,14 +204,14 @@ export const UNITS = [
   },
   {
     "name": "恐怖多臂怪",
-    "english-name": "Hydra Armed Horror",
+    "english_name": "Hydra Armed Horror",
     "type": "单位",
-    "unit-type": "怪异造物",
+    "subtype": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
     "cost": "2",
     "effect": "[已装备]: 移除装备, 获得 [多重攻击] 1",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 15,
     "health": 15,
@@ -217,14 +219,14 @@ export const UNITS = [
   },
   {
     "name": "九命梦魇",
-    "english-name": "Nine-Lived Nightmare",
+    "english_name": "Nine-Lived Nightmare",
     "type": "单位",
-    "unit-type": "怪异造物",
+    "subtype": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
     "cost": "2",
     "effect": "[复活] 8",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 1,
     "attack": 1,
     "health": 1,
@@ -232,14 +234,14 @@ export const UNITS = [
   },
   {
     "name": "瘟疫医生",
-    "english-name": "Plague Doctor",
+    "english_name": "Plague Doctor",
     "type": "单位",
-    "unit-type": "助手",
+    "subtype": "助手",
     "clan": "拉撒路联盟",
     "rarity": "高级",
     "cost": "2",
     "effect": "[攻击]: 施加等同于伤害量的 [不稳定]",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 1,
     "attack": 9,
     "health": 9,
@@ -247,14 +249,14 @@ export const UNITS = [
   },
   {
     "name": "实验对象阿尔法",
-    "english-name": "Test Subject Alpha",
+    "english_name": "Test Subject Alpha",
     "type": "单位",
-    "unit-type": "怪异造物",
+    "subtype": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "高级",
     "cost": "2",
     "effect": "[迅捷]: [横扫]",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 5,
     "health": 10,
@@ -262,10 +264,11 @@ export const UNITS = [
   },
 ];
 // 拉撒路联盟 法术
+/** @type {Spell[]} */
 export const SPELLS = [
   {
     "name": "联盟道钉",
-    "english-name": "Spike of the League",
+    "english_name": "Spike of the League",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -275,7 +278,7 @@ export const SPELLS = [
   },
   {
     "name": "酸液淋浴",
-    "english-name": "Acid Shower",
+    "english_name": "Acid Shower",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -285,7 +288,7 @@ export const SPELLS = [
   },
   {
     "name": "劣质躯体",
-    "english-name": "Faulty Body",
+    "english_name": "Faulty Body",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -295,7 +298,7 @@ export const SPELLS = [
   },
   {
     "name": "永恒精华",
-    "english-name": "Forevermore Serum",
+    "english_name": "Forevermore Serum",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -305,7 +308,7 @@ export const SPELLS = [
   },
   {
     "name": "惊骇",
-    "english-name": "Horrify",
+    "english_name": "Horrify",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -315,7 +318,7 @@ export const SPELLS = [
   },
   {
     "name": "无尽饥饿",
-    "english-name": "Insatiable Hunger",
+    "english_name": "Insatiable Hunger",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -325,7 +328,7 @@ export const SPELLS = [
   },
   {
     "name": "它活了",
-    "english-name": "It's Alive!",
+    "english_name": "It's Alive!",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -335,7 +338,7 @@ export const SPELLS = [
   },
   {
     "name": "伪科学",
-    "english-name": "Pseudoscience",
+    "english_name": "Pseudoscience",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -345,7 +348,7 @@ export const SPELLS = [
   },
   {
     "name": "风险操作",
-    "english-name": "Risky Operation",
+    "english_name": "Risky Operation",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -355,7 +358,7 @@ export const SPELLS = [
   },
   {
     "name": "零部件废料",
-    "english-name": "Scrap for Parts",
+    "english_name": "Scrap for Parts",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -365,7 +368,7 @@ export const SPELLS = [
   },
   {
     "name": "秘密成分",
-    "english-name": "Secret Ingredient",
+    "english_name": "Secret Ingredient",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -375,7 +378,7 @@ export const SPELLS = [
   },
   {
     "name": "手术式打击",
-    "english-name": "Surgical Strike",
+    "english_name": "Surgical Strike",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -385,7 +388,7 @@ export const SPELLS = [
   },
   {
     "name": "武器化义肢",
-    "english-name": "Weaponized Prosthetic",
+    "english_name": "Weaponized Prosthetic",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -395,7 +398,7 @@ export const SPELLS = [
   },
   {
     "name": "大脑转移",
-    "english-name": "Brain Transfer",
+    "english_name": "Brain Transfer",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -405,7 +408,7 @@ export const SPELLS = [
   },
   {
     "name": "爆炸反应",
-    "english-name": "Explosive Reaction",
+    "english_name": "Explosive Reaction",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -415,7 +418,7 @@ export const SPELLS = [
   },
   {
     "name": "调配技术",
-    "english-name": "Mixology",
+    "english_name": "Mixology",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -425,7 +428,7 @@ export const SPELLS = [
   },
   {
     "name": "自我意识",
-    "english-name": "Minds of their Own",
+    "english_name": "Minds of their Own",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -435,7 +438,7 @@ export const SPELLS = [
   },
   {
     "name": "复制光线",
-    "english-name": "Replicator Ray",
+    "english_name": "Replicator Ray",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -445,7 +448,7 @@ export const SPELLS = [
   },
   {
     "name": "恐怖之书",
-    "english-name": "Tome of Horrors",
+    "english_name": "Tome of Horrors",
     "type": "法术",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -455,10 +458,11 @@ export const SPELLS = [
   },
 ];
 // 拉撒路联盟 装备
+/** @type {Equipment[]} */
 export const EQUIPMENTS = [
   {
     "name": "剪刀手",
-    "english-name": "Scissor Hands",
+    "english_name": "Scissor Hands",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -468,7 +472,7 @@ export const EQUIPMENTS = [
   },
   {
     "name": "燃烧服",
-    "english-name": "Combustion Suit",
+    "english_name": "Combustion Suit",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -479,7 +483,7 @@ export const EQUIPMENTS = [
   },
   {
     "name": "双刃臂",
-    "english-name": "Double-Edged Arms",
+    "english_name": "Double-Edged Arms",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -489,7 +493,7 @@ export const EQUIPMENTS = [
   },
   {
     "name": "器官采集器",
-    "english-name": "Organ Harvester",
+    "english_name": "Organ Harvester",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -499,7 +503,7 @@ export const EQUIPMENTS = [
   },
   {
     "name": "药剂套装",
-    "english-name": "Potion Kit",
+    "english_name": "Potion Kit",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -510,7 +514,7 @@ export const EQUIPMENTS = [
   },
   {
     "name": "尖刺皮肤",
-    "english-name": "Spiky Skin",
+    "english_name": "Spiky Skin",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -520,7 +524,7 @@ export const EQUIPMENTS = [
   },
   {
     "name": "扭曲脊背",
-    "english-name": "Twisted Back",
+    "english_name": "Twisted Back",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -530,7 +534,7 @@ export const EQUIPMENTS = [
   },
   {
     "name": "吸血鬼之牙",
-    "english-name": "Vampire's Tooth",
+    "english_name": "Vampire's Tooth",
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "普通",
@@ -540,10 +544,11 @@ export const EQUIPMENTS = [
   },
 ];
 // 拉撒路联盟 房间
+/** @type {Room[]} */
 export const ROOMS = [
    {
     "name": "电力室",
-    "english-name": "Electricity Chamber",
+    "english_name": "Electricity Chamber",
     "type": "房间",
     "clan": "拉撒路联盟",
     "rarity": "稀有",
@@ -552,7 +557,7 @@ export const ROOMS = [
   },
    {
     "name": "复生实验室",
-    "english-name": "Reanimation Lab",
+    "english_name": "Reanimation Lab",
     "type": "房间",
     "clan": "拉撒路联盟",
     "rarity": "高级",
@@ -561,85 +566,87 @@ export const ROOMS = [
   },
 ];
 // 拉撒路联盟 神器
+/** @type {Artifact[]} */
 export const ARTIFACTS = [
    {
     "name": "高级增长剂",
-    "english-name": "Advanced Growth",
+    "english_name": "Advanced Growth",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "当拥有装备的单位死亡时, 其装备永久获得 [攻击力] 4",
   },
    {
     "name": "催化剂",
-    "english-name": "Catalyzing Agent",
+    "english_name": "Catalyzing Agent",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "每回合战斗结束时, [不稳定] 层数 +5",
   },
    {
     "name": "应急计划书",
-    "english-name": "Contingency Plans",
+    "english_name": "Contingency Plans",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "怪物造物进入战斗时获得 [尖刺] 7",
   },
    {
     "name": "狂热药剂",
-    "english-name": "Frenzystesia",
+    "english_name": "Frenzystesia",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "每回合友方单位首次穿戴装备时, 获得 [余烬] 1",
   },
    {
     "name": "混种生物的头发",
-    "english-name": "Hair of the Hybrid",
+    "english_name": "Hair of the Hybrid",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "为一个友方单位穿戴装备时, 若其生命值小于 50% 则获得 [护甲] 10, 否则获得 [狂怒] 5",
   },
    {
     "name": "英伽的烧杯",
-    "english-name": "Inga's Beaker",
+    "english_name": "Inga's Beaker",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "当使用 [调配] 时, 选择的数量 +1",
   },
    {
     "name": "保命外衣",
-    "english-name": "Life Insurer",
+    "english_name": "Life Insurer",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "使用 [复活] 增益复活单位时, 使其获得 [护甲] 14",
   },
    {
     "name": "毒性液体",
-    "english-name": "Nefarious Overflow",
+    "english_name": "Nefarious Overflow",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "[不稳定] 爆炸造成的伤害翻倍",
   },
    {
     "name": "零件工厂",
-    "english-name": "Part Factory",
+    "english_name": "Part Factory",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "在 [部署阶段] 时, 随机将一个 [嫁接] 单位加入手牌",
   },
    {
     "name": "进度起搏器",
-    "english-name": "Progress Pacemaker",
+    "english_name": "Progress Pacemaker",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "每回合第一次 [调配] 时, 再次 [调配]",
   },
    {
     "name": "外科医生的缝合线",
-    "english-name": "Surgeon's Suture",
+    "english_name": "Surgeon's Suture",
     "type": "神器",
     "clan": "拉撒路联盟",
     "effect": "为一个友方单位穿戴装备时, 恢复其所有生命值",
   },
 ];
+/** @type {Path[]} */
 export const PATHS = [
   {
     "name": "调配大师",
@@ -810,3 +817,9 @@ export const PATHS = [
     ]
   },
 ]
+// 祸患
+/** @type {Blight[]} */
+export const BLIGHTS = [];
+// 天灾
+/** @type {Scourge[]} */
+export const SCOURGES = [];

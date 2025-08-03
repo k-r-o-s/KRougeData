@@ -1,13 +1,23 @@
 // 全局 DEBUG 模式开关
-export const __DEBUG = false;
+export const __DEBUG = true;
 
 // DEBUG 模式下打印数据
+/**
+ * 
+ * @param {string} text 
+ * @param {any} data 
+ * @returns 
+ */
 export function __log_data(text, data) {
   if (!__DEBUG) { return; }
   console.log(text);
   console.log(data);
 }
-
+/**
+ * 
+ * @param {Map<string, ItemData>} items 
+ * @returns 
+ */
 export function __check_entities(items) {
   // 匹配被中括号 [] 包括起来的文字
   const regex = /\[(.*?)\]/g;
@@ -30,6 +40,11 @@ export function __check_entities(items) {
   return Array.from(entitiesNotFound).sort();
 }
 
+/**
+ * 
+ * @param {string} cssUrl 
+ * @returns 
+ */
 export function createCssLink(cssUrl) {
   const linkElem = document.createElement('link');
   linkElem.setAttribute('rel', 'stylesheet');

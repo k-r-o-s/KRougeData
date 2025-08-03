@@ -3,12 +3,13 @@
 export const module_name = "影主";
 
 // 影主 英雄
+/** @type { Unit[] } */
 export const CHAMPIONS = [
   {
     "name": "影祖",
-    "english-name": "Penumbra",
+    "english_name": "Penumbra",
     "type": "单位",
-    "unit-type": "勇者",
+    "subtype": "勇者",
     "rarity": "勇者",
     "clan": "影主",
     "cost": "0",
@@ -20,9 +21,9 @@ export const CHAMPIONS = [
   },
   {
     "name": "原基",
-    "english-name": "Primordium",
+    "english_name": "Primordium",
     "type": "单位",
-    "unit-type": "勇者",
+    "subtype": "勇者",
     "rarity": "勇者",
     "clan": "影主",
     "cost": "0",
@@ -34,17 +35,18 @@ export const CHAMPIONS = [
   },
 ];
 // 影主 单位
+/** @type { Unit[] } */
 export const UNITS = [
   {
     "name": "影者影裔",
-    "english-name": "Antumbra Morsel",
+    "english_name": "Antumbra Morsel",
     "type": "单位",
-    "unit-type": "影裔",
+    "subtype": "影裔",
     "clan": "影主",
     "rarity": "高级",
     "cost": "0",
     "effect": "[被吞食]: 吞食者获得 [生命值] 9",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 1,
     "attack": 0,
     "health": 9,
@@ -52,14 +54,14 @@ export const UNITS = [
   },
   {
     "name": "熔岩影裔",
-    "english-name": "Magma Morsel",
+    "english_name": "Magma Morsel",
     "type": "单位",
-    "unit-type": "影裔",
+    "subtype": "影裔",
     "clan": "影主",
     "rarity": "高级",
     "cost": "0",
     "effect": "[被吞食]: 吞食者获得 [攻击力] 9",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 1,
     "attack": 9,
     "health": 1,
@@ -67,14 +69,14 @@ export const UNITS = [
   },
   {
     "name": "影裔采掘者",
-    "english-name": "Morsel Excavator",
+    "english_name": "Morsel Excavator",
     "type": "单位",
-    "unit-type": "影裔",
+    "subtype": "影裔",
     "clan": "影主",
     "rarity": "高级",
     "cost": "0",
     "effect": "[被吞食]: 吞食者获得 [攻击力] 6 和 [吸血] 1",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 1,
     "attack": 6,
     "health": 1,
@@ -82,14 +84,14 @@ export const UNITS = [
   },
   {
     "name": "影裔宝石匠",
-    "english-name": "Morsel Jeweler",
+    "english_name": "Morsel Jeweler",
     "type": "单位",
-    "unit-type": "影裔",
+    "subtype": "影裔",
     "clan": "影主",
     "rarity": "高级",
     "cost": "0",
     "effect": "[被吞食]: 吞食者获得 [生命值] 6 和 [伤害护盾] 1",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 1,
     "attack": 0,
     "health": 6,
@@ -97,14 +99,14 @@ export const UNITS = [
   },
   {
     "name": "影裔矿工",
-    "english-name": "Morsel Miner",
+    "english_name": "Morsel Miner",
     "type": "单位",
-    "unit-type": "影裔",
+    "subtype": "影裔",
     "clan": "影主",
     "rarity": "稀有",
     "cost": "0",
     "effect": "[被吞食]: 吞食者获得 [攻击力] 9 和 [生命值] 9",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 1,
     "attack": 0,
     "health": 1,
@@ -112,14 +114,14 @@ export const UNITS = [
   },
   {
     "name": "影裔清道夫",
-    "english-name": "Rubble Morsel",
+    "english_name": "Rubble Morsel",
     "type": "单位",
-    "unit-type": "影裔",
+    "subtype": "影裔",
     "clan": "影主",
     "rarity": "普通",
     "cost": "0",
     "effect": "[被吞食]: 获得 [余烬] 1. 吞食者获得 [攻击力] 3 和 [生命值] 3",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 1,
     "attack": 0,
     "health": 1,
@@ -127,14 +129,14 @@ export const UNITS = [
   },
   {
     "name": "合金构造体",
-    "english-name": "Alloyed Construct",
+    "english_name": "Alloyed Construct",
     "type": "单位",
-    "unit-type": "构装",
+    "subtype": "构装",
     "clan": "影主",
     "rarity": "高级",
     "cost": "1",
     "effect": "[怠惰]. [多重攻击] 1. [暴食]: 获得 [燃料] 1",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 25,
     "health": 25,
@@ -142,14 +144,14 @@ export const UNITS = [
   },
   {
     "name": "熔炉收藏家",
-    "english-name": "Crucible Collector",
+    "english_name": "Crucible Collector",
     "type": "单位",
-    "unit-type": "雾影",
+    "subtype": "雾影",
     "clan": "影主",
     "rarity": "高级",
     "cost": "1",
     "effect": "[暴食]: 获得 [吸血] 1",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 30,
     "health": 20,
@@ -157,14 +159,14 @@ export const UNITS = [
   },
   {
     "name": "熔炉看守者",
-    "english-name": "Crucible Warden",
+    "english_name": "Crucible Warden",
     "type": "单位",
-    "unit-type": "雾影",
+    "subtype": "雾影",
     "clan": "影主",
     "rarity": "高级",
     "cost": "1",
     "effect": "[暴食]: 获得 [伤害护盾] 1",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 20,
     "health": 30,
@@ -172,14 +174,14 @@ export const UNITS = [
   },
   {
     "name": "余烬锻炉",
-    "english-name": "Ember Forge",
+    "english_name": "Ember Forge",
     "type": "单位",
-    "unit-type": "构装",
+    "subtype": "构装",
     "clan": "影主",
     "rarity": "高级",
     "cost": "1",
     "effect": "每回合 +2 [余烬]",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 2,
     "attack": 0,
     "health": 20,
@@ -187,14 +189,14 @@ export const UNITS = [
   },
   {
     "name": "影裔宿主",
-    "english-name": "Morselmaster",
+    "english_name": "Morselmaster",
     "type": "单位",
-    "unit-type": "雾影",
+    "subtype": "雾影",
     "clan": "影主",
     "rarity": "高级",
     "cost": "1",
     "effect": "你在本层 [召唤] 一个影裔单位时, 可产生一个复制品",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 1,
     "attack": 10,
     "health": 10,
@@ -202,14 +204,14 @@ export const UNITS = [
   },
   {
     "name": "影裔造物",
-    "english-name": "Morsel-Made",
+    "english_name": "Morsel-Made",
     "type": "单位",
-    "unit-type": "构装",
+    "subtype": "构装",
     "clan": "影主",
     "rarity": "稀有",
     "cost": "2",
     "effect": "[饥饿]: 吞食带有 [被吞食] 的单位. [暴食]: 获得 [攻击力] 2 和 [生命值] 2",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 2,
     "attack": 5,
     "health": 20,
@@ -217,14 +219,14 @@ export const UNITS = [
   },
   {
     "name": "影裔制造者",
-    "english-name": "Morselmaker",
+    "english_name": "Morselmaker",
     "type": "单位",
-    "unit-type": "雾影",
+    "subtype": "雾影",
     "clan": "影主",
     "rarity": "高级",
     "cost": "2",
     "effect": "[结算]: 召唤一个 [影者影裔] 和 [熔岩影裔]",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 1,
     "attack": 5,
     "health": 15,
@@ -232,14 +234,14 @@ export const UNITS = [
   },
   {
     "name": "狂食者",
-    "english-name": "Overgorger",
+    "english_name": "Overgorger",
     "type": "单位",
-    "unit-type": "雾影",
+    "subtype": "雾影",
     "clan": "影主",
     "rarity": "稀有",
     "cost": "2",
     "effect": "[暴食]: 永久获得 [攻击力] 2",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 3,
     "attack": 0,
     "health": 25,
@@ -247,14 +249,14 @@ export const UNITS = [
   },
   {
     "name": "噬影者",
-    "english-name": "Shadoweater",
+    "english_name": "Shadoweater",
     "type": "单位",
-    "unit-type": "雾影",
+    "subtype": "雾影",
     "clan": "影主",
     "rarity": "高级",
     "cost": "2",
     "effect": "[暴食]: 恢复 10 点生命值, 对所有敌方造成 20 点伤害",
-    "banner-unit": false,
+    "banner_unit": false,
     "size": 3,
     "attack": 0,
     "health": 50,
@@ -262,14 +264,14 @@ export const UNITS = [
   },
   {
     "name": "暗影破城傀儡",
-    "english-name": "Shadowsiege",
+    "english_name": "Shadowsiege",
     "type": "单位",
-    "unit-type": "构装",
+    "subtype": "构装",
     "clan": "影主",
     "rarity": "稀有",
     "cost": "6",
     "effect": "",
-    "banner-unit": true,
+    "banner_unit": true,
     "size": 6,
     "attack": 200,
     "health": 150,
@@ -277,10 +279,11 @@ export const UNITS = [
   },
 ];
 // 影主 法术
+/** @type { Spell[] } */
 export const SPELLS = [
   {
     "name": "永恒吞噬",
-    "english-name": "Forever Consumed",
+    "english_name": "Forever Consumed",
     "type": "法术",
     "clan": "影主",
     "rarity": "稀有",
@@ -290,7 +293,7 @@ export const SPELLS = [
   },
   {
     "name": "火焰激发",
-    "english-name": "Kindle",
+    "english_name": "Kindle",
     "type": "法术",
     "clan": "影主",
     "rarity": "稀有",
@@ -300,7 +303,7 @@ export const SPELLS = [
   },
   {
     "name": "矿井塌方",
-    "english-name": "Mine Collapse",
+    "english_name": "Mine Collapse",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -310,7 +313,7 @@ export const SPELLS = [
   },
   {
     "name": "棱晶提取",
-    "english-name": "Prism Retrieval",
+    "english_name": "Prism Retrieval",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -320,7 +323,7 @@ export const SPELLS = [
   },
   {
     "name": "棱晶之尘",
-    "english-name": "Prismal Dust",
+    "english_name": "Prismal Dust",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -330,7 +333,7 @@ export const SPELLS = [
   },
   {
     "name": "雾影道钉",
-    "english-name": "Shroud Spike",
+    "english_name": "Shroud Spike",
     "type": "法术",
     "clan": "影主",
     "rarity": "稀有",
@@ -340,7 +343,7 @@ export const SPELLS = [
   },
   {
     "name": "盛宴",
-    "english-name": "Feast",
+    "english_name": "Feast",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -350,7 +353,7 @@ export const SPELLS = [
   },
   {
     "name": "不朽交易",
-    "english-name": "Immortal Trade",
+    "english_name": "Immortal Trade",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -360,7 +363,7 @@ export const SPELLS = [
   },
   {
     "name": "瓶装影裔",
-    "english-name": "Packed Morsels",
+    "english_name": "Packed Morsels",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -370,7 +373,7 @@ export const SPELLS = [
   },
   {
     "name": "生产风险",
-    "english-name": "Perils of Production",
+    "english_name": "Perils of Production",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -380,7 +383,7 @@ export const SPELLS = [
   },
   {
     "name": "反胃",
-    "english-name": "Retch",
+    "english_name": "Retch",
     "type": "法术",
     "clan": "影主",
     "rarity": "稀有",
@@ -390,7 +393,7 @@ export const SPELLS = [
   },
   {
     "name": "空间棱晶",
-    "english-name": "Space Prism",
+    "english_name": "Space Prism",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -400,7 +403,7 @@ export const SPELLS = [
   },
   {
     "name": "影者猛袭",
-    "english-name": "Antumbra Assault",
+    "english_name": "Antumbra Assault",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -410,7 +413,7 @@ export const SPELLS = [
   },
   {
     "name": "自相残杀",
-    "english-name": "Cannibalize",
+    "english_name": "Cannibalize",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -420,7 +423,7 @@ export const SPELLS = [
   },
   {
     "name": "余烬贮藏",
-    "english-name": "Ember Cache",
+    "english_name": "Ember Cache",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -430,7 +433,7 @@ export const SPELLS = [
   },
   {
     "name": "引擎升级",
-    "english-name": "Engine Upgrade",
+    "english_name": "Engine Upgrade",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -440,7 +443,7 @@ export const SPELLS = [
   },
   {
     "name": "创造影裔",
-    "english-name": "Making of a Morsel",
+    "english_name": "Making of a Morsel",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -450,7 +453,7 @@ export const SPELLS = [
   },
   {
     "name": "随意射击",
-    "english-name": "Plink",
+    "english_name": "Plink",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -460,7 +463,7 @@ export const SPELLS = [
   },
   {
     "name": "暗影分裂",
-    "english-name": "Shadesplitter",
+    "english_name": "Shadesplitter",
     "type": "法术",
     "clan": "影主",
     "rarity": "普通",
@@ -470,7 +473,7 @@ export const SPELLS = [
   },
   {
     "name": "雾影分裂",
-    "english-name": "Shroud Mitosis",
+    "english_name": "Shroud Mitosis",
     "type": "法术",
     "clan": "影主",
     "rarity": "稀有",
@@ -480,7 +483,7 @@ export const SPELLS = [
   },
   {
     "name": "虚空禁锢",
-    "english-name": "Void Binding",
+    "english_name": "Void Binding",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -490,7 +493,7 @@ export const SPELLS = [
   },
   {
     "name": "洞窟崩塌",
-    "english-name": "Cave In",
+    "english_name": "Cave In",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -500,7 +503,7 @@ export const SPELLS = [
   },
   {
     "name": "熔炉延展",
-    "english-name": "Crucible Extension",
+    "english_name": "Crucible Extension",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -510,7 +513,7 @@ export const SPELLS = [
   },
   {
     "name": "能量窃取",
-    "english-name": "Furnace Tap",
+    "english_name": "Furnace Tap",
     "type": "法术",
     "clan": "影主",
     "rarity": "稀有",
@@ -520,7 +523,7 @@ export const SPELLS = [
   },
   {
     "name": "卑躬屈膝",
-    "english-name": "Grovel",
+    "english_name": "Grovel",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -530,7 +533,7 @@ export const SPELLS = [
   },
   {
     "name": "影主之石",
-    "english-name": "Umbra Stone",
+    "english_name": "Umbra Stone",
     "type": "法术",
     "clan": "影主",
     "rarity": "稀有",
@@ -540,7 +543,7 @@ export const SPELLS = [
   },
   {
     "name": "灼热钢钉",
-    "english-name": "Blazing Bolts",
+    "english_name": "Blazing Bolts",
     "type": "法术",
     "clan": "影主",
     "rarity": "稀有",
@@ -550,7 +553,7 @@ export const SPELLS = [
   },
   {
     "name": "爆裂喷发",
-    "english-name": "Excavation Eruption",
+    "english_name": "Excavation Eruption",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -560,7 +563,7 @@ export const SPELLS = [
   },
   {
     "name": "宝石秘库",
-    "english-name": "Gem Trove",
+    "english_name": "Gem Trove",
     "type": "法术",
     "clan": "影主",
     "rarity": "高级",
@@ -570,92 +573,95 @@ export const SPELLS = [
   },
 ];
 // 影主 装备
+/** @type { Equipment[] } */
 export const EQUIPMENTS = [
 ];
 // 影主 房间
+/** @type { Room[] } */
 export const ROOMS = [
 ];
 // 影主 神器
+/** @type { Artifact[] } */
 export const ARTIFACTS = [
   {
     "name": "被遗弃的影者",
-    "english-name": "Abandoned Antumbra",
+    "english_name": "Abandoned Antumbra",
     "type": "神器",
     "clan": "影主",
     "effect": "回合开始时, 将 1 个普通或高级影裔单位加入手牌",
   },
   {
     "name": "宝石项链",
-    "english-name": "Chain of Gems",
+    "english_name": "Chain of Gems",
     "type": "神器",
     "clan": "影主",
     "effect": "每回合首个被召唤的友方单位获得 [伤害护盾] 2",
   },
   {
     "name": "纪念道钉",
-    "english-name": "Commemorative Spike",
+    "english_name": "Commemorative Spike",
     "type": "神器",
     "clan": "影主",
     "effect": "战斗开始时, 每一层都会召唤 1 个 [影裔矿工]",
   },
   {
     "name": "化石尖牙",
-    "english-name": "Fossilized Fangs",
+    "english_name": "Fossilized Fangs",
     "type": "神器",
     "clan": "影主",
     "effect": "[暴食] 额外触发一次",
   },
   {
     "name": "影祖面具",
-    "english-name": "Mask of Penumbra",
+    "english_name": "Mask of Penumbra",
     "type": "神器",
     "clan": "影主",
     "effect": "每回合召唤影裔单位时, 抽 1 张牌",
   },
   {
     "name": "矿用千斤顶",
-    "english-name": "Mine Jacks",
+    "english_name": "Mine Jacks",
     "type": "神器",
     "clan": "影主",
     "effect": "中间层 +2 [容量]",
   },
   {
     "name": "虚空精酿",
-    "english-name": "Refined Void",
+    "english_name": "Refined Void",
     "type": "神器",
     "clan": "影主",
     "effect": "友方单位进入战斗时, 获得 [吸血] 2",
   },
   {
     "name": "暗影灯",
-    "english-name": "Shadelamp",
+    "english_name": "Shadelamp",
     "type": "神器",
     "clan": "影主",
     "effect": "每回合第一个敌方单位死亡时, 将 2 个影裔单位加入手牌",
   },
   {
     "name": "投影箱",
-    "english-name": "Shadowbox",
+    "english_name": "Shadowbox",
     "type": "神器",
     "clan": "影主",
     "effect": "当你在一场战斗召唤了第 20 个影裔单位时, 对所有层的所有单位造成 200 点伤害",
   },
   {
     "name": "金牙",
-    "english-name": "Teeth of Gold",
+    "english_name": "Teeth of Gold",
     "type": "神器",
     "clan": "影主",
     "effect": "当一个单位 [被吞食] 时, 对后排敌方单位造成 5 点伤害",
   },
   {
     "name": "翼族技术",
-    "english-name": "Winged Technology",
+    "english_name": "Winged Technology",
     "type": "神器",
     "clan": "影主",
     "effect": "影裔单位进入战斗时, 获得 [伤害护盾] 1",
   },
 ];
-
+/** @type { Path[] } */
 export const PATHS = [
   {
     "name": "建筑师",
@@ -826,3 +832,9 @@ export const PATHS = [
     ]
   },
 ]
+// 祸患
+/** @type {Blight[]} */
+export const BLIGHTS = [];
+// 天灾
+/** @type {Scourge[]} */
+export const SCOURGES = [];

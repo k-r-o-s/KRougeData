@@ -7,10 +7,9 @@
   padding: 3px;
   line-height: 1.3;
   cursor: pointer;
-  /* height: 18px; */
 }
 
-.search-tag-clear-button {
+.tag-clear-button {
   box-sizing: border-box;
   display: inline;
   background-color: var(--krs-button-face-color);
@@ -19,6 +18,10 @@
   padding: 0;
 }
 
-.search-tag-clear-button:hover {
+.tag-button-hidden {
+  visibility: collapse;
+}
+
+.tag-clear-button:hover {
   background-color: var(--krs-button-face-color-hover);
 }
