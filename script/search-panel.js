@@ -101,6 +101,7 @@ export class SearchPanel extends HTMLElement {
     // <image-toggle-button src="" text="0" condition="cost:0" size="42x42">
     // </image-toggle-button>
     const costSection = this.querySelector('#cost-section');
+    // TODO: 费用从 MT_DATA 中动态获取
     ['0', '1', '2', '3', '4+', 'X'].forEach(cost => {
       const button = ImageToggleButton.create();
       if (cost == '4+') {
