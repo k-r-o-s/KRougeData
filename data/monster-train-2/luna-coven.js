@@ -3,6 +3,7 @@
 export const module_name = "月巫团";
 
 // 月巫团 英雄
+/**@type{Unit[]}*/
 export const CHAMPIONS = [
   {
     "name": "阿杜恩",
@@ -34,6 +35,7 @@ export const CHAMPIONS = [
   },
 ];
 // 月巫团 单位
+/**@type{Unit[]}*/
 export const UNITS = [
   {
     "name": "占星师",
@@ -233,6 +235,7 @@ export const UNITS = [
   },
 ];
 // 月巫团 法术
+/**@type{Spell[]}*/
 export const SPELLS = [
   {
     "name": "月巫团道钉",
@@ -456,6 +459,7 @@ export const SPELLS = [
   },
 ];
 // 月巫团 装备
+/**@type{Equipment[]}*/
 export const EQUIPMENTS = [
   {
     "name": "月相循环法杖",
@@ -478,6 +482,7 @@ export const EQUIPMENTS = [
   },
 ];
 // 月巫团 房间
+/**@type{Room[]}*/
 export const ROOMS = [
   {
     "name": "月食室",
@@ -499,6 +504,7 @@ export const ROOMS = [
   },
 ];
 // 月巫团 神器
+/**@type{Artifact[]}*/
 export const ARTIFACTS = [
   {
     "name": "占星师的星象仪",
@@ -578,7 +584,7 @@ export const ARTIFACTS = [
     "effect": "每回合召唤的第一个单位获得 [导流] 4",
   },
 ];
-
+/**@type{ChampionPath[]}*/
 export const PATHS = [
   {
     "name": "神秘之锤",

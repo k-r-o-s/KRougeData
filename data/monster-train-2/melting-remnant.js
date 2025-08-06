@@ -27,7 +27,7 @@ export const CHAMPIONS = [
     "rarity": "勇者",
     "clan": "熔尸",
     "cost": "0",
-    "effect": "[自助餐] 3. [被吞食]: 使被吞食者获得此单位的 [攻击力] 和 [生命值]",
+    "effect": "",
     "size": 2,
     "attack": 10,
     "health": 10,
@@ -606,7 +606,7 @@ export const ARTIFACTS = [
     "effect": "[亡语] 额外触发一次",
   },
 ];
-/** @type { Path[] } */
+/** @type { ChampionPath[] } */
 export const PATHS = [
   {
     "name": "光芒四射",

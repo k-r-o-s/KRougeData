@@ -1,43 +1,53 @@
+import { MT_DATA } from '../data/monster-train-2/index.js';
 import { ImageToggleButton } from './image-toggle-button.js'
 import { SearchTag } from './search-tag.js';
 
+//-----------------------------------------------------------------------
+//                   HTML 模板
+//-----------------------------------------------------------------------
 const template = document.createElement('template');
 template.innerHTML = `
   <!-- 查询输入框和按钮区 -->
+  <section-divider text="文字" tooltip="按钮 [+] 可以保存当前搜索条件\n输入内容后回车执行搜索">
+  </section-divider>
   <div class="search-container">
     <input type="search" id="search-input" placeholder="请输入搜索条件..." list="search-list">
     <button id="search-button">🔎</button>
   </div>
   <div class="search-tag-list"></div>
   <!-- 卡牌氏族选取区 -->
-  <section-divider text="氏族"></section-divider>
+  <section-divider text="氏族" tooltip="双击可以快速单选">
+  </section-divider>
   <div id="clan-section" class="image-toggle-button-group">
   </div>
   <!-- 卡牌类型选取区 -->
-  <section-divider text="类型"></section-divider>
+  <section-divider text="类型" tooltip="神器和升级石会无视稀有度和费用条件\n双击可以快速单选"></section-divider>
   <div id="type-section" class="image-toggle-button-group">
   </div>
   <!-- 卡牌稀有度选取区 -->
-  <section-divider text="稀有度"></section-divider>
+  <section-divider text="稀有度" tooltip="双击可以快速单选"></section-divider>
   <div id="rarity-section" class="image-toggle-button-group">
   </div>
   <!-- 卡牌费用选取区 -->
-  <section-divider text="费用"></section-divider>
+  <section-divider text="费用" tooltip="双击可以快速单选"></section-divider>
   <div id="cost-section" class="image-toggle-button-group">
   </div>
   <!-- 标签选取区 -->
-  <section-divider text="标签"></section-divider>`;
+  <section-divider text="标签" tooltip="点击标签可以快速搜索"></section-divider>
+  <div id="tag-section" class="tag-accordion-container">
+  </div>`;
+
+/** @typedef {HTMLDetailsElement & { text: string }} AccordionDetail */
+/** @typedef {(query: Query| string)=>undefined} OnTagClickedCallback */
+/** @typedef {(currentTagGroup: string)=>undefined} OnTagGroupOpenCallback */
 
 export class SearchPanel extends HTMLElement {
   static TAG_NAME = 'search-panel';
-  /** @type {Query} */
-  static RESET_QUERY = {
-    "text": '',
-    "clan": [],
-    "type": [],
-    "rarity": [],
-    "cost": [],
-  }
+  #currentTagGroup = '';
+  /**@type{OnTagClickedCallback?}*/
+  #onTagClicked = undefined;
+  /**@type{OnTagGroupOpenCallback?}*/
+  #onTagGroupChanged = undefined;
 
   constructor() {
     super();
@@ -51,6 +61,8 @@ export class SearchPanel extends HTMLElement {
     this.searchInput = this.querySelector("#search-input");
     /** @type{HTMLDivElement} */
     this.searchTagList = this.querySelector(".search-tag-list");
+    /** @type{HTMLDivElement} */
+    this.tagSection = this.querySelector("#tag-section");
 
     this.#createToggleButtons();
     this.#createTermTags();
@@ -101,14 +113,9 @@ export class SearchPanel extends HTMLElement {
     // <image-toggle-button src="" text="0" condition="cost:0" size="42x42">
     // </image-toggle-button>
     const costSection = this.querySelector('#cost-section');
-    // TODO: 费用从 MT_DATA 中动态获取
-    ['0', '1', '2', '3', '4+', 'X'].forEach(cost => {
+    MT_DATA.costs.forEach(cost => {
       const button = ImageToggleButton.create();
-      if (cost == '4+') {
-        button.setAttribute('condition', `cost:4;cost:5;cost:6;cost:7;cost:8`);
-      } else {
-        button.setAttribute('condition', `cost:${cost}`);
-      }
+      button.setAttribute('condition', `cost:${cost}`);
       button.setAttribute('text', cost);
       button.setAttribute('title', cost);
       button.setAttribute('size', '42x42');
@@ -116,12 +123,49 @@ export class SearchPanel extends HTMLElement {
       this.toggleButtons.push(button);
     })
   }
-
+  /**
+   * 从所有数据中检索出的词条
+   * 用来生成快速标签
+   * 
+   * 标签根据类别分组, 使用比较新的 Web 标准 Exclusive Accordion 来实现
+   */
   #createTermTags() {
-
+    const groupedTerms = MT_DATA.groupedTerms;
+    const fragment = document.createDocumentFragment();
+    groupedTerms.forEach((terms, term_type) => {
+      if (term_type == '能力' || term_type == '召唤单位') {
+        return;
+      }
+      const detail = /**@type{AccordionDetail}*/(document.createElement('details'));
+      detail.setAttribute('name', 'tag-group');
+      if (term_type == this.#currentTagGroup) {
+        detail.toggleAttribute('open');
+      }
+      detail.text = term_type;
+      const title = document.createElement('summary');
+      title.textContent = term_type;
+      const content = document.createElement('div');
+      content.classList.add('accordion-content');
+      terms.forEach(term => {
+        content.appendChild(this.#createTag(term));
+      })
+      detail.appendChild(title);
+      detail.appendChild(content);
+      detail.addEventListener('toggle', (e) => {
+        const det = /**@type{AccordionDetail?}*/(e.target);
+        if (!det || det.tagName != 'DETAILS' || !det.open) {
+          return;
+        }
+        this.#currentTagGroup = det.text;
+        if (this.#onTagGroupChanged) {
+          this.#onTagGroupChanged(det.text);
+        }
+      });
+      fragment.appendChild(detail);
+    });
+    this.tagSection.appendChild(fragment);
   }
 
-  ///////////////////////////////////////////////////////
   get searchText() {
     return this.searchInput.value;
   }
@@ -137,12 +181,17 @@ export class SearchPanel extends HTMLElement {
     return conditons;
   }
   /**
-   * @param {(query:Query)=>undefined} callback 
+   * @param {OnTagClickedCallback?} callback 
    */
   set onTagClicked(callback) {
-    this._onTagClicked = callback;
+    this.#onTagClicked = callback;
   }
-
+  /**
+   * @param {OnTagGroupOpenCallback?} callback
+   */
+  set onTagGroupChanged(callback) {
+    this.#onTagGroupChanged = callback;
+  }
   /**
    * 
    * @param {Query} query 
@@ -163,31 +212,55 @@ export class SearchPanel extends HTMLElement {
       }
     }
     if (isNew) {
-      tag = /** @type { SearchTag } */ (SearchTag.create(true));
-      tag.query = query;
+      tag = this.#createTag(query);
     }
     // 即使它是原有的元素, insert 操作依然会把它从旧的位置移除并插入到第一个位置
     list.insertBefore(tag, list.firstElementChild);
     if (isNew && list.childNodes.length > MAX_TAG_COUNT) {
       list.removeChild(list.lastElementChild);
     }
-    if (isNew) {
-      const callback = () => {
-        this._onTagClicked(tag.query);
-      };
-      tag.addEventListener('click', callback);
-      tag.clickCallback = callback;
+  }
+  /**
+   * 
+   * @param {string | Query} textOrQuery 
+   * @param {boolean} closable 
+   * @returns {SearchTag}
+   */
+  #createTag(textOrQuery, closable = false) {
+    const tag = /** @type { SearchTag } */ (SearchTag.create(true));
+    if (typeof textOrQuery == 'string') {
+      tag.text = textOrQuery;
+    } else {
+      tag.query = textOrQuery;
+    }
+    tag.closable = closable;
+
+    const callback = () => {
+      this.#onTagClicked(tag.text || tag.query);
+    };
+    tag.addEventListener('click', callback);
+    tag.clickCallback = callback;
+
+    if (closable) {
       const clearCallback = () => {
         this.removeSearchTag(tag);
       }
       tag.clearButton.addEventListener('click', clearCallback);
       tag.clearCallback = clearCallback;
     }
+    return tag;
   }
   addResetTag() {
-    this.addSearchTag(SearchPanel.RESET_QUERY);
+    this.addSearchTag({
+      "text": '',
+      "clan": [],
+      "type": [],
+      "rarity": [],
+      "cost": [],
+    });
   }
   /**
+   * 删除搜索标签并清理资源
    * 
    * @param {SearchTag} tag 
    */
@@ -198,9 +271,28 @@ export class SearchPanel extends HTMLElement {
   }
   /**
    * 
-   * @param {Query} query 
+   * @param {string} tagGroup 
+   */
+  setCurrentTagGroup(tagGroup) {
+    this.#currentTagGroup = tagGroup;
+    const details = /**@type{NodeListOf<AccordionDetail>}*/(this.tagSection.querySelectorAll('details'));
+    details.forEach((d) => {
+      if (d.text == tagGroup && !d.open) {
+        d.open = true;
+      }
+    });
+  }
+
+  /**
+   * 根据搜索条件设置各个面板上控件的状态
+   * 
+   * @param {Query | string} query 
    */
   setQuery(query) {
+    if (typeof query == 'string') {
+      this.searchInput.value = query;
+      return;
+    }
     this.searchInput.value = query.text;
     ["clan", "type", "rarity", "cost"].forEach(sectionId => {
       const section = this.querySelector("#" + sectionId + "-section");

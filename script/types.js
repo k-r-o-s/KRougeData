@@ -45,7 +45,7 @@
  */
 
 /**
- * @typedef {object} PathStep
+ * @typedef {object} ChampionPathStep
  * @property {Number} rank - 等级
  * @property {Number} size - (占据房间的)尺寸
  * @property {Number} attack - 攻击力
@@ -54,14 +54,16 @@
  */
 
 /**
- * @typedef {object} Path
+ * @typedef {object} ChampionPath
  * @property {string} name - 名称
  * @property {string} champion - 英雄名字
  * @property {string} type - 类型
- * @property {PathStep[]} path - 路径
+ * @property {ChampionPathStep[]} path - 路径
  */
 // 单位
 /** @typedef { CardData & UnitData } Unit */
+// 单位
+/** @typedef { Unit & { paths: ChampionPath[]} } Champion */
 // 法术
 /** @typedef { CardData & { type: '法术'}  } Spell */
 // 装备

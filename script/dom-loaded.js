@@ -28,10 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
   __cardDialog = document.querySelector('#card-detail-dlg');
 
   // 快捷标签点击事件处理
-  __rightPanel.onTagClicked = (/** @type { Query } */query) => {
+  __rightPanel.onTagClicked = (/** @type { Query | string } */query) => {
     __rightPanel.setQuery(query);
     doSearch();
   };
+  __rightPanel.onTagGroupChanged = (currentTagGroup)=> {
+    localStorage.setItem('tagGroup', currentTagGroup);
+  }
+
   // 加载上次页面最后一次搜索条件
   loadSavedQuery();
 
@@ -64,6 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // 恢复上一次搜索的条件设置
 function loadSavedQuery() {
+  const tagGroup = localStorage.getItem('tagGroup') || '特性';
+  __rightPanel.setCurrentTagGroup(tagGroup);
+
   const queryString = localStorage.getItem('queryState');
   if (!queryString) { return; }
   try {
@@ -71,7 +78,7 @@ function loadSavedQuery() {
     __log_data("loaded query", query);
     __rightPanel.setQuery(query);
   } catch (e) {
-    console.error("query string: [" + queryString + "] is not valid");
+    console.error("查询字符串: [" + queryString + "] 无效");
   }
 }
 
@@ -99,11 +106,11 @@ function doSearch() {
   __rightPanel.conditions.map((condition) => {
     const pair = condition.split(":");
     if (!pair || pair.length != 2) {
-      console.error("invalid condition: [" + condition + "]"); return;
+      console.error("无效的查询条件: [" + condition + "]"); return;
     }
     if (__DEBUG) {
       if (!["clan", "type", "rarity", "cost"].includes(pair[0])) {
-        console.error("invalid condition: [" + condition + "]"); return;
+        console.error("无效的查询条件: [" + condition + "]"); return;
       }
     }
     const field = /** @type { "clan" | "type" | "rarity" | "cost"} */ (pair[0]);
@@ -112,7 +119,7 @@ function doSearch() {
   // 保存搜索条件, 以便下次打开/刷新页面时恢复
   localStorage.setItem('queryState', JSON.stringify(query));
   // 数据集过滤
-  /** @type { any[] } */
+  /** @type { ItemData[] } */
   const result = [];
   MT_DATA.forEach((item) => {
     if (item.type == '词条') { return; }
@@ -154,7 +161,7 @@ function doSearch() {
         }
         // 还没找到的话, 在 paths 字段查找
         if (!found && 'paths' in item && item.paths) {
-          const paths = /** @type{Path[]} */(item.paths);
+          const paths = /** @type{ChampionPath[]} */(item.paths);
           for (let pathData of paths) {
             for (let step of pathData.path) {
               if (step.effect && step.effect.includes(qText)) {
@@ -242,8 +249,12 @@ function createCardList(result) {
   }
   __leftPanel.innerHTML = "";
   let count = result.length;
+
+  /**@type{DocumentFragment?}*/
+  let fragment;
   if (!__animatingEnabled || count > 30) {
-    result.map((item) => __leftPanel.appendChild(createCard(item, false)));
+    fragment = document.createDocumentFragment();
+    result.map((item) => fragment.appendChild(createCard(item, false)));
   } else {
     if (count < 1) { return; }
     let i = 0;
@@ -268,6 +279,7 @@ function createCardList(result) {
     }
     __animationFrameId = requestAnimationFrame(createCardWithAnimation);
   }
+  if (fragment) { __leftPanel.appendChild(fragment); }
 }
 /**
  * 

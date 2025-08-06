@@ -1,5 +1,11 @@
 const template = document.createElement('template');
-template.innerHTML = `<div class="section-divider" id="divider"></div>`;
+template.innerHTML = `<div class="section-divider" id="divider">
+    <span id="title"></span>
+    <span class="section-help-container">
+      <span class="section-help-icon"> ? <span>
+      <div class="section-help-text"></div>
+    </span>
+  </div>`;
 
 export class SectionDivider extends HTMLElement {
 
@@ -23,11 +29,8 @@ export class SectionDivider extends HTMLElement {
     const content = template.content.cloneNode(true);
     shadowRoot.appendChild(content);
 
-    const divider = shadowRoot.querySelector('#divider');
-    if (!divider) {
-      console.error('template with ID "' + SectionDivider.TEMPLATE_ID + '" clone failed, <div id=\"divider\"> not found');
-    }
-    this.divider = divider;
+    this.divider = shadowRoot.querySelector('#title');
+    this.tooltip = shadowRoot.querySelector('.section-help-text');
   }
 
   // 可选：定义生命周期回调函数
@@ -39,10 +42,19 @@ export class SectionDivider extends HTMLElement {
     // console.log('SectionDivider 已从文档断开。');
   }
 
+  /**
+   * 
+   * @param {string} name 
+   * @param {string} oldValue 
+   * @param {string} newValue 
+   */
   attributeChangedCallback(name, oldValue, newValue) {
     switch (name) {
       case "text":
         this.divider.textContent = newValue;
+        break;
+      case "tooltip":
+        this.tooltip.textContent = newValue;
         break;
       default:
         console.error("unsupported attribute type: [" + name + "]");
@@ -50,7 +62,7 @@ export class SectionDivider extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['text']; // 监听的属性列表
+    return ['text', 'tooltip']; // 监听的属性列表
   }
 }
 

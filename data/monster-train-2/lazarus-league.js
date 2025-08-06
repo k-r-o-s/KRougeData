@@ -646,7 +646,7 @@ export const ARTIFACTS = [
     "effect": "为一个友方单位穿戴装备时, 恢复其所有生命值",
   },
 ];
-/** @type {Path[]} */
+/** @type {ChampionPath[]} */
 export const PATHS = [
   {
     "name": "调配大师",

@@ -5,12 +5,13 @@
   /* 垂直居中文本 */
   text-align: center;
   /* 确保文字在分隔符中居中 */
-  margin: 20px 0;
+  margin: 10px 0 20px;
   /* 上下外边距 */
   color: #555;
   /* 文字颜色 */
-  font-size: 0.9em;
+  font-size: 0.8rem;
   font-weight: bold;
+  cursor:none;
 }
 
 .section-divider::before,
@@ -26,11 +27,53 @@
 }
 
 .section-divider::before {
-  margin-right: 15px;
+  margin-right: 10px;
   /* 左侧线与文字的间距 */
 }
 
 .section-divider::after {
-  margin-left: 15px;
+  margin-left: 10px;
   /* 右侧线与文字的间距 */
+}
+
+.section-help-container {
+  position: relative; /* 确保子元素可以基于它定位 */
+  /* display: inline-block; */
+  cursor: pointer; /* 鼠标指针变为手型，提示可交互 */
+  margin: 0 0 0 4px;
+}
+
+.section-help-icon {
+  width: 1.0rem;
+  height: 1.0rem;
+  background-color: #65afff;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.section-help-text {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+
+  width: 320px;
+  background-color: var(--krs-main-bgcolor-dark);
+  color: #fff;
+  text-align: center;
+  white-space: pre-line;
+  border-radius: 6px;
+  padding: 5px 0;
+  z-index: 1;
+  top: 140%; /* 将提示框放在图标上方 */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s;
+}
+
+.section-help-container:hover .section-help-text {
+  visibility: visible;
+  opacity: 1;
 }

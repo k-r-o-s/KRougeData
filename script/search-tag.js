@@ -11,6 +11,8 @@ export class SearchTag extends HTMLElement {
   static TAG_NAME = 'search-tag'
   static MAX_LENGTH = 7; // 超过这个长度显示省略号
 
+  #text = "";
+
   constructor() {
     // 必须调用 super()
     super();
@@ -36,7 +38,7 @@ export class SearchTag extends HTMLElement {
    */
   set query(value) {
     this._query = value;
-    let text = value && value.text ? value.text : '[   ]';
+    let text = value && value.text ? value.text : '';
     // 超过 7 个字符显示省略号
     if (text.length > SearchTag.MAX_LENGTH) {
       text = text.slice(0, SearchTag.MAX_LENGTH) + '...';
@@ -52,7 +54,23 @@ export class SearchTag extends HTMLElement {
   get queryJson() {
     return this._query ? JSON.stringify(this._query) : "";
   }
-
+  /**@type{boolean}*/
+  get closable() {
+    return this.getAttribute('closable') == 'true';
+  }
+  /**@param{boolean} value*/
+  set closable(value) {
+    this.setAttribute('closable', value ? 'true' : 'false');
+  }
+  /**@type{string}*/
+  get text() {
+    return this.#text;
+  }
+  /**@param{string}value */
+  set text(value) {
+    this.#text = value;
+    this.setAttribute('text', value);
+  }
   /**
    * 
    * @param { string } name 
@@ -65,6 +83,10 @@ export class SearchTag extends HTMLElement {
         newValue == 'true'
           ? this.button.classList.remove("tag-button-hidden")
           : this.button.classList.add("tag-button-hidden");
+        break;
+      case 'text':
+        this.#text = newValue;
+        this.textSpan.textContent = newValue;
         break;
       default: break;
     }
@@ -80,7 +102,7 @@ export class SearchTag extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['closable']; // 监听的属性列表
+    return ['closable', 'text']; // 监听的属性列表
   }
 }
 

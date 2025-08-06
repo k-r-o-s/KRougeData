@@ -584,7 +584,7 @@ export const ARTIFACTS = [
     "effect": "当一个单位死于 [腐朽] 时, 将其减益效果施加于另一个随机敌方单位",
   },
 ];
-/** @type { Path[] } */
+/** @type { ChampionPath[] } */
 export const PATHS = [
   {
     "name": "领头人",

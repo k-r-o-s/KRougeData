@@ -1,11 +1,12 @@
-/* @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"; */
-@import "../proto/layout/layout.css";
-@import "../proto/image-toggle-button/style.css";
-@import "../proto/card-list-view/style.css";
-@import "../proto/item-card/style.css";
-@import "../proto/img-in-text/style.css";
 @import "../css/default.css";
+@import "../proto/card-list-view/style.css";
+@import "../proto/exclusive-accordion/style.css";
+@import "../proto/image-toggle-button/style.css";
+@import "../proto/img-in-text/style.css";
+@import "../proto/item-card/style.css";
+@import "../proto/layout/layout.css";
 
+/*----------------------------- 搜索面板 -----------------------------*/
 .search-container {
   display: flex;
   /* 启用 Flexbox 布局 */
@@ -65,8 +66,9 @@ search-tag {
   box-sizing: border-box;
   line-height: 1.8;
 }
+/*----------------------------- 标签组 -----------------------------*/
 
-/***************************************************************************/
+/*----------------------------- 对话框 -----------------------------*/
 dialog {
   min-width: 650px;
   max-height: 90vh;
@@ -80,3 +82,4 @@ dialog {
 .dialog-content div {
   margin: 0;
 }
+

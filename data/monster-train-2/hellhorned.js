@@ -601,7 +601,7 @@ export const ARTIFACTS = [
     "effect": "未使用的 [余烬] 保留至下一回合",
   },
 ];
-/** @type {Path[]} */
+/** @type {ChampionPath[]} */
 export const PATHS = [
   {
     "name": "殴斗者",

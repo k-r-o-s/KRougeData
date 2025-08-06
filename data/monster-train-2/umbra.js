@@ -661,7 +661,7 @@ export const ARTIFACTS = [
     "effect": "影裔单位进入战斗时, 获得 [伤害护盾] 1",
   },
 ];
-/** @type { Path[] } */
+/** @type { ChampionPath[] } */
 export const PATHS = [
   {
     "name": "建筑师",

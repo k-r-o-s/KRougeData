@@ -82,6 +82,8 @@ footer p {
   width: 380px;
   /* 固定宽度 */
   flex-shrink: 0;
+  max-height: calc(100vh - 120px);
+  overflow-y: scroll;
 }
 
 /* ///////////////////////////////////////////////////////////////////////// */

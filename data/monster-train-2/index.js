@@ -15,6 +15,7 @@ import * as Notes from "./notes.js"
 
 import { __log_data } from "../../script/util.js"
 
+/////////////////////////////////////////////////////////
 /**
  * 
  * @param {Map<string, ItemData>} terms 
@@ -38,14 +39,23 @@ function getTerms(terms, effect) {
     getTerms(terms, termData.effect);
   }
 }
-
-// const OBJ_TYPES_WITH_TIP = ["单位", "法术", "神器", "装备", "房间", "祸患", "天灾"];
-/** @type { Map<string, string[]>} */
-const GROUPED_TERMS = new Map();
+/** @type { Map<string, ItemData>
+ * & {
+ *    groupedTerms: Map<string, string[]>,
+ *    costs: string[]
+ * }} */
+const initAccumulator = Object.assign(new Map(), {
+  groupedTerms: /** @type { Map<string, string[]>} */new Map(),
+  costs: /**@type{string[]}*/[],
+});
 
 // 因为目前只有几百条数据, 这里没有太注重效率
 // 如果数据量非常大, 可以加几层 Map
-/** @type { Map<string, ItemData> & {groupedTerms?: Map<string, string[]>}} */
+/** @type { Map<string, ItemData>
+ * & {
+ *    groupedTerms: Map<string, string[]>,
+ *    costs: string[]
+ * }} */
 export const MT_DATA = [
   Banished,
   PyreBorne,
@@ -96,14 +106,13 @@ export const MT_DATA = [
     if (group.PATHS) {
       group.PATHS.map(item => {
         if (!item.champion) {
-          console.error("path data don't have champion:");
+          console.error("英雄升级的数据未包含英雄名字:");
           console.log(item);
           return;
         }
-
-        const championData = accumulator.get(item.champion);
+        const championData = /**@type{Champion}*/(accumulator.get(item.champion));
         if (!championData) {
-          console.error("can't find data of champion [" + item.champion + "]");
+          console.error("无法找到对应的英雄数据: [" + item.champion + "]");
           return;
         }
         if (!championData.paths) { championData.paths = []; }
@@ -112,26 +121,32 @@ export const MT_DATA = [
       __log_data("获取数据 PATHS", accumulator);
     }
     return accumulator;
-  }, new Map());
+  }, initAccumulator);
 
+const groupedTerms = MT_DATA.groupedTerms;
 Terms.TERMS.map(item => {
   MT_DATA.set(item.name, item);
-  let terms = GROUPED_TERMS.get(item.type);
+  let terms = groupedTerms.get(item.term_type);
   if (!terms) {
     terms = [];
-    GROUPED_TERMS.set(item.type, terms);
+    groupedTerms.set(item.term_type, terms);
   }
   terms.push(item.name);
 });
 __log_data("获取数据 TERMS", MT_DATA);
-__log_data("获取数据 GROUPED_TERMS", GROUPED_TERMS);
+__log_data("获取数据 GROUPED_TERMS", groupedTerms);
 
 Upgrades.UPGRADES.map(item => MT_DATA.set(item.name, item));
 __log_data("获取数据 UPGRADES", MT_DATA);
 
+const costs = MT_DATA.costs;
 MT_DATA.forEach((item) => {
   const terms = new Map();
   item.terms = terms;
+
+  if ('cost' in item && !MT_DATA.costs.includes(item.cost)) {
+    costs.push(item.cost);
+  }
 
   if (item.effect) {
     // text 属性是为了搜索用的时候避免方括号造成干扰, 在这里去掉 [ 和 ]
@@ -142,8 +157,8 @@ MT_DATA.forEach((item) => {
     getTerms(terms, item.effect);
   }
   if (!('paths' in item)) { return; }
-  const paths = /** @type { Path[] } */(item.paths);
-  paths.forEach((/** @type {Path} */pathData) => {
+  const paths = /** @type { ChampionPath[] } */(item.paths);
+  paths.forEach((/** @type {ChampionPath} */pathData) => {
     if (!pathData.path || !Array.isArray(pathData.path)) { return; }
     pathData.path.forEach((step) => {
       getTerms(terms, step.effect);
@@ -151,7 +166,8 @@ MT_DATA.forEach((item) => {
   })
 });
 
-MT_DATA.groupedTerms = GROUPED_TERMS;
+costs.sort();
+__log_data('costs: ', costs);
 
 // 把 Notes 的内容关联到对应卡牌数据的 tips 字段(类型 string[])
 Notes.NOTES.map(tip => {

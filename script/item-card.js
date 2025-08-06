@@ -4,22 +4,23 @@ import { createCssLink } from './util.js';
 /**
  * @typedef {()=>undefined} CardClickedCallback
  */
-function CardClickedHandler() {
-  if (this._onClickHandler) {
-    this._onClickHandler();
-  }
-}
 
 const template = document.createElement('template');
 template.innerHTML = `
   <div class="card-container">
-    <img class="card-image">
+    <img class="card-image" loading="lazy">
     <div class="card-name"></div>
     <div class="card-effect-area">
       <p class="card-effect"></p>
     </div>
     <img class="celestial_alcove-icon" src="/image/other/天界壁龛.webp">
   </div>`;
+
+function CardClickedHandler() {
+  if (this._onClickHandler) {
+    this._onClickHandler();
+  }
+}
 
 export class ItemCard extends HTMLElement {
 
@@ -69,8 +70,8 @@ export class ItemCard extends HTMLElement {
   /**
    * 
    * @param {string} name 
-   * @param {*} oldValue 
-   * @param {*} newValue 
+   * @param {string} oldValue 
+   * @param {string} newValue 
    */
   attributeChangedCallback(name, oldValue, newValue) {
     switch (name) {
@@ -97,7 +98,7 @@ export class ItemCard extends HTMLElement {
     setTimeout(() => {
       this.cardContainer.classList.remove('entering');
       this.cardContainer.classList.add('entered');
-    }, 10); // 小延迟确保样式应用
+    }, 20); // 小延迟确保样式应用
   }
   onBeingRemoved() {
     this.image.removeEventListener('click', this._cickHandler);
@@ -121,7 +122,7 @@ export class ItemCard extends HTMLElement {
       this.image.classList.remove("card-img-small");
       this.image.classList.add("card-img-normal");
     }
-    
+
     const celestialIcon = /**@type{HTMLImageElement}*/(this
       .shadowRoot.querySelector(".celestial_alcove-icon"));
     if ('celestial_alcove' in value && value["celestial_alcove"]) {
@@ -189,7 +190,7 @@ export class ItemCard extends HTMLElement {
     let html = "";
     if (this._item.terms) {
       this._item.terms.forEach(item => {
-        if (ItemCard.TYPES_WITH_CARD.includes(item.type) 
+        if (ItemCard.TYPES_WITH_CARD.includes(item.type)
           || (item.type == '词条' && item.term_type == '召唤单位')) {
           html += `<div class="term-summon">`;
           html += `<p class="term-title">${item.name}</p>`;

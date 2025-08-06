@@ -36,13 +36,22 @@ export class HeaderContent extends HTMLElement {
     // console.log('HeaderContent 已从文档断开。');
   }
 
+  /**
+   * 
+   * @param {string} name 
+   * @param {string} oldValue 
+   * @param {string} newValue 
+   */
   attributeChangedCallback(name, oldValue, newValue) {
     switch (name) {
       default:
-        console.error("unsupported attribute type: [" + name + "]");
+        console.error("未支持的属性名: [" + name + "]");
     }
   }
 
+  /**
+   * @return {string[]}
+   */
   static get observedAttributes() {
     return [];
   }

@@ -1,0 +1,13 @@
+@import "../../css/default.css";
+@import "./style.css";
+
+/* 容器样式：为了展示效果，给手风琴组加一个容器 */
+.accordion-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* 隐藏圆角溢出的内容 */
+}

@@ -586,7 +586,7 @@ export const ARTIFACTS = [
     "effect": "当敌方单位进入薪火室下方的楼层时, 对其施加 [法术易伤] 2",
   },
 ];
-/** @type { Path[] } */
+/** @type { ChampionPath[] } */
 export const PATHS = [
   {
     "name": "寒风",

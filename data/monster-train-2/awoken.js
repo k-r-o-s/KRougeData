@@ -581,7 +581,7 @@ export const ARTIFACTS = [
     "effect": "回合开始时, 将一张 [蛰刺] 加入手牌",
   },
 ];
-/** @type { Path[] } */
+/** @type { ChampionPath[] } */
 export const PATHS = [
   {
     "name": "爆炸",

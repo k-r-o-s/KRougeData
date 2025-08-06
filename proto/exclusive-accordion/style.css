@@ -1,0 +1,67 @@
+/* 核心样式：手风琴项 */
+details {
+  border-bottom: 1px solid #ddd;
+  transition: all 0.3s ease-in-out; /* 平滑过渡效果 */
+}
+
+details:last-of-type {
+  border-bottom: none; /* 移除最后一个手风琴项的底部边框 */
+}
+
+/* 标题样式 */
+summary {
+  list-style: none; /* 隐藏默认的三角形标记 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 1.5rem;
+  background-color: #f7f7f7;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+/* 鼠标悬停效果 */
+summary:hover {
+  background-color: #eee;
+}
+
+/* 着色高亮效果：展开时的标题样式 */
+details[open] > summary {
+  background-color: var(--krs-main-bgcolor-dark);
+  color: #fff;
+}
+
+/* 箭头图标：使用伪元素实现 */
+summary::after {
+  content: "▼"; /* 向下箭头 */
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: 0.8rem;
+  transition: transform 0.3s ease; /* 箭头旋转的平滑过渡 */
+}
+
+/* 箭头图标：展开时旋转 180 度 */
+details[open] > summary::after {
+  transform: rotate(180deg);
+}
+
+/* 内容区域样式 */
+.accordion-content {
+  padding: 0.6rem;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  /* 平滑过渡需要一些小技巧，这里使用 max-height */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  display: flex;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+
+/* 内容区域：展开时显示 */
+details[open] .accordion-content {
+  max-height: 500px; /* 足够大的值，确保内容完全显示 */
+}

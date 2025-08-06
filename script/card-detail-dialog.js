@@ -134,7 +134,7 @@ export class CardDetails extends HTMLElement {
       championPathDiv.style.display = 'flex';
       championPathHr.style.display = 'block';
 
-      const paths = /** @type { Path[] } */(value.paths);
+      const paths = /** @type { ChampionPath[] } */(value.paths);
       for (let i = 0; i < paths.length; i++) {
         shadowRoot.querySelector("#tab" + (i + 1) + "-label").textContent = paths[i].name;
         /** @type {HTMLInputElement} */(shadowRoot.querySelector('#tab1')).checked = true;
@@ -192,7 +192,7 @@ export class CardDetails extends HTMLElement {
     const seq = parseInt(id[3]) - 1;
     if (isNaN(seq) || typeof seq == 'undefined' || seq < 0) { return; }
 
-    const paths = /** @type { Path[] } */(this._item.paths);
+    const paths = /** @type { ChampionPath[] } */(this._item.paths);
     let imgSrc = this._item.name + "-" + paths[seq].name;
     const images = this.shadowRoot.querySelector('.tab-content').querySelectorAll('item-card');
     for (let i = 0; i < images.length; i++) {

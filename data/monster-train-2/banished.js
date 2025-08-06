@@ -563,7 +563,7 @@ export const ARTIFACTS = [
     "effect": "每层 [英勇] 额外提供 +1 [护甲]",
   },
 ];
-/** @type {Path[]} */
+/** @type {ChampionPath[]} */
 export const PATHS = [
   {
     "name": "先锋卫士",

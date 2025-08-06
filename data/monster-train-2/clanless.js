@@ -824,5 +824,5 @@ export const SCOURGES = [
     "description": ""
   },
 ];
-/** @type {Path[]} */
+/** @type {ChampionPath[]} */
 export const PATHS = [];

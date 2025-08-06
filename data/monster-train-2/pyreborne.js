@@ -685,7 +685,7 @@ export const ARTIFACTS = [
     "effect": "你对自己的单位造成伤害时, 使冷却缩短 1",
   },
 ];
-/** @type {Path[]} */
+/** @type {ChampionPath[]} */
 export const PATHS = [
   {
     "name": "金蛋之母",
