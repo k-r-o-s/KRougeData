@@ -47,7 +47,7 @@
   box-sizing: border-box;
   width: 100%;
   height: 34px;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 800;
   border: 4px solid #777c7c;
   background-color: #323a39;
@@ -60,7 +60,7 @@
   width: 90%;
   height: 120px;
   padding: 4px;
-  font-size: 12pt;
+  font-size: 1rem;
   line-height: 1.3;
   overflow: hidden;
   margin: 0 auto;
@@ -172,7 +172,7 @@
 
 .term-title {
   color: white;
-  font-size: 14pt;
+  font-size: 1.1rem;
   font-weight: 1000;
   line-height: 1.3;
   margin: 0;
@@ -180,7 +180,7 @@
 
 .term-effect {
   color: white;
-  font-size: 12pt;
+  font-size: 1rem;
   line-height: 1.3;
   margin: 0;
 }

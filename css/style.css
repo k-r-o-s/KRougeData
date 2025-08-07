@@ -45,7 +45,7 @@
   padding: 10px 10px;
   border: 1px solid #ddd;
   border-radius: 6px 0 0 6px;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .search-container button {
@@ -56,7 +56,7 @@
   border-radius: 0 6px 6px 0;
   border: 1px solid #ddd;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 1.2rem;
   white-space: nowrap;
   /* 防止按钮文本换行 */
 }

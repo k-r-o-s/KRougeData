@@ -35,7 +35,6 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            font-size: 18px; /* 基础字体大小 */
             line-height: 1.5; /* 基础行高 */
             background-color: #f8f8f8;
         }
@@ -92,7 +91,6 @@
         }
 
         .note {
-            font-size: 0.9em;
             color: #666;
             margin-top: 20px;
         }

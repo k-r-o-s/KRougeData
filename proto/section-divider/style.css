@@ -7,7 +7,7 @@
   /* 确保文字在分隔符中居中 */
   margin: 10px 0 20px;
   /* 上下外边距 */
-  color: #555;
+  color: var(--krs-button-face-color-checked);
   /* 文字颜色 */
   font-size: 0.8rem;
   font-weight: bold;
@@ -25,7 +25,7 @@
   /* 让伪元素占据可用空间 */
   height: 1px;
   /* 线的高度 */
-  background-color: #ccc;
+  background-color: var(--krs-button-border-color);
   /* 线的颜色 */
 }
 
@@ -49,8 +49,8 @@
 .section-help-icon {
   width: 1.0rem;
   height: 1.0rem;
-  background-color: #65afff;
-  color: #fff;
+  background-color: var(--krs-help-icon-bgcolor);
+  color: var(--krs-main-font-color);
   border-radius: 50%;
   text-align: center;
   font-weight: bold;
@@ -63,7 +63,7 @@
   opacity: 0;
 
   background-color: var(--krs-main-bgcolor-dark);
-  color: #fff;
+  color: var(--krs-main-font-color);
   text-align: center;
   white-space: pre;
   border-radius: 6px;

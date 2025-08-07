@@ -19,7 +19,7 @@
   border-radius: 5px 5px 0 0;
   margin-right: 5px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 1rem;
   color: #555;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -27,14 +27,13 @@
 /* Tab 标题鼠标悬停效果 */
 .tabs-container label:hover {
   background-color: var(--krs-button-face-color-hover);
-  color: #333;
+  color: var(--krs-main-bgcolor-dark);
 }
 
 /* 选中 Tab 标题的样式 */
 .tabs-container input[type="radio"]:checked+label {
   background-color: var(--krs-button-face-color-checked);
-  /* 蓝色选中效果 */
-  color: #fff;
+  color: var(--krs-main-font-color);
 }
 
 /* Tab 内容区域样式 */
@@ -93,7 +92,7 @@
   background-color: var(--krs-main-bgcolor-dark);
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1rem;
   padding: 4px;
 }
 
@@ -107,8 +106,8 @@
 }
 
 .title-tooltip {
-  font-size: 14px;
-  color: black;
+  font-size: 0.8rem;
+  color: var(--krs-main-bgcolor-dark);
   position: absolute;
   top: -30px;
   z-index: 1;
@@ -120,7 +119,7 @@
 }
 
 .card-notes {
-  font-size: 14px;
+  font-size: 0.8rem;
   max-width: 610px;
   word-wrap: break-word;
 }

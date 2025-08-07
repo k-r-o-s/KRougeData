@@ -7,8 +7,9 @@
     --krs-button-face-color-hover: #b8a164;
     --krs-button-border-color: #bbbbbb;
     --krs-card-border-color: #dac78c;
-    ;
     --krs-card-bgcolor: #e2d3bd;
+    --krs-main-font-color: white;
+    --krs-help-icon-bgcolor: #65afff;
 
     /* 卡牌, 神器等卡片的显示尺寸 */
     --krs-card-width: 240px;
@@ -24,8 +25,11 @@ footer,
 div,
 p,
 input,
-img {
+img,
+details,
+summary {
     box-sizing: border-box;
+    font-size: 12px;
 }
 
 hr {

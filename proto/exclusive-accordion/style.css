@@ -15,23 +15,23 @@ summary {
   justify-content: space-between;
   align-items: center;
   padding: 0.3rem 1.5rem;
-  background-color: #f7f7f7;
+  background-color: transparent;
   cursor: pointer;
   font-weight: bold;
-  color: #333;
+  color: var(--krs-button-face-color-checked);
   user-select: none;
   transition: background-color 0.3s ease;
 }
 
 /* 鼠标悬停效果 */
 summary:hover {
-  background-color: #eee;
+  background-color: var(--krs-main-bgcolor);
 }
 
 /* 着色高亮效果：展开时的标题样式 */
 details[open] > summary {
   background-color: var(--krs-main-bgcolor-dark);
-  color: #fff;
+  color: var(--krs-main-font-color);
 }
 
 /* 箭头图标：使用伪元素实现 */
@@ -51,7 +51,6 @@ details[open] > summary::after {
 /* 内容区域样式 */
 .accordion-content {
   padding: 0.6rem;
-  background-color: #fff;
   border-top: 1px solid #eee;
   /* 平滑过渡需要一些小技巧，这里使用 max-height */
   max-height: 0;
@@ -64,5 +63,5 @@ details[open] > summary::after {
 
 /* 内容区域：展开时显示 */
 details[open] .accordion-content {
-  max-height: 500px; /* 足够大的值，确保内容完全显示 */
+  max-height: 800px; /* 足够大的值，确保内容完全显示 */
 }

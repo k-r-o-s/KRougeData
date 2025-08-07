@@ -2,7 +2,6 @@
   position: relative;
   background-color: var(--krs-button-face-color);
   font-weight: bold;
-  font-size: 14px;
   border-color: var(--krs-button-border-color);
 }
 
