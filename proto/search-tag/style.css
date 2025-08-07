@@ -1,7 +1,7 @@
 .search-tag-text {
   display: inline;
   box-sizing: border-box;
-  font-size: 0.8rem;
+  font-size: 1rem;
   background-color: var(--krs-main-bgcolor);
   border: 1px solid black;
   padding: 3px;

@@ -3,6 +3,7 @@
   background-color: var(--krs-button-face-color);
   font-weight: bold;
   border-color: var(--krs-button-border-color);
+  color: var(--krs-button-face-color-checked);
 }
 
 .image-toggle-button img {

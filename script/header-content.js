@@ -1,3 +1,5 @@
+import { createCssLink } from "./util.js";
+
 const template = document.createElement('template');
 template.innerHTML = `<span class="header-icon">
         <img src="image/other/怪物火车2.webp" alt="">
@@ -15,12 +17,14 @@ export class HeaderContent extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
     // 创建 link 元素并添加到 shadowRoot
-    const linkElem = document.createElement('link');
-    linkElem.setAttribute('rel', 'stylesheet');
-    const styleUrl = new URL('../proto/header-content/style.css', import.meta.url);
-    linkElem.setAttribute('href', styleUrl.href);
-    this.shadowRoot.appendChild(linkElem);
-
+    // 创建 link 元素并添加到 shadowRoot
+    [
+      '../css/default.css',
+      '../proto/header-content/style.css'
+    ].forEach(css => {
+      const link = createCssLink(css);
+      shadowRoot.appendChild(link);
+    });
 
     // 复制 template 的内容并添加到 Shadow DOM
     const content = template.content.cloneNode(true);

@@ -40,12 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
   loadSavedQuery();
 
   // 搜索文本框
-  __rightPanel.searchInput.addEventListener('keyup', (e) => {
-    // 按回车
-    if (e.key === 'Enter') {
-      e.preventDefault();
+  __rightPanel.searchInput.addEventListener('change', (e) => {
       doSearch();
-    }
   });
   // 搜索按钮
   __rightPanel.clearButton.addEventListener('click', () => {

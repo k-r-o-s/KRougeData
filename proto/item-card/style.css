@@ -12,8 +12,11 @@
   border: 2px solid var(--krs-card-border-color);
   padding: 8px;
   background-color: var(--krs-card-bgcolor);
-  transition: transform 0.5s ease-in-out
-    /*, opacity 0.5s ease-in-out;*/
+  transition: transform 0.5s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.card-container:hover {
+  border-color: var(--krs-main-bgcolor-dark);
 }
 
 /* 元素进入时的初始状态 */
@@ -47,7 +50,7 @@
   box-sizing: border-box;
   width: 100%;
   height: 34px;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   font-weight: 800;
   border: 4px solid #777c7c;
   background-color: #323a39;
@@ -60,7 +63,7 @@
   width: 90%;
   height: 120px;
   padding: 4px;
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 1.3;
   overflow: hidden;
   margin: 0 auto;

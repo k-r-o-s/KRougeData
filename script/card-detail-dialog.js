@@ -58,19 +58,15 @@ export class CardDetails extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
     // 创建 link 元素并添加到 shadowRoot
-    let linkElem;
-
-    linkElem = createCssLink('../css/default.css');
-    this.shadowRoot.appendChild(linkElem);
-
-    linkElem = createCssLink('../proto/item-card/style.css');
-    this.shadowRoot.appendChild(linkElem);
-
-    linkElem = createCssLink('../proto/img-in-text/style.css');
-    this.shadowRoot.appendChild(linkElem);
-
-    linkElem = createCssLink('../proto/card-detail-dialog/style.css');
-    this.shadowRoot.appendChild(linkElem);
+    [
+      '../css/default.css',
+      '../proto/item-card/style.css',
+      '../proto/img-in-text/style.css',
+      '../proto/card-detail-dialog/style.css',
+    ].forEach(css => {
+      const link = createCssLink(css);
+      shadowRoot.appendChild(link);
+    });
 
     const content = template.content.cloneNode(true);
     shadowRoot.appendChild(content);

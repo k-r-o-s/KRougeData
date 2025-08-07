@@ -1,3 +1,5 @@
+import { createCssLink } from "./util.js";
+
 const template = document.createElement('template');
 template.innerHTML = `<div class="section-divider" id="divider">
     <span id="title"></span>
@@ -19,11 +21,14 @@ export class SectionDivider extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
     // 创建 link 元素并添加到 shadowRoot
-    const linkElem = document.createElement('link');
-    linkElem.setAttribute('rel', 'stylesheet');
-    const styleUrl = new URL('../proto/section-divider/style.css', import.meta.url);
-    linkElem.setAttribute('href', styleUrl.href);
-    this.shadowRoot.appendChild(linkElem);
+    [
+      '../css/default.css',
+      '../proto/item-card/style.css',
+      '../proto/section-divider/style.css',
+    ].forEach(css => {
+      const link = createCssLink(css);
+      shadowRoot.appendChild(link);
+    });
 
     // 复制 template 的内容并添加到 Shadow DOM
     const content = template.content.cloneNode(true);

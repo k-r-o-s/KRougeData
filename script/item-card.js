@@ -35,11 +35,14 @@ export class ItemCard extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
     // 创建 link 元素并添加到 shadowRoot
-    let linkElem;
-    linkElem = createCssLink('../proto/item-card/style.css');
-    shadowRoot.appendChild(linkElem);
-    linkElem = createCssLink('../proto/img-in-text/style.css');
-    shadowRoot.appendChild(linkElem);
+    [
+      '../css/default.css',
+      '../proto/item-card/style.css',
+      '../proto/img-in-text/style.css',
+    ].forEach(css => {
+      const link = createCssLink(css);
+      shadowRoot.appendChild(link);
+    });
 
     // 复制 template 的内容并添加到 Shadow DOM
     const content = template.content.cloneNode(true);

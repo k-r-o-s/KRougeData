@@ -42,6 +42,7 @@
   position: relative; /* 为伪元素定位提供参考 */
   display: inline-block; /* 确保元素可以有宽度和高度 */
   cursor: pointer;
+  font-weight: bold;
 }
 
 .link-span::after {
@@ -49,14 +50,15 @@
   position: absolute;
   left: 0;
   bottom: -3px; /* 调整下划线与文字的垂直位置 */
-  width: 100%; /* 下划线宽度与父元素相同 */
-  height: 1px; /* 下划线粗细 */
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px; /* 下划线粗细 */
   background-color: var(--krs-main-bgcolor-dark); /* 下划线颜色 */
   /* 可以添加过渡效果 */
-  transition: width 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 /* 鼠标悬停时下划线动画效果 */
 .link-span:hover::after {
-  width: 0; 
+  transform: scaleX(1);
 }

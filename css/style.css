@@ -1,3 +1,4 @@
+@import "../css/theme.css";
 @import "../css/default.css";
 @import "../proto/card-list-view/style.css";
 @import "../proto/exclusive-accordion/style.css";
@@ -12,7 +13,7 @@
   margin: 8px;
   border: 2px solid var(--krs-main-bgcolor-dark);
 
-  background-image: url('/image/other/funguy.webp');
+  background-image: var(--krs-banner-url);
   background-size: auto; /* 保持图片原始尺寸，不缩放 */
   background-position: center center; /* 将图片的中心点对齐 div 的中心点 */
   background-repeat: no-repeat; /* 防止图片重复 */
@@ -66,7 +67,6 @@
 }
 
 .search-tag-list {
-  box-sizing: border-box;
   width: calc(100% - 20px);
   max-height: 500px;
   margin: 10px auto;
@@ -79,8 +79,7 @@
 }
 
 search-tag {
-  box-sizing: border-box;
-  line-height: 1.8;
+  line-height: 2;
 }
 
 /*----------------------------- 标签组 -----------------------------*/

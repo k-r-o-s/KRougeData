@@ -1,3 +1,5 @@
+import { createCssLink } from "./util.js";
+
 const template = document.createElement('template');
 template.innerHTML = `
   <button div class="image-toggle-button button-size56x56" id="button">
@@ -16,12 +18,14 @@ export class ImageToggleButton extends HTMLElement {
     // 创建 Shadow DOM
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
-    // 创建 link 元素并添加到 shadowRoot
-    const linkElem = document.createElement('link');
-    linkElem.setAttribute('rel', 'stylesheet');
-    const styleUrl = new URL('../proto/image-toggle-button/style.css', import.meta.url);
-    linkElem.setAttribute('href', styleUrl.href);
-    this.shadowRoot.appendChild(linkElem);
+    [
+      '../css/default.css',
+      '../proto/item-card/style.css',
+      '../proto/image-toggle-button/style.css',
+    ].forEach(css => {
+      const link = createCssLink(css);
+      shadowRoot.appendChild(link);
+    });
 
     // 复制 template 的内容并添加到 Shadow DOM
     const content = template.content.cloneNode(true);

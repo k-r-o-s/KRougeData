@@ -133,6 +133,10 @@ Terms.TERMS.map(item => {
   }
   terms.push(item.name);
 });
+groupedTerms.forEach(terms => terms.sort((a, b) => {
+  return a.localeCompare(b, 'zh-Hans-CN', { sensitivity: 'accent' });
+}));
+
 __log_data("获取数据 TERMS", MT_DATA);
 __log_data("获取数据 GROUPED_TERMS", groupedTerms);
 
