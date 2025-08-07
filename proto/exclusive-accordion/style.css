@@ -19,6 +19,7 @@ summary {
   cursor: pointer;
   font-weight: bold;
   color: #333;
+  user-select: none;
   transition: background-color 0.3s ease;
 }
 

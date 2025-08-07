@@ -7,29 +7,31 @@ import { SearchTag } from './search-tag.js';
 //-----------------------------------------------------------------------
 const template = document.createElement('template');
 template.innerHTML = `
+  <div class="search-top-image">
+  </div>
   <!-- 查询输入框和按钮区 -->
   <section-divider text="文字" tooltip="按钮 [+] 可以保存当前搜索条件\n输入内容后回车执行搜索">
   </section-divider>
   <div class="search-container">
     <input type="search" id="search-input" placeholder="请输入搜索条件..." list="search-list">
-    <button id="search-button">🔎</button>
+    <button id="clear-button">❌</button>
   </div>
   <div class="search-tag-list"></div>
   <!-- 卡牌氏族选取区 -->
-  <section-divider text="氏族" tooltip="双击可以快速单选">
+  <section-divider text="氏族" tooltip="双击[未选中]的按钮会单选它\n双击[选中]的按钮会单不选它">
   </section-divider>
   <div id="clan-section" class="image-toggle-button-group">
   </div>
   <!-- 卡牌类型选取区 -->
-  <section-divider text="类型" tooltip="神器和升级石会无视稀有度和费用条件\n双击可以快速单选"></section-divider>
+  <section-divider text="类型" tooltip="神器和升级石会无视稀有度和费用条件\n双击[未选中]的按钮会单选它\n双击[选中]的按钮会单不选它"></section-divider>
   <div id="type-section" class="image-toggle-button-group">
   </div>
   <!-- 卡牌稀有度选取区 -->
-  <section-divider text="稀有度" tooltip="双击可以快速单选"></section-divider>
+  <section-divider text="稀有度" tooltip="双击[未选中]的按钮会单选它\n双击[选中]的按钮会单不选它"></section-divider>
   <div id="rarity-section" class="image-toggle-button-group">
   </div>
   <!-- 卡牌费用选取区 -->
-  <section-divider text="费用" tooltip="双击可以快速单选"></section-divider>
+  <section-divider text="费用" tooltip="双击[未选中]的按钮会单选它\n双击[选中]的按钮会单不选它"></section-divider>
   <div id="cost-section" class="image-toggle-button-group">
   </div>
   <!-- 标签选取区 -->
@@ -56,7 +58,7 @@ export class SearchPanel extends HTMLElement {
     this.appendChild(content);
 
     /** @type{HTMLButtonElement} */
-    this.searchButton = this.querySelector('#search-button');
+    this.clearButton = this.querySelector('#clear-button');
     /** @type{HTMLInputElement} */
     this.searchInput = this.querySelector("#search-input");
     /** @type{HTMLDivElement} */
@@ -73,7 +75,7 @@ export class SearchPanel extends HTMLElement {
     /** @type {ImageToggleButton[]} */
     this.toggleButtons = [];
 
-    // <image-toggle-button src="image/other/流放者.webp" condition="clan:流放者" title="流放者">
+    // <image-toggle-button src="image/other/流放者.webp" condition="clan:流放者" tip="流放者">
     // </image-toggle-button>
     /** @type {HTMLDivElement} */
     const clanSection = this.querySelector('#clan-section');
@@ -82,30 +84,30 @@ export class SearchPanel extends HTMLElement {
         const button = ImageToggleButton.create();
         button.setAttribute('src', `image/other/${clan}.webp`);
         button.setAttribute('condition', `clan:${clan}`);
-        button.setAttribute('title', clan);
+        button.setAttribute('tip', clan);
         clanSection.appendChild(button);
         this.toggleButtons.push(button);
       })
-    // <image-toggle-button src="image/other/单位.webp" condition="type:单位" title="单位" size="42x48">
+    // <image-toggle-button src="image/other/单位.webp" condition="type:单位" tip="单位" size="42x48">
     // </image-toggle-button>
     const typeSection = this.querySelector('#type-section');
     ['单位', '法术', '装备', '房间', '神器', '升级石', '祸患', '天灾'].forEach(type => {
       const button = ImageToggleButton.create();
       button.setAttribute('src', `image/other/${type}.webp`);
       button.setAttribute('condition', `type:${type}`);
-      button.setAttribute('title', type);
+      button.setAttribute('tip', type);
       button.setAttribute('size', '42x48');
       typeSection.appendChild(button);
       this.toggleButtons.push(button);
     })
-    // <image-toggle-button src="image/other/勇者.webp" condition="rarity:勇者" title="勇者"
+    // <image-toggle-button src="image/other/勇者.webp" condition="rarity:勇者" tip="勇者"
     //  size="42x42"></image-toggle-button>
     const raritySection = this.querySelector('#rarity-section');
     ['勇者', '普通', '高级', '稀有'].forEach(rarity => {
       const button = ImageToggleButton.create();
       button.setAttribute('src', `image/other/${rarity}.webp`);
       button.setAttribute('condition', `rarity:${rarity}`);
-      button.setAttribute('title', rarity);
+      button.setAttribute('tip', rarity);
       button.setAttribute('size', '42x42');
       raritySection.appendChild(button);
       this.toggleButtons.push(button);

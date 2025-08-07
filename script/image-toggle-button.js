@@ -2,6 +2,7 @@ const template = document.createElement('template');
 template.innerHTML = `
   <button div class="image-toggle-button button-size56x56" id="button">
     <img id="image">
+    <div id="tooltip"></div>
   </button>`;
 
 export class ImageToggleButton extends HTMLElement {
@@ -36,6 +37,7 @@ export class ImageToggleButton extends HTMLElement {
       * }
       } */
     this.button = (shadowRoot.querySelector('#button'));
+    this.tooltip = /**@type{HTMLDivElement}*/(shadowRoot.querySelector('#tooltip'));
   }
 
   // 可选：定义生命周期回调函数
@@ -64,11 +66,16 @@ export class ImageToggleButton extends HTMLElement {
     button.removeEventListener('click', button._clickHandler);
     button.removeEventListener('dblclick', button._dblClickHandler);
   }
-
+  /**
+   * 
+   * @param {string} name 
+   * @param {string} oldValue 
+   * @param {string} newValue 
+   */
   attributeChangedCallback(name, oldValue, newValue) {
     switch (name) {
-      case "title":
-        this.button.title = newValue;
+      case "tip":
+        this.tooltip.textContent = newValue;
         break;
       case "src":
         this.image.src = newValue;
@@ -106,7 +113,7 @@ export class ImageToggleButton extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['src', 'title', 'text', 'size', "off"]; // 监听的属性列表
+    return ['src', 'tip', 'text', 'size', "off"]; // 监听的属性列表
   }
 
   /**

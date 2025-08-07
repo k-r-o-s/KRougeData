@@ -8,7 +8,7 @@ import { createCssLink } from './util.js';
 const template = document.createElement('template');
 template.innerHTML = `
   <div class="card-container">
-    <img class="card-image" loading="lazy">
+    <img class="card-image">
     <div class="card-name"></div>
     <div class="card-effect-area">
       <p class="card-effect"></p>

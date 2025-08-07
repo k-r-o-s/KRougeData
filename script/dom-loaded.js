@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     __rightPanel.setQuery(query);
     doSearch();
   };
-  __rightPanel.onTagGroupChanged = (currentTagGroup)=> {
+  __rightPanel.onTagGroupChanged = (currentTagGroup) => {
     localStorage.setItem('tagGroup', currentTagGroup);
   }
 
@@ -48,7 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   // 搜索按钮
-  __rightPanel.searchButton.addEventListener('click', () => { doSearch(); });
+  __rightPanel.clearButton.addEventListener('click', () => {
+    __rightPanel.setQuery('');
+    doSearch();
+  });
   // 各个氏族/种类/稀有度/费用 等按钮
   __rightPanel.toggleButtons.map((btn) => {
     btn.addEventListener('click', () => { doSearch(); })
@@ -179,10 +182,10 @@ function doSearch() {
 
   // 根据搜索结果重建卡片列表
   createCardList(result);
-  // 生成快捷标签
-  if (result.length > 0) {
-    __rightPanel.addSearchTag(query);
-  }
+  // // 生成快捷标签
+  // if (result.length > 0) {
+  //   __rightPanel.addSearchTag(query);
+  // }
 }
 // 卡片上显示词条的 Tooltip
 /**

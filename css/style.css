@@ -7,6 +7,22 @@
 @import "../proto/layout/layout.css";
 
 /*----------------------------- 搜索面板 -----------------------------*/
+.search-top-image {
+  height: 60px;
+  margin: 8px;
+  border: 2px solid var(--krs-main-bgcolor-dark);
+
+  background-image: url('/image/other/funguy.webp');
+  background-size: auto; /* 保持图片原始尺寸，不缩放 */
+  background-position: center center; /* 将图片的中心点对齐 div 的中心点 */
+  background-repeat: no-repeat; /* 防止图片重复 */
+}
+
+.search-top-image img {
+  object-fit:contain;
+  display: block;
+}
+
 .search-container {
   display: flex;
   /* 启用 Flexbox 布局 */
@@ -32,7 +48,7 @@
   font-size: 14px;
 }
 
-#search-button {
+.search-container button {
   padding: 4px 4px;
   background-color: var(--krs-button-face-color);
   color: white;
@@ -66,6 +82,7 @@ search-tag {
   box-sizing: border-box;
   line-height: 1.8;
 }
+
 /*----------------------------- 标签组 -----------------------------*/
 
 /*----------------------------- 对话框 -----------------------------*/
@@ -73,6 +90,7 @@ dialog {
   min-width: 650px;
   max-height: 90vh;
 }
+
 .dialog-content {
   width: 800px;
   margin: 10px auto;
@@ -82,4 +100,3 @@ dialog {
 .dialog-content div {
   margin: 0;
 }
-
