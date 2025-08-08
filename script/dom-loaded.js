@@ -1,13 +1,14 @@
 
 import { __DEBUG, __log_data, debounce } from './util.js'
-import { MT_DATA } from '../data/monster-train-2/index.js'
+import { MT_DATA, queryEquals, queryHtml } from '../data/monster-train-2/index.js'
 import { ItemCard } from './item-card.js';
 import { SearchPanel } from './search-panel.js';
 import { CardDetails } from './card-detail-dialog.js';
+import { SearchTag } from './search-tag.js';
 
 // 卡牌的Tooltip
 /** @type { HTMLDivElement } */
-let __cardTermsTooltip = null;
+let __tooltip = null;
 // 左面版, 卡牌列表
 /** @type { HTMLDivElement} */
 let __leftPanel = null;
@@ -23,7 +24,7 @@ let __animatingEnabled = false;
 let __animationFrameId = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
-  __cardTermsTooltip = document.querySelector('#z-tooltip');
+  __tooltip = document.querySelector('#z-tooltip');
   __leftPanel = document.querySelector('.left-panel');
   __rightPanel = document.querySelector('.right-panel');
   __cardDialog = document.querySelector('#card-detail-dlg');
@@ -38,17 +39,37 @@ document.addEventListener('DOMContentLoaded', () => {
   __rightPanel.onTagGroupChanged = (currentTagGroup) => {
     localStorage.setItem('tagGroup', currentTagGroup);
   }
+  const saveSavedQueries = () => {
+    const str = JSON.stringify(__rightPanel.getSavedQueryTags().map(tag => tag.query));
+    localStorage.setItem('savedQueries', str);
+  };
+  __rightPanel.onQueryTagAdded = ((/**@type{SearchTag}*/tag)=> {
+    tag.addEventListener('mouseenter', onQueryTagMouseEnter);
+    tag.addEventListener('mouseleave', onQueryTagMouseLeave);
+    saveSavedQueries();
+  });
+  __rightPanel.onQueryTagRemoved = ((/**@type{SearchTag}*/tag)=> {
+    tag.removeEventListener('mouseenter', onQueryTagMouseEnter);
+    tag.removeEventListener('mouseleave', onQueryTagMouseLeave);
+    saveSavedQueries();
+  });
 
   // 加载上次页面最后一次搜索条件
   loadSavedQuery();
 
   const debounceFunc = debounce(doSearch, 200);
-
   // 搜索文本框
   __rightPanel.searchInput.addEventListener('input', (e) => {
     debounceFunc();
   });
-  // 搜索按钮
+  // 保存搜索按钮
+  __rightPanel.saveButton.addEventListener('click', () => {
+    const query = getQuery();
+    if (queryEquals(query, SearchPanel.RESET_QUERY)) { return; }
+
+    __rightPanel.addQueryTag(query, true);
+  });
+  // 清除搜索按钮
   __rightPanel.clearButton.addEventListener('click', () => {
     __rightPanel.setQuery('');
     doSearch();
@@ -78,25 +99,33 @@ function loadSavedQuery() {
   const tagGroup = localStorage.getItem('tagGroup') || '特性';
   __rightPanel.setCurrentTagGroup(tagGroup);
 
+  const saveQueries = localStorage.getItem('savedQueries');
+  if (saveQueries) {
+    try {
+      const queries = JSON.parse(saveQueries);
+      __log_data("读取 保存的查询", queries);
+      queries.forEach((/**@type{Query}*/query) => {
+        __rightPanel.addQueryTag(query, true);
+      });
+    } catch (e) {
+      console.error("保存查询字符串: [" + saveQueries + "] 无效");
+    }
+  }
   const queryString = localStorage.getItem('queryState');
   if (!queryString) { return; }
   try {
     const query = JSON.parse(queryString);
-    __log_data("loaded query", query);
+    __log_data("读取 查询字符串", query);
     __rightPanel.setQuery(query);
   } catch (e) {
     console.error("查询字符串: [" + queryString + "] 无效");
   }
 }
-
-// 执行搜索
-function doSearch() {
-  // 停止卡片添加的动画效果
-  if (__animationFrameId) {
-    cancelAnimationFrame(__animationFrameId);
-    __animationFrameId = null;
-  }
-
+/**
+ * 
+ * @returns {Query}
+ */
+function getQuery() {
   // 移除一些特殊字符 !@#$%^&*\/
   let queryText = __rightPanel.searchInput.value.replace(/!@#\$%\^&\*\\\//g, '');
   // 空白字符 =>  空格
@@ -123,6 +152,20 @@ function doSearch() {
     const field = /** @type { "clan" | "type" | "rarity" | "cost"} */ (pair[0]);
     query[field].push(pair[1]);
   })
+
+  return query;
+}
+
+// 执行搜索
+function doSearch() {
+  // 停止卡片添加的动画效果
+  if (__animationFrameId) {
+    cancelAnimationFrame(__animationFrameId);
+    __animationFrameId = null;
+  }
+
+  const query = getQuery();
+
   // 保存搜索条件, 以便下次打开/刷新页面时恢复
   localStorage.setItem('queryState', JSON.stringify(query));
   // 数据集过滤
@@ -191,38 +234,72 @@ function doSearch() {
   //   __rightPanel.addSearchTag(query);
   // }
 }
+// 标签上显示查询细节的 Tooltip
+/**
+ * @param {MouseEvent} e 
+ */
+function onQueryTagMouseEnter(e) {
+  const tag = /** @type{SearchTag } */(e.target);
+  __tooltip.innerHTML = queryHtml(tag.query);
+
+  const panelRect = __rightPanel.getBoundingClientRect();
+  const tagRect = tag.getBoundingClientRect();
+  const tooltipRect = __tooltip.getBoundingClientRect();
+
+  let x = (tagRect.left - 
+    (tooltipRect.width - tagRect.width) / 2);
+  if (x < panelRect.left) {
+    x = panelRect.left;
+  }
+  if (x + tooltipRect.width > panelRect.right) {
+    x = panelRect.right - tooltipRect.width;
+  }
+
+  let y = tagRect.top - tooltipRect.height;
+  if (y < panelRect.top) { y = panelRect.top; }
+  __tooltip.style.left = x + 'px';
+  __tooltip.style.top = y + 'px';
+  __tooltip.style.visibility = 'visible';
+}
+// 离开标签时隐藏 Tooltip
+/**
+ * @param {MouseEvent} e 
+ */
+function onQueryTagMouseLeave(e) {
+  __tooltip.style.visibility = 'hidden';
+}
 // 卡片上显示词条的 Tooltip
 /**
  * @param {MouseEvent} e 
  */
 function onCardMouseEnter(e) {
   const card = /** @type{ItemCard } */(e.target);
-  __cardTermsTooltip.innerHTML = card.termsHtml;
+  __tooltip.innerHTML = card.termsHtml;
 
   const panelRect = __leftPanel.getBoundingClientRect();
   const cardRect = card.getBoundingClientRect();
-  const tooltipRect = __cardTermsTooltip.getBoundingClientRect();
+  const tooltipRect = __tooltip.getBoundingClientRect();
 
-  __cardTermsTooltip.style.left = cardRect.right + "px";
+  __tooltip.style.left = cardRect.right + "px";
   // 避免过于靠下显示超出面板范围
   if (cardRect.top + tooltipRect.height > panelRect.bottom) {
-    __cardTermsTooltip.style.top = panelRect.bottom - tooltipRect.height - 2 + "px";
+    __tooltip.style.top = panelRect.bottom - tooltipRect.height - 2 + "px";
   }
   else {
-    __cardTermsTooltip.style.top = cardRect.top + "px";
+    __tooltip.style.top = cardRect.top + "px";
   }
   // 避免过于靠上超出面板范围
   if (cardRect.top < panelRect.top) {
-    __cardTermsTooltip.style.top = panelRect.top + "px";
+    __tooltip.style.top = panelRect.top + "px";
   }
-  __cardTermsTooltip.style.visibility = 'visible';
+  __tooltip.style.visibility = 'visible';
 }
 // 离开卡片时隐藏 Tooltip
 /**
  * @param {MouseEvent} e 
  */
 function onCardMouseLeave(e) {
-  __cardTermsTooltip.style.visibility = 'hidden';
+  __tooltip.style.visibility = 'hidden';
 }
 
 /**

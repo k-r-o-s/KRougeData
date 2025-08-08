@@ -13,7 +13,8 @@ template.innerHTML = `
   <section-divider text="文字" tooltip="输入内容后无需回车会自动搜索\n按钮 [+] 可以保存当前搜索条件\n点击标签[重置]会重置所有搜索条件\n可以搜索英文名">
   </section-divider>
   <div class="search-container">
-    <input type="search" id="search-input" placeholder="请输入搜索条件..." list="search-list">
+    <button id="save-button">➕</button>
+    <input id="search-input" placeholder="请输入搜索条件..." list="search-list">
     <button id="clear-button">❌</button>
   </div>
   <div class="search-tag-list"></div>
@@ -49,6 +50,7 @@ export class SearchPanel extends HTMLElement {
     , '狱魔', '觉者', '冥卫', '影主', '熔尸'];
   static TYPES = ['单位', '法术', '装备', '房间', '神器', '升级石', '祸患', '天灾'];
   static RARITIES = ['勇者', '普通', '高级', '稀有'];
+  static RESET_QUERY_NAME = '[重置]';
   /**@type{Query}*/
   static RESET_QUERY = {
     "text": '',
@@ -74,6 +76,8 @@ export class SearchPanel extends HTMLElement {
     this.appendChild(content);
 
     /** @type{HTMLButtonElement} */
+    this.saveButton = this.querySelector('#save-button');
+    /** @type{HTMLButtonElement} */
     this.clearButton = this.querySelector('#clear-button');
     /** @type{HTMLInputElement} */
     this.searchInput = this.querySelector("#search-input");
@@ -85,6 +89,8 @@ export class SearchPanel extends HTMLElement {
     this.#createToggleButtons();
     this.#createTermTags();
     this.tagClickCallbacks = new Map();
+    this.onQueryTagAdded = null;
+    this.onQueryTagRemoved = null;
   }
 
   //-----------------------------------------------------------------------
@@ -253,7 +259,7 @@ export class SearchPanel extends HTMLElement {
    * 
    * @returns {SearchTag}
    */
-  addSearchTag(query, closable) {
+  addQueryTag(query, closable) {
     const MAX_TAG_COUNT = 30;
     /** @type { SearchTag } */
     let tag = null;
@@ -270,21 +276,38 @@ export class SearchPanel extends HTMLElement {
     }
     if (isNew) {
       tag = this.#createTag(query, closable);
+      tag.text = query.text || "(空)";
     }
     // 即使它是原有的元素, insert 操作依然会把它从旧的位置移除并插入到第一个位置
     list.insertBefore(tag, list.firstElementChild);
     if (isNew && list.childNodes.length > MAX_TAG_COUNT) {
       list.removeChild(list.lastElementChild);
     }
+    if (this.onQueryTagAdded) {
+      this.onQueryTagAdded(tag);
+    }
     return tag;
+  }
+  /**
+   * 
+   * @returns {SearchTag[]}
+   */
+  getSavedQueryTags() {
+    const list =  /**@type{NodeListOf<SearchTag>}*/(this.searchTagList.querySelectorAll(SearchTag.TAG_NAME));
+    const savedTags = /**@type{SearchTag[]}*/([]);
+    list.forEach((tag) => {
+      if (!tag || tag.text == SearchPanel.RESET_QUERY_NAME) { return; }
+      savedTags.push(tag);
+    });
+    return savedTags;
   }
   /**
    * 
    * @returns {SearchTag}
    */
   addResetTag() {
-    const tag = this.addSearchTag(SearchPanel.RESET_QUERY, false);
-    tag.text = '[重置]';
+    const tag = this.addQueryTag(SearchPanel.RESET_QUERY, false);
+    tag.text = SearchPanel.RESET_QUERY_NAME;
     return tag
   }
   /**
@@ -293,6 +316,10 @@ export class SearchPanel extends HTMLElement {
    * @param {SearchTag} tag 
    */
   removeSearchTag(tag) {
+    const query = tag.query;
+    if (query && this.onQueryTagRemoved) {
+      this.onQueryTagRemoved(tag);
+    }
     tag.removeEventListener('click', tag.clickCallback);
     tag.clearButton.removeEventListener('click', tag.clearCallback);
     tag.parentElement.removeChild(tag);

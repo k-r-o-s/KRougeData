@@ -73,3 +73,32 @@ dialog::backdrop {
   backdrop-filter: blur(4px);
   /* 模糊背景 */
 }
+
+/* tooltip 的通用样式 */
+.tooltip {
+  background-color: var(--krs-main-bgcolor-dark);
+  color: var(--krs-main-font-color);
+  font-weight: normal;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+/* 表格风格的 tooltip, 目前主要是显示保存的查询标签的详情 */
+.grid-tooltip {
+  display: grid;
+  grid-template-columns: 70px 200px;
+  text-align: left;
+  gap: 3px;
+}
+/* 表格风格的 tooltip 的单元格样式 */
+.grid-tooltip-item {
+  /* 确保换行 */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  border: 1px solid #ccc;
+  padding: 0 3px;
+}
+/* 表格风格的 tooltip 的表头样式 */
+.grid-tooltip-header {
+  font-weight: bold;
+}

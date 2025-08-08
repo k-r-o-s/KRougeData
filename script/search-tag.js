@@ -34,7 +34,7 @@ export class SearchTag extends HTMLElement {
     const content = template.content.cloneNode(true);
     shadowRoot.appendChild(content);
 
-    this.textDiv = shadowRoot.querySelector('search-tag-text');
+    this.textDiv = shadowRoot.querySelector('.search-tag-text');
     this.textSpan = shadowRoot.querySelector('span');
     this.button = null; // shadowRoot.querySelector('button');
     this.clickCallback = null;
@@ -101,6 +101,7 @@ export class SearchTag extends HTMLElement {
     }
   }
   #createRemoveButton() {
+    if (this.button) { return; }
     //  <button class="tag-clear-button">❌</button>
     this.button = document.createElement('button');
     this.button.classList.add('tag-clear-button');

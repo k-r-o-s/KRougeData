@@ -189,3 +189,34 @@ Notes.NOTES.map(tip => {
   }
 });
 __log_data("数据加载完成", MT_DATA);
+
+/**
+ * 
+ * @param {Query?} q1 
+ * @param {Query?} q2 
+ * @returns 
+ */
+export function queryEquals(q1, q2) {
+  return JSON.stringify(q1) == JSON.stringify(q2);
+}
+/**
+ * 
+ * @param {Query?} query 
+ * @returns {string}
+ */
+export function queryHtml(query) {
+  if (!query) { return ''; }
+  let html = `<div class="tooltip grid-tooltip">`
+  html += `<div class="grid-tooltip-item grid-tooltip-header">文本</div>
+    <div class="grid-tooltip-item">${query.text || ''}</div>`;
+  html += `<div class="grid-tooltip-item grid-tooltip-header">氏族</div>
+    <div class="grid-tooltip-item">${query.clan ? query.clan.join(', ') : ''}</div>`;
+  html += `<div class="grid-tooltip-item grid-tooltip-header">种类</div>
+    <div class="grid-tooltip-item">${query.type ? query.type.join(', ') : ''}</div>`;
+  html += `<div class="grid-tooltip-item grid-tooltip-header">稀有度</div>
+    <div class="grid-tooltip-item">${query.rarity ? query.rarity.join(', ') : ''}</div>`;
+  html += `<div class="grid-tooltip-item grid-tooltip-header">费用</div>
+    <div class="grid-tooltip-item">${query.cost ? query.cost.join(', ') : ''}</div>`;
+  html += `</div>`;
+  return html;
+}
