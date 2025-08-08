@@ -63,7 +63,7 @@
   width: 90%;
   height: 120px;
   padding: 4px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.3;
   overflow: hidden;
   margin: 0 auto;
@@ -175,7 +175,7 @@
 
 .term-title {
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 1000;
   line-height: 1.3;
   margin: 0;
@@ -183,7 +183,7 @@
 
 .term-effect {
   color: white;
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.3;
   margin: 0;
 }

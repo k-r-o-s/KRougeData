@@ -4,7 +4,7 @@ const template = document.createElement('template');
 template.innerHTML = `
   <div class="search-tag-text">
     <span></span>
-    <button class="tag-clear-button">❌</button>
+    <!--<button class="tag-clear-button">❌</button>-->
   </div>`;
 
 export class SearchTag extends HTMLElement {
@@ -34,8 +34,9 @@ export class SearchTag extends HTMLElement {
     const content = template.content.cloneNode(true);
     shadowRoot.appendChild(content);
 
+    this.textDiv = shadowRoot.querySelector('search-tag-text');
     this.textSpan = shadowRoot.querySelector('span');
-    this.button = shadowRoot.querySelector('button');
+    this.button = null; // shadowRoot.querySelector('button');
     this.clickCallback = null;
     this.clearCallback = null;
   }
@@ -86,9 +87,11 @@ export class SearchTag extends HTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {
     switch (name) {
       case 'closable':
-        newValue == 'true'
-          ? this.button.classList.remove("tag-button-hidden")
-          : this.button.classList.add("tag-button-hidden");
+        if (newValue == 'true') {
+          this.#createRemoveButton();
+        } else {
+          this.#removeRemoveButton();
+        }
         break;
       case 'text':
         this.#text = newValue;
@@ -96,6 +99,17 @@ export class SearchTag extends HTMLElement {
         break;
       default: break;
     }
+  }
+  #createRemoveButton() {
+    //  <button class="tag-clear-button">❌</button>
+    this.button = document.createElement('button');
+    this.button.classList.add('tag-clear-button');
+    this.button.textContent = '❌';
+    this.textDiv.appendChild(this.button);
+  }
+  #removeRemoveButton() {
+    if (!this.button) { return; }
+    this.textDiv.removeChild(this.button);
   }
 
   /**

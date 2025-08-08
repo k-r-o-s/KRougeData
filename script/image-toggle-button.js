@@ -37,10 +37,11 @@ export class ImageToggleButton extends HTMLElement {
       * @type{ HTMLButtonElement & 
       * {
       *   _clickHandler: (this: HTMLButtonElement, ev: MouseEvent) => any
-      *   _dblClickHandler: (this: HTMLButtonElement, ev: MouseEvent) => any
+      *   _auxClickHandler: (this: HTMLButtonElement, ev: MouseEvent) => any
       * }
       } */
     this.button = (shadowRoot.querySelector('#button'));
+    this.text = /**@type{HTMLDivElement}*/(shadowRoot.querySelector('#text'));
     this.tooltip = /**@type{HTMLDivElement}*/(shadowRoot.querySelector('#tooltip'));
   }
 
@@ -50,25 +51,29 @@ export class ImageToggleButton extends HTMLElement {
     button._clickHandler = () => {
       button.classList.toggle("toggle-off");
     };
-    button._dblClickHandler = () => {
+    button._auxClickHandler = (e) => {
       if (!this.parentElement) { return; }
+      // 鼠标中键
+      if (e.button != 1) { return; }
       const siblings = this.parentElement.childNodes;
       const tagName = ImageToggleButton.TAG_NAME.toUpperCase();
+      const isOff = this.isOff;
       for (let i = 0; i < siblings.length; i++) {
         const ele = siblings[i];
+        const eleIsOff = (ele == this) ? (!isOff) : (isOff);
         if (ele.nodeName == tagName) {
-          (/** @type { ImageToggleButton } */(ele)).setAttribute('off', ele != this ? '1' : '0');
+          (/** @type { ImageToggleButton } */(ele)).setAttribute('off', eleIsOff ? '1' : '0');
         }
       }
     };
     button.addEventListener('click', button._clickHandler);
-    button.addEventListener('dblclick', button._dblClickHandler);
+    button.addEventListener('auxclick', button._auxClickHandler);
   }
 
   disconnectedCallback() {
     const button = this.button;
     button.removeEventListener('click', button._clickHandler);
-    button.removeEventListener('dblclick', button._dblClickHandler);
+    button.removeEventListener('auxclick', button._auxClickHandler);
   }
   /**
    * 
@@ -90,10 +95,21 @@ export class ImageToggleButton extends HTMLElement {
         }
         break;
       case "text":
-        this.button.textContent = newValue;
+        {
+          // 隐藏 <img> 并把文本设置在第一个文本子节点上
+          this.image.style.display = 'none';
+          const nodes = this.button.childNodes;
+          for (let i = 0; i < nodes.length; i++) {
+            const node = nodes[i];
+            if (node.nodeType == 3) { // 文本节点 
+              node.textContent = newValue;
+              break;
+            }
+          }
+        }
         break;
       case "size":
-        // button-size56x56 by default
+        // button-size56x56 是默认值
         if (newValue == "42x42") {
           this.button.classList.remove("button-size56x56");
           this.button.classList.add("button-size42x42");

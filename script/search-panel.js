@@ -10,7 +10,7 @@ template.innerHTML = `
   <div class="search-top-image">
   </div>
   <!-- 查询输入框和按钮区 -->
-  <section-divider text="文字" tooltip="按钮 [+] 可以保存当前搜索条件\n输入内容后回车执行搜索">
+  <section-divider text="文字" tooltip="输入内容后无需回车会自动搜索\n按钮 [+] 可以保存当前搜索条件\n点击标签[重置]会重置所有搜索条件\n可以搜索英文名">
   </section-divider>
   <div class="search-container">
     <input type="search" id="search-input" placeholder="请输入搜索条件..." list="search-list">
@@ -18,24 +18,24 @@ template.innerHTML = `
   </div>
   <div class="search-tag-list"></div>
   <!-- 卡牌氏族选取区 -->
-  <section-divider text="氏族" tooltip="双击[未选中]的按钮会单选它\n双击[选中]的按钮会单不选它">
+  <section-divider text="氏族" tooltip="鼠标中键点击 [未选中] 的按钮会单选它\n 鼠标中键点击 [选中] 的按钮会单不选它">
   </section-divider>
   <div id="clan-section" class="image-toggle-button-group">
   </div>
   <!-- 卡牌类型选取区 -->
-  <section-divider text="类型" tooltip="神器和升级石会无视稀有度和费用条件\n双击[未选中]的按钮会单选它\n双击[选中]的按钮会单不选它"></section-divider>
+  <section-divider text="类型" tooltip="神器和升级石会无视稀有度和费用条件筛选\n鼠标中键点击 [未选中] 的按钮会单选它\n 鼠标中键点击 [选中] 的按钮会单不选它"></section-divider>
   <div id="type-section" class="image-toggle-button-group">
   </div>
   <!-- 卡牌稀有度选取区 -->
-  <section-divider text="稀有度" tooltip="双击[未选中]的按钮会单选它\n双击[选中]的按钮会单不选它"></section-divider>
+  <section-divider text="稀有度" tooltip="神器和升级石会无视稀有度筛选\n鼠标中键点击 [未选中] 的按钮会单选它\n 鼠标中键点击 [选中] 的按钮会单不选它"></section-divider>
   <div id="rarity-section" class="image-toggle-button-group">
   </div>
   <!-- 卡牌费用选取区 -->
-  <section-divider text="费用" tooltip="双击[未选中]的按钮会单选它\n双击[选中]的按钮会单不选它"></section-divider>
+  <section-divider text="费用" tooltip="神器和升级石会无视费用筛选\n鼠标中键点击 [未选中] 的按钮会单选它\n 鼠标中键点击 [选中] 的按钮会单不选它"></section-divider>
   <div id="cost-section" class="image-toggle-button-group">
   </div>
   <!-- 标签选取区 -->
-  <section-divider text="标签" tooltip="点击标签可以快速搜索"></section-divider>
+  <section-divider text="词条" tooltip="游戏内的词条被分为了以下几个组\n点击组名展开\n点击词条标签可以快速搜索"></section-divider>
   <div id="tag-section" class="tag-accordion-container">
   </div>`;
 
@@ -45,6 +45,22 @@ template.innerHTML = `
 
 export class SearchPanel extends HTMLElement {
   static TAG_NAME = 'search-panel';
+  static CLANS = ['无氏族', '流放者', '薪龙族', '月巫团', '地下菌团', '拉撒路联盟'
+    , '狱魔', '觉者', '冥卫', '影主', '熔尸'];
+  static TYPES = ['单位', '法术', '装备', '房间', '神器', '升级石', '祸患', '天灾'];
+  static RARITIES = ['勇者', '普通', '高级', '稀有'];
+  /**@type{Query}*/
+  static RESET_QUERY = {
+    "text": '',
+    "clan": SearchPanel.CLANS,
+    "type": SearchPanel.TYPES,
+    "rarity": SearchPanel.RARITIES,
+    "cost": MT_DATA.costs,
+  };
+
+  //-----------------------------------------------------------------------
+  //                   私有变量
+  //-----------------------------------------------------------------------
   #currentTagGroup = '';
   /**@type{OnTagClickedCallback?}*/
   #onTagClicked = undefined;
@@ -71,6 +87,9 @@ export class SearchPanel extends HTMLElement {
     this.tagClickCallbacks = new Map();
   }
 
+  //-----------------------------------------------------------------------
+  //                   私有函数
+  //-----------------------------------------------------------------------
   #createToggleButtons() {
     /** @type {ImageToggleButton[]} */
     this.toggleButtons = [];
@@ -79,19 +98,18 @@ export class SearchPanel extends HTMLElement {
     // </image-toggle-button>
     /** @type {HTMLDivElement} */
     const clanSection = this.querySelector('#clan-section');
-    ['无氏族', '流放者', '薪龙族', '月巫团', '地下菌团', '拉撒路联盟'
-      , '狱魔', '觉者', '冥卫', '影主', '熔尸'].forEach(clan => {
-        const button = ImageToggleButton.create();
-        button.setAttribute('src', `image/other/${clan}.webp`);
-        button.setAttribute('condition', `clan:${clan}`);
-        button.setAttribute('tip', clan);
-        clanSection.appendChild(button);
-        this.toggleButtons.push(button);
-      })
+    SearchPanel.CLANS.forEach(clan => {
+      const button = ImageToggleButton.create();
+      button.setAttribute('src', `image/other/${clan}.webp`);
+      button.setAttribute('condition', `clan:${clan}`);
+      button.setAttribute('tip', clan);
+      clanSection.appendChild(button);
+      this.toggleButtons.push(button);
+    })
     // <image-toggle-button src="image/other/单位.webp" condition="type:单位" tip="单位" size="42x48">
     // </image-toggle-button>
     const typeSection = this.querySelector('#type-section');
-    ['单位', '法术', '装备', '房间', '神器', '升级石', '祸患', '天灾'].forEach(type => {
+    SearchPanel.TYPES.forEach(type => {
       const button = ImageToggleButton.create();
       button.setAttribute('src', `image/other/${type}.webp`);
       button.setAttribute('condition', `type:${type}`);
@@ -103,7 +121,7 @@ export class SearchPanel extends HTMLElement {
     // <image-toggle-button src="image/other/勇者.webp" condition="rarity:勇者" tip="勇者"
     //  size="42x42"></image-toggle-button>
     const raritySection = this.querySelector('#rarity-section');
-    ['勇者', '普通', '高级', '稀有'].forEach(rarity => {
+    SearchPanel.RARITIES.forEach(rarity => {
       const button = ImageToggleButton.create();
       button.setAttribute('src', `image/other/${rarity}.webp`);
       button.setAttribute('condition', `rarity:${rarity}`);
@@ -112,14 +130,14 @@ export class SearchPanel extends HTMLElement {
       raritySection.appendChild(button);
       this.toggleButtons.push(button);
     })
-    // <image-toggle-button src="" text="0" condition="cost:0" size="42x42">
+    // <image-toggle-button src="" text="0" condition="cost:0" tip="0" size="42x42">
     // </image-toggle-button>
     const costSection = this.querySelector('#cost-section');
     MT_DATA.costs.forEach(cost => {
       const button = ImageToggleButton.create();
       button.setAttribute('condition', `cost:${cost}`);
       button.setAttribute('text', cost);
-      button.setAttribute('title', cost);
+      button.setAttribute('tip', cost);
       button.setAttribute('size', '42x42');
       costSection.appendChild(button);
       this.toggleButtons.push(button);
@@ -167,11 +185,42 @@ export class SearchPanel extends HTMLElement {
     });
     this.tagSection.appendChild(fragment);
   }
+  /**
+     * 
+     * @param {string | Query} textOrQuery 
+     * @param {boolean} closable 
+     * @returns {SearchTag}
+     */
+  #createTag(textOrQuery, closable = false) {
+    const tag = /** @type { SearchTag } */ (SearchTag.create(closable));
+    if (typeof textOrQuery == 'string') {
+      tag.text = textOrQuery;
+    } else {
+      tag.query = textOrQuery;
+    }
+    tag.closable = closable;
 
+    const callback = () => {
+      this.#onTagClicked(tag.query || tag.text);
+    };
+    tag.addEventListener('click', callback);
+    tag.clickCallback = callback;
+
+    if (closable) {
+      const clearCallback = () => {
+        this.removeSearchTag(tag);
+      }
+      tag.clearButton.addEventListener('click', clearCallback);
+      tag.clearCallback = clearCallback;
+    }
+    return tag;
+  }
+  //-----------------------------------------------------------------------
+  //                   getter / setter
+  //-----------------------------------------------------------------------
   get searchText() {
     return this.searchInput.value;
   }
-
   get conditions() {
     /** @type { string[] } */
     const conditons = [];
@@ -194,11 +243,17 @@ export class SearchPanel extends HTMLElement {
   set onTagGroupChanged(callback) {
     this.#onTagGroupChanged = callback;
   }
+  //-----------------------------------------------------------------------
+  //                   public 函数
+  //-----------------------------------------------------------------------
   /**
    * 
    * @param {Query} query 
+   * @param {boolean} closable
+   * 
+   * @returns {SearchTag}
    */
-  addSearchTag(query) {
+  addSearchTag(query, closable) {
     const MAX_TAG_COUNT = 30;
     /** @type { SearchTag } */
     let tag = null;
@@ -214,52 +269,23 @@ export class SearchPanel extends HTMLElement {
       }
     }
     if (isNew) {
-      tag = this.#createTag(query);
+      tag = this.#createTag(query, closable);
     }
     // 即使它是原有的元素, insert 操作依然会把它从旧的位置移除并插入到第一个位置
     list.insertBefore(tag, list.firstElementChild);
     if (isNew && list.childNodes.length > MAX_TAG_COUNT) {
       list.removeChild(list.lastElementChild);
     }
+    return tag;
   }
   /**
    * 
-   * @param {string | Query} textOrQuery 
-   * @param {boolean} closable 
    * @returns {SearchTag}
    */
-  #createTag(textOrQuery, closable = false) {
-    const tag = /** @type { SearchTag } */ (SearchTag.create(true));
-    if (typeof textOrQuery == 'string') {
-      tag.text = textOrQuery;
-    } else {
-      tag.query = textOrQuery;
-    }
-    tag.closable = closable;
-
-    const callback = () => {
-      this.#onTagClicked(tag.text || tag.query);
-    };
-    tag.addEventListener('click', callback);
-    tag.clickCallback = callback;
-
-    if (closable) {
-      const clearCallback = () => {
-        this.removeSearchTag(tag);
-      }
-      tag.clearButton.addEventListener('click', clearCallback);
-      tag.clearCallback = clearCallback;
-    }
-    return tag;
-  }
   addResetTag() {
-    this.addSearchTag({
-      "text": '',
-      "clan": [],
-      "type": [],
-      "rarity": [],
-      "cost": [],
-    });
+    const tag = this.addSearchTag(SearchPanel.RESET_QUERY, false);
+    tag.text = '[重置]';
+    return tag
   }
   /**
    * 删除搜索标签并清理资源

@@ -1,4 +1,5 @@
-import { __DEBUG, __log_data } from './util.js'
+
+import { __DEBUG, __log_data, debounce } from './util.js'
 import { MT_DATA } from '../data/monster-train-2/index.js'
 import { ItemCard } from './item-card.js';
 import { SearchPanel } from './search-panel.js';
@@ -27,6 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
   __rightPanel = document.querySelector('.right-panel');
   __cardDialog = document.querySelector('#card-detail-dlg');
 
+  __rightPanel.addResetTag();
+
   // 快捷标签点击事件处理
   __rightPanel.onTagClicked = (/** @type { Query | string } */query) => {
     __rightPanel.setQuery(query);
@@ -39,9 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // 加载上次页面最后一次搜索条件
   loadSavedQuery();
 
+  const debounceFunc = debounce(doSearch, 200);
+
   // 搜索文本框
-  __rightPanel.searchInput.addEventListener('change', (e) => {
-      doSearch();
+  __rightPanel.searchInput.addEventListener('input', (e) => {
+    debounceFunc();
   });
   // 搜索按钮
   __rightPanel.clearButton.addEventListener('click', () => {
@@ -51,7 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // 各个氏族/种类/稀有度/费用 等按钮
   __rightPanel.toggleButtons.map((btn) => {
     btn.addEventListener('click', () => { doSearch(); })
-    btn.addEventListener('dblclick', () => { doSearch(); })
+    btn.addEventListener('auxclick', (e) => {
+      if (e.button != 1) { return; }
+      doSearch();
+    })
   });
 
   __cardDialog.addEventListener('click', (e) => {

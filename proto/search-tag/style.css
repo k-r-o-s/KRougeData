@@ -20,10 +20,6 @@
   padding: 0;
 }
 
-.tag-button-hidden {
-  display: none;
-}
-
 .tag-clear-button:hover {
   background-color: var(--krs-button-face-color-hover);
 }

@@ -90,9 +90,9 @@
 
   width: 100%;
   background-color: var(--krs-main-bgcolor-dark);
-  color: white;
+  color: var(--krs-main-font-color);
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.4rem;
   padding: 4px;
 }
 
@@ -106,7 +106,7 @@
 }
 
 .title-tooltip {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--krs-main-bgcolor-dark);
   position: absolute;
   top: -30px;
