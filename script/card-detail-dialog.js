@@ -279,6 +279,9 @@ export class CardDetails extends HTMLElement {
       if (card) {
         card.item = item;
       }
+      tooltip.classList.add('dlg-has-border');
+    } else {
+      tooltip.classList.remove('dlg-has-border');
     }
   }
 }

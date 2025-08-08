@@ -19,7 +19,7 @@
   border-radius: 5px 5px 0 0;
   margin-right: 5px;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #555;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -119,7 +119,7 @@
 }
 
 .card-notes {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   max-width: 610px;
   word-wrap: break-word;
 }
@@ -137,4 +137,7 @@
   position: fixed;
   z-index: 100;
   pointer-events: none;
+}
+.dlg-has-border {
+  border: 4px solid var(--krs-main-bgcolor-dark);
 }
