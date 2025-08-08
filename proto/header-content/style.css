@@ -11,3 +11,31 @@
   height: auto;
   transform: translateY(-60%);
 }
+
+header>p {
+  position: relative;
+}
+
+.menu-button {
+  position: absolute;
+
+  width: 42px;
+  height: 42px;
+  left: 100%;
+  top: 50%;
+  transform: translate(-150%, -50%);
+  display: flex;
+  align-content: center;
+  padding: 10px;
+  border: 1px solid var(--krs-button-face-color-checked);
+  border-radius: 50%;
+  background-color: var(--krs-main-bgcolor);
+}
+
+.menu-button:hover {
+  background-color: var(--krs-button-face-color);
+}
+
+.menu-button img {
+  object-fit: contain;
+}

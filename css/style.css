@@ -1,13 +1,23 @@
-@import "../css/theme.css";
 @import "../css/default.css";
+@import "../css/theme.css";
 @import "../proto/card-list-view/style.css";
 @import "../proto/exclusive-accordion/style.css";
+@import "../proto/header-content/style.css";
 @import "../proto/image-toggle-button/style.css";
 @import "../proto/img-in-text/style.css";
 @import "../proto/item-card/style.css";
 @import "../proto/layout/layout.css";
 
+/*----------------------------- header -----------------------------*/
+header-content {
+  position: relative;
+}
+
 /*----------------------------- 搜索面板 -----------------------------*/
+.panel-closed {
+  width: 0;
+  overflow-x: hidden;
+}
 .search-top-image {
   height: 60px;
   margin: 8px;

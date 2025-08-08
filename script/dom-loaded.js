@@ -18,6 +18,8 @@ let __rightPanel = null;
 // 卡牌详情对话框
 /** @type { HTMLDialogElement } */
 let __cardDialog = null;
+/**@type{HTMLButtonElement}*/
+let __searchPanelToggleButton = null;
 
 // 卡牌动画效果
 let __animatingEnabled = false;
@@ -28,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   __leftPanel = document.querySelector('.left-panel');
   __rightPanel = document.querySelector('.right-panel');
   __cardDialog = document.querySelector('#card-detail-dlg');
+  __searchPanelToggleButton = document.querySelector('.menu-button');
 
   __rightPanel.addResetTag();
 
@@ -52,6 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
     tag.removeEventListener('mouseenter', onQueryTagMouseEnter);
     tag.removeEventListener('mouseleave', onQueryTagMouseLeave);
     saveSavedQueries();
+  });
+  __searchPanelToggleButton.addEventListener('click', ()=> {
+    __rightPanel.classList.toggle('panel-closed');
   });
 
   // 加载上次页面最后一次搜索条件
