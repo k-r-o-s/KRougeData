@@ -1,16 +1,26 @@
+@use "sass:color";
+
+@function deep-color($clr) {
+  // 减少亮度（Lightness），让颜色变深
+  $clr: color.scale($clr, $lightness: -40%);
+  // 减少饱和度（Saturation），让颜色更柔和
+  $clr: color.scale($clr, $saturation: -25%);
+  @return $clr;
+}
+
 :root {
   //----------------------------- 主题: 默认 -------------------------------
   /* 主要配色 */
-  --krs-main-bgcolor-dark: #9b7329;
-  --krs-main-bgcolor: #fbf8f0;
-  --krs-button-face-color: #dfc47b;
-  --krs-button-face-color-checked: #594317;
-  --krs-button-face-color-hover: #806122;
-  --krs-button-border-color: #bbbbbb;
-  --krs-card-border-color: #dac78c;
-  --krs-card-bgcolor: #e2d3bd;
-  --krs-main-font-color: white;
-  --krs-help-icon-bgcolor: #5a9bd4;
+  --krs-main-bgcolor-dark: hsl(38.9, 58.2%, 38.4%);
+  --krs-main-bgcolor: hsl(43.6, 57.9%, 96.3%);
+  --krs-button-face-color: hsl(43.8, 61%, 67.8%);
+  --krs-button-face-color-checked: hsl(40, 58.9%, 22%);
+  --krs-button-face-color-hover: hsl(40.2, 58%, 31.8%);
+  --krs-button-border-color: hsl(0, 0%, 73.3%);
+  --krs-card-border-color: hsl(45.4, 51.3%, 70.2%);
+  --krs-card-bgcolor: hsl(35.7, 38.9%, 81.4%);
+  --krs-main-font-color: hsl(0, 0%, 100%);
+  --krs-help-icon-bgcolor: hsl(208, 58.7%, 59.2%);
   /* banner 图片 */
   --krs-banner-url: url('/image/other/funguy.webp');
 
@@ -21,27 +31,46 @@
   /* 词条的宽度 */
   --krs-term-width: 360px;
   //----------------------------- 主题色 -------------------------------
-  --krs-color-banished: #0fa0b7;
-  --krs-color-banished-darker: #0a606d;
-  --krs-color-pyreborne: #de0c55;
-  --krs-color-pyreborne-darker: #8e0938;
-  --krs-color-lunacoven: #ffd1fe;
-  --krs-color-lunacoven-darker: #ab6baa;
-  --krs-color-underlegion: #e67424;
-  --krs-color-underlegion-darker: #a34808;
-  --krs-color-lazarusleague: #afce47;
-  --krs-color-lazarusleague-darker: #6e871b;
-  --krs-color-hellhorned: #ff3604;
-  --krs-color-hellhorned-darker: #901f03;
-  --krs-color-awoken: #5ab706;
-  --krs-color-awoken-darker: #336804;
-  --krs-color-stygainguard: #a33ef8;
-  --krs-color-stygainguard-darker: #5a1097;
-  --krs-color-umbra: #fecb1a;
-  --krs-color-umbra-darker: #9c7b03;
-  --krs-color-meltingremnant: #5aa3f5;
-  --krs-color-meltingremnant-darker: #245b99;
-
+  $tmp-color: hsl(188.2, 84.8%, 38.8%);
+  --krs-color-banished: #{$tmp-color};
+  $tmp-color: deep-color($tmp-color);
+  --krs-color-banished-darker: #{$tmp-color};
+  $tmp-color: hsl(339.1, 89.7%, 45.9%);
+  --krs-color-pyreborne: #{$tmp-color};
+  $tmp-color: deep-color($tmp-color);
+  --krs-color-pyreborne-darker: #{$tmp-color};
+  $tmp-color: hsl(301.3, 100%, 91%);
+  --krs-color-lunacoven: #{$tmp-color};
+  $tmp-color: deep-color($tmp-color);
+  --krs-color-lunacoven-darker: #{$tmp-color};
+  $tmp-color: hsl(24.7, 79.5%, 52.2%);
+  --krs-color-underlegion: #{$tmp-color};
+  $tmp-color: deep-color($tmp-color);
+  --krs-color-underlegion-darker: #{$tmp-color};
+  $tmp-color: hsl(73.8, 57.9%, 54.3%);
+  --krs-color-lazarusleague: #{$tmp-color};
+  $tmp-color: deep-color($tmp-color);
+  --krs-color-lazarusleague-darker: #{$tmp-color};
+  $tmp-color: hsl(12, 100%, 50.8%);
+  --krs-color-hellhorned: #{$tmp-color};
+  $tmp-color: deep-color($tmp-color);
+  --krs-color-hellhorned-darker: #{$tmp-color};
+  $tmp-color: hsl(91.5, 93.7%, 37.1%);
+  --krs-color-awoken: #{$tmp-color};
+  $tmp-color: deep-color($tmp-color);
+  --krs-color-awoken-darker: #{$tmp-color};
+  $tmp-color: hsl(272.6, 93%, 60.8%);
+  --krs-color-stygainguard: #{$tmp-color};
+  $tmp-color: deep-color($tmp-color);
+  --krs-color-stygainguard-darker: #{$tmp-color};
+  $tmp-color: hsl(46.6, 99.1%, 54.9%);
+  --krs-color-umbra: #{$tmp-color};
+  $tmp-color: deep-color($tmp-color);
+  --krs-color-umbra-darker: #{$tmp-color};
+  $tmp-color: hsl(211.7, 88.6%, 65.7%);
+  --krs-color-meltingremnant: #{$tmp-color};
+  $tmp-color: deep-color($tmp-color);
+  --krs-color-meltingremnant-darker: #{$tmp-color};
 }
 
 html {
@@ -84,9 +113,11 @@ a:active {
   color: var(--krs-main-font-color);
 }
 
-p, a {
+p,
+a {
   margin: 0;
 }
+
 hr {
   border: none;
   /* 移除浏览器默认的边框 */

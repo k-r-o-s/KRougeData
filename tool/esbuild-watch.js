@@ -19,6 +19,8 @@ if (process.argv.includes('debug')) {
   _debug = true;
 }
 
+/**@typedef{'verbose' | 'debug' | 'info' | 'warning' | 'error' | 'silent'}LogLevel*/
+
 async function startDevServer() {
   // TypeScript 构建配置
   const tsConfig = {
@@ -36,7 +38,9 @@ async function startDevServer() {
     // 原理是编译时把 __DEBUG 替换为 'true' 或者 'false'
     define: {
       __DEBUG: _debug ? 'true' : 'false'
-    }
+    },
+    logLimit: 0,
+    logLevel: /**@type{LogLevel}*/('info')
   };
 
   // SCSS 构建配置
@@ -49,6 +53,8 @@ async function startDevServer() {
     bundle: false,
     sourcemap: true,
     plugins: [sassPlugin()],
+    logLimit: 0,
+    logLevel: /**@type{LogLevel}*/('info')
   };
 
   // 1. 创建两个独立的构建上下文
