@@ -1,12 +1,10 @@
-import { createCssLink } from "./util.js";
-
 const template = document.createElement('template');
 template.innerHTML = `
   <span class="header-icon">
     <img src="/image/other/怪物火车2.webp" alt="">
   </span>怪物火车 2 数据查询
   <button class="menu-button">
-    <img src="/image/other/menu-burger.svg">
+    <img src="/image/other/panel-toggle-button.svg">
   </button>`;
 
 export class HeaderContent extends HTMLElement {

@@ -19,3 +19,13 @@ header p {
   font-size: 1.8rem;
   width: 100%;
 }
+
+footer>div {
+  display: flex;
+  /* 将子元素分散到两端 */
+  justify-content: space-between;
+  /* 可选：垂直居中 */
+  align-items: center;
+  /* 可选：增加内边距 */
+  padding: 0 20px;
+}

@@ -12,6 +12,8 @@
   <script type="module" src="./data/monster-train-2/index.js"></script>
   <!-- 控件: header 区内容 -->
   <script type="module" src="./script/header-content.js"></script>
+  <!-- 控件: footer 区内容 -->
+  <script type="module" src="./script/footer-content.js"></script>
   <!-- 控件: 卡片列表区的卡片 -->
   <script type="module" src="./script/item-card.js"></script>
   <!-- 控件: 查询区的图片按钮 -->
@@ -39,15 +41,14 @@
   <main>
     <!-- 卡片列表 -->
     <div class="left-panel card-list-view">
-      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
-      <item-card src="image/cards/不朽交易.webp" class=""></item-card>
     </div>
     <!-- 查询条件面板 -->
     <search-panel class="right-panel"></search-panel>
   </main>
 
   <footer>
-    <p>&copy; 2025 By K_r_o_s</p>
+    <footer-content>
+    </footer-content>
   </footer>
 
   <!-- 卡片用于显示词条的 tooltip -->
@@ -56,6 +57,9 @@
   <!-- 模态对话框 -->
   <dialog id="card-detail-dlg">
     <card-details class="dialog-content"></card-details>
+  </dialog>
+  <dialog id="setting-dlg">
+    <card-details class="setting-dlg-content"></card-details>
   </dialog>
 </body>
 

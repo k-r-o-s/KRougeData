@@ -1,0 +1,26 @@
+{
+  "name": "krougedata",
+  "version": "1.0.0",
+  "description": "用于 `RougeLike` 游戏的信息搜索工具.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "w": "node tool/esbuild-watch.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k-r-o-s/KRougeData.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k-r-o-s/KRougeData/issues"
+  },
+  "homepage": "https://github.com/k-r-o-s/KRougeData#readme",
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "esbuild": "^0.25.8",
+    "esbuild-sass-plugin": "^3.3.1",
+    "glob": "^11.0.3"
+  }
+}

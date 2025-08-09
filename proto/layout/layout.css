@@ -53,7 +53,6 @@ main {
 }
 
 footer {
-  box-sizing: border-box;
   background-color: var(--krs-main-bgcolor-dark);
   border-top: 1px solid #555555;
   color: white;
@@ -65,21 +64,13 @@ footer {
   /* 固定高度 */
   max-height: 30px;
 }
-
-footer p {
-  margin: 0px;
-  font-weight: 1000;
-}
-
 /* ///////////////////////////////////////////////////////////////////////// */
 .left-panel {
-  box-sizing: border-box;
   background-color: var(--krs-main-bgcolor);
   flex: 1;
 }
 
 .right-panel {
-  box-sizing: border-box;
   width: 380px;
   /* 固定宽度 */
   flex-shrink: 0;
