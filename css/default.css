@@ -60,6 +60,10 @@ summary {
   box-sizing: border-box;
 }
 
+p, a {
+  margin: 0;
+}
+
 /* 未访问的链接 */
 a:link {
   color: var(--krs-main-font-color);
@@ -83,9 +87,6 @@ a:active {
   color: var(--krs-main-font-color);
 }
 
-p, a {
-  margin: 0;
-}
 hr {
   border: none;
   /* 移除浏览器默认的边框 */
@@ -142,7 +143,6 @@ dialog::backdrop {
 /* 表格风格的 tooltip 的单元格样式 */
 .grid-tooltip-item {
   /* 确保换行 */
-  word-wrap: break-word;
   overflow-wrap: break-word;
   border: 1px solid #ccc;
   padding: 0 3px;
