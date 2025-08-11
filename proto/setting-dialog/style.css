@@ -52,6 +52,7 @@
   font-weight: bold;
   text-shadow: 2px 2px 1px black;
   transition: border-width 0.3s ease-in;
+  user-select: none;
 }
 .setting__button-theme:hover {
   border-width: 4px 4px 4px 30px;

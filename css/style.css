@@ -123,4 +123,5 @@ footer-content {
   align-items: center;
   /* 可选：增加内边距 */
   padding: 0 20px;
+  height: 100%;
 }

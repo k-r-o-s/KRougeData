@@ -1,6 +1,7 @@
 @import "../../css/default.css";
 @import "./style.css";
 @import "../item-card/style.css";
+@import "../section-divider/style.css";
 
 .setting-dialog-content {
   width: 720px;
