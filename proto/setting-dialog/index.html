@@ -15,20 +15,36 @@
 <body>
   <div class="setting-dialog-content">
     <section-divider text="主题" tooltip="切换主题风格"></section-divider>
-    <div class="theme-selection">
-      <div class="theme-button btn-theme-banished">流放者</div>
-      <div class="theme-button btn-theme-pyreborne">薪龙族</div>
-      <div class="theme-button btn-theme-lunacoven">月巫团</div>
-      <div class="theme-button btn-theme-underlegion theme-selected">地下菌团</div>
-      <div class="theme-button btn-theme-lazarusleague">拉撒路</div>
-      <div class="theme-button btn-theme-hellhorned">狱魔</div>
-      <div class="theme-button btn-theme-awoken">觉者</div>
-      <div class="theme-button btn-theme-stygainguard">冥卫</div>
-      <div class="theme-button btn-theme-umbra">影主</div>
-      <div class="theme-button btn-theme-meltingremnant">熔尸</div>
+    <div class="setting__container-theme-sel">
+      <div class="setting__button-theme btn-theme-banished" data-value="banished">流放者</div>
+      <div class="setting__button-theme btn-theme-pyreborne" data-value="pyreborne">薪龙族</div>
+      <div class="setting__button-theme btn-theme-lunacoven" data-value="lunacoven">月巫团</div>
+      <div class="setting__button-theme btn-theme-underlegion theme-selected" data-value="underlegion">地下菌团</div>
+      <div class="setting__button-theme btn-theme-lazarusleague" data-value="lazarusleague">拉撒路</div>
+      <div class="setting__button-theme btn-theme-hellhorned" data-value="hellhorned">狱魔</div>
+      <div class="setting__button-theme btn-theme-awoken" data-value="awoken">觉者</div>
+      <div class="setting__button-theme btn-theme-stygainguard" data-value="stygainguard">冥卫</div>
+      <div class="setting__button-theme btn-theme-umbra" data-value="umbra">影主</div>
+      <div class="setting__button-theme btn-theme-meltingremnant" data-value="meltingremnant">熔尸</div>
     </div>
     <section-divider text="文字" tooltip="设置文字规格"></section-divider>
-    <div class=""
+    <div class="setting__container-font-sel">
+      <div>
+        <label for="setting__opt-small-font">
+          <input type="radio" name="setting__font-size" value="small" id="setting__opt-small-font" />
+          小</label>
+      </div>
+      <div>
+        <label for="setting__opt-medium-font">
+        <input type="radio" name="setting__font-size" value="medium" id="setting__opt-medium-font" checked />
+        中</label>
+      </div>
+      <div>
+        <label for="setting__opt-large-font">
+        <input type="radio" name="setting__font-size" value="large" id="setting__opt-large-font" />
+        大</label>
+      </div>
+    </div>
   </div>
 
 </body>

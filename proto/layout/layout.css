@@ -17,7 +17,7 @@ header {
   box-sizing: border-box;
   background-color: var(--krs-main-bgcolor);
   border-bottom: 1px solid #555555;
-  color: white;
+  color: var(--krs-main-font-color);
   padding: 0px;
 
   /* 垂直居中子项 */
@@ -55,7 +55,7 @@ main {
 footer {
   background-color: var(--krs-main-bgcolor-dark);
   border-top: 1px solid #555555;
-  color: white;
+  color: var(--krs-main-font-color);
   text-align: center;
   padding: 0px;
 
@@ -75,6 +75,7 @@ footer {
   /* 固定宽度 */
   flex-shrink: 0;
   max-height: calc(100vh - 120px);
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 

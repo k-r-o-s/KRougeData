@@ -21,7 +21,7 @@ if (process.argv.includes('debug')) {
 
 /**@typedef{'verbose' | 'debug' | 'info' | 'warning' | 'error' | 'silent'}LogLevel*/
 
-async function startDevServer() {
+async function startBuildWatch() {
   // TypeScript 构建配置
   const tsConfig = {
     // esbuild 本身并不支持通配符, 需要通过 golb 生成文件列表
@@ -46,7 +46,7 @@ async function startDevServer() {
   // SCSS 构建配置
   const scssConfig = {
     entryPoints: glob.sync('src/**/*.scss'),
-    outdir: 'dist/',
+    outdir: '/',
     // 多入口文件需要以 outbase 的路径为基准, 
     // 才能在 outdir 保持原有的文件夹结构
     outbase: 'src/',
@@ -66,20 +66,21 @@ async function startDevServer() {
   // host 和 port 是可选的，可根据需要配置
   Promise.all([
     scssCtx.watch(),
+    tsCtx.watch(),
     // context.server = watch + server
     // 用哪个 context 启动server 都可以
-    tsCtx.serve({
-      servedir: '.',
-      host: _host,
-      port: _port,
-    })
+    // tsCtx.serve({
+    //   servedir: '.',
+    //   host: _host,
+    //   port: _port,
+    // })
   ]);
 
-  console.log(`Development server is running at http://${_host}:${_port}`);
+  // console.log(`Development server is running at http://${_host}:${_port}`);
   console.log('Watching for file changes...');
 }
 
-startDevServer().catch((err) => {
+startBuildWatch().catch((err) => {
   console.error('An error occurred:', err);
   process.exit(1);
 });

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" class="root__theme-banished root__font-size-medium">
 
 <head>
   <meta charset="UTF-8">
@@ -26,6 +26,8 @@
   <script type="module" src="./script/search-panel.js"></script>
   <!-- 控件: 卡片详情对话框 -->
   <script type="module" src="./script/card-detail-dialog.js"></script>
+  <!-- 控件: 设置对话框 -->
+  <script type="module" src="./script/setting-dialog.js"></script>
   <!-- 辅助工具类 -->
   <script type="module" src="./script/util.js"></script>
   <!-- DOM 加载完成后的事件处理 -->
@@ -59,7 +61,7 @@
     <card-details class="dialog-content"></card-details>
   </dialog>
   <dialog id="setting-dlg">
-    <card-details class="setting-dlg-content"></card-details>
+    <setting-dialog-content></setting-dialog-content>
   </dialog>
 </body>
 

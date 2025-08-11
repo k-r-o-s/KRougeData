@@ -7,6 +7,8 @@
 @import "../proto/img-in-text/style.css";
 @import "../proto/item-card/style.css";
 @import "../proto/layout/layout.css";
+@import "../proto/section-divider/style.css";
+@import "../proto/setting-dialog/style.css";
 
 /*----------------------------- header -----------------------------*/
 header-content {
@@ -59,11 +61,11 @@ header-content {
 .search-container button {
   padding: 6px 4px;
   background-color: var(--krs-button-face-color);
-  color: white;
+  color: var(--krs-main-font-color);
   border: none;
   border: 1px solid #ddd;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1rem;
   white-space: nowrap;
   /* 防止按钮文本换行 */
 }

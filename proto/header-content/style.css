@@ -27,9 +27,15 @@ header .menu-button {
   padding: 10px;
 }
 
+.footer__button-container {
+  position: relative;
+}
+
 footer .menu-button {
-  width: 24px;
-  height: 24px;
+  position: absolute;
+  top: -16px;
+  width: 36px;
+  height: 36px;
   padding: 2px;
   border-width: 2px;
 }

@@ -39,7 +39,7 @@ summary::after {
   content: "▼"; /* 向下箭头 */
   display: inline-block;
   margin-left: 1rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   transition: transform 0.3s ease; /* 箭头旋转的平滑过渡 */
 }
 

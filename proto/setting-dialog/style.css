@@ -1,4 +1,4 @@
-.theme-selection {
+.setting__container-theme-sel {
   --krs--theme-button-width: 120px;
   --krs--theme-button-height: 48px;
   --krs--theme-button-gap: 10px;
@@ -9,12 +9,37 @@
   justify-content: center;
   /* 定义元素之间的间距，包括水平和垂直 */
   gap: var(--krs--theme-button-gap);
-  width: calc(5 * var(--krs--theme-button-width) + 4 * 10px);
+  width: calc(5 * var(--krs--theme-button-width) + 4 * var(--krs--theme-button-gap));
   /* 容器自身水平居中 */
   margin: 10px auto;
 }
 
-.theme-button {
+.setting__container-font-sel {
+  --krs--font-size-opt-button-width: 120px;
+  --krs--font-size-opt-button-gap: 30px;
+
+  display: flex;
+  flex-wrap: wrap;
+  /* 使 flex 容器在主轴上水平居中 */
+  justify-content: center;
+  /* 定义元素之间的间距，包括水平和垂直 */
+  gap: var(--krs--font-size-opt-button-gap);
+  width: calc(3 * var(--krs--font-size-opt-button-width) + 2 * var(--krs--font-size-opt-button-gap));
+  /* 容器自身水平居中 */
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.setting__container-font-sel label, input {
+  cursor: pointer;
+}
+
+.setting__container-font-sel label {
+  user-select: none;
+  font-size: 1rem;
+}
+
+.setting__button-theme {
   width: var(--krs--theme-button-width);
   height: var(--krs--theme-button-height);
   cursor: pointer;
@@ -22,13 +47,13 @@
   display: flex;
   justify-content: center; /* 水平居中 */
   align-items: center; /* 垂直居中 */
-  font-size: 1.4rem;
-  color: var(--krs-main-font-color);
+  font-size: 1rem;
+  color: white;
   font-weight: bold;
   text-shadow: 2px 2px 1px black;
   transition: border-width 0.3s ease-in;
 }
-.theme-button:hover {
+.setting__button-theme:hover {
   border-width: 4px 4px 4px 30px;
 }
 .btn-theme-banished {
@@ -74,4 +99,8 @@
 
 .theme-selected {
   border-width: 4px 4px 4px 30px;
+}
+.theme-disabled {
+  filter: blur(2px);
+  cursor:not-allowed;
 }

@@ -10,7 +10,7 @@ template.innerHTML = `
   <div class="search-top-image">
   </div>
   <!-- 查询输入框和按钮区 -->
-  <section-divider text="文字" tooltip="输入内容后无需回车会自动搜索\n按钮 [+] 可以保存当前搜索条件\n点击标签[重置]会重置所有搜索条件\n可以搜索英文名">
+  <section-divider text="文字" tooltip="按钮 [+] 可以保存当前搜索条件\n点击标签[重置]会重置所有搜索条件\n可以搜索英文名">
   </section-divider>
   <div class="search-container">
     <button id="save-button">➕</button>

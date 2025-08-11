@@ -50,7 +50,7 @@
   box-sizing: border-box;
   width: 100%;
   height: 34px;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 800;
   border: 4px solid #777c7c;
   background-color: #323a39;
@@ -104,7 +104,7 @@
 .term-basic {
   background-color: #1b434b;
   width: var(--krs-term-width);
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   border: 4px solid#2f7282;
   margin: 2px;
   padding: 4px;
@@ -113,7 +113,7 @@
 .term-ability {
   background-color: #612a00;
   width: var(--krs-term-width);
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   border: 4px solid#a34d20;
   margin: 2px;
   padding: 4px;
@@ -122,7 +122,7 @@
 .term-trigger {
   background-color: #592378;
   width: var(--krs-term-width);
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   border: 4px solid#b54bd6;
   margin: 2px;
   padding: 4px;
@@ -131,7 +131,7 @@
 .term-feature {
   background-color: #8e5e20;
   width: var(--krs-term-width);
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   border: 4px solid#e4b943;
   margin: 2px;
   padding: 4px;
@@ -140,7 +140,7 @@
 .term-buff {
   background-color: #165a38;
   width: var(--krs-term-width);
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   border: 4px solid#2ba96c;
   margin: 2px;
   padding: 4px;
@@ -149,7 +149,7 @@
 .term-debuff {
   background-color: #852521;
   width: var(--krs-term-width);
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   border: 4px solid#a42a26;
   margin: 2px;
   padding: 4px;
@@ -158,7 +158,7 @@
 .term-property {
   background-color: #2a2e2f;
   width: var(--krs-term-width);
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   border: 4px solid#6f787f;
   margin: 2px;
   padding: 4px;
@@ -167,7 +167,7 @@
 .term-summon {
   background-color: #2a2e2f;
   width: var(--krs-term-width);
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   border: 4px solid#6f787f;
   margin: 2px;
   padding: 4px;
@@ -183,7 +183,7 @@
 
 .term-effect {
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.3;
   margin: 0;
 }

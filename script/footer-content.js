@@ -1,8 +1,10 @@
 const template = document.createElement('template');
 template.innerHTML = `
-  <button class="menu-button">
+  <div class="footer__button-container">
+  <button class="menu-button" id="settings-button">
     <img src="/image/other/settings.svg">
   </button>
+  </div>
   <a href="https://github.com/k-r-o-s/KRougeData">&copy; 2025  k-r-o-s / KRougeData</p>`;
 
 export class FooterContent extends HTMLElement {

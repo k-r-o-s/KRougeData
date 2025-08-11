@@ -9,7 +9,7 @@
   /* 上下外边距 */
   color: var(--krs-button-face-color-checked);
   /* 文字颜色 */
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
 
   cursor: default;

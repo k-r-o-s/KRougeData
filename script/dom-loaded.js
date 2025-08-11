@@ -5,6 +5,7 @@ import { ItemCard } from './item-card.js';
 import { SearchPanel } from './search-panel.js';
 import { CardDetails } from './card-detail-dialog.js';
 import { SearchTag } from './search-tag.js';
+import { SettingDialogContent } from './setting-dialog.js';
 
 // 卡牌的Tooltip
 /** @type { HTMLDivElement } */
@@ -18,8 +19,8 @@ let __rightPanel = null;
 // 卡牌详情对话框
 /** @type { HTMLDialogElement } */
 let __cardDialog = null;
-/**@type{HTMLButtonElement}*/
-let __searchPanelToggleButton = null;
+/** @type { HTMLDialogElement } */
+let __settingDialog = null;
 
 // 卡牌动画效果
 let __animatingEnabled = false;
@@ -30,7 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
   __leftPanel = document.querySelector('.left-panel');
   __rightPanel = document.querySelector('.right-panel');
   __cardDialog = document.querySelector('#card-detail-dlg');
-  __searchPanelToggleButton = document.querySelector('.menu-button');
+  __settingDialog = document.querySelector('#setting-dlg');
+
+  const searchPanelToggleButton = document.querySelector('#search-panel-toggle-button');
+  const settingsButton = document.querySelector('#settings-button');
 
   __rightPanel.addResetTag();
 
@@ -46,18 +50,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const str = JSON.stringify(__rightPanel.getSavedQueryTags().map(tag => tag.query));
     localStorage.setItem('savedQueries', str);
   };
-  __rightPanel.onQueryTagAdded = ((/**@type{SearchTag}*/tag)=> {
+  __rightPanel.onQueryTagAdded = ((/**@type{SearchTag}*/tag) => {
     tag.addEventListener('mouseenter', onQueryTagMouseEnter);
     tag.addEventListener('mouseleave', onQueryTagMouseLeave);
     saveSavedQueries();
   });
-  __rightPanel.onQueryTagRemoved = ((/**@type{SearchTag}*/tag)=> {
+  __rightPanel.onQueryTagRemoved = ((/**@type{SearchTag}*/tag) => {
     tag.removeEventListener('mouseenter', onQueryTagMouseEnter);
     tag.removeEventListener('mouseleave', onQueryTagMouseLeave);
     saveSavedQueries();
   });
-  __searchPanelToggleButton.addEventListener('click', ()=> {
+  searchPanelToggleButton.addEventListener('click', () => {
     __rightPanel.classList.toggle('panel-closed');
+  });
+  settingsButton.addEventListener('click', () => {
+    __settingDialog.showModal();
   });
 
   // 加载上次页面最后一次搜索条件
@@ -97,14 +104,39 @@ document.addEventListener('DOMContentLoaded', () => {
       __cardDialog.close();
     }
   });
+  __settingDialog.addEventListener('click', (e) => {
+    if (e.target === __settingDialog) {
+      __settingDialog.close();
+    }
+  });
   doSearch();
 });
 
 // 恢复上一次搜索的条件设置
 function loadSavedQuery() {
+  // 读取主题/字体等设置
+  /**@type{SettingDialogContent}*/
+  const settings = __settingDialog.querySelector(SettingDialogContent.TAG_NAME);
+  const theme = localStorage.getItem('setting-theme');
+  if (theme) {
+    settings.changeTheme(theme);
+  }
+  const fontSize = localStorage.getItem('setting-font-size');
+  if (fontSize) {
+    settings.changeFontSize(fontSize);
+  }
+  settings.onFontSizeChanged = (/**@type{string}*/size) => {
+    localStorage.setItem('setting-font-size', size);
+  }
+  settings.onThemeChanged = (/**@type{string}*/theme) => {
+    localStorage.setItem('setting-theme', theme);
+  }
+
+  // 读取词条组上一次打开的组
   const tagGroup = localStorage.getItem('tagGroup') || '特性';
   __rightPanel.setCurrentTagGroup(tagGroup);
 
+  // 读取保存的查询条件
   const saveQueries = localStorage.getItem('savedQueries');
   if (saveQueries) {
     try {
@@ -117,6 +149,7 @@ function loadSavedQuery() {
       console.error("保存查询字符串: [" + saveQueries + "] 无效");
     }
   }
+  // 读取最后一次执行的查询
   const queryString = localStorage.getItem('queryState');
   if (!queryString) { return; }
   try {
@@ -252,7 +285,7 @@ function onQueryTagMouseEnter(e) {
   const tagRect = tag.getBoundingClientRect();
   const tooltipRect = __tooltip.getBoundingClientRect();
 
-  let x = (tagRect.left - 
+  let x = (tagRect.left -
     (tooltipRect.width - tagRect.width) / 2);
   if (x < panelRect.left) {
     x = panelRect.left;

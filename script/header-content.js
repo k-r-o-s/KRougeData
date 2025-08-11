@@ -3,7 +3,7 @@ template.innerHTML = `
   <span class="header-icon">
     <img src="/image/other/怪物火车2.webp" alt="">
   </span>怪物火车 2 数据查询
-  <button class="menu-button">
+  <button class="menu-button" id="search-panel-toggle-button">
     <img src="/image/other/panel-toggle-button.svg">
   </button>`;
 

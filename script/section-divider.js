@@ -1,8 +1,8 @@
-import { createCssLink } from "./util.js";
+// import { createCssLink } from "./util.js";
 
 const template = document.createElement('template');
 template.innerHTML = `<div class="section-divider" id="divider">
-    <span id="title"></span>
+    <span class="section-divider__title"></span>
     <span class="section-help-container">
       <span class="section-help-icon"> ? <span>
       <div class="section-help-text"></div>
@@ -17,30 +17,28 @@ export class SectionDivider extends HTMLElement {
     // 必须调用 super()
     super();
 
-    // 创建 Shadow DOM
-    const shadowRoot = this.attachShadow({ mode: 'open' });
+    // // 创建 Shadow DOM
+    // const shadowRoot = this.attachShadow({ mode: 'open' });
 
-    // 创建 link 元素并添加到 shadowRoot
-    [
-      '../css/default.css',
-      '../proto/item-card/style.css',
-      '../proto/section-divider/style.css',
-    ].forEach(css => {
-      const link = createCssLink(css);
-      shadowRoot.appendChild(link);
-    });
+    // // 创建 link 元素并添加到 shadowRoot
+    // [
+    //   '../css/default.css',
+    //   '../proto/item-card/style.css',
+    //   '../proto/section-divider/style.css',
+    // ].forEach(css => {
+    //   const link = createCssLink(css);
+    //   shadowRoot.appendChild(link);
+    // });
 
     // 复制 template 的内容并添加到 Shadow DOM
     const content = template.content.cloneNode(true);
-    shadowRoot.appendChild(content);
-
-    this.divider = shadowRoot.querySelector('#title');
-    this.tooltip = shadowRoot.querySelector('.section-help-text');
+    this.appendChild(content);
+    this.divider = this.querySelector('.section-divider__title');
+    this.tooltip = this.querySelector('.section-help-text');
   }
 
   // 可选：定义生命周期回调函数
   connectedCallback() {
-    // console.log('SectionDivider 已连接到文档111。');
   }
 
   disconnectedCallback() {

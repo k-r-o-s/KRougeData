@@ -73,8 +73,96 @@
   --krs-color-meltingremnant-darker: #{$tmp-color};
 }
 
-html {
+.root__font-size-small {
+  font-size: 10px;
+}
+
+.root__font-size-medium {
   font-size: 12px;
+}
+
+.root__font-size-large {
+  font-size: 16px;
+}
+
+.root__theme-banished {
+  /* 主要配色 */
+  --krs-main-bgcolor-dark: hsl(188.2, 58.2%, 38.4%);
+  --krs-main-bgcolor: hsl(188.2, 57.9%, 96.3%);
+  --krs-button-face-color: hsl(188.2, 61%, 67.8%);
+  --krs-button-face-color-checked: hsl(188.2, 58.9%, 22%);
+  --krs-button-face-color-hover: hsl(188.2, 58%, 31.8%);
+  --krs-button-border-color: hsl(188.2, 0%, 73.3%);
+  --krs-card-border-color: hsl(188.2, 51.3%, 70.2%);
+  --krs-card-bgcolor: hsl(188.2, 38.9%, 81.4%);
+  --krs-main-font-color: hsl(188.2, 0%, 100%);
+  --krs-help-icon-bgcolor: hsl(208, 58.7%, 59.2%);
+  /* banner 图片 */
+  --krs-banner-url: url('/image/other/divinedancer.webp');
+}
+
+.root__theme-pyreborne {
+  /* 主要配色 */
+  --krs-main-bgcolor-dark: hsl(0, 58.2%, 38.4%);
+  --krs-main-bgcolor: hsl(0, 57.9%, 96.3%);
+  --krs-button-face-color: hsl(0, 61%, 67.8%);
+  --krs-button-face-color-checked: hsl(0, 58.9%, 22%);
+  --krs-button-face-color-hover: hsl(0.2, 58%, 31.8%);
+  --krs-button-border-color: hsl(0, 0%, 73.3%);
+  --krs-card-border-color: hsl(0, 51.3%, 70.2%);
+  --krs-card-bgcolor: hsl(0, 38.9%, 81.4%);
+  --krs-main-font-color: hsl(0, 0%, 100%);
+  --krs-help-icon-bgcolor: hsl(208, 58.7%, 59.2%);
+  /* banner 图片 */
+  --krs-banner-url: url('/image/other/pyreblooded.webp');
+}
+
+.root__theme-lunacoven {
+  /* 主要配色 */
+  --krs-main-bgcolor-dark: hsl(301.3, 58.2%, 80%);
+  --krs-main-bgcolor: hsl(301.3, 57.9%, 96.3%);
+  --krs-button-face-color: hsl(301.3, 61%, 88.8%);
+  --krs-button-face-color-checked: hsl(301.3, 58.9%, 44%);
+  --krs-button-face-color-hover: hsl(301.3, 58%, 66.8%);
+  --krs-button-border-color: hsl(301.3, 0%, 87.3%);
+  --krs-card-border-color: hsl(301.3, 51.3%, 70.2%);
+  --krs-card-bgcolor: hsl(301.3, 38.9%, 90.4%);
+  --krs-main-font-color: hsl(301.3, 50%, 20%);
+  --krs-help-icon-bgcolor: hsl(301.3, 61%, 88.8%);
+  /* banner 图片 */
+  --krs-banner-url: url('/image/other/astrologer.webp');
+}
+
+.root__theme-underlegion {
+  /* 主要配色 */
+  --krs-main-bgcolor-dark: hsl(38.9, 58.2%, 38.4%);
+  --krs-main-bgcolor: hsl(43.6, 57.9%, 96.3%);
+  --krs-button-face-color: hsl(43.8, 61%, 67.8%);
+  --krs-button-face-color-checked: hsl(40, 58.9%, 22%);
+  --krs-button-face-color-hover: hsl(40.2, 58%, 31.8%);
+  --krs-button-border-color: hsl(0, 0%, 73.3%);
+  --krs-card-border-color: hsl(45.4, 51.3%, 70.2%);
+  --krs-card-bgcolor: hsl(35.7, 38.9%, 81.4%);
+  --krs-main-font-color: hsl(0, 0%, 100%);
+  --krs-help-icon-bgcolor: hsl(208, 58.7%, 59.2%);
+  /* banner 图片 */
+  --krs-banner-url: url('/image/other/funguy.webp');
+}
+
+.root__theme-lazarusleague {
+  /* 主要配色 */
+  --krs-main-bgcolor-dark: hsl(73.8, 58%, 38%);
+  --krs-main-bgcolor: hsl(73.8, 57.9%, 96.3%);
+  --krs-button-face-color: hsl(73.8, 61%, 67.8%);
+  --krs-button-face-color-checked: hsl(73.8, 58.9%, 22%);
+  --krs-button-face-color-hover: hsl(73.8, 58%, 31.8%);
+  --krs-button-border-color: hsl(73.8, 0%, 73.3%);
+  --krs-card-border-color: hsl(73.8, 51.3%, 70.2%);
+  --krs-card-bgcolor: hsl(73.8, 38.9%, 81.4%);
+  --krs-main-font-color: hsl(73.8, 0%, 100%);
+  --krs-help-icon-bgcolor: hsl(208, 58.7%, 59.2%);
+  /* banner 图片 */
+  --krs-banner-url: url('/image/other/hydraarmedhorror.webp');
 }
 
 header,
@@ -83,11 +171,17 @@ footer,
 div,
 p,
 a,
+button,
 input,
 img,
 details,
 summary {
   box-sizing: border-box;
+}
+
+p,
+a {
+  margin: 0;
 }
 
 /* 未访问的链接 */
@@ -111,11 +205,6 @@ a:hover {
 /* 链接被点击时 */
 a:active {
   color: var(--krs-main-font-color);
-}
-
-p,
-a {
-  margin: 0;
 }
 
 hr {
@@ -174,7 +263,6 @@ dialog::backdrop {
 /* 表格风格的 tooltip 的单元格样式 */
 .grid-tooltip-item {
   /* 确保换行 */
-  word-wrap: break-word;
   overflow-wrap: break-word;
   border: 1px solid #ccc;
   padding: 0 3px;
