@@ -90,10 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // 各个氏族/种类/稀有度/费用 等按钮
   __rightPanel.toggleButtons.map((btn) => {
     btn.addEventListener('click', () => { doSearch(); })
-    btn.addEventListener('auxclick', (e) => {
-      if (e.button != 1) { return; }
-      doSearch();
-    })
   });
 
   __cardDialog.addEventListener('click', (e) => {

@@ -19,20 +19,20 @@ template.innerHTML = `
   </div>
   <div class="search-tag-list"></div>
   <!-- 卡牌氏族选取区 -->
-  <section-divider text="氏族" tooltip="鼠标中键点击 [未选中] 的按钮会单选它\n 鼠标中键点击 [选中] 的按钮会单不选它">
+  <section-divider text="氏族" tooltip="Ctrl + 点击 [未选中] 的按钮会单选它\n再次点击会反选">
   </section-divider>
   <div id="clan-section" class="image-toggle-button-group">
   </div>
   <!-- 卡牌类型选取区 -->
-  <section-divider text="类型" tooltip="神器和升级石会无视稀有度和费用条件筛选\n鼠标中键点击 [未选中] 的按钮会单选它\n 鼠标中键点击 [选中] 的按钮会单不选它"></section-divider>
+  <section-divider text="类型" tooltip="神器和升级石会无视稀有度和费用条件筛选\nCtrl + 点击 [未选中] 的按钮会单选它\n再次点击会反选"></section-divider>
   <div id="type-section" class="image-toggle-button-group">
   </div>
   <!-- 卡牌稀有度选取区 -->
-  <section-divider text="稀有度" tooltip="神器和升级石会无视稀有度筛选\n鼠标中键点击 [未选中] 的按钮会单选它\n 鼠标中键点击 [选中] 的按钮会单不选它"></section-divider>
+  <section-divider text="稀有度" tooltip="神器和升级石会无视稀有度筛选\nCtrl + 点击 [未选中] 的按钮会单选它\n再次点击会反选"></section-divider>
   <div id="rarity-section" class="image-toggle-button-group">
   </div>
   <!-- 卡牌费用选取区 -->
-  <section-divider text="费用" tooltip="神器和升级石会无视费用筛选\n鼠标中键点击 [未选中] 的按钮会单选它\n 鼠标中键点击 [选中] 的按钮会单不选它"></section-divider>
+  <section-divider text="费用" tooltip="神器和升级石会无视费用筛选\nCtrl + 点击 [未选中] 的按钮会单选它\n再次点击会反选"></section-divider>
   <div id="cost-section" class="image-toggle-button-group">
   </div>
   <!-- 标签选取区 -->

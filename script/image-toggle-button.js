@@ -37,7 +37,6 @@ export class ImageToggleButton extends HTMLElement {
       * @type{ HTMLButtonElement & 
       * {
       *   _clickHandler: (this: HTMLButtonElement, ev: MouseEvent) => any
-      *   _auxClickHandler: (this: HTMLButtonElement, ev: MouseEvent) => any
       * }
       } */
     this.button = (shadowRoot.querySelector('#button'));
@@ -48,13 +47,16 @@ export class ImageToggleButton extends HTMLElement {
   // 可选：定义生命周期回调函数
   connectedCallback() {
     const button = this.button;
-    button._clickHandler = () => {
-      button.classList.toggle("toggle-off");
-    };
-    button._auxClickHandler = (e) => {
+    button._clickHandler = (e) => {
+      if (!e.ctrlKey) {
+        button.classList.toggle("toggle-off");
+        return;
+      }
+
+      //----------------------------- 如果按下了 Ctrl -------------------------------
       if (!this.parentElement) { return; }
       // 鼠标中键
-      if (e.button != 1) { return; }
+      e.preventDefault();
       const siblings = this.parentElement.childNodes;
       const tagName = ImageToggleButton.TAG_NAME.toUpperCase();
       const isOff = this.isOff;
@@ -67,13 +69,11 @@ export class ImageToggleButton extends HTMLElement {
       }
     };
     button.addEventListener('click', button._clickHandler);
-    button.addEventListener('auxclick', button._auxClickHandler);
   }
 
   disconnectedCallback() {
     const button = this.button;
     button.removeEventListener('click', button._clickHandler);
-    button.removeEventListener('auxclick', button._auxClickHandler);
   }
   /**
    * 
