@@ -6,7 +6,7 @@ export const module_name = "地下菌团";
 /** @type { Unit[] } */
 export const CHAMPIONS = [
   {
-    "name": "断头台纽甘君",
+    "name": "“断头台”纽甘君",
     "english_name": "Bolete the Guillotine",
     "type": "单位",
     "subtype": "勇者",
@@ -588,7 +588,7 @@ export const ARTIFACTS = [
 export const PATHS = [
   {
     "name": "领头人",
-    "champion": "断头台纽甘君",
+    "champion": "“断头台”纽甘君",
     "type": "path",
     "path": [
       {
@@ -616,7 +616,7 @@ export const PATHS = [
   },
   {
     "name": "刽子手",
-    "champion": "断头台纽甘君",
+    "champion": "“断头台”纽甘君",
     "type": "path",
     "path": [
       {
@@ -644,7 +644,7 @@ export const PATHS = [
   },
   {
     "name": "巣群意识",
-    "champion": "断头台纽甘君",
+    "champion": "“断头台”纽甘君",
     "type": "path",
     "path": [
       {

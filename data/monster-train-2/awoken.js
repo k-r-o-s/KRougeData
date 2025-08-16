@@ -38,7 +38,7 @@ export const CHAMPIONS = [
 /** @type { Unit[] } */
 export const UNITS = [
   {
-    "name": "极速蔓灵",
+    "name": "疾速蔓灵",
     "english_name": "Animus of Speed",
     "type": "单位",
     "subtype": "蔓灵",
@@ -173,7 +173,7 @@ export const UNITS = [
     "description": ""
   },
   {
-    "name": "野林看守人",
+    "name": "野林看护人",
     "english_name": "Wildwood Custodian",
     "type": "单位",
     "subtype": "通灵者",

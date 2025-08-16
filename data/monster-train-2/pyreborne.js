@@ -237,7 +237,7 @@ export const UNITS = [
 /** @type {Spell[]} */
 export const SPELLS = [
   {
-    "name": "薪龙族道钉",
+    "name": "薪龙族脑钉",
     "english_name": "Pyreborne Brainspike",
     "type": "法术",
     "clan": "薪龙族",
@@ -629,7 +629,7 @@ export const ARTIFACTS = [
     "effect": "当一个单位获得 [薪火熔胶] 时, 获得的层数 +1",
   },
   {
-    "name": "隐藏宝库",
+    "name": "隐藏金库",
     "english_name": "Hidden Coffers",
     "type": "神器",
     "clan": "薪龙族",

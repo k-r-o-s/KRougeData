@@ -327,7 +327,7 @@ export const SPELLS = [
     "description": ""
   },
   {
-    "name": "它活了",
+    "name": "它活了！",
     "english_name": "It's Alive!",
     "type": "法术",
     "clan": "拉撒路联盟",

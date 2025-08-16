@@ -502,7 +502,7 @@ export const SPELLS = [
     "description": ""
   },
   {
-    "name": "断角之书",
+    "name": "独角之书",
     "english_name": "Onehorn's Tome",
     "type": "法术",
     "clan": "狱魔",
@@ -538,7 +538,7 @@ export const ARTIFACTS = [
     "effect": "友方单位的 [狂怒] 不会减少",
   },
   {
-    "name": "圣者桂冠",
+    "name": "胜者桂冠",
     "english_name": "Consumed Crown",
     "type": "神器",
     "clan": "狱魔",

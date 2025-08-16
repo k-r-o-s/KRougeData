@@ -13,8 +13,13 @@ template.innerHTML = `
       </span><span class="title-text"></span>
       <span class="title-tooltip fading">英文名已复制到剪切板</span>
     </p>
+    <p class="card-asset-data">
+      <span class="card-asset-value"></span>
+      <span class="card-guid-value"></span>
+    </p>
+    <hr>
     <div class="card-basic-info">
-      <item-card id="card" src="../../image/cards/不朽交易.webp" class=""></item-card>
+      <item-card id="card" src="" class=""></item-card>
       <div class="card-terms"></div>
     </div>
     <hr id="champion-paths-hr">
@@ -103,6 +108,12 @@ export class CardDetails extends HTMLElement {
     const title = this.shadowRoot.querySelector('.card-title');
     if ('english_name' in value) {
       title.querySelector(".title-text").textContent = value.english_name;
+    }
+    if ('asset-name' in value) {
+      this.shadowRoot.querySelector('.card-asset-value').textContent = value['asset-name'];
+    }
+    if ('guid' in value) {
+      this.shadowRoot.querySelector('.card-guid-value').textContent = value.guid;
     }
     const titleIcon = title.querySelector('img');
     titleIcon.setAttribute("src", "image/other/" + value.type + ".webp");

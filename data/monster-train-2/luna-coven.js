@@ -368,7 +368,7 @@ export const SPELLS = [
     "description": ""
   },
   {
-    "name": "星尘冲击",
+    "name": "星辰冲击",
     "english_name": "Starstruck",
     "type": "法术",
     "clan": "月巫团",
@@ -528,7 +528,7 @@ export const ARTIFACTS = [
     "effect": "[月相循环] 时, 生命值最低的友方单位恢复 10 点生命值",
   },
   {
-    "name": "妖精隐匿处",
+    "name": "妖精的隐匿处",
     "english_name": "Fae's Nook",
     "type": "神器",
     "clan": "月巫团",

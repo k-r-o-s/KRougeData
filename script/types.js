@@ -125,5 +125,8 @@
  *  @typedef { (Unit | Spell | Equipment | Room | Artifact 
  *    | Blight | Scourge | Term | Upgrade)
  *    & { text?: string, tips?: string[], terms?: Map<string, ItemData> }
+ *    & { "asset-name"?: string, guid?: string }
  *  } ItemData 
  * */
+
+/** @typedef {{name: string, "asset-name": string, guid: string}} AssetData */

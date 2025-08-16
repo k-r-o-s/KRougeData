@@ -1,3 +1,7 @@
+import { CARD_DATA } from "./card-data.js"
+// import { CHARACTER_DATA } from "./character-data.js"
+import { COLLECTABLE_DATA } from "./collectable-data.js"
+
 import * as Awoken from "./awoken.js"
 import * as Banished from "./banished.js"
 import * as Clanless from "./clanless.js"
@@ -5,13 +9,13 @@ import * as Hellhorned from "./hellhorned.js"
 import * as LazarusLeague from "./lazarus-league.js"
 import * as LunaCoven from "./luna-coven.js"
 import * as MeltingRemnants from "./melting-remnant.js"
+import * as Notes from "./notes.js"
 import * as PyreBorne from "./pyreborne.js"
 import * as StygianGuard from "./stygian-guard.js"
+import * as Terms from "./terms.js"
 import * as Umbra from "./umbra.js"
 import * as Underlegion from "./underlegion.js"
-import * as Terms from "./terms.js"
 import * as Upgrades from "./upgrades.js"
-import * as Notes from "./notes.js"
 
 import { __log_data } from "../../script/util.js"
 
@@ -188,6 +192,32 @@ Notes.NOTES.map(tip => {
     termData.tips.push(tip);
   }
 });
+
+MT_DATA.forEach((v, k) => {
+  let dataMap;
+  switch (v.type) {
+    case '法术':
+    case '装备':
+    case '房间':
+    case '单位':
+      dataMap = CARD_DATA;
+      break;
+    case '神器':
+      dataMap = COLLECTABLE_DATA;
+      break;
+    case '升级石':
+    default:
+      break;
+  }
+  if (!dataMap) { return; }
+  const asset = dataMap.get(k);
+  if (!asset) {
+    console.error(`无法找到 [${k}] 的资产数据`); return;
+  }
+  v["asset-name"] = asset["asset-name"];
+  v.guid = asset.guid;
+});
+
 __log_data("数据加载完成", MT_DATA);
 
 /**

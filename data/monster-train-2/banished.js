@@ -128,7 +128,7 @@ export const UNITS = [
     "description": ""
   },
   {
-    "name": "坚毅十字军",
+    "name": "坚毅的十字军",
     "english_name": "Steadfast Crusader",
     "type": "单位",
     "subtype": "天使",

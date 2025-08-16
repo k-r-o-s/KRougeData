@@ -128,7 +128,7 @@ export const UNITS = [
     "description": ""
   },
   {
-    "name": "合金构造体",
+    "name": "合金构装体",
     "english_name": "Alloyed Construct",
     "type": "单位",
     "subtype": "构装",

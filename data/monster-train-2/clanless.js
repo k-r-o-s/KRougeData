@@ -40,7 +40,7 @@ export const UNITS = [
     "description": ""
   },
   {
-    "name": "玩偶盒",
+    "name": "玩偶匣",
     "english_name": "Jack in the Box",
     "type": "单位",
     "subtype": "盒",
@@ -198,7 +198,7 @@ export const EQUIPMENTS = [
     "effect": "[结算]: 恢复 10 点生命值",
   },
   {
-    "name": "残忍板甲",
+    "name": "坚忍板甲",
     "english_name": "Stoic Platemail",
     "type": "装备",
     "clan": "无氏族",
@@ -218,7 +218,7 @@ export const EQUIPMENTS = [
     "effect": "[迅捷]",
   },
   {
-    "name": "过度成长的甲壳",
+    "name": "过度生长的甲壳",
     "english_name": "Overgrowth Carapace",
     "type": "装备",
     "clan": "无氏族",
@@ -331,7 +331,7 @@ export const ARTIFACTS = [
     "effect": "+3 [部署阶段余烬]",
   },
   {
-    "name": "调和磨石",
+    "name": "调合磨石",
     "english_name": "Attuned Whetstone",
     "type": "神器",
     "clan": "无氏族",
@@ -380,7 +380,7 @@ export const ARTIFACTS = [
     "effect": "有装备的单位获得 [护甲] 10",
   },
   {
-    "name": "依莫特之书",
+    "name": "伊莫特之书",
     "english_name": "Emot Tome",
     "type": "神器",
     "clan": "无氏族",
@@ -450,7 +450,7 @@ export const ARTIFACTS = [
     "effect": "单位获得一个额外升级栏",
   },
   {
-    "name": "阴影外套",
+    "name": "阴影护套",
     "english_name": "Shadow's Sheath",
     "type": "神器",
     "clan": "无氏族",
@@ -573,7 +573,7 @@ export const ARTIFACTS = [
     "effect": "非勇者单位获得 3 倍基础 [攻击力]. 每回合战斗结束时, 此神器有 1% 的几率被摧毁",
   },
   {
-    "name": "西科",
+    "name": "希科",
     "english_name": "Chicot",
     "type": "神器",
     "clan": "无氏族",

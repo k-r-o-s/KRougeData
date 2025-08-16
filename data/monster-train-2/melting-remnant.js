@@ -327,7 +327,7 @@ export const SPELLS = [
     "description": ""
   },
   {
-    "name": "精华洗礼",
+    "name": "净化洗礼",
     "english_name": "Purifying Cleanse",
     "type": "法术",
     "clan": "熔尸",

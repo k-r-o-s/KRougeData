@@ -20,7 +20,7 @@ export const CHAMPIONS = [
     "description": "",
   },
   {
-    "name": "泰西斯·泰坦之灾",
+    "name": "泰西丝·泰坦之灾",
     "english_name": "Tethys Titansbane",
     "type": "单位",
     "subtype": "勇者",
@@ -558,7 +558,7 @@ export const ARTIFACTS = [
     "effect": "当敌方单位进入火车时, 对其施加 [沉默] 1",
   },
   {
-    "name": "泰西斯之鳞",
+    "name": "泰西丝之鳞",
     "english_name": "Tethys' Scales",
     "type": "神器",
     "clan": "冥卫",
@@ -590,7 +590,7 @@ export const ARTIFACTS = [
 export const PATHS = [
   {
     "name": "寒风",
-    "champion": "泰西斯·泰坦之灾",
+    "champion": "泰西丝·泰坦之灾",
     "type": "path",
     "path": [
       {
@@ -618,7 +618,7 @@ export const PATHS = [
   },
   {
     "name": "导流",
-    "champion": "泰西斯·泰坦之灾",
+    "champion": "泰西丝·泰坦之灾",
     "type": "path",
     "path": [
       {
@@ -646,7 +646,7 @@ export const PATHS = [
   },
   {
     "name": "掌中图腾",
-    "champion": "泰西斯·泰坦之灾",
+    "champion": "泰西丝·泰坦之灾",
     "type": "path",
     "path": [
       {
