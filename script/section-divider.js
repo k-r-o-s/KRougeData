@@ -4,7 +4,7 @@ const template = document.createElement('template');
 template.innerHTML = `<div class="section-divider" id="divider">
     <span class="section-divider__title"></span>
     <span class="section-help-container">
-      <span class="section-help-icon"> ? <span>
+      <span class="section-help-icon hidden"> ? <span>
       <div class="section-help-text"></div>
     </span>
   </div>`;
@@ -34,6 +34,7 @@ export class SectionDivider extends HTMLElement {
     const content = template.content.cloneNode(true);
     this.appendChild(content);
     this.divider = this.querySelector('.section-divider__title');
+    this.helpIcon = /**@type{HTMLSpanElement}*/(this.querySelector('.section-help-icon'));
     this.tooltip = this.querySelector('.section-help-text');
   }
 
@@ -58,6 +59,11 @@ export class SectionDivider extends HTMLElement {
         break;
       case "tooltip":
         this.tooltip.textContent = newValue;
+        if (newValue) {
+          this.helpIcon.style.display = 'inline-block';
+        } else {
+          this.helpIcon.style.display = 'none';
+        }
         break;
       default:
         console.error("unsupported attribute type: [" + name + "]");

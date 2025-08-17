@@ -1,5 +1,5 @@
 /************************************ basic 区 ***************************************/
-.card-basic-info {
+.cardDetail__basic {
   display: flex;
   flex-direction: row;
   gap: 6px;
@@ -7,68 +7,76 @@
   --krs-card-height: calc(300px * 6 / 4); */
 }
 
-.card-basic-info .card-terms {
+.cardDetail__basic .card-terms {
   flex: 2 0;
 
 }
 
-.card-basic-info item-card {
+.cardDetail__basic item-card {
   flex: 1 0;
 }
 
-.card-basic-info .card-details {
+.cardDetail__basic .card-details {
   flex: 2 0;
 
 }
 
-.card-title {
+.cardDetail__title {
   position: relative;
 
   width: 100%;
   background-color: var(--krs-main-bgcolor-dark);
   color: var(--krs-main-font-color);
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.4rem;
   margin: 20px 0 0 0;
   padding: 4px;
 }
 
-.card-title .title-text {
-  margin-left: 30px;
+.cardDetail__name {
+  user-select: all;
 }
 
-.card-title img {
+.cardDetail__ename {
+  margin: 0 1rem;
+  user-select: all;
+}
+
+.cardDetail__title-icon {
   width: 70px;
   height: auto;
 }
 
-.card-title .inline-image-wrapper {
-  width: 4em;
+.cardDetail__icon-wrapper {
+  position: relative;
+  display: inline-block;
+  height: 1em;
+  width: 3em;
+  vertical-align: middle;
+  overflow: visible;
 }
 
-.title-tooltip {
-  font-size: 1rem;
-  color: var(--krs-main-bgcolor-dark);
+.cardDetail__icon-wrapper img {
   position: absolute;
-  top: -30px;
+  left: 0;
+  top: 50%;
+  width: auto;
+  height: 5rem;
+  transform: translateY(-50%) translateX(-3px);
   z-index: 1;
-  opacity: 0;
 }
 
-.fading {
-  transition: opacity 4s ease-in;
+.cardDetail__asset-data {
+  margin: 10px 0;
 }
-.card-asset-data {
-  margin: 10px;
-}
-.card-asset-value {
+.cardDetail__asset {
   margin-left: 5rem;
   display: inline-block;
   width: 180px;
   font-size: 12px;
   user-select: all;
 }
-.card-guid-value {
+.cardDetail__guid {
   display: inline-block;
   width: 280px;
   font-size: 12px;
@@ -137,21 +145,21 @@
 
 /*----------------------------- Notes 区 -----------------------------*/
 
-.card-notes {
+.cardDetail__notes {
   font-size: 1rem;
   max-width: 610px;
 }
 
-.card-note-list {
+.cardDetail__note-list {
   padding: 0;
 }
-.card-note-list li {
+.cardDetail__note-list li {
   /* 使用实心圆点 */
   list-style-type: disc;
   /* 调整缩进 */
   margin-left: 1.5em;
 }
-.dlg-tooltip {
+.cardDetail__tooltip {
   position: fixed;
   z-index: 100;
   pointer-events: none;

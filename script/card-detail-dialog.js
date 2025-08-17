@@ -1,4 +1,4 @@
-import { createCssLink } from './util.js';
+// import { createCssLink } from './util.js';
 import { ItemCard } from './item-card.js';
 import { MT_DATA } from '../data/monster-train-2/index.js';
 
@@ -7,23 +7,24 @@ import { MT_DATA } from '../data/monster-train-2/index.js';
  */
 const template = document.createElement('template');
 template.innerHTML = `
-    <p class="card-title">
-      <span class="inline-image-wrapper">
+    <p class="cardDetail__title">
+      <span class="cardDetail__icon-wrapper">
         <img src="">
-      </span><span class="title-text"></span>
-      <span class="title-tooltip fading">英文名已复制到剪切板</span>
+      </span>
+      <span class="cardDetail__name"></span>
+      <span class="cardDetail__ename"></span>
     </p>
-    <p class="card-asset-data">
-      <span class="card-asset-value"></span>
-      <span class="card-guid-value"></span>
+    <p class="cardDetail__asset-data">
+      <span class="cardDetail__asset"></span>
+      <span class="cardDetail__guid"></span>
     </p>
-    <hr>
-    <div class="card-basic-info">
+    <section-divider text="基础"></section-divider>
+    <div class="cardDetail__basic">
       <item-card id="card" src="" class=""></item-card>
       <div class="card-terms"></div>
     </div>
-    <hr id="champion-paths-hr">
-    <div class="champion-paths">
+    <section-divider id="cardDetail__cardDetail__champion-paths-hr" text="升级"></section-divider>
+    <div class="cardDetail__champion-paths">
       <div class="tabs-container">
         <input type="radio" id="tab1" name="tab-group">
         <label id="tab1-label" for="tab1">强力食品</label>
@@ -40,11 +41,11 @@ template.innerHTML = `
         </div>
       </div>
     </div>
-    <hr>
-    <div class="card-notes">
-      <ul class="card-note-list"></ul>
+    <section-divider text="技巧" tooltip="卡牌的技巧可以编辑\n /data/monster-train-2/notes.js \n 来添加到下面的区域"></section-divider>
+    <div class="cardDetail__notes">
+      <ul class="cardDetail__note-list"></ul>
     </div>
-    <div class="dlg-tooltip"></div>`;
+    <div class="cardDetail__tooltip"></div>`;
 
 /** @type {HTMLDivElement} */
 let tooltip;
@@ -60,42 +61,30 @@ export class CardDetails extends HTMLElement {
     super();
 
     // 创建 Shadow DOM
-    const shadowRoot = this.attachShadow({ mode: 'open' });
+    // const shadowRoot = this.attachShadow({ mode: 'open' });
 
-    // 创建 link 元素并添加到 shadowRoot
-    [
-      '../css/default.css',
-      '../proto/item-card/style.css',
-      '../proto/img-in-text/style.css',
-      '../proto/card-detail-dialog/style.css',
-    ].forEach(css => {
-      const link = createCssLink(css);
-      shadowRoot.appendChild(link);
-    });
+    // // 创建 link 元素并添加到 shadowRoot
+    // [
+    //   '../css/default.css',
+    //   '../proto/item-card/style.css',
+    //   '../proto/img-in-text/style.css',
+    //   '../proto/card-detail-dialog/style.css',
+    // ].forEach(css => {
+    //   const link = createCssLink(css);
+    //   shadowRoot.appendChild(link);
+    // });
 
     const content = template.content.cloneNode(true);
-    shadowRoot.appendChild(content);
+    this.appendChild(content);
 
     ['tab1', 'tab2', 'tab3'].forEach(id => {
-      const radio = shadowRoot.querySelector('#' + id);
+      const radio = this.querySelector('#' + id);
       radio.addEventListener('change', () => {
         this.#onTabSelected(id);
       });
     });
 
-    const title = shadowRoot.querySelector('.title-text');
-    const titleTooltip = /** @type {HTMLSpanElement} */(shadowRoot.querySelector('.title-tooltip'));
-    title.addEventListener('click', () => {
-      titleTooltip.classList.remove('fading');
-      titleTooltip.style.opacity = '1';
-      navigator.clipboard.writeText(title.textContent);
-      setTimeout(() => {
-        titleTooltip.classList.add('fading');
-        titleTooltip.style.opacity = '0';
-      }, 10);
-    });
-
-    tooltip = shadowRoot.querySelector('.dlg-tooltip');
+    tooltip = this.querySelector('.cardDetail__tooltip');
     dialogInstance = this;
   }
 
@@ -103,22 +92,22 @@ export class CardDetails extends HTMLElement {
    * @param {ItemData} value 
    */
   set item(value) {
-    const shadowRoot = this.shadowRoot;
     this._item = value;
-    const title = this.shadowRoot.querySelector('.card-title');
+    const title = this.querySelector('.cardDetail__title');
+    title.querySelector(".cardDetail__name").textContent = value.name;
     if ('english_name' in value) {
-      title.querySelector(".title-text").textContent = value.english_name;
+      title.querySelector(".cardDetail__ename").textContent = value.english_name;
     }
     if ('asset-name' in value) {
-      this.shadowRoot.querySelector('.card-asset-value').textContent = value['asset-name'];
+      this.querySelector('.cardDetail__asset').textContent = value['asset-name'];
     }
     if ('guid' in value) {
-      this.shadowRoot.querySelector('.card-guid-value').textContent = value.guid;
+      this.querySelector('.cardDetail__guid').textContent = value.guid;
     }
     const titleIcon = title.querySelector('img');
     titleIcon.setAttribute("src", "image/other/" + value.type + ".webp");
 
-    const card = /** @type {ItemCard} */(shadowRoot.querySelector('#card'));
+    const card = /** @type {ItemCard} */(this.querySelector('#card'));
     card.item = value;
     switch (value.type) {
       case "神器":
@@ -132,26 +121,26 @@ export class CardDetails extends HTMLElement {
         break;
     }
 
-    const cardTermDiv = shadowRoot.querySelector('.card-terms');
+    const cardTermDiv = this.querySelector('.card-terms');
     cardTermDiv.innerHTML = card.termsHtml;
 
-    const championPathDiv = /** @type {HTMLDivElement} */(shadowRoot.querySelector('.champion-paths'));
-    const championPathHr = /** @type {HTMLHRElement} */(shadowRoot.querySelector('#champion-paths-hr'));
+    const championPathDiv = /** @type {HTMLDivElement} */(this.querySelector('.cardDetail__champion-paths'));
+    const championPathHr = /** @type {HTMLHRElement} */(this.querySelector('#cardDetail__cardDetail__champion-paths-hr'));
     if ('paths' in value) {
       championPathDiv.style.display = 'flex';
       championPathHr.style.display = 'block';
 
       const paths = /** @type { ChampionPath[] } */(value.paths);
       for (let i = 0; i < paths.length; i++) {
-        shadowRoot.querySelector("#tab" + (i + 1) + "-label").textContent = paths[i].name;
-        /** @type {HTMLInputElement} */(shadowRoot.querySelector('#tab1')).checked = true;
+        this.querySelector("#tab" + (i + 1) + "-label").textContent = paths[i].name;
+        /** @type {HTMLInputElement} */(this.querySelector('#tab1')).checked = true;
         this.#onTabSelected('tab1');
       }
     } else {
       championPathDiv.style.display = 'none';
       championPathHr.style.display = 'none';
     }
-    const noteList = shadowRoot.querySelector('.card-note-list');
+    const noteList = this.querySelector('.cardDetail__note-list');
     let html = '';
     if (value.tips) {
       value.tips.forEach(tip => {
@@ -190,9 +179,8 @@ export class CardDetails extends HTMLElement {
    */
   #onTabSelected(id) {
     if (!this._item || !('paths' in this._item)) { return; }
-    const shadowRoot = this.shadowRoot;
-    const championPathDiv = /** @type {HTMLDivElement} */(shadowRoot.querySelector('.champion-paths'));
-    const championPathHr = /** @type {HTMLHRElement} */(shadowRoot.querySelector('#champion-paths-hr'));
+    const championPathDiv = /** @type {HTMLDivElement} */(this.querySelector('.cardDetail__champion-paths'));
+    const championPathHr = /** @type {HTMLHRElement} */(this.querySelector('#cardDetail__cardDetail__champion-paths-hr'));
     championPathDiv.style.display = 'flex';
     championPathHr.style.display = 'block';
 
@@ -201,7 +189,7 @@ export class CardDetails extends HTMLElement {
 
     const paths = /** @type { ChampionPath[] } */(this._item.paths);
     let imgSrc = this._item.name + "-" + paths[seq].name;
-    const images = this.shadowRoot.querySelector('.tab-content').querySelectorAll('item-card');
+    const images = this.querySelector('.tab-content').querySelectorAll('item-card');
     for (let i = 0; i < images.length; i++) {
       images[i].setAttribute('src', `/image/paths/${imgSrc + (i + 1)}.webp`);
     }

@@ -93,15 +93,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   __cardDialog.addEventListener('click', (e) => {
-    // 检查点击事件的目标是否是 dialog 元素本身
-    // 这意味着点击发生在 dialog 元素的 padding/border/周围的阴影 区域，
-    // 而不是 dialog 内部的任何内容元素上。
-    if (e.target === __cardDialog) {
+    // e.target 会是那些元素，而不是 __cardDialog
+    if (e.target === e.currentTarget) {
       __cardDialog.close();
     }
   });
   __settingDialog.addEventListener('click', (e) => {
-    if (e.target === __settingDialog) {
+    if (e.target === e.currentTarget) {
       __settingDialog.close();
     }
   });

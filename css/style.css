@@ -1,5 +1,6 @@
 @import "../css/default.css";
 @import "../css/theme.css";
+@import "../proto/card-detail-dialog/style.css";
 @import "../proto/card-list-view/style.css";
 @import "../proto/exclusive-accordion/style.css";
 @import "../proto/header-content/style.css";
@@ -109,10 +110,6 @@ dialog {
   width: 800px;
   margin: 10px auto;
   background-color: var(--krs-main-bgcolor);
-}
-
-.dialog-content div {
-  margin: 0;
 }
 
 footer-content {
