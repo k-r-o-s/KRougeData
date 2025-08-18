@@ -129,9 +129,9 @@ export class ItemCard extends HTMLElement {
     const celestialIcon = /**@type{HTMLImageElement}*/(this
       .shadowRoot.querySelector(".celestial_alcove-icon"));
     if ('celestial_alcove' in value && value["celestial_alcove"]) {
-      celestialIcon.style.visibility = 'visible';
+      celestialIcon.style.display = 'block';
     } else {
-      celestialIcon.style.visibility = 'hidden';
+      celestialIcon.style.display = 'none';
     }
   }
 

@@ -85,6 +85,7 @@
   width: 36px;
   height: auto;
   transform: translateX(calc(-100% - 3px));
+  display: none;
 }
 
 .card-img-small {

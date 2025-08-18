@@ -92,19 +92,41 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => { doSearch(); })
   });
 
-  __cardDialog.addEventListener('click', (e) => {
-    // e.target 会是那些元素，而不是 __cardDialog
-    if (e.target === e.currentTarget) {
-      __cardDialog.close();
-    }
-  });
-  __settingDialog.addEventListener('click', (e) => {
-    if (e.target === e.currentTarget) {
-      __settingDialog.close();
-    }
-  });
+  makeDlgCloseWhenClickOutside(__cardDialog);
+  makeDlgCloseWhenClickOutside(__settingDialog);
+
   doSearch();
 });
+
+/**
+ * 
+ * @param {HTMLDialogElement & { mouseInDialog?: boolean }} dlg 
+ */
+function makeDlgCloseWhenClickOutside(dlg) {
+  dlg.addEventListener('mousedown', (e) => {
+    // 0 - 左键
+    if (e.button != 0) { return; }
+
+    // 获取 dialog 元素在视口中的边界信息
+    const rect = dlg.getBoundingClientRect();
+
+    // 检查点击事件的坐标是否在 dialog 的边界内
+    dlg.mouseInDialog =
+      e.clientX >= rect.left &&
+      e.clientX <= rect.right &&
+      e.clientY >= rect.top &&
+      e.clientY <= rect.bottom;
+  });
+
+  dlg.addEventListener('mouseup', (e) => {
+    // 0 - 左键
+    if (e.button != 0) { return; }
+    // 如果点击不在 dialog 内部，则关闭它
+    if (!dlg.mouseInDialog) {
+      dlg.close();
+    }
+  });
+}
 
 // 恢复上一次搜索的条件设置
 function loadSavedQuery() {
