@@ -98,8 +98,12 @@ export class CardDetails extends HTMLElement {
     if ('english_name' in value) {
       title.querySelector(".cardDetail__ename").textContent = value.english_name;
     }
+    const asset = /**@type{HTMLParagraphElement}*/(this.querySelector('.cardDetail__asset-data'));
     if ('asset-name' in value) {
-      this.querySelector('.cardDetail__asset').textContent = value['asset-name'];
+      asset.querySelector('.cardDetail__asset').textContent = value['asset-name'];
+      asset.style.display = 'block';
+    } else {
+      asset.style.display = 'none';
     }
     if ('guid' in value) {
       this.querySelector('.cardDetail__guid').textContent = value.guid;
