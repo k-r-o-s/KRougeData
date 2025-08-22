@@ -39,7 +39,7 @@ mkdir -p "$tempFolder"
 # 编译 server.go
 echo
 echo "编译 server.exe"
-go build -o server server/server.go
+go build -o ./server.exe server/server.go
 
 # 拷贝所需文件
 # 遍历数组，将每个文件/目录拷贝到 tempFolder
