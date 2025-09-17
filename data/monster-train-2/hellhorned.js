@@ -135,7 +135,7 @@ export const UNITS = [
     "clan": "狱魔",
     "rarity": "普通",
     "cost": "1",
-    "effect": "[召唤]: 对所有敌方单位造成 8 点伤害",
+    "effect": "[召唤]: 对所有敌方单位造成 10 点伤害",
     "banner_unit": false,
     "size": 1,
     "attack": 1,
@@ -269,8 +269,8 @@ export const UNITS = [
     "subtype": "恶魔",
     "clan": "狱魔",
     "rarity": "稀有",
-    "cost": "8",
-    "effect": "卡组中每有一个小鬼单位, [余烬] -1",
+    "cost": "4",
+    "effect": "[能力: 军阀的十一税]",
     "banner_unit": true,
     "size": 3,
     "attack": 100,
@@ -288,7 +288,7 @@ export const SPELLS = [
     "clan": "狱魔",
     "rarity": "稀有",
     "cost": "X",
-    "effect": "[消耗]. 获得 3 [X] [狂怒] 和 3 [X] [护甲]",
+    "effect": "[消耗]. 获得 4 [X] [狂怒] 和 4 [X] [护甲]",
     "description": ""
   },
   {
@@ -298,7 +298,7 @@ export const SPELLS = [
     "clan": "狱魔",
     "rarity": "普通",
     "cost": "X",
-    "effect": "对所有敌方单位造成 3 [X] 点伤害",
+    "effect": "对所有敌方单位造成 5 [X] 点伤害",
     "description": ""
   },
   {
@@ -309,16 +309,6 @@ export const SPELLS = [
     "rarity": "稀有",
     "cost": "0",
     "effect": "造成 5 点伤害, 获得 [狂怒] 7",
-    "description": ""
-  },
-  {
-    "name": "硬化",
-    "english_name": "Fortify",
-    "type": "法术",
-    "clan": "狱魔",
-    "rarity": "普通",
-    "cost": "0",
-    "effect": "获得 [护甲] 8",
     "description": ""
   },
   {
@@ -358,7 +348,7 @@ export const SPELLS = [
     "clan": "狱魔",
     "rarity": "稀有",
     "cost": "1",
-    "effect": "[消耗]. 获得 [护甲] 25",
+    "effect": "[消耗]. 获得 [护甲] 30",
     "description": ""
   },
   {
@@ -378,7 +368,7 @@ export const SPELLS = [
     "clan": "狱魔",
     "rarity": "普通",
     "cost": "1",
-    "effect": "[穿刺]. 造成 5 点伤害, 重复两次",
+    "effect": "[穿刺]. 造成 8 点伤害, 重复两次",
     "description": ""
   },
   {
@@ -388,7 +378,7 @@ export const SPELLS = [
     "clan": "狱魔",
     "rarity": "稀有",
     "cost": "1",
-    "effect": "对前排敌方单位造成伤害, 数值为卡组内小鬼牌数量的 20 倍",
+    "effect": "对前排敌方单位造成伤害, 数值为卡组内小鬼牌数量的 25 倍",
     "description": ""
   },
   {
@@ -428,7 +418,7 @@ export const SPELLS = [
     "clan": "狱魔",
     "rarity": "高级",
     "cost": "2",
-    "effect": "[穿刺]. 造成 5 点伤害, 获得 [护甲] 20",
+    "effect": "[穿刺]. 造成 3 点伤害, 获得 [护甲] 20",
     "description": ""
   },
   {
@@ -468,7 +458,7 @@ export const SPELLS = [
     "clan": "狱魔",
     "rarity": "高级",
     "cost": "3",
-    "effect": "[穿刺]. 对所有单位造成 100 点伤害",
+    "effect": "[穿刺]. 对所有单位造成 120 点伤害",
     "description": ""
   },
   {
@@ -515,10 +505,30 @@ export const SPELLS = [
 // 狱魔 装备
 /** @type {Equipment[]} */
 export const EQUIPMENTS = [
+  {
+    "name": "加固护肩",
+    "english_name": "Fortified Pauldrons",
+    "type": "装备",
+    "clan": "狱魔",
+    "rarity": "普通",
+    "cost": "0",
+    "effect": "[护甲] 6. [结算]: 获得 [护甲] 6",
+    "description": ""
+  },
 ];
 // 狱魔 房间
 /** @type {Room[]} */
 export const ROOMS = [
+  {
+    "name": "狂怒室",
+    "english_name": "Rage Room",
+    "type": "房间",
+    "clan": "狱魔",
+    "rarity": "稀有",
+    "cost": "1",
+    "effect": "友方单位 [攻击] 和 [复仇] 时获得 [狂怒]",
+    "description": ""
+  },
 ];
 // 狱魔 神器
 /** @type {Artifact[]} */
@@ -598,7 +608,7 @@ export const ARTIFACTS = [
     "english_name": "The Unbroken Horn",
     "type": "神器",
     "clan": "狱魔",
-    "effect": "未使用的 [余烬] 保留至下一回合",
+    "effect": "将 [部署阶段] 和各回合未使用的 [余烬] 保留至下一回合",
   },
 ];
 /** @type {ChampionPath[]} */
@@ -641,21 +651,21 @@ export const PATHS = [
         "attack": 30,
         "health": 6,
         "size": 2,
-        "effect": "[杀戮]: +15 [攻击力]",
+        "effect": "[能力: 剔除]. [杀戮]: +15 [攻击力]",
       },
       {
         "rank": 2,
         "attack": 60,
         "health": 12,
         "size": 2,
-        "effect": "[杀戮]: +25 [攻击力]",
+        "effect": "[能力: 剔除 II]. [杀戮]: +25 [攻击力]",
       },
       {
         "rank": 3,
         "attack": 120,
         "health": 24,
         "size": 2,
-        "effect": "[杀戮]: +50 [攻击力]",
+        "effect": "[能力: 剔除 III]. [杀戮]: +50 [攻击力]",
       },
     ]
   },
@@ -666,22 +676,22 @@ export const PATHS = [
     "path": [
       {
         "rank": 1,
-        "attack": 15,
-        "health": 15,
-        "size": 2,
-        "effect": "[杀戮]: 获得 [护甲] 10. [复仇]: 获得 [狂怒] 3",
-      },
-      {
-        "rank": 2,
         "attack": 25,
         "health": 25,
         "size": 2,
-        "effect": "[杀戮]: 获得 [护甲] 15. [复仇]: 获得 [狂怒] 4",
+        "effect": "[杀戮]: 获得 [护甲] 10. [复仇]: 获得 [狂怒] 4",
+      },
+      {
+        "rank": 2,
+        "attack": 35,
+        "health": 50,
+        "size": 2,
+        "effect": "[杀戮]: 获得 [护甲] 15. [复仇]: 获得 [狂怒] 5",
       },
       {
         "rank": 3,
-        "attack": 40,
-        "health": 40,
+        "attack": 45,
+        "health": 75,
         "size": 2,
         "effect": "[杀戮]: 获得 [护甲] 25. [复仇]: 获得 [狂怒] 6",
       },
@@ -723,21 +733,21 @@ export const PATHS = [
       {
         "rank": 1,
         "attack": 10,
-        "health": 10,
+        "health": 15,
         "size": 2,
         "effect": "[集结]: +10 [攻击力]",
       },
       {
         "rank": 2,
-        "attack": 10,
-        "health": 20,
+        "attack": 15,
+        "health": 30,
         "size": 2,
         "effect": "[集结]: +15 [攻击力]",
       },
       {
         "rank": 3,
-        "attack": 10,
-        "health": 40,
+        "attack": 25,
+        "health": 60,
         "size": 2,
         "effect": "[集结]: +25 [攻击力]",
       },
@@ -753,21 +763,21 @@ export const PATHS = [
         "attack": 10,
         "health": 20,
         "size": 2,
-        "effect": "[行动]: 击杀所有小鬼单位, 每个小鬼对敌方单位造成 20 点伤害",
+        "effect": "[能力: 小鬼投掷]",
       },
       {
         "rank": 2,
         "attack": 20,
         "health": 40,
         "size": 2,
-        "effect": "[行动]: 击杀所有小鬼单位, 每个小鬼对敌方单位造成 40 点伤害",
+        "effect": "[能力: 小鬼投掷 II]",
       },
       {
         "rank": 3,
         "attack": 50,
         "health": 80,
         "size": 2,
-        "effect": "[行动]: 击杀所有小鬼单位, 每个小鬼对敌方单位造成 60 点伤害",
+        "effect": "[能力: 小鬼投掷 III]",
       },
     ]
   },

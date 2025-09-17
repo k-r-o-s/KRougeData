@@ -254,7 +254,7 @@ export const UNITS = [
     "subtype": "怪异造物",
     "clan": "拉撒路联盟",
     "rarity": "高级",
-    "cost": "2",
+    "cost": "3",
     "effect": "[迅捷]: [横扫]",
     "banner_unit": true,
     "size": 2,
@@ -333,7 +333,7 @@ export const SPELLS = [
     "clan": "拉撒路联盟",
     "rarity": "普通",
     "cost": "1",
-    "effect": "[前进]. 获得 [吸血] 1 和 [攻击力] 10",
+    "effect": "[前进]. 获得 [吸血] 1 和 [攻击力] 7",
     "description": ""
   },
   {
@@ -437,6 +437,16 @@ export const SPELLS = [
     "description": ""
   },
   {
+    "name": "胡乱混合",
+    "english_name": "Mix-a-Lot",
+    "type": "法术",
+    "clan": "拉撒路联盟",
+    "rarity": "稀有",
+    "cost": "3",
+    "effect": "[调配] 5 次, 每次随机选择 [注入物]",
+    "description": ""
+  },
+  {
     "name": "复制光线",
     "english_name": "Replicator Ray",
     "type": "法术",
@@ -497,7 +507,7 @@ export const EQUIPMENTS = [
     "type": "装备",
     "clan": "拉撒路联盟",
     "rarity": "高级",
-    "cost": "1",
+    "cost": "2",
     "attack": 10,
     "effect": "[杀戮]: 获得 [复活] 1",
   },
@@ -767,24 +777,24 @@ export const PATHS = [
     "path": [
       {
         "rank": 1,
-        "attack": 15,
+        "attack": 10,
         "health": 25,
         "size": 2,
-        "effect": "[巧匠]: 附加装备永久 +2 [攻击力]",
+        "effect": "[巧匠]: 附加装备永久 +3 [攻击力]",
       },
       {
         "rank": 2,
-        "attack": 30,
-        "health": 40,
+        "attack": 20,
+        "health": 45,
         "size": 2,
-        "effect": "[巧匠]: 附加装备永久 +4 [攻击力]",
+        "effect": "[巧匠]: 附加装备永久 +6 [攻击力]",
       },
       {
         "rank": 3,
-        "attack": 60,
-        "health": 60,
+        "attack": 40,
+        "health": 80,
         "size": 2,
-        "effect": "[巧匠]: 附加装备永久 +6 [攻击力]",
+        "effect": "[巧匠]: 附加装备永久 +9 [攻击力]",
       },
     ]
   },
@@ -796,21 +806,21 @@ export const PATHS = [
       {
         "rank": 1,
         "attack": 10,
-        "health": 25,
+        "health": 20,
         "size": 2,
         "effect": "[能力: 吞噬]",
       },
       {
         "rank": 2,
         "attack": 15,
-        "health": 45,
+        "health": 40,
         "size": 2,
         "effect": "[能力: 吞噬 II]",
       },
       {
         "rank": 3,
         "attack": 20,
-        "health": 85,
+        "health": 80,
         "size": 2,
         "effect": "[能力: 吞噬 III]",
       },

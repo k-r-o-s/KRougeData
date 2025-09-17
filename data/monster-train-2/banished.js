@@ -243,7 +243,7 @@ export const SPELLS = [
     "clan": "流放者",
     "rarity": "稀有",
     "cost": "X",
-    "effect": "[消耗]。获得 3 [X] [英勇]",
+    "effect": "[消耗]。获得 4 [X] [英勇]",
   },
   {
     "name": "维格之光",
@@ -354,6 +354,15 @@ export const SPELLS = [
     "effect": "[消耗]。[前进]。使一个友方单位获得 [英勇] 5, 然后使其立即攻击",
   },
   {
+    "name": "驶向天堂",
+    "english_name": "Heavensward",
+    "type": "法术",
+    "clan": "流放者",
+    "rarity": "稀有",
+    "cost": "2",
+    "effect": "[消耗]。[上升] 一个友方单位, 然后在新楼层 [前进] [生命值] 最高的友方单位",
+  },
+  {
     "name": "无私牺牲",
     "english_name": "Selfless Sacrefice",
     "type": "法术",
@@ -418,7 +427,7 @@ export const EQUIPMENTS = [
     "type": "装备",
     "clan": "流放者",
     "rarity": "普通",
-    "cost": "1",
+    "cost": "0",
     "effect": "[转移]: 受到 30 点伤害。可以装备在敌方单位上",
   },
   {

@@ -45,7 +45,7 @@ export const UNITS = [
     "clan": "冥卫",
     "rarity": "普通",
     "cost": "0",
-    "effect": "[回合结束]: 随机 [冻结] 一张手牌",
+    "effect": "[能力: 冻结射线]",
     "banner_unit": false,
     "size": 1,
     "attack": 5,
@@ -165,11 +165,11 @@ export const UNITS = [
     "clan": "冥卫",
     "rarity": "稀有",
     "cost": "1",
-    "effect": "[咒语]: -5 [生命值], 抽 1 张牌",
+    "effect": "[咒语]: 下回合抽牌 +1",
     "banner_unit": false,
     "size": 1,
     "attack": 0,
-    "health": 40,
+    "health": 1,
     "description": ""
   },
   {
@@ -263,7 +263,7 @@ export const SPELLS = [
     "clan": "冥卫",
     "rarity": "普通",
     "cost": "0",
-    "effect": "对一个敌方单位施加 [法术易伤] 1",
+    "effect": "施加 [法术易伤] 1",
     "description": ""
   },
   {
@@ -303,7 +303,7 @@ export const SPELLS = [
     "clan": "冥卫",
     "rarity": "高级",
     "cost": "0",
-    "effect": "[永冻]. [消耗]. 对所有敌方单位施加 [沉默] 5",
+    "effect": "[永冻]. [消耗]. 对所有敌方单位施加 [沉默] 3",
     "description": ""
   },
   {
@@ -387,23 +387,13 @@ export const SPELLS = [
     "description": ""
   },
   {
-    "name": "海妖之歌",
-    "english_name": "Siren's Song",
-    "type": "法术",
-    "clan": "冥卫",
-    "rarity": "稀有",
-    "cost": "1",
-    "effect": "[薪火相传]. 使所有敌方单位 [上升] 并施加 [眩晕] 3",
-    "description": ""
-  },
-  {
     "name": "泰坦谢礼",
     "english_name": "Titan's Gratitude",
     "type": "法术",
     "clan": "冥卫",
     "rarity": "普通",
     "cost": "1",
-    "effect": "[调和]. 对前排敌方单位造成 35 点伤害, 随机舍弃 1 张牌",
+    "effect": "[调和]. 对前排敌方单位造成 60 点伤害, 随机舍弃 1 张牌",
     "description": ""
   },
   {
@@ -412,7 +402,7 @@ export const SPELLS = [
     "type": "法术",
     "clan": "冥卫",
     "rarity": "稀有",
-    "cost": "2",
+    "cost": "3",
     "effect": "[消耗]. 舍弃全部手牌, 抽 5 张牌",
     "description": ""
   },
@@ -453,7 +443,7 @@ export const SPELLS = [
     "clan": "冥卫",
     "rarity": "稀有",
     "cost": "3",
-    "effect": "抽 3 张法术牌并使其获得 [消耗], +30 [魔法强度] 和 [余烬] 0",
+    "effect": "[消耗]. 抽 3 张伤害性法术牌并使其获得 [消耗], +30 [魔法强度] 和 [余烬] 0",
     "description": ""
   },
   {
@@ -500,10 +490,31 @@ export const SPELLS = [
 // 冥卫 装备
 /** @type { Equipment[] } */
 export const EQUIPMENTS = [
+  {
+    "name": "冰霜穿刺者",
+    "english_name": "Frostpiercer",
+    "type": "装备",
+    "clan": "觉者",
+    "rarity": "稀有",
+    "cost": "2",
+    "attack": 5,
+    "effect": "[攻击]: 施加等同于造成伤害一半的 [霜冻]",
+    "description": ""
+  },
 ];
 // 冥卫 房间
 /** @type { Room[] } */
 export const ROOMS = [
+   {
+    "name": "海妖之歌",
+    "english_name": "Siren's Song",
+    "type": "房间",
+    "clan": "冥卫",
+    "rarity": "稀有",
+    "cost": "2",
+    "effect": "[薪火相传]. 战斗开始时, [上升] 本层的非首领敌方单位, 并施加 [眩晕] 3",
+    "description": ""
+  },
 ];
 // 冥卫 神器
 /** @type { Artifact[] } */
@@ -576,7 +587,7 @@ export const ARTIFACTS = [
     "english_name": "Token of a Traitor",
     "type": "神器",
     "clan": "冥卫",
-    "effect": "使用法术会随机对该层的一个敌方单位造成 2 点伤害",
+    "effect": "使用法术会随机对该层的一个敌方单位造成 3 点伤害",
   },
   {
     "name": "图腾碎片",
@@ -654,21 +665,21 @@ export const PATHS = [
         "attack": 10,
         "health": 10,
         "size": 1,
-        "effect": "[横扫]. [攻击]: 对被攻击的单位施加 [法术易伤] 1",
+        "effect": "[横扫]. [能力: 符文话语]. [攻击]: 对被攻击的单位施加 [法术易伤] 1",
       },
       {
         "rank": 2,
         "attack": 20,
         "health": 12,
         "size": 1,
-        "effect": "[横扫]. [攻击]: 对被攻击的单位施加 [法术易伤] 2",
+        "effect": "[横扫]. [能力: 符文话语 II]. [攻击]: 对被攻击的单位施加 [法术易伤] 2",
       },
       {
         "rank": 3,
         "attack": 30,
         "health": 15,
         "size": 1,
-        "effect": "[横扫]. [攻击]: 对被攻击的单位施加 [法术易伤] 3",
+        "effect": "[横扫]. [能力: 符文话语 III]. [攻击]: 对被攻击的单位施加 [法术易伤] 3",
       },
     ]
   },
@@ -735,24 +746,24 @@ export const PATHS = [
     "path": [
       {
         "rank": 1,
-        "attack": 60,
-        "health": 60,
+        "attack": 0,
+        "health": 5,
         "size": 2,
-        "effect": "[静滞]. [咒语]: 获得 [碎片] 1. 当 [碎片] 达到 4 层时, 移除 [静滞]",
+        "effect": "[静滞]. [能力: 复苏]. [咒语]: 获得 [碎片] 1",
       },
       {
         "rank": 2,
-        "attack": 120,
-        "health": 120,
+        "attack": 0,
+        "health": 5,
         "size": 2,
-        "effect": "[静滞]. [咒语]: 获得 [碎片] 1. 当 [碎片] 达到 10 层时, 移除 [静滞]",
+        "effect": "[静滞]. [能力: 复苏 II]. [咒语]: 获得 [碎片] 1",
       },
       {
         "rank": 3,
-        "attack": 250,
-        "health": 250,
+        "attack": 0,
+        "health": 5,
         "size": 2,
-        "effect": "[静滞]. [咒语]: 获得 [碎片] 1. 当 [碎片] 达到 15 层时, 移除 [静滞]",
+        "effect": "[静滞]. [能力: 复苏 III]. [咒语]: 获得 [碎片] 1",
       },
     ]
   },

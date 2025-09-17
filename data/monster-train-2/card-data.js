@@ -26,6 +26,11 @@ export const CARD_DATA = [
     "guid": "1cb73496-d5ba-49c1-ae6e-a145809c29e2",
   },
   {
+    "name": "冰霜穿刺者",
+    "asset-name": "Frostpiercer",
+    "guid": "db758e27-67e0-48cf-9c08-ea5796bad5ba",
+  },
+  {
     "name": "螺旋结晶",
     "asset-name": "TwinShards",
     "guid": "0a97eac9-329c-41af-a27e-e6ce37efc632",
@@ -111,6 +116,11 @@ export const CARD_DATA = [
     "guid": "a99ae26b-3ed8-4187-b027-46d07830fef1",
   },
   {
+    "name": "藤蔓之怒",
+    "asset-name": "Vinemother_Ability",
+    "guid": "fe60d507-7fbe-4104-9644-22da81d25dea",
+  },
+  {
     "name": "灼热钢钉",
     "asset-name": "AnnihilateRoomDamage2",
     "guid": "0130a4a0-2269-4003-97e1-58d1f5ce3bd8",
@@ -176,6 +186,11 @@ export const CARD_DATA = [
     "guid": "0c8ff108-478c-4c1c-9c49-f6a297b4e0d8",
   },
   {
+    "name": "树脂之刃",
+    "asset-name": "ResinBlades",
+    "guid": "1d2e6259-e3ef-4a6a-8894-2c12db9fd4a9",
+  },
+  {
     "name": "恶魔新兵",
     "asset-name": "HeroInTraining",
     "guid": "57ffb1c3-0728-4254-ab35-7e34adab459f",
@@ -184,6 +199,11 @@ export const CARD_DATA = [
     "name": "妖术飞升",
     "asset-name": "Hexcalation",
     "guid": "d67c52be-d7bb-4291-a716-31408e4ced60",
+  },
+  {
+    "name": "武器库",
+    "asset-name": "WeaponsCache",
+    "guid": "e221f8ac-7b5f-4485-a4d1-dedd22f61466",
   },
   {
     "name": "赏金猎手",
@@ -256,6 +276,11 @@ export const CARD_DATA = [
     "guid": "5b2ba535-54b5-4f42-86e4-9b2ff2e07563",
   },
   {
+    "name": "现身",
+    "asset-name": "EmergeAbility",
+    "guid": "91fc348d-5b7a-4114-ad4b-a234b3dfd8d1",
+  },
+  {
     "name": "月出时分",
     "asset-name": "Moonrise",
     "guid": "fe6dfafa-9712-484c-9bb4-145c0989e667",
@@ -274,6 +299,11 @@ export const CARD_DATA = [
     "name": "熔岩流",
     "asset-name": "LavaFlow",
     "guid": "479ceb1b-fc8c-420f-8fa0-17683cee4511",
+  },
+  {
+    "name": "剔除 III",
+    "asset-name": "HornbreakerAttackOnKill_Ability3",
+    "guid": "f0c1e194-3b3f-46d2-b6ed-74b638978e79",
   },
   {
     "name": "野林树液",
@@ -506,6 +536,11 @@ export const CARD_DATA = [
     "guid": "46ffe4e9-eb1e-417b-a37a-70d343706bdb",
   },
   {
+    "name": "静滞水晶",
+    "asset-name": "StasisCrystal",
+    "guid": "764f9b75-daf1-4deb-a6a2-f09964fb5296",
+  },
+  {
     "name": "闪光饮剂",
     "asset-name": "GlitteringDraught",
     "guid": "297c2618-1a10-4367-8b7c-d068a6c5b3f4",
@@ -561,6 +596,11 @@ export const CARD_DATA = [
     "guid": "175a7730-7a1c-4da1-97b8-d799e7570396",
   },
   {
+    "name": "复苏 II",
+    "asset-name": "SolgardStasisGoodStatsAbility2",
+    "guid": "a3050bd4-250a-4cd8-9165-66a512f77910",
+  },
+  {
     "name": "劣质躯体",
     "asset-name": "FaultyBody",
     "guid": "0da73673-b84b-4525-a6f0-9604d8087d0e",
@@ -569,6 +609,11 @@ export const CARD_DATA = [
     "name": "雷克特·烛焰",
     "asset-name": "RemnantChampion",
     "guid": "7052d604-bf4b-49cb-a1a9-1a0c47033c50",
+  },
+  {
+    "name": "冻结射线",
+    "asset-name": "FreezeAbility",
+    "guid": "7a0103bd-9bbb-4a9e-af38-334ed948db5f",
   },
   {
     "name": "邪恶交易",
@@ -706,6 +751,11 @@ export const CARD_DATA = [
     "guid": "356a00a4-010b-462b-b683-2ef296d076a8",
   },
   {
+    "name": "符文话语 III",
+    "asset-name": "TethysSpellWeaknessOnStrike3",
+    "guid": "7a3a126b-84e2-4732-b3ba-7d011b3db779",
+  },
+  {
     "name": "雇佣兵",
     "asset-name": "SoldierOfFortune",
     "guid": "fbf7e58a-9369-49d8-ba1a-782fbcaf6498",
@@ -726,6 +776,11 @@ export const CARD_DATA = [
     "guid": "73d96e11-7665-4915-8301-e3e6ffdafb51",
   },
   {
+    "name": "地穴呼唤",
+    "asset-name": "FlickerRaiseOnSlayAbility1",
+    "guid": "e5ec1706-f8ae-445e-a876-4772717c466f",
+  },
+  {
     "name": "影祖",
     "asset-name": "ChampionPenumbra",
     "guid": "41600212-9122-46e2-a607-545a86830574",
@@ -739,6 +794,11 @@ export const CARD_DATA = [
     "name": "勇气药水",
     "asset-name": "LiquidCourage",
     "guid": "a6dfc0d2-9bfe-499a-b521-0a2c4cefc1a2",
+  },
+  {
+    "name": "回响地下室",
+    "asset-name": "EchoVault",
+    "guid": "d74c257e-d38b-44da-b3d4-0a67934803a7",
   },
   {
     "name": "锻铁工人",
@@ -799,6 +859,11 @@ export const CARD_DATA = [
     "name": "浴血竞技场",
     "asset-name": "BloodsoakedArena",
     "guid": "6ee4f735-fc54-4f85-aa13-fd0d169af3b2",
+  },
+  {
+    "name": "狂怒室",
+    "asset-name": "RageRoom",
+    "guid": "93759003-bb97-44e4-9ef6-472c55bee2d9",
   },
   {
     "name": "影裔清道夫",
@@ -874,6 +939,11 @@ export const CARD_DATA = [
     "name": "死亡咆哮",
     "asset-name": "Deathroar",
     "guid": "73da2bc8-68a5-41b2-a639-754c2a98b6fd",
+  },
+  {
+    "name": "小鬼投掷",
+    "asset-name": "ShardtailSacrificeImps1",
+    "guid": "d9c0c510-ccb5-4a89-9f3b-99799e765540",
   },
   {
     "name": "被诅咒的双头刃",
@@ -1036,8 +1106,8 @@ export const CARD_DATA = [
     "guid": "87d7cda6-1568-405f-a295-5040f378b4d3",
   },
   {
-    "name": "觉醒",
-    "asset-name": "Awake",
+    "name": "苏醒丛林",
+    "asset-name": "AwakeningThicket",
     "guid": "57921ae8-ca98-4a3b-a659-5e741d2e904a",
   },
   {
@@ -1074,6 +1144,11 @@ export const CARD_DATA = [
     "name": "磨砺武器",
     "asset-name": "Sharpen",
     "guid": "2ff4ef73-00f4-4bd5-b868-607320188980",
+  },
+  {
+    "name": "军阀的什一税",
+    "asset-name": "ConsumerOfCrownsAbility",
+    "guid": "21a37998-63c7-4fd5-a586-37f923889935",
   },
   {
     "name": "中份调合",
@@ -1141,6 +1216,11 @@ export const CARD_DATA = [
     "guid": "66189a7b-2593-4b08-aafd-f1bdae7e3c2a",
   },
   {
+    "name": "大快朵颐",
+    "asset-name": "ChompAbility",
+    "guid": "f7126e4a-ef22-4621-b1f7-31a53e2e5870",
+  },
+  {
     "name": "临时魔像",
     "asset-name": "MakeshiftGolem",
     "guid": "92084a94-6cc6-4af3-9a7d-de61ec7d161c",
@@ -1201,6 +1281,11 @@ export const CARD_DATA = [
     "guid": "5de24977-6800-4015-a20e-9949e79e057c",
   },
   {
+    "name": "符文话语 II",
+    "asset-name": "TethysSpellWeaknessOnStrike2",
+    "guid": "a33d6f5e-e4ad-4c06-868c-cf3d6845d741",
+  },
+  {
     "name": "调配",
     "asset-name": "PotionKit_Ability",
     "guid": "d18c5f9a-72c0-4c27-ad3f-24bd9cf54736",
@@ -1256,7 +1341,7 @@ export const CARD_DATA = [
     "guid": "db494633-3dda-4410-b9bf-c7e4d2d47d1f",
   },
   {
-    "name": "硬化",
+    "name": "加固护肩",
     "asset-name": "Fortify",
     "guid": "1dd23b59-fa5e-44bc-83ca-de119ede4f21",
   },
@@ -1341,6 +1426,11 @@ export const CARD_DATA = [
     "guid": "6314e127-6a79-4b81-9d0e-9e95b6dab168",
   },
   {
+    "name": "地穴呼唤 II",
+    "asset-name": "FlickerRaiseOnSlayAbility2",
+    "guid": "e4437169-e7b5-4f08-9db1-75a4c54ac962",
+  },
+  {
     "name": "寒流",
     "asset-name": "ColdstingSiren",
     "guid": "ca84a9e5-f167-49d1-91cc-ba662d3c1dc4",
@@ -1374,6 +1464,11 @@ export const CARD_DATA = [
     "name": "死亡舞者",
     "asset-name": "DeathsDancer",
     "guid": "6a2bbbef-1282-4d28-8890-1daf0c1be50c",
+  },
+  {
+    "name": "剔除 II",
+    "asset-name": "HornbreakerAttackOnKill_Ability2",
+    "guid": "f7fec3af-db53-4c50-ab16-c5220e07e838",
   },
   {
     "name": "宇宙闪电",
@@ -1426,6 +1521,11 @@ export const CARD_DATA = [
     "guid": "8c404be7-7179-461c-8e7d-b5fdb296174c",
   },
   {
+    "name": "胡乱混合",
+    "asset-name": "Mixalot",
+    "guid": "a68aa4ef-ff56-4d3f-b760-ddb7b2bbe207",
+  },
+  {
     "name": "生生不息",
     "asset-name": "EvergrowthAbility",
     "guid": "2f25e708-9d01-4c6b-8ac3-cdaf5ff8723a",
@@ -1471,6 +1571,11 @@ export const CARD_DATA = [
     "guid": "55a291ba-611e-4e29-93b0-08f5154ceb89",
   },
   {
+    "name": "铁舌",
+    "asset-name": "Irontongue",
+    "guid": "17fa5800-9c48-41f5-be97-86db8d4c5f9e",
+  },
+  {
     "name": "原基",
     "asset-name": "ChampionPrimordium",
     "guid": "2e1b29f2-fbe8-47b9-8ef8-1bac4c1f1f65",
@@ -1511,8 +1616,8 @@ export const CARD_DATA = [
     "guid": "fbfda8b0-63e2-47b4-a969-8377b83333ef",
   },
   {
-    "name": "熔化者的记忆",
-    "asset-name": "MemoriesOfTheMelted",
+    "name": "熔化者纪念碑",
+    "asset-name": "MemorialOfTheMelted",
     "guid": "98f20790-57cc-4bce-943a-2ad5955974d8",
   },
   {
@@ -1581,6 +1686,11 @@ export const CARD_DATA = [
     "guid": "f9f20326-dccb-44af-894b-467534afab4a",
   },
   {
+    "name": "驶向天堂",
+    "asset-name": "Heavensward",
+    "guid": "07fd0035-5dde-40f1-bfed-7d9f1f89f5c8",
+  },
+  {
     "name": "绿色新兵",
     "asset-name": "GreenRecruit",
     "guid": "c052c567-1e3c-4f36-a6cd-89b0648b9475",
@@ -1599,6 +1709,11 @@ export const CARD_DATA = [
     "name": "诱捕",
     "asset-name": "Ensnare",
     "guid": "2260a35e-0570-4e22-a3e0-4c39acfeb933",
+  },
+  {
+    "name": "复苏 III",
+    "asset-name": "SolgardStasisGoodStatsAbility3",
+    "guid": "3323495f-81e9-42db-ac91-699d92bfdfc7",
   },
   {
     "name": "星尘祈愿",
@@ -1711,6 +1826,11 @@ export const CARD_DATA = [
     "guid": "e66178fd-b8e7-401c-b570-7832840ea902",
   },
   {
+    "name": "古老生长物",
+    "asset-name": "OldGrowth",
+    "guid": "fa78eb5b-5475-4012-810b-961f72a0c76d",
+  },
+  {
     "name": "采掘的余烬",
     "asset-name": "SelfPurgeEnergyGain",
     "guid": "d0e1fe8a-fb2a-44e0-9d9b-a3ddd7475c34",
@@ -1719,6 +1839,11 @@ export const CARD_DATA = [
     "name": "锅炉房",
     "asset-name": "BoilerRoom",
     "guid": "08001aa4-2e9d-42da-9ba7-ff4b0fd5ce80",
+  },
+  {
+    "name": "符文话语",
+    "asset-name": "TethysSpellWeaknessOnStrike",
+    "guid": "dc1ceefa-0101-4903-ac98-3a445a634732",
   },
   {
     "name": "野林看护人",
@@ -1829,6 +1954,11 @@ export const CARD_DATA = [
     "name": "月相魔导",
     "asset-name": "Lunacy",
     "guid": "e9fa09e5-13bd-4826-a8e5-969332cbfbbf",
+  },
+  {
+    "name": "小鬼投掷 II",
+    "asset-name": "ShardtailSacrificeImps2",
+    "guid": "fb0d1638-347d-4b4a-98c9-96bff42a968e",
   },
   {
     "name": "无名海妖",
@@ -2016,6 +2146,11 @@ export const CARD_DATA = [
     "guid": "0a256fdf-bd45-49a0-a9e6-a48dd182eca2",
   },
   {
+    "name": "迅速射击",
+    "asset-name": "AnimusOfSpeedAbility",
+    "guid": "c2055882-a6f3-4b74-81f4-53f9350e51a0",
+  },
+  {
     "name": "懵懂小鬼",
     "asset-name": "AggressiveImp",
     "guid": "5a8399dd-a958-4317-b814-de0e2972ca3d",
@@ -2029,6 +2164,11 @@ export const CARD_DATA = [
     "name": "优雅小仙女",
     "asset-name": "EtherealSeelie",
     "guid": "02258ff7-457e-4de6-88cf-faff348801d7",
+  },
+  {
+    "name": "小鬼投掷 III",
+    "asset-name": "ShardtailSacrificeImps3",
+    "guid": "c807999e-f9b9-423e-9af1-d52666127082",
   },
   {
     "name": "月巫团道钉",
@@ -2056,6 +2196,11 @@ export const CARD_DATA = [
     "guid": "c682012e-b5fc-4f75-9cb4-f6ade997b72f",
   },
   {
+    "name": "大腐朽",
+    "asset-name": "TheGreatDecay",
+    "guid": "61ed6915-b344-4571-8dcb-966fa4ebbaf0",
+  },
+  {
     "name": "维格之盾",
     "asset-name": "ShieldOfWyngh",
     "guid": "19f119ac-b9d4-4daf-b887-cf439fad0a60",
@@ -2079,6 +2224,11 @@ export const CARD_DATA = [
     "name": "爆裂喷发",
     "asset-name": "ExcavationEruption",
     "guid": "682ef9b9-80cb-4e00-8d57-09340d6f4cc1",
+  },
+  {
+    "name": "剔除",
+    "asset-name": "HornbreakerAttackOnKill_Ability1",
+    "guid": "1dfb5cc8-4217-4305-93d3-583bb5ae80aa",
   },
   {
     "name": "断角",
@@ -2109,6 +2259,11 @@ export const CARD_DATA = [
     "name": "放火者",
     "asset-name": "Firebrand",
     "guid": "3d20e7fd-0c1f-478e-8845-4a11e27baca5",
+  },
+  {
+    "name": "针刺绽放",
+    "asset-name": "WyldentenSlayForStingAbility",
+    "guid": "08a0835a-88e4-414a-907e-36a619e7aef9",
   },
   {
     "name": "勇气",
@@ -2166,6 +2321,11 @@ export const CARD_DATA = [
     "guid": "ac87d3d4-c542-4950-878a-50cbc9a45919",
   },
   {
+    "name": "贪食者之口",
+    "asset-name": "GluttonsMaw",
+    "guid": "fc5ff692-13f4-4083-a4a8-70295782a550",
+  },
+  {
     "name": "欢快毒鹅膏",
     "asset-name": "CheeryDeathcap",
     "guid": "97260e75-4e11-439e-8eda-cd961143fc12",
@@ -2184,6 +2344,11 @@ export const CARD_DATA = [
     "name": "黑暗交易",
     "asset-name": "DarkDeal",
     "guid": "6a6c4a72-3e32-4995-8070-68d9240de0d5",
+  },
+  {
+    "name": "复苏",
+    "asset-name": "SolgardStasisGoodStatsAbility1",
+    "guid": "cad96b9a-a638-44ab-a0f9-488f8120b9ce",
   },
   {
     "name": "赫芙的铁锤",
@@ -2236,6 +2401,11 @@ export const CARD_DATA = [
     "guid": "fddb49b8-9d3e-457c-a9e8-55b7793db94c",
   },
   {
+    "name": "地穴呼唤 III",
+    "asset-name": "FlickerRaiseOnSlayAbility3",
+    "guid": "ff1b01d9-3cde-45c0-a49d-936ededdb7d8",
+  },
+  {
     "name": "招募无芯者",
     "asset-name": "WicklessRecruitment",
     "guid": "2d5f5f3d-fefb-448c-a819-4c82b0c6b17b",
@@ -2254,6 +2424,11 @@ export const CARD_DATA = [
     "name": "钩手",
     "asset-name": "Meathook_Ability",
     "guid": "a7dac277-0718-442d-8903-e21187ff56e6",
+  },
+  {
+    "name": "流亡者的王冠",
+    "asset-name": "ExilesDiadem",
+    "guid": "217d467c-77c2-481d-b78f-57aaf3dcd4a6",
   },
   {
     "name": "棱晶提取",
@@ -2279,6 +2454,11 @@ export const CARD_DATA = [
     "name": "夜幕掩护",
     "asset-name": "CoverOfNight",
     "guid": "e022d66a-f794-4ff9-95a6-b3cc53f49a27",
+  },
+  {
+    "name": "黄昏战衣",
+    "asset-name": "DuskMantle",
+    "guid": "49a88125-2a35-4cfa-b556-3502f0cccb14",
   },
   {
     "name": "古怪助手",
@@ -2479,6 +2659,11 @@ export const CARD_DATA = [
     "name": "冥卫护符",
     "asset-name": "GuardianAmulet",
     "guid": "690ba1bf-378e-4db3-a2ab-c37dc36df04b",
+  },
+  {
+    "name": "被熔炼的宝藏",
+    "asset-name": "SmeltedTreasure",
+    "guid": "a1049085-eba0-4118-9546-ca20d680c2b8",
   },
   {
     "name": "重铸",

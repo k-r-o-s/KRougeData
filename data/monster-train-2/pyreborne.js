@@ -209,7 +209,7 @@ export const UNITS = [
     "subtype": "龙",
     "clan": "薪龙族",
     "rarity": "稀有",
-    "cost": "2",
+    "cost": "1",
     "effect": "[能力: 赋能]",
     "banner_unit": true,
     "size": 1,
@@ -283,7 +283,7 @@ export const SPELLS = [
     "clan": "薪龙族",
     "rarity": "稀有",
     "cost": "1",
-    "effect": "[消耗]. 获得 3 [龙族宝藏]. 你的薪火收到 10 点伤害",
+    "effect": "[消耗]. 获得 3 [龙族宝藏]. 你的薪火收到 8 点伤害",
     "description": ""
   },
   {
@@ -344,6 +344,16 @@ export const SPELLS = [
     "rarity": "普通",
     "cost": "1",
     "effect": "[消耗]. 施加 [薪火熔胶] 10",
+    "description": ""
+  },
+  {
+    "name": "被熔炼的宝藏",
+    "english_name": "Smelted Treasure",
+    "type": "法术",
+    "clan": "薪龙族",
+    "rarity": "稀有",
+    "cost": "1",
+    "effect": "花费 50 [金币]. 使一个友方单位获得 50 [护甲]",
     "description": ""
   },
   {

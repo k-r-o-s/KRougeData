@@ -428,6 +428,16 @@ export const SPELLS = [
     "description": ""
   },
   {
+    "name": "大腐朽",
+    "english_name": "The Great Decay",
+    "type": "法术",
+    "clan": "地下菌团",
+    "rarity": "稀有",
+    "cost": "2",
+    "effect": "[消耗]. 使手牌中的所有法术牌获得 [消耗] 和 -1 [余烬]",
+    "description": ""
+  },
+  {
     "name": "蘑菇人活动盔甲",
     "english_name": "Funguy in a Suit",
     "type": "法术",
@@ -607,7 +617,7 @@ export const PATHS = [
       },
       {
         "rank": 3,
-        "attack": 100,
+        "attack": 160,
         "health": 30,
         "size": 3,
         "effect": "[践踏]. [杀戮]: 所有友方单位 [散播] 4",
@@ -621,24 +631,24 @@ export const PATHS = [
     "path": [
       {
         "rank": 1,
-        "attack": 15,
-        "health": 30,
+        "attack": 30,
+        "health": 20,
         "size": 3,
-        "effect": "[收割]: 获得 [再生] 1 和 [狂怒] 2",
+        "effect": "[虹吸]: [生成] 2. 每层 [部队] 额外 +1 [生命值]",
       },
       {
         "rank": 2,
-        "attack": 20,
-        "health": 60,
+        "attack": 50,
+        "health": 50,
         "size": 3,
-        "effect": "[收割]: 获得 [再生] 2 和 [狂怒] 3",
+        "effect": "[虹吸]: [生成] 2. 每层 [部队] 额外 +2 [生命值]",
       },
       {
         "rank": 3,
-        "attack": 30,
+        "attack": 80,
         "health": 100,
         "size": 3,
-        "effect": "[收割]: 获得 [再生] 3 和 [狂怒] 4",
+        "effect": "[虹吸]: [生成] 2. 每层 [部队] 额外 +3 [生命值]",
       },
     ]
   },
@@ -675,7 +685,7 @@ export const PATHS = [
     "champion": "狮鬃夫人",
     "type": "path",
     "path": [
-       {
+      {
         "rank": 1,
         "attack": 25,
         "health": 10,
@@ -750,7 +760,7 @@ export const PATHS = [
         "attack": 20,
         "health": 40,
         "size": 2,
-        "effect": "[行动]: 对所有敌方单位施加 [腐朽] 1. 当一个单位获得 [腐朽] 时, 获得的层数 +4",
+        "effect": "[行动]: 对所有敌方单位施加 [腐朽] 1. 当一个单位获得 [腐朽] 时, 获得的层数 +5",
       },
     ]
   },

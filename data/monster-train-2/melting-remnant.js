@@ -75,7 +75,7 @@ export const UNITS = [
     "clan": "熔尸",
     "rarity": "高级",
     "cost": "0",
-    "effect": "[永生]. [亡语]: 抽 1 张牌",
+    "effect": "[永生]. [亡语]: 下回合抽 2 张牌",
     "banner_unit": false,
     "size": 1,
     "attack": 1,
@@ -123,7 +123,7 @@ export const UNITS = [
     "effect": "[燃命] 1, [多重攻击] 1",
     "banner_unit": false,
     "size": 1,
-    "attack": 10,
+    "attack": 15,
     "health": 5,
     "description": ""
   },
@@ -150,10 +150,10 @@ export const UNITS = [
     "clan": "熔尸",
     "rarity": "高级",
     "cost": "1",
-    "effect": "[燃命] 3",
+    "effect": "[燃命] 3. 每层 [燃命] +5 [攻击力]",
     "banner_unit": true,
     "size": 2,
-    "attack": 45,
+    "attack": 25,
     "health": 45,
     "description": ""
   },
@@ -288,8 +288,8 @@ export const UNITS = [
     "effect": "[亡语]: 召唤 2 只 [双生烛人] 并使它们获得该单位上所有的升级和属性变化",
     "banner_unit": true,
     "size": 4,
-    "attack": 8,
-    "health": 8,
+    "attack": 16,
+    "health": 16,
     "description": ""
   },
 ];
@@ -304,26 +304,6 @@ export const SPELLS = [
     "rarity": "稀有",
     "cost": "X",
     "effect": "[消耗]. 使友方单位获得 +4 [X] [攻击力] 与 [燃命] 4",
-    "description": ""
-  },
-  {
-    "name": "神圣滴注",
-    "english_name": "Hallowed Drippings",
-    "type": "法术",
-    "clan": "熔尸",
-    "rarity": "普通",
-    "cost": "0",
-    "effect": "[消耗]. 友方 [燃命] 单位获得 [燃命] 5",
-    "description": ""
-  },
-  {
-    "name": "熔化者的记忆",
-    "english_name": "Memories of the Melted",
-    "type": "法术",
-    "clan": "熔尸",
-    "rarity": "高级",
-    "cost": "0",
-    "effect": "[消耗]. 每有一个友方单位在战斗中阵亡, 获得 1 [余烬]",
     "description": ""
   },
   {
@@ -387,6 +367,16 @@ export const SPELLS = [
     "description": ""
   },
   {
+    "name": "神圣滴注",
+    "english_name": "Hallowed Drippings",
+    "type": "法术",
+    "clan": "熔尸",
+    "rarity": "普通",
+    "cost": "1",
+    "effect": "[消耗]. 友方 [燃命] 单位获得 [燃命] 5 和 +5 [攻击力]",
+    "description": ""
+  },
+  {
     "name": "一心求死",
     "english_name": "Intent on Death",
     "type": "法术",
@@ -432,7 +422,7 @@ export const SPELLS = [
     "type": "法术",
     "clan": "熔尸",
     "rarity": "高级",
-    "cost": "1",
+    "cost": "2",
     "effect": "移除友方单位的所有 [减益] 效果和敌方单位的所有 [增益] 效果",
     "description": ""
   },
@@ -482,7 +472,7 @@ export const SPELLS = [
     "type": "法术",
     "clan": "熔尸",
     "rarity": "稀有",
-    "cost": "2",
+    "cost": "3",
     "effect": "消灭所有友方单位. 随机 [改造] 本层单位, 直到超出 [容量] 上限",
     "description": ""
   },
@@ -520,10 +510,30 @@ export const SPELLS = [
 // 熔尸 装备
 /** @type { Equipment[] } */
 export const EQUIPMENTS = [
+  {
+    "name": "树脂之刃",
+    "english_name": "Resin Blades",
+    "type": "装备",
+    "clan": "熔尸",
+    "rarity": "稀有",
+    "cost": "2",
+    "effect": "[燃命] 1. [多重攻击] 1. 持有此装备的单位被消灭时, 此装备返回手牌",
+    "description": ""
+  },
 ];
 // 熔尸 房间
 /** @type { Room[] } */
 export const ROOMS = [
+  {
+    "name": "熔化者纪念碑",
+    "english_name": "Memorial of the Melted",
+    "type": "房间",
+    "clan": "熔尸",
+    "rarity": "高级",
+    "cost": "1",
+    "effect": "友方单位获得 [永生]",
+    "description": ""
+  },
 ];
 // 熔尸 神器
 /** @type { Artifact[] } */
@@ -613,7 +623,7 @@ export const PATHS = [
     "champion": "雷克特·烛焰",
     "type": "path",
     "path": [
-     {
+      {
         "rank": 1,
         "attack": 50,
         "health": 50,
@@ -674,21 +684,21 @@ export const PATHS = [
         "attack": 15,
         "health": 15,
         "size": 2,
-        "effect": "[结算]: 随机改造 2 个单位, 使其获得 +10 [攻击力]",
+        "effect": "[能力: 地穴呼唤]",
       },
       {
         "rank": 2,
         "attack": 30,
         "health": 30,
         "size": 2,
-        "effect": "[结算]: 随机改造 2 个单位, 使其获得 +15 [攻击力]",
+        "effect": "[能力: 地穴呼唤 II]",
       },
       {
         "rank": 3,
         "attack": 50,
         "health": 50,
         "size": 2,
-        "effect": "[结算]: 随机改造 2 个单位, 使其获得 +20 [攻击力]",
+        "effect": "[能力: 地穴呼唤 III]",
       },
     ]
   },
@@ -697,7 +707,7 @@ export const PATHS = [
     "champion": "小菲德",
     "type": "path",
     "path": [
-       {
+      {
         "rank": 1,
         "attack": 5,
         "health": 1,
@@ -706,7 +716,7 @@ export const PATHS = [
       },
       {
         "rank": 2,
-       "attack": 5,
+        "attack": 5,
         "health": 1,
         "size": 1,
         "effect": "[亡语]: 使友方单位获得 +12 [攻击力], +5 [生命值] 和 [燃命] 2",
@@ -734,7 +744,7 @@ export const PATHS = [
       },
       {
         "rank": 2,
-       "attack": 5,
+        "attack": 5,
         "health": 1,
         "size": 1,
         "effect": "[迅捷]. [永生]. [亡语]: +30 [攻击力], +2 [生命值]",
@@ -755,21 +765,21 @@ export const PATHS = [
     "path": [
       {
         "rank": 1,
-       "attack": 5,
+        "attack": 5,
         "health": 1,
         "size": 1,
         "effect": "[尖刺] 5. [杀戮]: 永久获得 +2 [攻击力] 和 [尖刺] 2",
       },
       {
         "rank": 2,
-       "attack": 5,
+        "attack": 5,
         "health": 1,
         "size": 1,
         "effect": "[尖刺] 5. [杀戮]: 永久获得 +3 [攻击力] 和 [尖刺] 3",
       },
       {
         "rank": 3,
-       "attack": 5,
+        "attack": 5,
         "health": 1,
         "size": 1,
         "effect": "[尖刺] 5. [杀戮]: 永久获得 +4 [攻击力] 和 [尖刺] 4",

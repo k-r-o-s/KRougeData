@@ -135,7 +135,7 @@ export const UNITS = [
     "clan": "影主",
     "rarity": "高级",
     "cost": "1",
-    "effect": "[怠惰]. [多重攻击] 1. [暴食]: 获得 [燃料] 1",
+    "effect": "[怠惰]. [多重攻击] 1. [燃料] 2. [暴食]: 获得 [燃料] 1",
     "banner_unit": true,
     "size": 2,
     "attack": 25,
@@ -154,7 +154,7 @@ export const UNITS = [
     "banner_unit": true,
     "size": 2,
     "attack": 30,
-    "health": 20,
+    "health": 35,
     "description": ""
   },
   {
@@ -210,7 +210,7 @@ export const UNITS = [
     "clan": "影主",
     "rarity": "稀有",
     "cost": "2",
-    "effect": "[饥饿]: 吞食带有 [被吞食] 的单位. [暴食]: 获得 [攻击力] 2 和 [生命值] 2",
+    "effect": "[饥饿]: 吞食带有 [被吞食] 的单位. [暴食]: 获得 [攻击力] 4 和 [生命值] 4",
     "banner_unit": true,
     "size": 2,
     "attack": 5,
@@ -244,7 +244,7 @@ export const UNITS = [
     "banner_unit": true,
     "size": 3,
     "attack": 0,
-    "health": 25,
+    "health": 35,
     "description": ""
   },
   {
@@ -288,7 +288,7 @@ export const SPELLS = [
     "clan": "影主",
     "rarity": "稀有",
     "cost": "X",
-    "effect": "对前排敌方单位造成 40 [X] 点伤害",
+    "effect": "对前排敌方单位造成 80 [X] 点伤害",
     "description": ""
   },
   {
@@ -308,7 +308,7 @@ export const SPELLS = [
     "clan": "影主",
     "rarity": "普通",
     "cost": "X",
-    "effect": "对一个敌方单位造成 3 [X] 点伤害. [杀戮]: 获得 [余烬] 2",
+    "effect": "造成 3 [X] 点伤害. [杀戮]: 获得 [余烬] 2",
     "description": ""
   },
   {
@@ -432,16 +432,6 @@ export const SPELLS = [
     "description": ""
   },
   {
-    "name": "引擎升级",
-    "english_name": "Engine Upgrade",
-    "type": "法术",
-    "clan": "影主",
-    "rarity": "高级",
-    "cost": "1",
-    "effect": "[消耗]. 本层 -1 [容量], 每回合获得 +1 [余烬], 效果持续到本场战斗结束",
-    "description": ""
-  },
-  {
     "name": "创造影裔",
     "english_name": "Making of a Morsel",
     "type": "法术",
@@ -502,16 +492,6 @@ export const SPELLS = [
     "description": ""
   },
   {
-    "name": "熔炉延展",
-    "english_name": "Crucible Extension",
-    "type": "法术",
-    "clan": "影主",
-    "rarity": "高级",
-    "cost": "2",
-    "effect": "本层获得 +1 [容量]",
-    "description": ""
-  },
-  {
     "name": "能量窃取",
     "english_name": "Furnace Tap",
     "type": "法术",
@@ -548,7 +528,7 @@ export const SPELLS = [
     "clan": "影主",
     "rarity": "稀有",
     "cost": "3",
-    "effect": "[移除]. 对前排敌方单位造成 40 点伤害, 并将强化后的这张牌加入你的弃牌堆",
+    "effect": "[移除]. 对前排敌方单位造成 60 点伤害, 并将强化后的这张牌加入你的弃牌堆",
     "description": ""
   },
   {
@@ -575,10 +555,40 @@ export const SPELLS = [
 // 影主 装备
 /** @type { Equipment[] } */
 export const EQUIPMENTS = [
+  {
+    "name": "贪食者之口",
+    "english_name": "Glutton's Maw",
+    "type": "装备",
+    "clan": "影主",
+    "rarity": "稀有",
+    "cost": "2",
+    "effect": "[能力: 大快朵颐]",
+    "description": ""
+  },
 ];
 // 影主 房间
 /** @type { Room[] } */
 export const ROOMS = [
+  {
+    "name": "引擎升级",
+    "english_name": "Engine Upgrade",
+    "type": "房间",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "0",
+    "effect": "-1 [容量], 每回合获得 +1 [余烬]",
+    "description": ""
+  },
+  {
+    "name": "熔炉延展",
+    "english_name": "Crucible Extension",
+    "type": "房间",
+    "clan": "影主",
+    "rarity": "高级",
+    "cost": "2",
+    "effect": "+4 [容量]",
+    "description": ""
+  },
 ];
 // 影主 神器
 /** @type { Artifact[] } */
@@ -651,7 +661,7 @@ export const ARTIFACTS = [
     "english_name": "Teeth of Gold",
     "type": "神器",
     "clan": "影主",
-    "effect": "当一个单位 [被吞食] 时, 对后排敌方单位造成 5 点伤害",
+    "effect": "当一个单位 [被吞食] 时, 对生命值最低的敌方单位造成 5 点伤害",
   },
   {
     "name": "翼族技术",
@@ -733,15 +743,15 @@ export const PATHS = [
       },
       {
         "rank": 2,
-        "attack": 20,
-        "health": 20,
+        "attack": 35,
+        "health": 35,
         "size": 3,
         "effect": "[吸血] 2. [暴食]: +9 [攻击力] +4 [生命值]",
       },
       {
         "rank": 3,
-        "attack": 20,
-        "health": 20,
+        "attack": 50,
+        "health": 50,
         "size": 3,
         "effect": "[吸血] 2. [暴食]: +15 [攻击力] +6 [生命值]",
       },
@@ -796,8 +806,8 @@ export const PATHS = [
       },
       {
         "rank": 3,
-        "attack": 3,
-        "health": 3,
+        "attack": 10,
+        "health": 10,
         "size": 2,
         "effect": "[自助餐] 12. [被吞食]: 使被吞食者获得此单位的 [攻击力] 和 [生命值]",
       },

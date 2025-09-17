@@ -45,7 +45,7 @@ export const UNITS = [
     "clan": "觉者",
     "rarity": "高级",
     "cost": "1",
-    "effect": "[迅捷]",
+    "effect": "[迅捷]. [能力: 迅速射击]",
     "banner_unit": true,
     "size": 2,
     "attack": 35,
@@ -77,8 +77,8 @@ export const UNITS = [
     "cost": "1",
     "effect": "[召唤]: 获得 60 最大生命值. [复原]: [滋养] 3",
     "banner_unit": true,
-    "size": 2,
-    "attack": 10,
+    "size": 3,
+    "attack": 15,
     "health": 25,
     "description": ""
   },
@@ -90,7 +90,7 @@ export const UNITS = [
     "clan": "觉者",
     "rarity": "高级",
     "cost": "1",
-    "effect": "在本层中, 治疗法术的 [余烬] -1",
+    "effect": "在本层中, 治疗和 [再生] 法术的 [余烬] -1",
     "banner_unit": false,
     "size": 1,
     "attack": 0,
@@ -105,11 +105,11 @@ export const UNITS = [
     "clan": "觉者",
     "rarity": "高级",
     "cost": "1",
-    "effect": "[横扫]",
+    "effect": "[横扫]. [复仇]: +3 [攻击力]",
     "banner_unit": true,
     "size": 2,
-    "attack": 5,
-    "health": 30,
+    "attack": 3,
+    "health": 35,
     "description": ""
   },
   {
@@ -150,11 +150,11 @@ export const UNITS = [
     "clan": "觉者",
     "rarity": "高级",
     "cost": "1",
-    "effect": "[召唤]: 获得 60 最大生命值. [复原]: 获得 [尖刺] 3",
+    "effect": "[召唤]: 获得 60 最大生命值. [复原]: 获得 [尖刺] 4",
     "banner_unit": true,
     "size": 3,
     "attack": 15,
-    "health": 15,
+    "health": 25,
     "description": ""
   },
   {
@@ -165,7 +165,7 @@ export const UNITS = [
     "clan": "觉者",
     "rarity": "稀有",
     "cost": "1",
-    "effect": "[结算]: 将一张 [蛰刺] 法术加入手牌",
+    "effect": "[回合结束]: 卡组中的 [蛰刺] 法术获得 +4 [魔法强度]. [能力: 藤蔓之怒]",
     "banner_unit": true,
     "size": 2,
     "attack": 0,
@@ -210,7 +210,7 @@ export const UNITS = [
     "clan": "觉者",
     "rarity": "稀有",
     "cost": "3",
-    "effect": "[召唤]: 获得 80 点最大生命值. [复原]: 永久获得 [攻击力] 1",
+    "effect": "[召唤]: 获得 80 点最大生命值. [复原]: 永久获得 +3 [攻击力]",
     "banner_unit": true,
     "size": 4,
     "attack": 20,
@@ -228,7 +228,7 @@ export const SPELLS = [
     "clan": "觉者",
     "rarity": "稀有",
     "cost": "X",
-    "effect": "[消耗]. 抽 [X] 张牌并使它们 [余烬] -1",
+    "effect": "[消耗]. 抽 [X] 张牌并使它们 [余烬] -1. 本回合无法再抽牌",
     "description": ""
   },
   {
@@ -238,7 +238,7 @@ export const SPELLS = [
     "clan": "觉者",
     "rarity": "高级",
     "cost": "0",
-    "effect": "对一个敌方单位施加 [缠绕] 1. 下回合抽牌数 +1",
+    "effect": "施加 [缠绕] 1. 下回合抽牌数 +1",
     "description": ""
   },
   {
@@ -348,7 +348,7 @@ export const SPELLS = [
     "clan": "觉者",
     "rarity": "普通",
     "cost": "1",
-    "effect": "获得 [攻击力] 10 和 [生命值] -2",
+    "effect": "获得 [攻击力] 12 和 [生命值] -2",
     "description": ""
   },
   {
@@ -368,7 +368,7 @@ export const SPELLS = [
     "clan": "觉者",
     "rarity": "普通",
     "cost": "1",
-    "effect": "恢复 4 的生命值, 获得 [再生] 1",
+    "effect": "恢复 4 的生命值, 获得 [再生] 2",
     "description": ""
   },
   {
@@ -377,8 +377,8 @@ export const SPELLS = [
     "type": "法术",
     "clan": "觉者",
     "rarity": "高级",
-    "cost": "1",
-    "effect": "恢复 10 点生命值, [下降]",
+    "cost": "2",
+    "effect": "恢复 25 点生命值, [下降]",
     "description": ""
   },
   {
@@ -398,7 +398,7 @@ export const SPELLS = [
     "clan": "觉者",
     "rarity": "稀有",
     "cost": "1",
-    "effect": "获得 [再生] 2 和 [尖刺] 2 并将一张此卡的复制品加入弃牌堆",
+    "effect": "恢复 3 生命值. 获得 [再生] 3 和 [尖刺] 3 并将一张此卡的复制品加入弃牌堆",
     "description": ""
   },
   {
@@ -418,7 +418,7 @@ export const SPELLS = [
     "clan": "觉者",
     "rarity": "普通",
     "cost": "1",
-    "effect": "[消耗]. 获得 [再生] 5",
+    "effect": "[消耗]. 获得 [再生] 4 以及 +4 [生命值]",
     "description": ""
   },
   {
@@ -458,7 +458,7 @@ export const SPELLS = [
     "clan": "觉者",
     "rarity": "高级",
     "cost": "2",
-    "effect": "恢复 25 点生命值, 下回合抽卡数 +2",
+    "effect": "恢复 20 点生命值两次, 下回合抽卡数 +2",
     "description": ""
   },
   {
@@ -468,17 +468,7 @@ export const SPELLS = [
     "clan": "觉者",
     "rarity": "普通",
     "cost": "2",
-    "effect": "获得 [攻击力] 4 和 [尖刺] 5",
-    "description": ""
-  },
-  {
-    "name": "觉醒",
-    "english_name": "Awake",
-    "type": "法术",
-    "clan": "觉者",
-    "rarity": "高级",
-    "cost": "3",
-    "effect": "恢复 40 点生命值, 获得 [再生] 3",
+    "effect": "获得 [攻击力] 6 和 [尖刺] 6",
     "description": ""
   },
   {
@@ -495,10 +485,30 @@ export const SPELLS = [
 // 觉者 装备
 /** @type { Equipment[] } */
 export const EQUIPMENTS = [
+  {
+    "name": "古老生长物",
+    "english_name": "Oldgrowth",
+    "type": "装备",
+    "clan": "觉者",
+    "rarity": "稀有",
+    "cost": "1",
+    "effect": "[复原]: 获得 10 [生命值]. +10 [生命值]",
+    "description": ""
+  },
 ];
 // 觉者 房间
 /** @type { Room[] } */
 export const ROOMS = [
+  {
+    "name": "苏醒丛林",
+    "english_name": "Awakening Thicket",
+    "type": "房间",
+    "clan": "觉者",
+    "rarity": "高级",
+    "cost": "2",
+    "effect": "友方单位获得 +20 最大生命值, 且 [结算] 时恢复 10 点生命值",
+    "description": ""
+  },
 ];
 // 觉者 神器
 /** @type { Artifact[] } */
@@ -588,7 +598,7 @@ export const PATHS = [
     "champion": "智者",
     "type": "path",
     "path": [
-     {
+      {
         "rank": 1,
         "attack": 0,
         "health": 30,
@@ -672,26 +682,26 @@ export const PATHS = [
     "champion": "威尔丹顿",
     "type": "path",
     "path": [
-       {
+      {
         "rank": 1,
         "attack": 5,
         "health": 40,
         "size": 3,
-        "effect": "[召唤]: 将 3 张带有 [冻结] 的 [蛰刺] 法术加入手牌. [咒语]: +2 [攻击力]",
+        "effect": "[能力: 针刺绽放]. [咒语]: +2 [攻击力]",
       },
       {
         "rank": 2,
         "attack": 10,
         "health": 70,
         "size": 3,
-        "effect": "[召唤]: 将 3 张带有 [冻结] 的 [蛰刺] 法术加入手牌. [咒语]: +3 [攻击力]",
+        "effect": "[能力: 针刺绽放]. [咒语]: +3 [攻击力]",
       },
       {
         "rank": 3,
         "attack": 20,
         "health": 100,
         "size": 3,
-        "effect": "[召唤]: 将 3 张带有 [冻结] 的 [蛰刺] 法术加入手牌. [咒语]: +4 [攻击力]",
+        "effect": "[能力: 针刺绽放]. [咒语]: +4 [攻击力]",
       },
     ]
   },

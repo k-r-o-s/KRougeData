@@ -150,7 +150,7 @@ export const UNITS = [
     "clan": "月巫团",
     "rarity": "高级",
     "cost": "1",
-    "effect": "[潜行] 2. [新月]: 多重攻击 1",
+    "effect": "[潜行] 2. [新月]: [多重攻击] 2",
     "banner_unit": true,
     "size": 2,
     "attack": 10,
@@ -403,7 +403,7 @@ export const SPELLS = [
     "type": "法术",
     "clan": "月巫团",
     "rarity": "高级",
-    "cost": "2",
+    "cost": "1",
     "effect": "[上升]. 施加 [法术易伤] 2",
     "description": ""
   },
@@ -461,6 +461,16 @@ export const SPELLS = [
 // 月巫团 装备
 /**@type{Equipment[]}*/
 export const EQUIPMENTS = [
+  {
+    "name": "黄昏战衣",
+    "english_name": "Dusk Mantle",
+    "type": "装备",
+    "clan": "月巫团",
+    "rarity": "稀有",
+    "cost": "1",
+    "health": 10,
+    "effect": "[新月]: [泰坦皮肤] 5",
+  },
   {
     "name": "月相循环法杖",
     "english_name": "Luna Cyclestaff",
@@ -652,21 +662,21 @@ export const PATHS = [
         "attack": 20,
         "health": 20,
         "size": 2,
-        "effect": "[魔刃] 2. [咒语]: 使所有友方单位获得 [护甲] 3, 寂静者获得双倍",
+        "effect": "[魔刃] 2. [咒语]: 使所有友方单位获得 [护甲] 3, 寂静者获得 +1 [攻击力]",
       },
       {
         "rank": 2,
         "attack": 30,
         "health": 30,
         "size": 2,
-        "effect": "[魔刃] 2. [咒语]: 使所有友方单位获得 [护甲] 3, 寂静者获得双倍",
+        "effect": "[魔刃] 2. [咒语]: 使所有友方单位获得 [护甲] 3, 寂静者获得 +2 [攻击力]",
       },
       {
         "rank": 3,
         "attack": 50,
         "health": 50,
         "size": 2,
-        "effect": "[魔刃] 2. [咒语]: 使所有友方单位获得 [护甲] 4, 寂静者获得双倍",
+        "effect": "[魔刃] 2. [咒语]: 使所有友方单位获得 [护甲] 4, 寂静者获得 +3 [攻击力]",
       },
     ]
   },
@@ -705,22 +715,22 @@ export const PATHS = [
     "path": [
       {
         "rank": 1,
-        "attack": 15,
-        "health": 10,
+        "attack": 20,
+        "health": 20,
         "size": 2,
-        "effect": "[能力: 月之回响]. 满月: +15 [导流]",
+        "effect": "[能力: 月之回响]. 满月: +20 [导流]",
       },
       {
         "rank": 2,
-        "attack": 20,
-        "health": 15,
+        "attack": 25,
+        "health": 25,
         "size": 2,
         "effect": "[能力: 月之回响]. 满月: +40 [导流]",
       },
       {
         "rank": 3,
         "attack": 30,
-        "health": 20,
+        "health": 30,
         "size": 2,
         "effect": "[能力: 月之回响]. 满月: +70 [导流]",
       },
